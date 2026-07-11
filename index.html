@@ -3,152 +3,166 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日科技投资动态 · 2026年7月10日</title>
+<title>每日科技投资动态 · 2026年7月11日</title>
 <style>
-  :root { --accent: #c8401a; --ink: #1a1a1a; --gray: #666; --bg: #f5f3ef; }
+  :root { --accent: #c8401a; --ink: #1a1a1a; --gray: #6b6b6b; --bg: #f5f3ef; --card: #ffffff; --line: #e3ded6; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif; background: var(--bg); color: var(--ink); line-height: 1.7; }
+  body { font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif; background: var(--bg); color: var(--ink); line-height: 1.75; }
   .wrap { max-width: 860px; margin: 0 auto; padding: 32px 20px 48px; }
   header { border-bottom: 3px solid var(--ink); padding-bottom: 18px; margin-bottom: 24px; }
-  header h1 { font-size: 30px; letter-spacing: 2px; }
-  header h1 span { color: var(--accent); }
-  .meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-top: 8px; font-size: 13px; color: var(--gray); }
-  .card { background: #fff; border: 1px solid #e3ded6; border-radius: 8px; padding: 22px 24px; margin-bottom: 18px; }
-  h2.sec { font-size: 15px; color: var(--accent); letter-spacing: 3px; margin: 26px 0 12px; border-left: 4px solid var(--accent); padding-left: 10px; }
-  .overview p { font-size: 15px; }
-  .hl { border: 2px solid var(--accent); position: relative; }
-  .hl .badge { position: absolute; top: -12px; left: 20px; background: var(--accent); color: #fff; font-size: 12px; padding: 2px 12px; border-radius: 12px; letter-spacing: 2px; }
-  .hl h3 { font-size: 21px; margin: 6px 0 4px; }
-  .hl .sub { color: var(--gray); font-size: 13px; margin-bottom: 14px; }
-  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin: 14px 0; }
-  .stat { background: #faf6f2; border: 1px solid #eee0d6; border-radius: 6px; padding: 10px 12px; text-align: center; }
-  .stat .num { color: var(--accent); font-size: 20px; font-weight: 700; }
-  .stat .lbl { font-size: 12px; color: var(--gray); }
-  .hl h4 { font-size: 14px; color: var(--accent); margin: 14px 0 4px; }
-  .hl p { font-size: 14px; }
-  .item { display: flex; gap: 14px; }
-  .item .rank { color: var(--accent); font-size: 22px; font-weight: 800; min-width: 30px; font-style: italic; }
-  .item h3 { font-size: 16px; margin-bottom: 4px; }
-  .amt { color: var(--accent); font-weight: 700; }
-  .item p { font-size: 14px; color: #333; }
+  .kicker { font-size: 13px; letter-spacing: 4px; color: var(--accent); font-weight: 600; margin-bottom: 6px; }
+  h1 { font-size: 34px; font-weight: 800; letter-spacing: 1px; }
+  .meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-top: 10px; font-size: 13px; color: var(--gray); }
+  .meta b { color: var(--ink); }
+  section { margin-bottom: 30px; }
+  h2 { font-size: 19px; font-weight: 700; margin-bottom: 14px; padding-left: 10px; border-left: 4px solid var(--accent); }
+  .overview { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px 22px; font-size: 15px; }
+  .overview p + p { margin-top: 10px; }
+  .hl { color: var(--accent); font-weight: 700; }
+  .spot { background: var(--card); border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: 10px; padding: 24px; }
+  .spot .tagline { font-size: 12px; color: var(--accent); font-weight: 700; letter-spacing: 2px; margin-bottom: 8px; }
+  .spot h3 { font-size: 24px; margin-bottom: 4px; }
+  .spot .sub { color: var(--gray); font-size: 14px; margin-bottom: 16px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 16px 0 18px; }
+  .cell { background: #faf7f2; border: 1px solid var(--line); border-radius: 8px; padding: 12px; text-align: center; }
+  .cell .num { font-size: 21px; font-weight: 800; color: var(--accent); }
+  .cell .lbl { font-size: 12px; color: var(--gray); margin-top: 2px; }
+  .spot h4 { font-size: 15px; margin: 16px 0 6px; color: var(--accent); }
+  .spot p { font-size: 14.5px; }
+  .item { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px 20px; margin-bottom: 12px; display: flex; gap: 16px; }
+  .rank { font-size: 22px; font-weight: 800; color: var(--line); min-width: 34px; text-align: center; line-height: 1.3; }
+  .item.big .rank { color: var(--accent); }
+  .item h3 { font-size: 16.5px; margin-bottom: 4px; }
+  .amt { color: var(--accent); font-weight: 800; }
+  .item p { font-size: 14px; color: #3a3a3a; }
   .tags { margin-top: 8px; }
-  .tag { display: inline-block; font-size: 11px; color: var(--gray); background: #f2ede6; border-radius: 10px; padding: 1px 10px; margin-right: 6px; }
-  footer { margin-top: 32px; border-top: 1px solid #d8d2c8; padding-top: 16px; font-size: 12px; color: var(--gray); }
-  footer a { color: var(--accent); text-decoration: none; word-break: break-all; }
-  footer li { margin-bottom: 4px; margin-left: 18px; }
-  .disclaimer { margin-top: 12px; background: #efe9e0; padding: 10px 14px; border-radius: 6px; }
+  .tag { display: inline-block; font-size: 12px; background: #f3ece4; color: #8a5a3a; border-radius: 4px; padding: 1px 8px; margin-right: 6px; }
+  .tag.vc { background: #fdeae3; color: var(--accent); }
+  footer { border-top: 1px solid var(--line); padding-top: 18px; font-size: 12.5px; color: var(--gray); }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer li { margin-left: 18px; margin-bottom: 4px; }
+  .disc { margin-top: 12px; font-size: 12px; }
+  @media (max-width: 560px) { h1 { font-size: 26px; } .item { flex-direction: column; gap: 4px; } }
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <header>
-  <h1>每日<span>科技投资</span>动态</h1>
+  <div class="kicker">DAILY TECH INVESTMENT BRIEF</div>
+  <h1>每日科技投资动态</h1>
   <div class="meta">
-    <span>2026年7月10日 · 星期五</span>
-    <span>信息源：TechCrunch · CNBC · Bloomberg · TechStartups · Crunchbase</span>
+    <span><b>2026年7月11日 · 星期六</b>　覆盖过去24–48小时</span>
+    <span>信息源：TechCrunch · Bloomberg · Crunchbase News · TechStartups</span>
   </div>
 </header>
 
-<section class="card overview">
-  <h2 class="sec" style="margin-top:0">今日概览</h2>
-  <p>过去48小时，全球创投资金持续涌向 AI 基础设施与前沿硬科技：AI 芯片公司 SambaNova 以 110亿美元估值完成 10亿美元 F 轮首关，成为本期最大交易；量子计算新贵 Oratomic 获 Khosla Ventures、ARCH、Spark 联合领投的 3亿美元 A 轮，贝索斯个人基金参投。企业级 AI（LeapXpert、8090、Prime Intellect）、深层地热（Quaise）、高超音速推进（Venus Aerospace）等均获大额融资，NVIDIA、Intel、Salesforce 等巨头 CVC 频繁现身。据 Crunchbase 数据，2026上半年全球风投总额达创纪录的 5100亿美元，其中 AI 相关交易占绝对主导。</p>
-</section>
-
-<h2 class="sec">今日最值得关注</h2>
-<section class="card hl">
-  <span class="badge">深度聚焦</span>
-  <h3>SambaNova Systems：10亿美元 F 轮首关，估值110亿美元</h3>
-  <div class="sub">General Atlantic 领投 · Intel Capital、卡塔尔投资局（QIA）、BlackRock、Vista、T. Rowe Price 等跟投 · 7月8日宣布</div>
-  <div class="stats">
-    <div class="stat"><div class="num">$10亿</div><div class="lbl">本轮融资（F轮首关）</div></div>
-    <div class="stat"><div class="num">$110亿</div><div class="lbl">投后估值</div></div>
-    <div class="stat"><div class="num">$20亿+</div><div class="lbl">累计融资</div></div>
-    <div class="stat"><div class="num">7倍</div><div class="lbl">估值7个月涨幅</div></div>
+<section>
+  <h2>今日概览</h2>
+  <div class="overview">
+    <p>过去两日全球创投延续"硬科技"主线：资金集中涌向 <span class="hl">AI 基础设施、芯片、量子计算、深层地热与航空航天</span>，而非消费应用。头条是 AI 芯片公司 <span class="hl">SambaNova 以 110 亿美元估值完成 10 亿美元 F 轮首关</span>（General Atlantic 领投，Intel Capital、贝莱德、卡塔尔投资局参投），距其 E 轮仅五个月。量子初创 Oratomic 获 Khosla、ARCH、Spark 联合领投的 3 亿美元 A 轮，为量子领域史上最大首轮 VC 投资之一。</p>
+    <p>据 Crunchbase，2026 上半年全球 VC 融资约 <span class="hl">5100 亿美元</span>创历史纪录，其中约 88% 的 AI 资金流向美国公司；企业级 AI（Prime Intellect、8090、LeapXpert）、AI+生物医药（Beeline、Alchemab）与主权/产业资本参与（欧盟芯片法案、日本 JERA、洛克希德·马丁）是本期最鲜明的三条主线。</p>
   </div>
-  <h4>公司业务</h4>
-  <p>总部位于加州圣何塞，2017年由斯坦福团队创立，CEO 为 Rodrigo Liang。主打自研 RDU 架构的 AI 训练与推理芯片及整机系统，走"高端推理"路线：最新第五代芯片 SN50 面向 Agentic AI 设计，可在单机架上运行数万亿参数大模型；上一代 SN40L 系统自2023年起已在云端和本地部署，是 NVIDIA 之外的重要企业级推理替代方案。</p>
-  <h4>历史融资</h4>
-  <p>2021年4月 D 轮融资 6.76亿美元（软银愿景基金领投，估值51亿美元），一度成为全球融资最多的 AI 初创公司；2025年底英特尔曾洽谈以约16亿美元收购，交易告吹；2026年2月 E 轮融资 3.5亿美元（Vista Equity Partners 领投、Intel Capital 参投）；仅5个月后完成本次 F 轮首关，估值从收购报价的16亿美元飙升至110亿美元，累计融资超过20亿美元。</p>
-  <h4>业务进展</h4>
-  <p>公司披露2025年收官时订单与营收创历史新高（未公布具体数字，尚未盈利属行业常态）。摩根大通近期选定 SambaNova 作为本地化推理基础设施合作伙伴，用 SN40L/SN50 在行内私有环境运行 AI；日本软银电信（SoftBank Corp.）成为 SN50 首个客户，将在日本部署。公司与英特尔达成联合研发合作，客户覆盖金融、电信、能源及主权 AI 部署。本轮资金将用于扩产能、研发和销售网络。</p>
 </section>
 
-<h2 class="sec">今日要闻 · 按重要性排序</h2>
+<section>
+  <h2>今日最值得关注</h2>
+  <div class="spot">
+    <div class="tagline">★ 头条交易</div>
+    <h3>SambaNova Systems — 10亿美元 F 轮首关，估值110亿美元</h3>
+    <div class="sub">AI 训练/推理芯片与系统 · 美国圣何塞 · General Atlantic 领投，Seligman、T. Rowe Price、Capital Group、Intel Capital、贝莱德、卡塔尔投资局、Vista 等参投</div>
+    <div class="grid">
+      <div class="cell"><div class="num">$10亿</div><div class="lbl">本轮融资（F轮首关）</div></div>
+      <div class="cell"><div class="num">$110亿</div><div class="lbl">投后估值</div></div>
+      <div class="cell"><div class="num">≈$25亿</div><div class="lbl">累计融资（含本轮）</div></div>
+      <div class="cell"><div class="num">$3.5亿</div><div class="lbl">上轮 E 轮（2026年2月）</div></div>
+    </div>
+    <h4>业务内容</h4>
+    <p>2017 年创立，做"高端推理（premium inference）"专用 AI 芯片与整机系统，走英伟达之外的路线。SN50 芯片可在单机架上运行数万亿参数模型；SN40L 系统 2023 年起交付，支持云端与本地私有化部署，主打企业与"主权 AI"客户。</p>
+    <h4>历史融资</h4>
+    <p>A 轮 5600 万美元（2018，Walden/GV）→ B 轮 1.5 亿（2019，Intel Capital）→ C 轮 2.5 亿（2020，贝莱德领投）→ D 轮 6.76 亿（2021，软银愿景基金2号，估值超 50 亿美元）→ E 轮 3.5 亿（2026年2月，Vista 与 Cambium 领投、Intel Capital 战略入股）→ 本轮 F 轮 10 亿首关。F 轮前累计约 14.8 亿美元（Tracxn 数据）。</p>
+    <h4>业务进展</h4>
+    <p>刚被<b>摩根大通选为本地部署推理基础设施合作伙伴</b>——SN40L/SN50 将为该行提供安全的行内 AI 推理，是大型银行自建私有 AI 栈的标志性订单；Intel 自 E 轮起深度绑定，双方联合开发产品。公司未披露营收与盈利数据。估值从 2021 年的 50 多亿升至 110 亿美元，市场将其视为英伟达在推理侧最受资本认可的挑战者之一，但仍面临 Nvidia、Cerebras、Groq 等激烈竞争。</p>
+  </div>
+</section>
 
-<section class="card item"><div class="rank">1</div><div>
-  <h3>SambaNova 完成 <span class="amt">10亿美元</span> F 轮首关，估值110亿美元</h3>
-  <p>General Atlantic 领投，Intel Capital、QIA、BlackRock、Vista 等跟投。投资人押注"NVIDIA 挑战者"，详见上方深度聚焦。</p>
-  <div class="tags"><span class="tag">AI芯片</span><span class="tag">F轮</span><span class="tag">General Atlantic</span></div>
-</div></section>
+<section>
+  <h2>今日交易榜（按重要性排序）</h2>
 
-<section class="card item"><div class="rank">2</div><div>
-  <h3>量子计算公司 Oratomic 获 <span class="amt">3亿美元</span> A 轮</h3>
-  <p>ARCH、Spark Capital、Khosla Ventures 联合领投，Bezos Expeditions、Index、General Catalyst、Bain Capital 参投，为量子行业史上最大早期融资之一。公司3月才公开亮相，走中性原子容错量子计算路线；Vinod Khosla 称此次出手对标其当年投资 OpenAI。</p>
-  <div class="tags"><span class="tag">量子计算</span><span class="tag">A轮</span><span class="tag">Khosla</span><span class="tag">贝索斯</span></div>
-</div></section>
+  <div class="item big"><div class="rank">1</div><div>
+    <h3>SambaNova · <span class="amt">10亿美元 F 轮首关</span>（估值110亿美元）</h3>
+    <p>General Atlantic 领投，Intel Capital、贝莱德、QIA、Vista 等参投；获摩根大通推理基础设施订单。详见上方重点卡片。</p>
+    <div class="tags"><span class="tag vc">General Atlantic</span><span class="tag vc">Intel Capital</span><span class="tag">AI芯片</span><span class="tag">Series F</span></div>
+  </div></div>
 
-<section class="card item"><div class="rank">3</div><div>
-  <h3>LeapXpert 获 Riverwood 领投 <span class="amt">1.8亿美元</span> 增长轮</h3>
-  <p>纽约企业通信合规平台，用 AI 监控 WhatsApp、Slack、短信等"影子渠道"，帮金融等受监管行业满足合规要求。合规类工具罕见的大额融资，反映监管趋严下"受治理通信"市场升温。</p>
-  <div class="tags"><span class="tag">企业AI</span><span class="tag">合规科技</span><span class="tag">增长轮</span></div>
-</div></section>
+  <div class="item big"><div class="rank">2</div><div>
+    <h3>Oratomic · <span class="amt">3亿美元 A 轮</span></h3>
+    <p>中性原子路线容错量子计算，3月才公开亮相即获量子领域史上最大首轮融资之一。ARCH、Spark、Khosla Ventures 联合领投，贝索斯 Expeditions、Index、General Catalyst、Bain Capital 参投；Vinod Khosla 称此为对标其 OpenAI 押注的"首笔投资"。</p>
+    <div class="tags"><span class="tag vc">Khosla Ventures</span><span class="tag vc">Bezos Expeditions</span><span class="tag">量子计算</span><span class="tag">Series A</span></div>
+  </div></div>
 
-<section class="card item"><div class="rank">4</div><div>
-  <h3>Prime Intellect 获 <span class="amt">1.3亿美元</span> A 轮，估值10亿美元</h3>
-  <p>Radical Ventures 领投，NVIDIA Ventures、Intel Capital、戴尔资本、Iconiq 参投。为企业提供"开箱即用 AI 实验室"：算力+强化学习框架+评估工具，让 Ramp、Zapier 等客户在私有数据上训练自己的 AI Agent，成立即成独角兽，累计融资约1.5亿美元。</p>
-  <div class="tags"><span class="tag">企业AI</span><span class="tag">NVIDIA CVC</span><span class="tag">独角兽</span></div>
-</div></section>
+  <div class="item"><div class="rank">3</div><div>
+    <h3>LeapXpert · <span class="amt">1.8亿美元成长轮</span></h3>
+    <p>Riverwood Capital 领投。为金融等受监管行业提供 WhatsApp/Slack/短信等外部通讯的 AI 合规监控与存档，合规赛道罕见大额融资。</p>
+    <div class="tags"><span class="tag vc">Riverwood Capital</span><span class="tag">企业合规AI</span><span class="tag">Growth</span></div>
+  </div></div>
 
-<section class="card item"><div class="rank">5</div><div>
-  <h3>Chamath 创办的 8090 Solutions 获 Salesforce Ventures 领投 <span class="amt">1.35亿美元</span> A 轮</h3>
-  <p>"AI原生软件工厂"：用生成式 AI 读取业务需求并自动生成企业级应用代码，人类工程师负责验证。Craft Ventures、TPG 及 Nikesh Arora 等天使参投，Salesforce 领投具战略协同意味。</p>
-  <div class="tags"><span class="tag">AI编程</span><span class="tag">Salesforce CVC</span><span class="tag">A轮</span></div>
-</div></section>
+  <div class="item"><div class="rank">4</div><div>
+    <h3>8090 Solutions · <span class="amt">1.35亿美元 A 轮</span></h3>
+    <p>Chamath Palihapitiya 创办的"AI 原生软件工厂"，用生成式 AI 自动生成企业级应用代码。Salesforce Ventures 领投，Craft、TPG 及 Nikesh Arora 等参投。</p>
+    <div class="tags"><span class="tag vc">Salesforce Ventures</span><span class="tag">AI编程</span><span class="tag">Series A</span></div>
+  </div></div>
 
-<section class="card item"><div class="rank">6</div><div>
-  <h3>深层地热公司 Quaise Energy 获 <span class="amt">1.34亿美元</span> B 轮首关</h3>
-  <p>Prelude Ventures 领投，日本 JERA、出光兴产战略跟投。源自 MIT 的毫米波钻探技术可钻至地下数英里的"超热岩层"，提供全天候基载清洁电力，将用于建设试点井。</p>
-  <div class="tags"><span class="tag">清洁能源</span><span class="tag">地热</span><span class="tag">B轮</span></div>
-</div></section>
+  <div class="item"><div class="rank">5</div><div>
+    <h3>Prime Intellect · <span class="amt">1.3亿美元 A 轮</span>（估值10亿美元）</h3>
+    <p>纽约"企业 AI 实验室一体机"：打包算力、强化学习框架与推理工具，让企业在私有数据上自训 AI 智能体，客户含 Ramp、Zapier。Radical Ventures 领投，NVIDIA Ventures、Intel Capital、戴尔、Iconiq 参投。</p>
+    <div class="tags"><span class="tag vc">NVIDIA Ventures</span><span class="tag vc">Radical Ventures</span><span class="tag">企业AI智能体</span><span class="tag">新晋独角兽</span></div>
+  </div></div>
 
-<section class="card item"><div class="rank">7</div><div>
-  <h3>Beeline Medicines 追加 <span class="amt">1.263亿美元</span>，A 轮累计4.26亿美元</h3>
-  <p>波士顿临床阶段 AI 制药公司，Bain Capital、加拿大养老金 CPPIB、百时美施贵宝（BMS）参投。用自研算法设计自身免疫疾病精准疗法，主打管线为红斑狼疮，资金用于推进临床试验。</p>
-  <div class="tags"><span class="tag">AI制药</span><span class="tag">生物科技</span><span class="tag">A轮扩展</span></div>
-</div></section>
+  <div class="item"><div class="rank">6</div><div>
+    <h3>Quaise Energy · <span class="amt">1.34亿美元 B 轮首关</span></h3>
+    <p>MIT 孵化的毫米波超深层地热钻探，瞄准 AI 时代的全天候清洁基载电力。Prelude Ventures 领投，日本 JERA、出光兴产战略参投。</p>
+    <div class="tags"><span class="tag vc">JERA</span><span class="tag">深层地热</span><span class="tag">Series B</span></div>
+  </div></div>
 
-<section class="card item"><div class="rank">8</div><div>
-  <h3>德国 QuantumDiamonds 获 <span class="amt">9100万欧元</span>（股权+欧盟芯片法案拨款）</h3>
-  <p>World Fund 领投1500万欧元股权，德国联邦及巴伐利亚政府依据《芯片法案》提供7600万欧元拨款。用合成金刚石量子传感器检测先进制程芯片内部缺陷，CEO 称有望成为"欧洲下一个 ASML"。</p>
-  <div class="tags"><span class="tag">半导体</span><span class="tag">量子传感</span><span class="tag">欧盟芯片法案</span></div>
-</div></section>
+  <div class="item"><div class="rank">7</div><div>
+    <h3>Beeline Medicines · <span class="amt">1.263亿美元 A 轮扩展</span></h3>
+    <p>波士顿 AI 驱动自免疫药物研发（主管线红斑狼疮），A 轮累计达 4.263 亿美元。Bain Capital、加拿大养老金 CPPIB、百时美施贵宝加注。</p>
+    <div class="tags"><span class="tag vc">Bain Capital</span><span class="tag">AI制药</span><span class="tag">Series A ext.</span></div>
+  </div></div>
 
-<section class="card item"><div class="rank">9</div><div>
-  <h3>Venus Aerospace 获 <span class="amt">9100万美元</span> B 轮，洛克希德·马丁参投</h3>
-  <p>Mercury Fund 领投。研发旋转爆震火箭发动机（RDRE），面向高超音速飞行与点对点快速运输，反映防务航天硬科技重回风投视野。</p>
-  <div class="tags"><span class="tag">航空航天</span><span class="tag">防务科技</span><span class="tag">B轮</span></div>
-</div></section>
+  <div class="item"><div class="rank">8</div><div>
+    <h3>Parallel · <span class="amt">1亿美元 B 轮</span></h3>
+    <p>据报道由红杉资本领投，Khosla Ventures、Kleiner Perkins 参投——一线 VC 罕见同框，红杉本期最受关注的出手。</p>
+    <div class="tags"><span class="tag vc">红杉资本</span><span class="tag vc">Kleiner Perkins</span><span class="tag">Series B</span></div>
+  </div></div>
 
-<section class="card item"><div class="rank">10</div><div>
-  <h3>本地大模型工具 Ollama 获 <span class="amt">6500万美元</span> B 轮</h3>
-  <p>Theory Ventures 领投，7月9日宣布。Ollama 是最流行的本地运行开源大模型工具之一，融资将用于扩展产品与团队，呼应"模型私有化部署"趋势。</p>
-  <div class="tags"><span class="tag">开源AI</span><span class="tag">开发者工具</span><span class="tag">B轮</span></div>
-</div></section>
+  <div class="item"><div class="rank">9</div><div>
+    <h3>QuantumDiamonds · <span class="amt">9100万欧元</span>（股权+补贴）</h3>
+    <p>慕尼黑公司用合成金刚石量子传感检测芯片内部缺陷，志在成为"欧洲下一个 ASML"。World Fund 领投 1500 万欧元股权，欧盟芯片法案提供 7600 万欧元资助。</p>
+    <div class="tags"><span class="tag vc">World Fund</span><span class="tag">半导体检测</span><span class="tag">欧盟芯片法案</span></div>
+  </div></div>
+
+  <div class="item"><div class="rank">10</div><div>
+    <h3>Venus Aerospace · <span class="amt">9100万美元 B 轮</span></h3>
+    <p>旋转爆震火箭发动机（RDRE），面向高超音速飞行与点对点快速运输。Mercury Fund 领投，洛克希德·马丁风投、Draper 参投，防务硬科技回暖信号。</p>
+    <div class="tags"><span class="tag vc">Lockheed Martin Ventures</span><span class="tag">航空航天</span><span class="tag">Series B</span></div>
+  </div></div>
+</section>
 
 <footer>
-  <strong>信息来源（2026年7月10日检索）：</strong>
+  <b>信息来源（本期实际引用）</b>
   <ul>
-    <li><a href="https://techstartups.com/2026/07/09/venture-capital-startup-funding-roundup-july-9-2026-sequoia-khosla-ventures-y-combinator-a16z-accel/">TechStartups · Venture Capital & Startup Funding Roundup, July 9, 2026</a></li>
-    <li><a href="https://techcrunch.com/2026/07/08/sambanova-draws-1b-at-11b-valuation-in-series-f-first-close/">TechCrunch · SambaNova raises $1B at $11B valuation</a></li>
-    <li><a href="https://www.cnbc.com/2026/07/08/sambanova-ai-chip-funding-valuation.html">CNBC · SambaNova hits $11 billion valuation</a></li>
-    <li><a href="https://www.bloomberg.com/news/articles/2026-07-08/ai-chip-startup-sambanova-raises-funds-at-11-billion-valuation">Bloomberg · AI Chip Startup SambaNova Raises Funds at $11 Billion Valuation</a></li>
-    <li><a href="https://www.businesswire.com/news/home/20260708184792/en/SambaNova-Completes-First-Close-of-$1-Billion-Financing-at-$11-Billion-Valuation">BusinessWire · SambaNova Completes First Close of $1 Billion Financing</a></li>
-    <li><a href="https://news.crunchbase.com/venture/global-startup-exits-ipo-ma-soar-ai-q2-h1-2026/">Crunchbase · Global Startup Investment Hit Record $510B In H1 2026</a></li>
-    <li><a href="https://www.finsmes.com/2026/02/sambanova-raises-350m-in-series-e-financing.html">FinSMEs · SambaNova Raises $350M in Series E Financing（2026年2月）</a></li>
-    <li><a href="https://www.businesswire.com/news/home/20210413005263/en/SambaNova-Systems-Raises-$676M-in-Series-D-Surpasses-$5B-Valuation-and-Becomes-Worlds-Best-Funded-AI-Startup">BusinessWire · SambaNova Series D $676M（2021年4月）</a></li>
+    <li><a href="https://techstartups.com/2026/07/09/venture-capital-startup-funding-roundup-july-9-2026-sequoia-khosla-ventures-y-combinator-a16z-accel/">TechStartups：VC & Startup Funding Roundup, July 9, 2026</a></li>
+    <li><a href="https://techcrunch.com/2026/07/08/sambanova-draws-1b-at-11b-valuation-in-series-f-first-close/">TechCrunch：SambaNova raises $1B at $11B valuation</a></li>
+    <li><a href="https://www.bloomberg.com/news/articles/2026-07-08/ai-chip-startup-sambanova-raises-funds-at-11-billion-valuation">Bloomberg：SambaNova Raises $1 Billion</a></li>
+    <li><a href="https://www.generalatlantic.com/media-article/sambanova-completes-first-close-of-1-billion-financing-at-11-billion-valuation/">General Atlantic 官方新闻稿</a></li>
+    <li><a href="https://www.finsmes.com/2026/02/sambanova-raises-350m-in-series-e-financing.html">FinSMEs：SambaNova $350M Series E（2026年2月）</a></li>
+    <li><a href="https://tracxn.com/d/companies/sambanova-systems/__TvzSIBPeKIVjGmWovhh4uYJ9eAl6FPYF0Iwfg8H-YJg/funding-and-investors">Tracxn：SambaNova 融资历史</a></li>
+    <li><a href="https://news.crunchbase.com/ai/biggest-funding-rounds-billion-dollar-cyber-ai-keyfactor-sambanova/">Crunchbase News：本周十大融资</a></li>
+    <li><a href="https://siliconangle.com/2026/07/08/quantum-startup-oratomic-banks-300m-race-straight-fault-tolerance/">SiliconANGLE：Oratomic $300M</a></li>
   </ul>
-  <div class="disclaimer">免责声明：本页内容基于公开新闻报道整理，仅供参考，不构成任何投资建议。金额与估值以公司官方披露为准。</div>
+  <p class="disc">免责声明：本页内容由 AI 根据公开报道自动汇总，仅供信息参考，不构成任何投资建议。数据以各公司官方公告为准。生成时间：2026年7月11日。</p>
 </footer>
 
 </div>
