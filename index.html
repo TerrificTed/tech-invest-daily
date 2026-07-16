@@ -3,152 +3,154 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日科技投资动态 · 2026年7月15日</title>
+<title>每日科技投资动态 · 2026年7月16日</title>
 <style>
-  :root { --accent: #c8401a; --ink: #1a1a1a; --gray: #666; --bg: #f5f3ef; }
+  :root { --accent: #c8401a; --ink: #1a1a1a; --gray: #666; --line: #e5e0d8; --bg: #f7f5f0; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif; background: var(--bg); color: var(--ink); line-height: 1.7; }
+  body { font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif; background: var(--bg); color: var(--ink); line-height: 1.75; }
   .wrap { max-width: 860px; margin: 0 auto; padding: 32px 20px 60px; }
   header { border-bottom: 3px solid var(--ink); padding-bottom: 18px; margin-bottom: 28px; }
-  header h1 { font-size: 34px; letter-spacing: 2px; }
-  header .meta { display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 8px; font-size: 14px; color: var(--gray); }
-  header .meta .date { color: var(--accent); font-weight: 600; }
-  .section-title { font-size: 20px; font-weight: 700; margin: 34px 0 14px; padding-left: 10px; border-left: 5px solid var(--accent); }
-  .card { background: #fff; border-radius: 10px; padding: 22px 24px; margin-bottom: 14px; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
-  .overview p { margin-bottom: 10px; }
-  .highlight-card { border: 2px solid var(--accent); }
-  .highlight-badge { display: inline-block; background: var(--accent); color: #fff; font-size: 13px; padding: 3px 12px; border-radius: 20px; margin-bottom: 10px; }
-  .highlight-card h3 { font-size: 24px; margin-bottom: 4px; }
-  .highlight-card .sub { color: var(--gray); font-size: 14px; margin-bottom: 14px; }
-  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin: 16px 0; }
-  .stat { background: #faf6f3; border-radius: 8px; padding: 12px; text-align: center; }
-  .stat .num { font-size: 20px; font-weight: 800; color: var(--accent); }
-  .stat .label { font-size: 12px; color: var(--gray); margin-top: 2px; }
-  .highlight-card h4 { font-size: 15px; margin: 16px 0 6px; color: var(--accent); }
-  .highlight-card p { font-size: 15px; margin-bottom: 8px; }
-  .news-item { display: flex; gap: 16px; }
-  .rank { font-size: 26px; font-weight: 800; color: #d9c8bf; min-width: 36px; line-height: 1.2; }
-  .news-item h3 { font-size: 17px; margin-bottom: 4px; }
-  .amount { color: var(--accent); font-weight: 800; }
-  .news-item p { font-size: 14px; color: #333; margin: 4px 0 8px; }
-  .tags span { display: inline-block; font-size: 12px; background: #f0e9e4; color: #7a5a4a; border-radius: 4px; padding: 2px 8px; margin-right: 6px; }
-  footer { margin-top: 40px; border-top: 1px solid #ddd; padding-top: 18px; font-size: 13px; color: var(--gray); }
-  footer ul { margin: 8px 0 14px 20px; }
+  .kicker { color: var(--accent); font-size: 13px; letter-spacing: 3px; font-weight: 600; }
+  h1 { font-size: 34px; font-weight: 800; letter-spacing: 1px; margin: 6px 0 8px; }
+  .meta { color: var(--gray); font-size: 13px; }
+  .meta b { color: var(--ink); }
+  section { margin-bottom: 34px; }
+  h2 { font-size: 19px; font-weight: 700; border-left: 4px solid var(--accent); padding-left: 10px; margin-bottom: 14px; }
+  .overview { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 20px 24px; font-size: 15px; }
+  .overview p + p { margin-top: 10px; }
+  .hl-card { background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: 8px; padding: 24px 26px; }
+  .hl-badge { display: inline-block; background: var(--accent); color: #fff; font-size: 12px; padding: 2px 10px; border-radius: 3px; margin-bottom: 10px; letter-spacing: 1px; }
+  .hl-card h3 { font-size: 24px; margin-bottom: 4px; }
+  .hl-sub { color: var(--gray); font-size: 14px; margin-bottom: 16px; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(125px, 1fr)); gap: 10px; margin: 16px 0 20px; }
+  .stat { background: #faf8f4; border: 1px solid var(--line); border-radius: 6px; padding: 12px 10px; text-align: center; }
+  .stat .num { color: var(--accent); font-size: 20px; font-weight: 800; }
+  .stat .lbl { color: var(--gray); font-size: 12px; margin-top: 2px; }
+  .hl-card h4 { font-size: 15px; color: var(--accent); margin: 16px 0 6px; }
+  .hl-card p { font-size: 14.5px; }
+  ol.deals { list-style: none; counter-reset: deal; }
+  .deal { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 18px 22px 16px 58px; margin-bottom: 12px; position: relative; counter-increment: deal; }
+  .deal::before { content: counter(deal); position: absolute; left: 18px; top: 18px; width: 26px; height: 26px; background: var(--ink); color: #fff; border-radius: 50%; font-size: 14px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+  .deal:first-child::before { background: var(--accent); }
+  .deal-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; }
+  .deal-head b { font-size: 16.5px; }
+  .amt { color: var(--accent); font-weight: 800; font-size: 16px; }
+  .deal p { font-size: 14px; color: #333; margin-top: 4px; }
+  .tags { margin-top: 8px; }
+  .tag { display: inline-block; font-size: 11.5px; color: var(--gray); border: 1px solid var(--line); background: #faf8f4; border-radius: 3px; padding: 1px 8px; margin-right: 6px; }
+  .tag.hot { color: var(--accent); border-color: var(--accent); }
+  footer { border-top: 2px solid var(--ink); padding-top: 16px; font-size: 12.5px; color: var(--gray); }
   footer a { color: var(--accent); text-decoration: none; }
-  .disclaimer { font-size: 12px; color: #999; }
+  footer li { margin-left: 18px; }
+  .disclaimer { margin-top: 12px; font-size: 12px; }
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <header>
+  <div class="kicker">DAILY TECH INVESTMENT BRIEFING</div>
   <h1>每日科技投资动态</h1>
-  <div class="meta">
-    <span class="date">2026年7月15日 · 星期三</span>
-    <span>信息源：TechCrunch · CNBC · Bloomberg · Defense News · TechStartups · FinSMEs</span>
-  </div>
+  <div class="meta"><b>2026年7月16日 · 星期四</b> ｜ 覆盖过去24–48小时 ｜ 信息源：TechCrunch、CNBC、Bloomberg、Axios、Fortune、TechStartups、Crunchbase News 等</div>
 </header>
 
-<div class="section-title">今日概览</div>
-<div class="card overview">
-  <p>过去24–48小时，全球风险投资继续向<strong>国防科技、AI基础设施与前沿计算</strong>高度集中。欧洲诞生史上最大国防科技融资——慕尼黑Helsing完成18亿美元E轮，估值180亿美元；德国无人机公司Quantum Systems获Blackstone与空客领投12亿美元。两笔巨额交易合计占当日融资总额约七成。</p>
-  <p>AI垂直应用同样火热：AI制药公司Chai Discovery获Index、KP、红杉加持的4亿美元C轮；阿里巴巴领投AI视频生成公司PixVerse 4.39亿美元；Khosla Ventures联合领投量子计算公司Oratomic 3亿美元超大A轮。整体信号明确：资本正流向具有国家战略意义与深科技壁垒的公司，而非消费级应用。</p>
-</div>
-
-<div class="section-title">今日最值得关注</div>
-<div class="card highlight-card">
-  <span class="highlight-badge">头条交易</span>
-  <h3>Helsing：18亿美元E轮，欧洲国防科技史上最大融资</h3>
-  <div class="sub">慕尼黑 · AI国防 · Dragoneer/Lightspeed/General Catalyst/高盛/摩根大通等参投</div>
-  <div class="stats">
-    <div class="stat"><div class="num">$18亿</div><div class="label">本轮融资（E轮）</div></div>
-    <div class="stat"><div class="num">$180亿</div><div class="label">投后估值</div></div>
-    <div class="stat"><div class="num">~$35亿</div><div class="label">累计融资</div></div>
-    <div class="stat"><div class="num">€2.69亿</div><div class="label">德军HX-2首批订单</div></div>
+<section>
+  <h2>今日概览</h2>
+  <div class="overview">
+    <p>过去48小时全球科技创投延续"AI + 硬科技"主线：<b>Neko Health 以 7 亿美元 Series C（估值近 70 亿美元）领衔</b>，预防医疗赛道迎来标志性大额融资；丰田系人形机器人公司 <b>Walden Robotics 携约 3 亿美元种子轮出隐身</b>（NVIDIA、波音、三星、CoreWeave 参投），机器人与制造自动化持续吸金；防务方向上，洛克希德·马丁宣布面向英国和欧洲追加至少 1 亿美元 CVC 投资。</p>
+    <p>宏观层面，据 Crunchbase 数据，2026 上半年全球创投总额达创纪录的 <b>5100 亿美元</b>，已超过 2025 全年的 4400 亿美元；其中 OpenAI 与 Anthropic 两家合计吸走 2170 亿美元（约 43%），二季度超过 70% 的资金流向 AI 公司，资本集中度进一步加剧。</p>
   </div>
-  <h4>公司业务</h4>
-  <p>Helsing成立于2021年，是欧洲对标Anduril的AI国防公司。核心产品包括HX-2打击无人机（航程100公里、时速250公里、载弹5公斤）、Altra AI战场指挥软件，并规划CA-1自主战斗机。客户覆盖德国、英国、法国等北约成员国，目前每月向乌克兰交付数百架HX-2，并已在美国西弗吉尼亚开设首座美国工厂。</p>
-  <h4>历史融资</h4>
-  <p>2021年A轮1.025亿欧元，由Spotify创始人Daniel Ek的Prima Materia领投（持股约10%，Ek任董事长）；2023年B轮由General Catalyst领投；2024年7月C轮4.5亿欧元，估值约50亿欧元；2025年6月D轮6亿欧元，Prima Materia再度领投，估值120亿欧元。本轮后累计融资约35亿美元，一年内估值提升逾50%。新进投资方包括高盛另类资产、摩根大通、加拿大养老金CPP、Iconiq、Dragoneer等，公司仍保持欧洲资本主导。</p>
-  <h4>业务进展</h4>
-  <p>2026年2月获德国国防军2.69亿欧元HX-2巡飞弹订单（框架合同上限14.6亿欧元）；本月另获2.23亿欧元实验性作战软件合同。公司称保持三位数增长，早期收入主要来自AI传感器融合与态势感知软件授权。本轮资金将用于扩大无人机产能与AI平台研发。</p>
-</div>
+</section>
 
-<div class="section-title">今日交易列表（按重要性排序）</div>
+<section>
+  <h2>今日最值得关注</h2>
+  <div class="hl-card">
+    <span class="hl-badge">TOP PICK</span>
+    <h3>Neko Health：7亿美元 Series C，估值一年半翻四倍</h3>
+    <div class="hl-sub">Lightspeed 与 O.G. Venture Partners 共同领投 ｜ Atomico、General Catalyst、Lakestar 跟投 ｜ 扎克伯格夫妇、Ari Emanuel、will.i.am 等个人投资者参与（7月15日）</div>
+    <div class="stats">
+      <div class="stat"><div class="num">$7亿</div><div class="lbl">本轮融资额</div></div>
+      <div class="stat"><div class="num">≈$70亿</div><div class="lbl">投后估值</div></div>
+      <div class="stat"><div class="num">≈$10.3亿</div><div class="lbl">累计融资</div></div>
+      <div class="stat"><div class="num">$2190万</div><div class="lbl">年收入（2025，Latka数据）</div></div>
+      <div class="stat"><div class="num">10万+</div><div class="lbl">已完成扫描人次</div></div>
+      <div class="stat"><div class="num">35万+</div><div class="lbl">等候/注册名单</div></div>
+    </div>
+    <h4>公司业务</h4>
+    <p>Neko Health 由 Spotify 创始人 Daniel Ek 与 Hjalmar Nilsonne 于 2018 年在瑞典创立，主打"全身预防性健康扫描"：60 分钟无创、无辐射检查，采集数百万个健康数据点（皮肤、心血管、血液等），由医生现场解读，定价约 299 英镑/次（瑞典 2750 克朗）。目前在斯德哥尔摩、伦敦、曼彻斯特运营诊所。</p>
+    <h4>历史融资</h4>
+    <p>2023年7月 Series A 融资 6540 万美元（Lakestar、Atomico、General Catalyst 及 Ek 的 Prima Materia）；2025年1月 Series B 融资 2.6 亿美元（Lightspeed 领投），估值 17–18 亿美元；本轮 7 亿美元后累计融资约 10.3 亿美元，估值较 Series B 增长约四倍。</p>
+    <h4>业务进展与本轮用途</h4>
+    <p>已有超 10 万人完成扫描、超 35 万人排队或注册，需求明显供不应求；第三方数据估算其 2025 年收入约 2190 万美元（公司仍处于重投入扩张期，尚未盈利）。本轮资金将主要用于进军美国市场——首批诊所年内落地纽约等城市——并继续投入传感器与 AI 诊断研发。</p>
+  </div>
+</section>
 
-<div class="card news-item"><div class="rank">01</div><div>
-  <h3>Helsing — <span class="amount">$1.8B</span> E轮 · 估值$18B</h3>
-  <p>欧洲最大国防科技融资（详见上方深度解读）。Dragoneer、Lightspeed、General Catalyst、高盛、摩根大通、CPP等参投。</p>
-  <div class="tags"><span>国防AI</span><span>无人机</span><span>德国</span></div>
-</div></div>
-
-<div class="card news-item"><div class="rank">02</div><div>
-  <h3>Quantum Systems — <span class="amount">$1.2B</span> D轮 · 估值约$8B</h3>
-  <p>德国自主无人机公司，Blackstone与空客联合领投（Noteus、Advent参投），从单一无人机转向陆海空"系统家族"，宣称已盈利且保持三位数增长。</p>
-  <div class="tags"><span>国防</span><span>自主系统</span><span>德国</span></div>
-</div></div>
-
-<div class="card news-item"><div class="rank">03</div><div>
-  <h3>PixVerse — <span class="amount">$4.39亿</span> C轮扩展 · 估值超$20亿</h3>
-  <p>新加坡AI视频生成公司，阿里巴巴领投，CDH、Mirae Asset等跟投。注册用户1.5亿、月活1500万，资金用于全球算力扩张与"世界模型"研发，进军互动娱乐。</p>
-  <div class="tags"><span>AI视频</span><span>阿里巴巴</span><span>消费AI</span></div>
-</div></div>
-
-<div class="card news-item"><div class="rank">04</div><div>
-  <h3>Chai Discovery — <span class="amount">$4亿</span> C轮 · 估值$38亿</h3>
-  <p>旧金山AI药物设计公司，Index Ventures、Kleiner Perkins、红杉、Dimension领投。已与礼来、辉瑞、诺华达成合作，一年内完成第三轮融资。</p>
-  <div class="tags"><span>AI制药</span><span>红杉</span><span>生物科技</span></div>
-</div></div>
-
-<div class="card news-item"><div class="rank">05</div><div>
-  <h3>Oratomic — <span class="amount">$3亿</span> A轮 · 估值约$68亿</h3>
-  <p>伦敦容错量子计算公司，ARCH、Spark、Khosla Ventures联合领投，贝索斯Bezos Expeditions、General Catalyst、Bain等参投。中性原子路线，称1–2万量子比特即可实现纠错。</p>
-  <div class="tags"><span>量子计算</span><span>Khosla</span><span>前沿科技</span></div>
-</div></div>
-
-<div class="card news-item"><div class="rank">06</div><div>
-  <h3>TerraFirma — <span class="amount">$1.15亿</span> A轮</h3>
-  <p>奥斯汀建筑机器人公司，由前SpaceX工程师创办，Kleiner Perkins领投1亿美元（Bain Capital Ventures等跟投）。自主机器人"施工队"可砌砖、浇筑、安装构件。</p>
-  <div class="tags"><span>机器人</span><span>建筑科技</span><span>Kleiner Perkins</span></div>
-</div></div>
-
-<div class="card news-item"><div class="rank">07</div><div>
-  <h3>Senra Systems — <span class="amount">$6500万</span> B轮</h3>
-  <p>加州赛普拉斯软件驱动制造公司，聚焦线束等关键部件的自动化生产，服务航空航天与国防客户。</p>
-  <div class="tags"><span>智能制造</span><span>国防供应链</span></div>
-</div></div>
-
-<div class="card news-item"><div class="rank">08</div><div>
-  <h3>Oak — <span class="amount">$6000万</span></h3>
-  <p>特拉维夫"AI原生身份操作系统"公司，为企业在AI代理时代管理人类与机器身份权限，7月15日官宣。</p>
-  <div class="tags"><span>身份安全</span><span>AI安全</span><span>以色列</span></div>
-</div></div>
-
-<div class="card news-item"><div class="rank">09</div><div>
-  <h3>Valarian — <span class="amount">$5000万</span> A轮</h3>
-  <p>伦敦AI主权云公司，NEA领投（其在欧洲首笔军民两用投资）。为政府AI工作负载构建"密封"本地化环境，规避美国《云法案》管辖，累计融资7000万美元。</p>
-  <div class="tags"><span>主权AI</span><span>数据安全</span><span>NEA</span></div>
-</div></div>
-
-<div class="card news-item"><div class="rank">10</div><div>
-  <h3>Velocity — <span class="amount">$3800万</span> A轮</h3>
-  <p>波士顿稳定币B2B支付网络，Dragonfly与FirstMark联合领投，Coinbase Ventures、Capital One、Ripple等参投。支持以太坊、Solana等多链企业资金即时划转。</p>
-  <div class="tags"><span>稳定币</span><span>金融科技</span><span>Coinbase Ventures</span></div>
-</div></div>
+<section>
+  <h2>交易列表（按重要性排序）</h2>
+  <ol class="deals">
+    <li class="deal">
+      <div class="deal-head"><b>Neko Health</b><span class="amt">$7亿 Series C</span><span style="color:var(--gray);font-size:13px">估值≈$70亿 · 7月15日</span></div>
+      <p>Daniel Ek 的全身健康扫描公司，Lightspeed 与 O.G. Venture Partners 领投，资金用于美国扩张（详见上方重点卡片）。</p>
+      <div class="tags"><span class="tag hot">医疗健康</span><span class="tag">Lightspeed</span><span class="tag">消费医疗</span></div>
+    </li>
+    <li class="deal">
+      <div class="deal-head"><b>Walden Robotics</b><span class="amt">≈$3亿 种子轮</span><span style="color:var(--gray);font-size:13px">估值$11亿 · 7月15日</span></div>
+      <p>丰田研究院（TRI）分拆的人形机器人公司出隐身，丰田与 Deviation Capital 共同领投，NVIDIA、波音、三星 Ventures、CoreWeave Ventures 参投；轮式人形机器人已在丰田北美工厂按 8 小时班次上岗，主攻工业场景装卸、清洁与配料。</p>
+      <div class="tags"><span class="tag hot">机器人</span><span class="tag">NVIDIA CVC</span><span class="tag">丰田</span><span class="tag">史上最大种子轮之一</span></div>
+    </li>
+    <li class="deal">
+      <div class="deal-head"><b>Helsing</b><span class="amt">$18亿 Series E</span><span style="color:var(--gray);font-size:13px">估值$180亿 · 7月13日</span></div>
+      <p>欧洲最大防务科技融资纪录：德国 AI 防务公司获 Goldman Sachs Growth Equity、JPMorganChase、Lightspeed、General Catalyst、CPP 等投资，估值达 180 亿美元，产品含 HX-2 攻击无人机与 Altra 战场 AI 系统，认购需求远超额度。</p>
+      <div class="tags"><span class="tag hot">防务AI</span><span class="tag">欧洲纪录</span><span class="tag">General Catalyst</span></div>
+    </li>
+    <li class="deal">
+      <div class="deal-head"><b>PixVerse</b><span class="amt">$4.39亿 Series C（含扩展）</span><span style="color:var(--gray);font-size:13px">估值$20亿+ · 7月13日</span></div>
+      <p>新加坡 AI 视频生成公司完成 Series C 扩展，阿里巴巴、Mirae Asset 等新股东加入；注册用户超 1.5 亿、月活超 1500 万，将从视频生成扩展至实时世界模型与互动娱乐/游戏引擎。</p>
+      <div class="tags"><span class="tag hot">AI视频</span><span class="tag">阿里巴巴 CVC</span><span class="tag">世界模型</span></div>
+    </li>
+    <li class="deal">
+      <div class="deal-head"><b>TerraFirma</b><span class="amt">$1.15亿（含$1亿 Series A）</span><span style="color:var(--gray);font-size:13px">7月14日</span></div>
+      <p>SpaceX 前工程师创立的半自主工程机械公司，Kleiner Perkins 领投 Series A，Bain Capital Ventures 等参投；用远程/半自主方式操作重型设备，已承接德州多个基建项目，长期目标是月球与火星基础设施建设。</p>
+      <div class="tags"><span class="tag hot">建筑科技</span><span class="tag">Kleiner Perkins</span><span class="tag">太空</span></div>
+    </li>
+    <li class="deal">
+      <div class="deal-head"><b>洛克希德·马丁 Ventures</b><span class="amt">$1亿+ 投向英国/欧洲</span><span style="color:var(--gray);font-size:13px">7月16日</span></div>
+      <p>洛马宣布在伦敦设立 CVC 办公室，承诺向英国及欧洲防务科技初创投资至少 1 亿美元；此前 4 月已将整体投资池从 4 亿美元扩至 10 亿美元，欧洲防务创投热度持续升温。</p>
+      <div class="tags"><span class="tag hot">CVC动态</span><span class="tag">防务</span><span class="tag">欧洲</span></div>
+    </li>
+    <li class="deal">
+      <div class="deal-head"><b>Senra Systems</b><span class="amt">$6500万 Series B</span><span style="color:var(--gray);font-size:13px">7月15日</span></div>
+      <p>SpaceX 老兵创立的航空航天/防务线束（wire harness）智能制造公司，Lowercarbon 与 Interlagos 领投，红杉、a16z、Founders Fund、General Catalyst 跟投；累计融资超 1.12 亿美元，计划建第三座工厂、月产能从 1000 套提至 1 万套。</p>
+      <div class="tags"><span class="tag hot">先进制造</span><span class="tag">红杉/a16z/Founders Fund</span><span class="tag">国防工业链</span></div>
+    </li>
+    <li class="deal">
+      <div class="deal-head"><b>Oak</b><span class="amt">$6000万 种子轮</span><span style="color:var(--gray);font-size:13px">7月15日</span></div>
+      <p>以色列网络安全连续创业者 Shai Morag（Ermetic 被 Tenable 收购）新公司出隐身，Accel、Greylock、CRV 共同领投；打造 AI 原生"身份操作系统"，统一治理人类、机器与 AI Agent 身份，产品已在企业客户中商用。</p>
+      <div class="tags"><span class="tag hot">网络安全</span><span class="tag">Accel/Greylock</span><span class="tag">AI Agent身份</span></div>
+    </li>
+    <li class="deal">
+      <div class="deal-head"><b>Probook</b><span class="amt">$4000万（含$3400万 Series A）</span><span style="color:var(--gray);font-size:13px">本周</span></div>
+      <p>由蓝领技工出身的创始人打造的家庭服务（HVAC/水电）AI 调度操作系统，Series A 由 a16z 与红杉共同领投，红杉此前领投其 600 万美元种子轮——两大顶级基金罕见联手押注传统行业 AI 化。</p>
+      <div class="tags"><span class="tag hot">垂直AI</span><span class="tag">a16z + 红杉</span><span class="tag">家庭服务</span></div>
+    </li>
+    <li class="deal">
+      <div class="deal-head"><b>Monumental</b><span class="amt">$3200万 Series B</span><span style="color:var(--gray);font-size:13px">7月15日</span></div>
+      <p>阿姆斯特丹砌砖机器人公司，Khosla Ventures 领投，Plural、Hummingbird 跟投；创始团队前公司 Silk 曾被 Palantir 收购，现运营 150+ 台机器人、参建 100 多套住宅，资金用于进军美国德州/佛州等劳动力短缺市场。</p>
+      <div class="tags"><span class="tag hot">建筑机器人</span><span class="tag">Khosla Ventures</span><span class="tag">欧洲</span></div>
+    </li>
+  </ol>
+</section>
 
 <footer>
-  <strong>信息来源</strong>
+  <b>信息来源（当日检索）：</b>
   <ul>
-    <li><a href="https://techstartups.com/2026/07/14/venture-capital-startup-funding-roundup-july-14-2026-blackstone-general-catalyst-index-ventures-kleiner-perkins-lightspeed-sequoia/">TechStartups：Venture Capital & Startup Funding Roundup, July 14, 2026</a></li>
-    <li><a href="https://www.cnbc.com/2026/07/13/helsing-fund-raise-defense-18-billion.html">CNBC：Europe's Anduril rival Helsing raises $1.8 billion at $18 billion valuation</a></li>
-    <li><a href="https://www.defensenews.com/global/europe/2026/07/13/helsing-raises-18-billion-in-europes-biggest-defense-startup-round/">Defense News：Helsing raises $1.8 billion in Europe's biggest defense-startup round</a></li>
-    <li><a href="https://www.bloomberg.com/news/articles/2026-07-13/drone-startup-helsing-raises-at-18-billion-with-goldman-backing">Bloomberg：Goldman Backs Drone Startup Helsing at $18 Billion Valuation</a></li>
-    <li><a href="https://helsing.ai/newsroom/helsing-raises-1-8bn-in-series-e">Helsing 官方新闻稿：Series E</a></li>
-    <li><a href="https://www.cnbc.com/2025/06/17/spotifys-daniel-ek-leads-investment-in-defense-startup-helsing.html">CNBC：Spotify's Daniel Ek leads investment in Helsing（历史融资）</a></li>
-    <li><a href="https://sifted.eu/articles/helsing-fundraise-600m-daniel-ek">Sifted：Helsing raises €600m Series D</a></li>
-    <li><a href="https://www.finsmes.com/">FinSMEs：7月15日融资快讯（Oak、Senra Systems、Velocity等）</a></li>
+    <li><a href="https://techcrunch.com/2026/07/15/daniel-eks-body-scanning-startup-neko-health-raises-another-700m/">TechCrunch：Neko Health 融资 7 亿美元</a> ｜ <a href="https://www.nekohealth.com/gb/en/press/neko-health-raises-usd700m-series-c-ahead-of-us-launch">Neko 官方公告</a> ｜ <a href="https://techcrunch.com/2025/01/22/neko-the-body-scanning-startup-co-founded-by-spotifys-daniel-ek-snaps-up-260m-at-a-1-8b-valuation/">TechCrunch：Neko Series B（2025）</a> ｜ <a href="https://getlatka.com/companies/nekohealth.com">Latka：Neko 收入估算</a></li>
+    <li><a href="https://www.bloomberg.com/news/articles/2026-07-15/toyota-backed-robotics-startup-walden-launches-with-1-1-billion-valuation">Bloomberg：Walden Robotics</a> ｜ <a href="https://techstartups.com/2026/07/15/walden-robotics-emerges-from-stealth-with-300m-in-funding-at-1-1b-valuation-deploys-general-purpose-ai-robots-at-toyota-factory/">TechStartups：Walden 出隐身</a></li>
+    <li><a href="https://www.cnbc.com/2026/07/13/helsing-fund-raise-defense-18-billion.html">CNBC：Helsing Series E</a> ｜ <a href="https://www.cnbc.com/2026/07/14/terrafirma-construction-tech-spacex.html">CNBC：TerraFirma</a> ｜ <a href="https://www.prnewswire.com/news-releases/lockheed-martin-earmarks-100-million-for-venture-capital-investments-in-uk-europe-302827004.html">PR Newswire：洛克希德·马丁 Ventures</a></li>
+    <li><a href="https://www.businesswire.com/news/home/20260713137347/en/PixVerse-Closes-Series-C-Extension-Bringing-Total-to-USD-439-Million-and-Announces-Expansion-Into-Interactive-Entertainment">BusinessWire：PixVerse</a> ｜ <a href="https://www.axios.com/2026/07/15/senra-systems-seriesb-wire-harness">Axios：Senra Systems</a> ｜ <a href="https://techcrunch.com/2026/07/15/backed-by-60m-in-funding-oak-steps-out-of-stealth-to-fix-the-identity-mess-that-ai-agents-are-making-worse/">TechCrunch：Oak</a></li>
+    <li><a href="https://fortune.com/2026/07/15/construction-robotics-startup-monumental-raises-32-million-from-khosla-ventures-to-tackle-labor-shortages/">Fortune：Monumental</a> ｜ <a href="https://techfundingnews.com/built-by-a-tradesman-backed-by-a16z-and-sequoia-probook-raises-40m-to-reinvent-dispatch-for-americas-home-service-businesses/">TFN：Probook</a> ｜ <a href="https://news.crunchbase.com/venture/global-startup-exits-ipo-ma-soar-ai-q2-h1-2026/">Crunchbase News：2026 上半年数据</a> ｜ <a href="https://techstartups.com/2026/07/14/venture-capital-startup-funding-roundup-july-14-2026-blackstone-general-catalyst-index-ventures-kleiner-perkins-lightspeed-sequoia/">TechStartups：7月14日汇总</a></li>
   </ul>
-  <p class="disclaimer">免责声明：本页面内容基于公开新闻报道整理，仅供参考，不构成任何投资建议。融资金额与估值以公司官方披露为准。生成时间：2026年7月15日。</p>
+  <p class="disclaimer">免责声明：本页面内容由 AI 根据当日公开报道自动汇总生成，仅供参考，不构成任何投资建议。金额、估值等数据以官方公告为准。生成时间：2026年7月16日。</p>
 </footer>
 
 </div>
