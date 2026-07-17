@@ -3,156 +3,149 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日科技投资动态 · 2026年7月16日</title>
+<title>每日科技投资动态 · 2026年7月18日</title>
 <style>
-  :root { --accent: #c8401a; --ink: #1a1a1a; --gray: #666; --bg: #f5f3ef; }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif; background: var(--bg); color: var(--ink); line-height: 1.7; }
-  .wrap { max-width: 860px; margin: 0 auto; padding: 32px 20px 60px; }
-  header { border-bottom: 3px solid var(--ink); padding-bottom: 18px; margin-bottom: 24px; }
-  header h1 { font-size: 30px; letter-spacing: 2px; }
-  header .date { color: var(--accent); font-weight: 700; margin-top: 6px; font-size: 15px; }
-  header .src { color: var(--gray); font-size: 13px; margin-top: 4px; }
-  .card { background: #fff; border-radius: 10px; padding: 22px 24px; margin-bottom: 18px; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
-  h2.sec { font-size: 18px; margin: 28px 0 14px; padding-left: 10px; border-left: 4px solid var(--accent); }
-  .overview p { margin-bottom: 10px; font-size: 15px; }
-  .hl { border: 2px solid var(--accent); position: relative; }
-  .hl-badge { position: absolute; top: -13px; left: 20px; background: var(--accent); color: #fff; font-size: 13px; font-weight: 700; padding: 2px 14px; border-radius: 12px; }
-  .hl h3 { font-size: 22px; margin: 8px 0 4px; }
-  .hl .sub { color: var(--gray); font-size: 14px; margin-bottom: 14px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin: 14px 0; }
-  .stat { background: #faf6f3; border-radius: 8px; padding: 10px 12px; text-align: center; }
-  .stat .num { color: var(--accent); font-size: 20px; font-weight: 800; }
-  .stat .lbl { color: var(--gray); font-size: 12px; }
-  .hl h4 { font-size: 15px; color: var(--accent); margin: 14px 0 4px; }
-  .hl p, .hl li { font-size: 14.5px; }
-  .hl ul { padding-left: 20px; }
-  .item { display: flex; gap: 14px; }
-  .rank { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--ink); color: #fff; font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; margin-top: 3px; }
-  .item h3 { font-size: 16.5px; }
-  .amt { color: var(--accent); font-weight: 800; }
-  .item p { font-size: 14px; color: #333; margin-top: 4px; }
-  .tags { margin-top: 8px; }
-  .tag { display: inline-block; background: #f3e9e4; color: var(--accent); font-size: 12px; padding: 1px 10px; border-radius: 10px; margin-right: 6px; margin-top: 4px; }
-  footer { margin-top: 36px; border-top: 1px solid #ddd; padding-top: 18px; font-size: 13px; color: var(--gray); }
-  footer a { color: var(--accent); text-decoration: none; word-break: break-all; }
-  footer ul { padding-left: 18px; margin: 8px 0; }
-  .disc { margin-top: 12px; font-size: 12px; }
+  :root { --accent:#c8401a; --ink:#1a1a1a; --gray:#666; --bg:#f5f3ef; --card:#fff; --line:#e3ddd4; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif; background:var(--bg); color:var(--ink); line-height:1.75; }
+  .wrap { max-width:860px; margin:0 auto; padding:0 20px 60px; }
+  header { border-bottom:3px solid var(--ink); padding:36px 0 18px; margin-bottom:8px; }
+  header h1 { font-size:34px; letter-spacing:2px; font-weight:800; }
+  header h1 span { color:var(--accent); }
+  .meta { display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; font-size:13px; color:var(--gray); margin-top:10px; border-top:1px solid var(--line); padding-top:10px; }
+  .section-title { font-size:15px; font-weight:700; color:var(--accent); letter-spacing:3px; margin:34px 0 14px; display:flex; align-items:center; gap:10px; }
+  .section-title::after { content:""; flex:1; height:1px; background:var(--line); }
+  .overview { background:var(--card); border:1px solid var(--line); border-left:4px solid var(--accent); padding:20px 24px; font-size:15px; border-radius:6px; }
+  .hl-card { background:var(--card); border:1px solid var(--line); border-radius:8px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,.05); }
+  .hl-head { background:var(--accent); color:#fff; padding:16px 24px; }
+  .hl-head .tag { font-size:12px; letter-spacing:2px; opacity:.9; }
+  .hl-head h2 { font-size:22px; margin-top:4px; font-weight:800; }
+  .hl-body { padding:22px 24px; font-size:15px; }
+  .hl-body h3 { font-size:15px; color:var(--accent); margin:18px 0 6px; }
+  .hl-body p { margin-bottom:8px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin:16px 0 4px; }
+  .stat { background:#faf7f2; border:1px solid var(--line); border-radius:6px; padding:12px 14px; text-align:center; }
+  .stat b { display:block; font-size:20px; color:var(--accent); }
+  .stat span { font-size:12px; color:var(--gray); }
+  ol.deals { list-style:none; counter-reset:n; }
+  ol.deals li { background:var(--card); border:1px solid var(--line); border-radius:6px; padding:16px 20px 16px 58px; margin-bottom:12px; position:relative; font-size:14.5px; }
+  ol.deals li::before { counter-increment:n; content:counter(n); position:absolute; left:18px; top:16px; width:26px; height:26px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center; }
+  ol.deals li:first-child::before { background:var(--accent); }
+  .deal-title { font-weight:700; font-size:16px; }
+  .amt { color:var(--accent); font-weight:800; }
+  .tags { margin-top:6px; }
+  .tags span { display:inline-block; font-size:11.5px; background:#f0e9df; color:#7a5b3a; border-radius:3px; padding:1px 8px; margin-right:6px; }
+  footer { margin-top:44px; border-top:2px solid var(--ink); padding-top:16px; font-size:12.5px; color:var(--gray); }
+  footer a { color:var(--accent); text-decoration:none; }
+  footer ul { list-style:none; margin:8px 0 14px; }
+  footer li { margin-bottom:4px; }
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <header>
-  <h1>每日科技投资动态</h1>
-  <div class="date">2026年7月16日 · 星期四</div>
-  <div class="src">信息来源：TechCrunch · Bloomberg · TechStartups · Business Wire · PR Newswire · Crunchbase News</div>
+  <h1>每日<span>科技投资</span>动态</h1>
+  <div class="meta">
+    <span>2026年7月18日 · 星期六</span>
+    <span>信息源：TechStartups · CNBC · Reuters · Crunchbase News · SiliconANGLE</span>
+  </div>
 </header>
 
-<div class="card overview">
-  <h2 style="font-size:17px;margin-bottom:10px;">今日概览</h2>
-  <p>过去48小时（7月14–15日）全球科技创投延续「高度集中」态势：仅7月15日单日披露融资即超10亿美元，最大四笔交易占比逾八成。资金明显流向三条主线——<strong>预防医疗与AI医疗</strong>（Neko Health 7亿美元、Chai Discovery 4亿美元）、<strong>AI基础设施与应用</strong>（Spectro Cloud、Emergent、AIsphere）、以及<strong>工业与实体自动化</strong>（Senra、Monumental）。</p>
-  <p>投资方阵容豪华：红杉、a16z、Founders Fund 同时现身 Senra 的B轮；Khosla Ventures 一天内出手 Emergent 与 Monumental 两笔；高盛另类资产增长股权领投 Spectro Cloud；阿里巴巴领投AI视频公司 AIsphere。宏观层面，Crunchbase 数据显示2026上半年全球创投总额达创纪录的5100亿美元，AI占比超七成。</p>
+<div class="section-title">今日概览</div>
+<div class="overview">
+  <p>过去24–48小时，全球风险投资继续向"能落地的AI"高度集中。<b>Fireworks 以 15.05 亿美元 Series D、175 亿美元估值</b>成为绝对头条；Wonder 获 6.5 亿美元加码食品科技自动化；旅行平台 Fora 晋升独角兽。早期市场同样激进——德国机器人数据公司 microagi 拿下 5500 万美元（号称德国史上最大种子轮），红杉与 8VC 联投的 AI 员工公司 Sable 成立不到一年即获 4500 万美元。据 Crunchbase 统计，2026 上半年全球创投总额达创纪录的 5100 亿美元，其中二季度超 70% 资金流向 AI 公司。资本的主线清晰：从"模型"转向"操作层"——AI 基础设施、部署、治理与物理世界数据。</p>
 </div>
 
-<h2 class="sec">今日最值得关注</h2>
-<div class="card hl">
-  <span class="hl-badge">重点关注</span>
-  <h3>Neko Health：7亿美元C轮，估值逼近70亿美元</h3>
-  <div class="sub">Spotify 创始人 Daniel Ek 联合创立的全身扫描预防医疗公司 · 领投：Lightspeed、O.G. Venture Partners</div>
-  <div class="grid">
-    <div class="stat"><div class="num">$700M</div><div class="lbl">本轮融资（C轮）</div></div>
-    <div class="stat"><div class="num">~$70亿</div><div class="lbl">投后估值（约18个月4倍）</div></div>
-    <div class="stat"><div class="num">~$10.25亿</div><div class="lbl">累计融资</div></div>
-    <div class="stat"><div class="num">$2190万</div><div class="lbl">年收入（2025）</div></div>
-    <div class="stat"><div class="num">10万+</div><div class="lbl">全球候补名单</div></div>
+<div class="section-title">今日最值得关注</div>
+<div class="hl-card">
+  <div class="hl-head">
+    <div class="tag">FOCUS · AI 基础设施</div>
+    <h2>Fireworks：15.05亿美元 Series D，估值175亿美元</h2>
   </div>
-  <h4>业务内容</h4>
-  <p>Neko Health 由 Daniel Ek 与 Hjalmar Nilsonne 于瑞典创立，提供自研全身扫描（皮肤、心血管等数十项指标）结合血液检测的付费年度体检，目标是把医疗从「治已病」转向「早发现、早预防」。目前在斯德哥尔摩、伦敦、曼彻斯特运营诊所，本轮资金将用于进军美国，首站纽约。</p>
-  <h4>历史融资</h4>
-  <ul>
-    <li>2023年7月 A轮：6500万美元（约6000万欧元），Lakestar 领投，Atomico、General Catalyst、Prima Materia 参与</li>
-    <li>2025年1月 B轮：2.6亿美元，Lightspeed 领投，估值约17–18亿美元</li>
-    <li>2026年7月 C轮：7亿美元，Lightspeed 与 O.G. Venture Partners 领投；Mark Zuckerberg 夫妇、Tim Ferriss、Maria Sharapova、will.i.am、OpenAI 等参投</li>
-  </ul>
-  <h4>业务进展</h4>
-  <p>开业约两年完成超1万次扫描，候补名单超10万人；2025年收入约2190万美元（尚未盈利，仍处重投入扩张期）。约70亿美元估值对应收入倍数极高，市场对其押注在于扫描技术的数据飞轮与美国高端预防医疗市场的规模想象；名人与战略投资者（含 OpenAI）入场亦显示其品牌与AI诊断潜力获认可。</p>
+  <div class="hl-body">
+    <div class="grid">
+      <div class="stat"><b>$15.05亿</b><span>本轮融资额（Series D）</span></div>
+      <div class="stat"><b>$175亿</b><span>投后估值（9个月涨超4倍）</span></div>
+      <div class="stat"><b>≈$18.3亿</b><span>累计披露融资</span></div>
+      <div class="stat"><b>$10亿+</b><span>年化收入运行率（同比约5倍）</span></div>
+      <div class="stat"><b>40万亿+</b><span>日处理Token（一年前为15万亿）</span></div>
+      <div class="stat"><b>95%</b><span>Token 来自专用定制模型</span></div>
+    </div>
+    <h3>公司业务</h3>
+    <p>Fireworks（美国加州圣马刁）由前 Meta PyTorch 团队负责人 Lin Qiao 于 2022 年创立，7位联合创始人中5位是 PyTorch 核心贡献者。公司为企业提供基于开源模型的"专用智能"基础设施——在客户专有数据上训练、微调并高速推理定制模型，主打比闭源大模型更低的成本与更强的可控性，与 Together AI、Baseten 直接竞争，客户包括大量将AI推向生产环境的企业。</p>
+    <h3>历史融资</h3>
+    <p>种子轮后，2024 年初完成 2500 万美元 Series A；2024 年 7 月完成 5200 万美元 Series B（红杉领投，NVIDIA、AMD、Databricks Ventures、MongoDB Ventures、Benchmark 参投），估值 5.52 亿美元；2025 年 10 月完成 2.5 亿美元 Series C（Lightspeed、Index Ventures、Evantic 领投），估值 40 亿美元；本轮 Series D 由 Atreides Management、Index Ventures、TCV 联合领投，Evantic、Lightspeed、<b>NVIDIA</b> 参投，估值从 40 亿跃升至 175 亿美元，累计披露融资约 18.3 亿美元。</p>
+    <h3>业务进展</h3>
+    <p>年化收入运行率已突破 10 亿美元——2025 年底约 3.05 亿美元、2026 年 5 月达 8 亿美元，一年内增长约5倍；平台日 Token 处理量从 15 万亿增至逾 40 万亿，其中 95% 来自专用模型而非通用现成模型。据 Reuters，新资金将用于扩充工程团队与全球算力。该轮融资印证了市场判断：企业AI支出正转向定制化开源模型栈，AI 基础设施赛道的"收费站"地位正在形成。</p>
+  </div>
 </div>
 
-<h2 class="sec">重要交易列表（按重要性排序）</h2>
-
-<div class="card"><div class="item"><div class="rank">1</div><div>
-  <h3>Neko Health — <span class="amt">$700M</span> C轮</h3>
-  <p>见上方重点解读。Lightspeed、O.G. Venture Partners 领投，估值近70亿美元，进军美国市场。</p>
-  <div class="tags"><span class="tag">预防医疗</span><span class="tag">Lightspeed</span><span class="tag">Daniel Ek</span></div>
-</div></div></div>
-
-<div class="card"><div class="item"><div class="rank">2</div><div>
-  <h3>AIsphere — <span class="amt">$439M</span> C轮</h3>
-  <p>AI视频生成公司，阿里巴巴领投，7月14日完成、15日披露。阿里在AI内容生成赛道再落重子，是本期最大的战略方（CVC）主导交易。</p>
-  <div class="tags"><span class="tag">AI视频</span><span class="tag">阿里巴巴</span><span class="tag">CVC</span></div>
-</div></div></div>
-
-<div class="card"><div class="item"><div class="rank">3</div><div>
-  <h3>Chai Discovery — <span class="amt">$400M</span> C轮，估值约38亿美元</h3>
-  <p>AI蛋白质/抗体药物设计公司，Index、Kleiner Perkins、红杉、Dimension 共同领投，OpenAI、Thrive、Bain Capital Ventures 参投；已与礼来、辉瑞、诺华达成合作。顶级VC+OpenAI同押AI制药。</p>
-  <div class="tags"><span class="tag">AI制药</span><span class="tag">红杉</span><span class="tag">Kleiner Perkins</span><span class="tag">OpenAI</span></div>
-</div></div></div>
-
-<div class="card"><div class="item"><div class="rank">4</div><div>
-  <h3>Emergent — <span class="amt">$130M</span> C轮，估值15亿美元</h3>
-  <p>面向创业者与中小企业的AI编程/软件生成平台，「盒子里的工程团队」。Creaegis 领投，Khosla Ventures、软银愿景基金2期、Lightspeed、YC 参投。年收入运行率已达1.2亿美元、付费客户超20万，累计融资2.3亿美元。</p>
-  <div class="tags"><span class="tag">AI编程</span><span class="tag">Khosla</span><span class="tag">软银</span></div>
-</div></div></div>
-
-<div class="card"><div class="item"><div class="rank">5</div><div>
-  <h3>Spectro Cloud — <span class="amt">$100M+</span> D轮，估值超10亿美元</h3>
-  <p>AI基础设施管理平台（企业/主权云/新型云环境的K8s与GPU控制平面）。高盛另类资产增长股权领投，AMD Ventures、爱立信、LG技术投资参与，累计融资2.6亿美元。芯片与电信巨头CVC集体押注AI infra运维层。</p>
-  <div class="tags"><span class="tag">AI基础设施</span><span class="tag">高盛</span><span class="tag">AMD Ventures</span></div>
-</div></div></div>
-
-<div class="card"><div class="item"><div class="rank">6</div><div>
-  <h3>Senra Systems — <span class="amt">$65M</span> B轮</h3>
-  <p>软件驱动的线束（wire harness）制造商，瞄准航空航天与国防供应链瓶颈。Lowercarbon 与 Interlagos 共同领投，红杉、a16z、Founders Fund、General Catalyst、8VC 参投——制造业公司罕见的顶级豪华阵容，累计融资超1.12亿美元。</p>
-  <div class="tags"><span class="tag">先进制造</span><span class="tag">红杉</span><span class="tag">a16z</span><span class="tag">Founders Fund</span></div>
-</div></div></div>
-
-<div class="card"><div class="item"><div class="rank">7</div><div>
-  <h3>Oak — <span class="amt">$60M</span> 种子轮</h3>
-  <p>特拉维夫/旧金山AI原生身份安全公司，出stealth即获超大种子轮：Accel、Greylock、CRV 三家共同领投。统一管控人类、机器与AI Agent的身份权限，直指Agent时代的新攻击面。</p>
-  <div class="tags"><span class="tag">身份安全</span><span class="tag">Accel</span><span class="tag">Greylock</span></div>
-</div></div></div>
-
-<div class="card"><div class="item"><div class="rank">8</div><div>
-  <h3>Monumental — <span class="amt">$32M</span> B轮</h3>
-  <p>阿姆斯特丹砌砖机器人公司，Khosla Ventures 领投，Plural、Hummingbird 跟投。机器人已参与100多栋住宅及学校、酒店等真实工地作业，累计融资至少5700万美元，将扩张至美国。</p>
-  <div class="tags"><span class="tag">建筑机器人</span><span class="tag">Khosla</span></div>
-</div></div></div>
-
-<div class="card"><div class="item"><div class="rank">9</div><div>
-  <h3>TytoCare — <span class="amt">$25M+</span> 成长轮</h3>
-  <p>远程诊疗设备+FDA认证软件的AI临床平台，Insight Partners 领投，OrbiMed、高通创投等参投，累计融资至少2.3亿美元。远程医疗向高临床可信度方向升级。</p>
-  <div class="tags"><span class="tag">数字医疗</span><span class="tag">Insight Partners</span><span class="tag">高通创投</span></div>
-</div></div></div>
-
-<div class="card"><div class="item"><div class="rank">10</div><div>
-  <h3>Rime — <span class="amt">$24M</span> A轮</h3>
-  <p>面向医疗、金融等受监管场景的企业级语音AI，M13 领投，Twilio Ventures 参投；客户包括梅奥诊所、Dialpad、Upstart。另值得一提：稳定币支付基础设施 Cyclops 获 <span class="amt">$20M</span> A轮（Coinbase Ventures、Circle 参投）。</p>
-  <div class="tags"><span class="tag">语音AI</span><span class="tag">M13</span><span class="tag">Twilio Ventures</span></div>
-</div></div></div>
+<div class="section-title">今日交易榜（按重要性排序）</div>
+<ol class="deals">
+  <li>
+    <div class="deal-title">Fireworks — <span class="amt">$15.05亿</span> Series D，估值$175亿</div>
+    Atreides、Index Ventures、TCV 领投，NVIDIA、Lightspeed 参投。开源模型定制推理基础设施，年化收入超$10亿。详见上方重点卡片。
+    <div class="tags"><span>AI基础设施</span><span>NVIDIA</span><span>Index Ventures</span></div>
+  </li>
+  <li>
+    <div class="deal-title">Wonder — <span class="amt">$6.5亿</span> Series D，投前估值$90亿</div>
+    Accel、GV、NEA 老股东加码，ARK Invest、AllianceBernstein 新进。软件定义的餐饮平台：中央厨房机器人+配送+市场聚合，网点自2025年5月起从46个扩至140个，2021年以来累计融资超$30亿，被视为IPO前的资产负债表准备。
+    <div class="tags"><span>食品科技</span><span>机器人</span><span>GV</span><span>ARK Invest</span></div>
+  </li>
+  <li>
+    <div class="deal-title">Fora — <span class="amt">$6000万</span> Series D，投后估值$10亿</div>
+    Forerunner、Tactile Ventures 领投，Thrive Capital、Insight Partners 跟投。AI 增强的旅行顾问平台晋升独角兽：1.5万名顾问累计预订超$30亿旅行，累计融资$1.385亿。"AI放大人力而非取代"的代表案例。
+    <div class="tags"><span>旅行科技</span><span>新独角兽</span><span>Thrive</span></div>
+  </li>
+  <li>
+    <div class="deal-title">microagi — <span class="amt">$5500万</span> 种子轮（德国史上最大）</div>
+    Hummingbird 领投，Northzone、LocalGlobe、redalpine 参投。慕尼黑机器人部署公司，专注工业机器人的任务数据与运营层；姊妹数据部门 shift 在15国雇佣2万余人用传感器手套采集物理任务数据。"具身智能"数据层的标志性押注。
+    <div class="tags"><span>机器人</span><span>具身智能</span><span>欧洲</span></div>
+  </li>
+  <li>
+    <div class="deal-title">Sable — <span class="amt">$4500万</span>（红杉 + 8VC 领投）</div>
+    成立不到一年，AI员工"Aidan"整合电脑操作、浏览器导航、视觉、语音与共享屏幕，面向客户端演示、引导与支持场景，客户已含 Notion、Decagon 及多家大型上市公司。
+    <div class="tags"><span>AI Agent</span><span>红杉</span><span>8VC</span></div>
+  </li>
+  <li>
+    <div class="deal-title">Xenter — <span class="amt">$5825万</span> Series B</div>
+    犹他州医疗科技公司，无线医疗设备+数据基础设施+临床AI（XenFi 生态、"Physical Intelligence"），资金用于商业化落地、产能与临床注册。医疗硬件+数据层的组合打法。
+    <div class="tags"><span>医疗科技</span><span>数据基础设施</span></div>
+  </li>
+  <li>
+    <div class="deal-title">Whale — <span class="amt">$4000万</span> Series C3（Series C 累计$1亿）</div>
+    招银国际（CMB International）、SMBC 亚洲基金领投，新加坡电信 Innov8、现代汽车集团参投。新加坡企业"AI操作系统"，服务45国1600余家企业、管理60万+边缘AI节点，产业资本云集。
+    <div class="tags"><span>企业AI</span><span>边缘计算</span><span>亚太</span></div>
+  </li>
+  <li>
+    <div class="deal-title">Bunkerhill Health — <span class="amt">$2500万</span> Series B（累计$5500万）</div>
+    Khosla Ventures 领投，红杉、Felicis、Optum Ventures、YC 跟投。Carebricks 平台让医院把内部想法转化为可部署的AI Agent，已落地 Cleveland Clinic、Intermountain Health 等体系。
+    <div class="tags"><span>医疗AI</span><span>Khosla</span><span>红杉</span></div>
+  </li>
+  <li>
+    <div class="deal-title">Beacon Security — <span class="amt">$1300万</span> 种子轮</div>
+    Notable Capital 领投，60余位创始人与CISO跟投。为AI网络安全Agent构建可信上下文数据层，2026上半年 ARR 增长300%。
+    <div class="tags"><span>网络安全</span><span>AI Agent</span></div>
+  </li>
+  <li>
+    <div class="deal-title">Kind Designs — <span class="amt">$1000万</span> Pre-A，估值$7000万</div>
+    Mark Cuban、NY Angels 等投资。迈阿密3D打印"活体海堤"，已锁定$1000万合同收入、$1.75亿活跃管线并获美国海军$200万合同——气候适应基建正成为可投资赛道。
+    <div class="tags"><span>气候科技</span><span>Mark Cuban</span><span>基建</span></div>
+  </li>
+</ol>
 
 <footer>
-  <strong>信息来源</strong>
+  <b>信息来源</b>
   <ul>
-    <li><a href="https://techstartups.com/2026/07/15/venture-capital-startup-funding-roundup-july-15-2026-accel-crv-greylock-goldman-sachs-khosla-ventures-m13-and-nava-ventures/">TechStartups：7月15日创投融资日报</a></li>
-    <li><a href="https://techcrunch.com/2026/07/15/daniel-eks-body-scanning-startup-neko-health-raises-another-700m/">TechCrunch：Neko Health 再融资7亿美元</a></li>
-    <li><a href="https://www.bloomberg.com/news/articles/2026-07-15/daniel-ek-s-neko-health-raises-700-million-from-billionaires-celebs">Bloomberg：Neko Health 获亿万富豪与名人投资</a></li>
-    <li><a href="https://www.nekohealth.com/gb/en/press/neko-health-raises-usd700m-series-c-ahead-of-us-launch">Neko Health 官方新闻稿（C轮）</a> · <a href="https://www.nekohealth.com/se/en/press/neko-health-raises-260m-series-b">B轮新闻稿</a></li>
-    <li><a href="https://www.businesswire.com/news/home/20260715082819/en/Emergent-Raises-Series-C-at-%241.5B-Valuation-to-Help-Entrepreneurs-and-SMBs-Build-the-Software-Their-Businesses-Run-On">Business Wire：Emergent C轮</a> · <a href="https://www.prnewswire.com/news-releases/oak-raises-60m-in-seed-funding-to-build-the-ai-native-identity-operating-system-302826349.html">PR Newswire：Oak 种子轮</a></li>
-    <li><a href="https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups">Crescendo：AI创投交易追踪（AIsphere、Chai Discovery）</a></li>
-    <li><a href="https://news.crunchbase.com/venture/global-startup-exits-ipo-ma-soar-ai-q2-h1-2026/">Crunchbase News：2026上半年全球创投达5100亿美元</a></li>
+    <li><a href="https://techstartups.com/2026/07/16/venture-capital-startup-funding-roundup-july-16-2026-8vc-accel-ark-invest-gv-khosla-ventures-mark-cuban-and-sequoia-capital/">TechStartups · Venture Capital & Startup Funding Roundup, July 16, 2026</a></li>
+    <li><a href="https://www.cnbc.com/2026/07/16/fireworks-nvidia-cloud-ai-startup-value.html">CNBC · Nvidia-backed Fireworks hits $17.5 billion valuation</a></li>
+    <li><a href="https://siliconangle.com/2026/07/16/ai-infrastructure-startup-fireworks-closes-1-5b-round-17-5b-valuation/">SiliconANGLE · Fireworks closes $1.5B round at $17.5B valuation</a></li>
+    <li><a href="https://sacra.com/c/fireworks-ai/">Sacra · Fireworks AI revenue, valuation & funding</a></li>
+    <li><a href="https://news.crunchbase.com/venture/biggest-funding-rounds-ai-energy-biotech-joulent/">Crunchbase News · The Week's 10 Biggest Funding Rounds</a></li>
+    <li><a href="https://techcrunch.com/category/venture/">TechCrunch · Venture</a></li>
   </ul>
-  <p class="disc">免责声明：本页内容基于公开媒体报道整理，仅供参考，不构成任何投资建议。金额与估值以公司官方披露为准。生成时间：2026年7月16日。</p>
+  <p>免责声明：本页内容由公开新闻报道整理生成，仅供参考，不构成任何投资建议。数据以公司官方公告及原始报道为准。生成日期：2026年7月18日。</p>
 </footer>
 
 </div>
