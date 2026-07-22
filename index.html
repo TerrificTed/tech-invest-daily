@@ -1,600 +1,434 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>每日科技投资动态 - 2026年7月21日</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日科技投资动态 | 2026年7月22日</title>
+<style>
+  :root{
+    --accent:#c8401a;
+    --accent-light:#fbeae4;
+    --ink:#1a1a1a;
+    --sub:#5a5a5a;
+    --line:#e4e0da;
+    --bg:#f2efe9;
+    --card:#ffffff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"PingFang SC","Microsoft YaHei","Songti SC",serif,"Helvetica Neue",Arial,sans-serif;
+    line-height:1.6;
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px 60px;}
+  header.masthead{
+    border-bottom:4px solid var(--ink);
+    padding:36px 20px 18px;
+    text-align:center;
+    background:var(--card);
+  }
+  .masthead-inner{max-width:900px;margin:0 auto;}
+  .kicker{
+    letter-spacing:4px;
+    font-size:12px;
+    color:var(--accent);
+    font-weight:700;
+    text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  h1.title{
+    font-size:38px;
+    margin:0 0 12px;
+    font-weight:800;
+    letter-spacing:1px;
+  }
+  .meta-row{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+    font-size:13px;
+    color:var(--sub);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:10px 0;
+    margin-top:10px;
+  }
+  .meta-row span b{color:var(--ink);}
+  section{margin-top:34px;}
+  h2.section-title{
+    font-size:13px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--accent);
+    border-bottom:2px solid var(--ink);
+    padding-bottom:8px;
+    margin-bottom:18px;
+    font-weight:800;
+  }
+  .overview-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    padding:22px 24px;
+    font-size:15px;
+    color:#333;
+  }
+  .overview-card p{margin:0 0 12px;}
+  .overview-card p:last-child{margin-bottom:0;}
+  .overview-tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;}
+  .tag{
+    font-size:12px;
+    padding:4px 10px;
+    border:1px solid var(--accent);
+    color:var(--accent);
+    border-radius:2px;
+    background:var(--accent-light);
+  }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-            background: #f5f5f5;
-            color: #333;
-            line-height: 1.6;
-        }
+  /* Highlight card */
+  .highlight{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-top:5px solid var(--accent);
+    padding:28px;
+  }
+  .highlight-badge{
+    display:inline-block;
+    background:var(--accent);
+    color:#fff;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:2px;
+    padding:4px 12px;
+    margin-bottom:14px;
+  }
+  .highlight h3{
+    font-size:26px;
+    margin:0 0 6px;
+    font-weight:800;
+  }
+  .highlight .sub{
+    color:var(--sub);
+    font-size:14px;
+    margin-bottom:18px;
+  }
+  .stat-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin:20px 0;
+  }
+  .stat-cell{
+    background:#fff;
+    padding:16px 10px;
+    text-align:center;
+  }
+  .stat-cell .num{
+    font-size:20px;
+    font-weight:800;
+    color:var(--accent);
+    display:block;
+    margin-bottom:4px;
+  }
+  .stat-cell .label{
+    font-size:12px;
+    color:var(--sub);
+  }
+  .highlight-body p{margin:0 0 14px;font-size:15px;color:#2a2a2a;}
+  .highlight-body h4{
+    font-size:14px;
+    margin:20px 0 8px;
+    color:var(--ink);
+    border-left:4px solid var(--accent);
+    padding-left:8px;
+  }
+  .highlight-body ul{margin:0;padding-left:20px;font-size:14px;color:#2a2a2a;}
+  .highlight-body li{margin-bottom:6px;}
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+  /* News list */
+  .news-item{
+    background:var(--card);
+    border:1px solid var(--line);
+    padding:18px 22px;
+    margin-bottom:14px;
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+  }
+  .rank{
+    font-size:24px;
+    font-weight:800;
+    color:var(--line);
+    min-width:36px;
+    line-height:1;
+  }
+  .news-content{flex:1;}
+  .news-head{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:baseline;
+    gap:10px;
+    margin-bottom:6px;
+  }
+  .news-title{font-size:17px;font-weight:700;color:var(--ink);}
+  .amount{
+    font-size:14px;
+    font-weight:800;
+    color:#fff;
+    background:var(--accent);
+    padding:2px 9px;
+    border-radius:2px;
+    white-space:nowrap;
+  }
+  .news-desc{font-size:14px;color:#3a3a3a;margin:6px 0 10px;}
+  .news-tags{display:flex;flex-wrap:wrap;gap:6px;}
+  .mini-tag{
+    font-size:11px;
+    color:var(--sub);
+    border:1px solid var(--line);
+    padding:2px 8px;
+    border-radius:2px;
+    background:#faf8f5;
+  }
 
-        header {
-            background: white;
-            padding: 30px;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #c8401a;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        h1 {
-            font-size: 32px;
-            margin-bottom: 10px;
-            color: #333;
-            font-weight: 600;
-        }
-
-        .header-meta {
-            display: flex;
-            gap: 20px;
-            font-size: 14px;
-            color: #666;
-            margin-top: 15px;
-        }
-
-        .header-meta span {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .date-badge {
-            background: #c8401a;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 3px;
-            font-weight: 500;
-        }
-
-        .overview {
-            background: white;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-left: 4px solid #c8401a;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        .overview h2 {
-            font-size: 18px;
-            margin-bottom: 15px;
-            color: #333;
-        }
-
-        .overview p {
-            font-size: 15px;
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 10px;
-        }
-
-        .highlight {
-            background: #fff3cd;
-            padding: 20px;
-            border-radius: 4px;
-            margin-top: 15px;
-            border-left: 3px solid #ffc107;
-        }
-
-        .featured {
-            background: white;
-            padding: 30px;
-            margin-bottom: 20px;
-            border-top: 4px solid #c8401a;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-
-        .featured h2 {
-            font-size: 20px;
-            margin-bottom: 20px;
-            color: #c8401a;
-            text-align: center;
-        }
-
-        .featured-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 20px;
-        }
-
-        .featured-left h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: #333;
-        }
-
-        .featured-left p {
-            font-size: 15px;
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 10px;
-        }
-
-        .metrics {
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 4px;
-            margin-top: 20px;
-        }
-
-        .metric-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
-        .metric-box {
-            background: white;
-            padding: 15px;
-            border-radius: 4px;
-            border-left: 3px solid #c8401a;
-        }
-
-        .metric-label {
-            font-size: 12px;
-            color: #999;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 5px;
-        }
-
-        .metric-value {
-            font-size: 20px;
-            font-weight: 600;
-            color: #c8401a;
-        }
-
-        .deals {
-            background: white;
-            padding: 30px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-
-        .deals h2 {
-            font-size: 20px;
-            margin-bottom: 20px;
-            color: #333;
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: 10px;
-        }
-
-        .deal-item {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        .deal-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .deal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 8px;
-        }
-
-        .deal-title {
-            font-size: 16px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 5px;
-        }
-
-        .deal-amount {
-            background: #c8401a;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 3px;
-            font-size: 14px;
-            font-weight: 600;
-            white-space: nowrap;
-        }
-
-        .deal-description {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 8px;
-        }
-
-        .deal-meta {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            font-size: 12px;
-        }
-
-        .deal-tag {
-            background: #f0f0f0;
-            padding: 2px 8px;
-            border-radius: 3px;
-            color: #666;
-        }
-
-        .deal-date {
-            color: #999;
-        }
-
-        footer {
-            background: white;
-            padding: 30px;
-            margin-top: 20px;
-            border-top: 2px solid #f0f0f0;
-            font-size: 13px;
-            color: #666;
-        }
-
-        footer h3 {
-            font-size: 14px;
-            color: #333;
-            margin-bottom: 15px;
-            margin-top: 20px;
-        }
-
-        footer h3:first-child {
-            margin-top: 0;
-        }
-
-        footer ul {
-            list-style: none;
-            margin-bottom: 20px;
-        }
-
-        footer li {
-            margin-bottom: 8px;
-        }
-
-        footer a {
-            color: #c8401a;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        .disclaimer {
-            background: #f9f9f9;
-            padding: 15px;
-            border-radius: 4px;
-            margin-top: 20px;
-            border-left: 3px solid #999;
-            font-size: 12px;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        @media (max-width: 768px) {
-            .featured-content {
-                grid-template-columns: 1fr;
-            }
-
-            .metric-row {
-                grid-template-columns: 1fr;
-            }
-
-            .deal-header {
-                flex-direction: column;
-            }
-
-            .deal-amount {
-                align-self: flex-start;
-            }
-        }
-    </style>
+  footer{
+    margin-top:44px;
+    border-top:3px solid var(--ink);
+    padding-top:20px;
+    font-size:12.5px;
+    color:var(--sub);
+  }
+  footer h3{font-size:13px;color:var(--ink);margin:0 0 10px;letter-spacing:1px;}
+  footer ul{margin:0 0 16px;padding-left:18px;}
+  footer li{margin-bottom:5px;}
+  footer a{color:var(--accent);text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+  .disclaimer{
+    background:#faf8f5;
+    border:1px solid var(--line);
+    padding:14px 16px;
+    font-size:12px;
+    color:var(--sub);
+  }
+  @media (max-width:640px){
+    h1.title{font-size:26px;}
+    .stat-grid{grid-template-columns:repeat(2,1fr);}
+    .news-item{flex-direction:column;}
+    .rank{min-width:auto;}
+  }
+</style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>📊 每日科技投资动态</h1>
-            <div class="header-meta">
-                <span><span class="date-badge">2026年7月21日</span></span>
-                <span>过去24-48小时全球融资速览</span>
-                <span>数据来源：TechCrunch、Bloomberg、CNBC</span>
-            </div>
-        </header>
 
-        <div class="overview">
-            <h2>📈 今日概览</h2>
-            <p><strong>融资热点：</strong>AI基础设施继续领跑融资榜单，数据管理、视频生成、芯片设计等领域吸引超重量级投资。</p>
-            <p><strong>核心趋势：</strong>Databricks刷新单轮融资记录，估值突破$188B；中国AI视频生成(Kling AI)获得$2.8B国际融资；芯片材料发现与核聚变等深科技赛道崭露头角。</p>
-            <p><strong>投资方动向：</strong>Coatue、Sequoia、Accel、Khosla Ventures等顶级VC活跃度高；Meta、Nvidia、Google等科技巨头CVC持续加大战略投资；Jeff Bezos关注制造业AI。</p>
-            <div class="highlight">
-                <strong>🔥 关键数据：</strong>过去48小时至少4笔超$1B融资（Databricks $3B、Kling AI $2.8B、Helsing $1.8B、Quantum Systems $1.2B），融资总额突破$100亿大关，AI芯片/基础设施领域贡献75%。
-            </div>
-        </div>
-
-        <div class="featured">
-            <h2>⭐ 今日最值得关注</h2>
-            <div class="featured-content">
-                <div class="featured-left">
-                    <h3>Databricks</h3>
-                    <p><strong>核心业务：</strong>AI数据平台领导者，为企业提供统一的数据、AI、BI一体化平台。旗下产品包括Lakehouse平台、Unity AI Gateway、Genie AI助手等。</p>
-                    <p><strong>融资背景：</strong>Coatue Management领投本轮，部分资金用于收购和扩展AI助手平台。</p>
-                </div>
-                <div class="metrics">
-                    <div class="metric-row">
-                        <div class="metric-box">
-                            <div class="metric-label">最新估值</div>
-                            <div class="metric-value">$188B</div>
-                        </div>
-                        <div class="metric-box">
-                            <div class="metric-label">本轮融资</div>
-                            <div class="metric-value">$3B</div>
-                        </div>
-                    </div>
-                    <div class="metric-row">
-                        <div class="metric-box">
-                            <div class="metric-label">年运营收入(ARR)</div>
-                            <div class="metric-value">$4.8B+</div>
-                        </div>
-                        <div class="metric-box">
-                            <div class="metric-label">AI产品收入</div>
-                            <div class="metric-value">$1B+</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div style="background: #f9f9f9; padding: 20px; border-radius: 4px; margin-top: 20px;">
-                <h4 style="color: #333; margin-bottom: 12px;">融资历程与估值增长</h4>
-                <table style="width: 100%; font-size: 13px; border-collapse: collapse;">
-                    <tr style="border-bottom: 1px solid #e0e0e0;">
-                        <td style="padding: 10px; color: #666;"><strong>时间</strong></td>
-                        <td style="padding: 10px; color: #666;"><strong>轮次/融资</strong></td>
-                        <td style="padding: 10px; color: #666;"><strong>金额</strong></td>
-                        <td style="padding: 10px; color: #666;"><strong>估值</strong></td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #e0e0e0;">
-                        <td style="padding: 10px;">2019年2月</td>
-                        <td style="padding: 10px;">Series E</td>
-                        <td style="padding: 10px;">$250M</td>
-                        <td style="padding: 10px;">$2.75B</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #e0e0e0;">
-                        <td style="padding: 10px;">2019年10月</td>
-                        <td style="padding: 10px;">Series F</td>
-                        <td style="padding: 10px;">$400M</td>
-                        <td style="padding: 10px;">$6.2B</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #e0e0e0;">
-                        <td style="padding: 10px;">2025年1月</td>
-                        <td style="padding: 10px;">Series J</td>
-                        <td style="padding: 10px;">$10B</td>
-                        <td style="padding: 10px;">$62B</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #e0e0e0;">
-                        <td style="padding: 10px;">2025年9月</td>
-                        <td style="padding: 10px;">Series K</td>
-                        <td style="padding: 10px;">$1B</td>
-                        <td style="padding: 10px;">$100B+</td>
-                    </tr>
-                    <tr style="border-bottom: 1px solid #e0e0e0;">
-                        <td style="padding: 10px;">2026年2月</td>
-                        <td style="padding: 10px;">Series L</td>
-                        <td style="padding: 10px;">$4-5B</td>
-                        <td style="padding: 10px;">$134B</td>
-                    </tr>
-                    <tr style="background: #fff3cd;">
-                        <td style="padding: 10px;"><strong>2026年7月</strong></td>
-                        <td style="padding: 10px;"><strong>新一轮</strong></td>
-                        <td style="padding: 10px;"><strong>$3B</strong></td>
-                        <td style="padding: 10px;"><strong>$188B</strong></td>
-                    </tr>
-                </table>
-                <p style="font-size: 12px; color: #666; margin-top: 12px;">
-                    <strong>估值看点：</strong>5个月间估值增长40%（从$134B→$188B），6年间从$2.75B增长68倍。ARR增速55%（YoY），AI产品收入已占总收入21%以上，说明从数据管理向AI平台转型的商业化成效显著。
-                </p>
-            </div>
-        </div>
-
-        <div class="deals">
-            <h2>🔝 其他重要融资（按融资规模排序）</h2>
-
-            <div class="deal-item">
-                <div class="deal-header">
-                    <div class="deal-title">Kling AI（快手旗下）- 视频生成</div>
-                    <div class="deal-amount">$2.8B</div>
-                </div>
-                <div class="deal-description">
-                    中国领先的AI视频生成平台获得国际融资，Alibaba、Tencent等加入。公司被估值约$15B，成为中国AI视频领域融资最多企业。
-                </div>
-                <div class="deal-meta">
-                    <span class="deal-date">📅 2026年7月2日</span>
-                    <span class="deal-tag">视频生成</span>
-                    <span class="deal-tag">中国</span>
-                </div>
-            </div>
-
-            <div class="deal-item">
-                <div class="deal-header">
-                    <div class="deal-title">Together AI - 开源AI模型平台</div>
-                    <div class="deal-amount">$800M</div>
-                </div>
-                <div class="deal-description">
-                    为企业提供开源大模型训练和部署平台，让公司能用开源模型替代闭源API。Series C融资，重点布局AI基础设施。
-                </div>
-                <div class="deal-meta">
-                    <span class="deal-date">📅 2026年7月1日</span>
-                    <span class="deal-tag">AI基础设施</span>
-                    <span class="deal-tag">美国</span>
-                </div>
-            </div>
-
-            <div class="deal-item">
-                <div class="deal-header">
-                    <div class="deal-title">Helsing - 防御AI</div>
-                    <div class="deal-amount">$1.8B</div>
-                </div>
-                <div class="deal-description">
-                    欧洲防御和安全AI领导者完成Series E融资，累计融资$2.9B。专注于开发AI驱动的防御和网络安全解决方案。
-                </div>
-                <div class="deal-meta">
-                    <span class="deal-date">📅 2026年7月13日</span>
-                    <span class="deal-tag">防御科技</span>
-                    <span class="deal-tag">欧洲</span>
-                    <span class="deal-tag">累计 $2.9B</span>
-                </div>
-            </div>
-
-            <div class="deal-item">
-                <div class="deal-header">
-                    <div class="deal-title">Quantum Systems - 量子计算</div>
-                    <div class="deal-amount">$1.2B</div>
-                </div>
-                <div class="deal-description">
-                    量子计算硬件初创完成Series D融资。公司致力于开发实用量子计算机，为产业链提供下一代计算力。
-                </div>
-                <div class="deal-meta">
-                    <span class="deal-date">📅 2026年7月2日</span>
-                    <span class="deal-tag">量子计算</span>
-                </div>
-            </div>
-
-            <div class="deal-item">
-                <div class="deal-header">
-                    <div class="deal-title">SambaNova Systems - AI芯片</div>
-                    <div class="deal-amount">$1.0B</div>
-                </div>
-                <div class="deal-description">
-                    AI芯片制造商完成Series F融资，估值达$11B。开发针对AI推理和训练的专用芯片架构，与NVIDIA、AMD等竞争。
-                </div>
-                <div class="deal-meta">
-                    <span class="deal-date">📅 2026年7月8日</span>
-                    <span class="deal-tag">AI芯片</span>
-                    <span class="deal-tag">估值 $11B</span>
-                </div>
-            </div>
-
-            <div class="deal-item">
-                <div class="deal-header">
-                    <div class="deal-title">CuspAI - 芯片材料发现</div>
-                    <div class="deal-amount">~$500M</div>
-                </div>
-                <div class="deal-description">
-                    英国初创利用AI加速半导体材料发现。启动"AI材料铸造厂"联盟，联合48家科技巨头（Nvidia、Meta、Hyundai等），为芯片和工业材料研发加速。Jeff Bezos支持。
-                </div>
-                <div class="deal-meta">
-                    <span class="deal-date">📅 2026年7月20日</span>
-                    <span class="deal-tag">材料科学</span>
-                    <span class="deal-tag">英国</span>
-                </div>
-            </div>
-
-            <div class="deal-item">
-                <div class="deal-header">
-                    <div class="deal-title">Proxima Fusion - 核聚变</div>
-                    <div class="deal-amount">€411M (~$468M)</div>
-                </div>
-                <div class="deal-description">
-                    核聚变能源初创获Series A融资，重点开发商业化聚变反应堆。代表能源领域深科技热度回升。
-                </div>
-                <div class="deal-meta">
-                    <span class="deal-date">📅 2026年7月7日</span>
-                    <span class="deal-tag">清洁能源</span>
-                    <span class="deal-tag">德国</span>
-                </div>
-            </div>
-
-            <div class="deal-item">
-                <div class="deal-header">
-                    <div class="deal-title">PixVerse - 视频生成</div>
-                    <div class="deal-amount">$439M</div>
-                </div>
-                <div class="deal-description">
-                    新加坡视频生成初创完成Series C扩展，累计融资$439M，估值突破$2B。与OpenAI DALL-E、Runway等竞争。
-                </div>
-                <div class="deal-meta">
-                    <span class="deal-date">📅 2026年7月13日</span>
-                    <span class="deal-tag">视频生成</span>
-                    <span class="deal-tag">新加坡</span>
-                    <span class="deal-tag">估值 $2B+</span>
-                </div>
-            </div>
-
-            <div class="deal-item">
-                <div class="deal-header">
-                    <div class="deal-title">Emergent - AI编码助手</div>
-                    <div class="deal-amount">$130M</div>
-                </div>
-                <div class="deal-description">
-                    印度AI编码初创在Series C融资中成为独角兽，估值达$1.5B。成立仅6个月即跻身独角兽行列，融资额增长5倍，展现印度AI人才储备爆发力。
-                </div>
-                <div class="deal-meta">
-                    <span class="deal-date">📅 2026年7月15日</span>
-                    <span class="deal-tag">AI编码</span>
-                    <span class="deal-tag">印度</span>
-                    <span class="deal-tag">新独角兽</span>
-                </div>
-            </div>
-
-            <div class="deal-item">
-                <div class="deal-header">
-                    <div class="deal-title">Nous Research - AI Agent框架</div>
-                    <div class="deal-amount">融资中</div>
-                </div>
-                <div class="deal-description">
-                    Hermes开源Agent框架开发者正在洽谈新一轮融资，估值达$1.5B。代表开源AI框架团队的商业化加速。
-                </div>
-                <div class="deal-meta">
-                    <span class="deal-date">📅 2026年7月13日</span>
-                    <span class="deal-tag">AI框架</span>
-                    <span class="deal-tag">融资中 $1.5B估值</span>
-                </div>
-            </div>
-        </div>
-
-        <footer>
-            <h3>📚 数据来源</h3>
-            <ul>
-                <li><a href="https://techcrunch.com/2026/07/17/databricks-hits-188b-valuation-extending-its-run-as-ais-favorite-second-act/" target="_blank">Databricks hits $188B valuation - TechCrunch</a></li>
-                <li><a href="https://www.bloomberg.com/news/articles/2026-07-17/coatue-leads-databricks-funding-round-at-188-billion-valuation" target="_blank">Coatue Leads Databricks Funding Round - Bloomberg</a></li>
-                <li><a href="https://www.bloomberg.com/news/articles/2026-07-02/china-s-kling-ai-raises-2-billion-to-expand-ai-video-operations" target="_blank">Kling AI Funding - Bloomberg</a></li>
-                <li><a href="https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/" target="_blank">PixVerse Series C - TechCrunch</a></li>
-                <li><a href="https://www.bloomberg.com/news/articles/2026-07-08/ai-chip-startup-sambanova-raises-funds-at-11-billion-valuation" target="_blank">SambaNova Systems Funding - Bloomberg</a></li>
-                <li><a href="https://techcrunch.com/2026/07/15/indian-ai-coding-startup-emergent-becomes-a-unicorn-just-over-a-year-after-launch/" target="_blank">Emergent AI Unicorn - TechCrunch</a></li>
-                <li><a href="https://www.bloomberg.com/news/articles/2026-07-20/bezos-backs-startup-focused-on-material-discovery-for-chipmaking" target="_blank">CuspAI Material Discovery - Bloomberg</a></li>
-                <li><a href="https://techstartups.com/2026/07/16/venture-capital-startup-funding-roundup-july-16-2026-8vc-accel-ark-invest-gv-khosla-ventures-mark-cuban-and-sequoia-capital/" target="_blank">July 16 VC Roundup - TechStartups</a></li>
-                <li><a href="https://techstartups.com/2026/07/15/venture-capital-startup-funding-roundup-july-15-2026-accel-crv-greylock-goldman-sachs-khosla-ventures-m13-and-nava-ventures/" target="_blank">July 15 VC Roundup - TechStartups</a></li>
-                <li><a href="https://techcrunch.com/2026/07/14/openai-researcher-miles-wang-in-talks-to-launch-ai-drug-discovery-startup-valued-at-2b/" target="_blank">OpenAI Researcher Drug Discovery Startup - TechCrunch</a></li>
-            </ul>
-
-            <h3>📢 关键VCs活跃榜单</h3>
-            <ul>
-                <li><strong>Coatue Management</strong>：领投Databricks $3B融资</li>
-                <li><strong>Sequoia Capital</strong>：参与多笔大型融资</li>
-                <li><strong>Accel</strong>：AI基础设施重度投资者</li>
-                <li><strong>Khosla Ventures</strong>：深科技（聚变、量子计算）领头羊</li>
-                <li><strong>General Catalyst</strong>：早期AI初创孵化</li>
-                <li><strong>Jeff Bezos</strong>：支持芯片材料发现初创CuspAI</li>
-                <li><strong>Meta、Nvidia、Google CVC</strong>：战略性大额投资AI基础设施</li>
-            </ul>
-
-            <div class="disclaimer">
-                <strong>⚠️ 免责声明：</strong>本页面信息来自公开披露的融资新闻，截至2026年7月21日整理。所有数据均基于TechCrunch、Bloomberg、CNBC、TechStartups等权威媒体发布。本摘要仅供信息参考，不构成投资建议。融资金额、估值和完成状态可能因披露不完整而有所差异。所有观点均基于公开信息，不代表任何投资立场。
-            </div>
-        </footer>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="kicker">Daily Tech Investment Brief · 科技投资情报</div>
+    <h1 class="title">每日科技投资动态</h1>
+    <div class="meta-row">
+      <span>📅 <b>2026年7月22日</b>（星期三）</span>
+      <span>🕐 覆盖窗口：<b>7月20日–7月22日</b></span>
+      <span>📰 来源：TechCrunch · Bloomberg · TechStartups · Axios · TechNode</span>
     </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <h2 class="section-title">今日概览</h2>
+    <div class="overview-card">
+      <p>过去48小时全球科技投资热度不减，资金持续向AI"控制层"集中——材料科学、芯片推理软件、AI代理支付基础设施、网络安全等赛道成为资本追逐的重点，而非泛化的模型应用层。本轮融资中，Kleiner Perkins、NEA、a16z、Bessemer、Forerunner 等头部VC悉数出手，AMD Ventures、Bezos Expeditions、腾讯、美团等战略投资方同样活跃。</p>
+      <p>中国市场方面，月之暗面（Moonshot AI）传出计划以最高500亿美元估值启动上市前最后一轮融资，较今年5月的200亿美元估值再度大幅跃升，成为今日最受关注的交易。此外，"复活"史前物种的Colossal Biosciences也在洽谈以200–300亿美元估值融资，较其今年初的102亿美元估值近乎翻三倍。</p>
+      <div class="overview-tags">
+        <span class="tag">AI基础设施</span>
+        <span class="tag">网络安全</span>
+        <span class="tag">生物科技</span>
+        <span class="tag">机器人</span>
+        <span class="tag">国防科技</span>
+        <span class="tag">中国AI</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">今日最值得关注</h2>
+    <div class="highlight">
+      <span class="highlight-badge">HIGHLIGHT · 深度聚焦</span>
+      <h3>月之暗面 Moonshot AI：拟以500亿美元估值启动上市前最后一轮融资</h3>
+      <div class="sub">彭博社7月21日报道 · 腾讯、美团、阿里生态资本持续加码的中国大模型独角兽</div>
+
+      <div class="stat-grid">
+        <div class="stat-cell"><span class="num">≤500亿</span><span class="label">拟议投前估值（美元）</span></div>
+        <div class="stat-cell"><span class="num">315亿</span><span class="label">当前收尾轮估值（美元）</span></div>
+        <div class="stat-cell"><span class="num">55亿+</span><span class="label">历史累计融资（美元）</span></div>
+        <div class="stat-cell"><span class="num">3亿</span><span class="label">6月年化经常性收入ARR（美元）</span></div>
+      </div>
+
+      <div class="highlight-body">
+        <h4>业务内容</h4>
+        <p>月之暗面成立于2023年，由CMU背景、曾任职Meta与Google的杨植麟创立，核心产品为AI助手Kimi，主打超长上下文理解与多模态交互，是继文心一言、通义之后中国第三大AI助手，上线半年月活用户超3600万。7月17日发布的新一代模型Kimi K3因需求暴涨，两天后一度暂停新增付费订阅。</p>
+
+        <h4>历史融资情况</h4>
+        <ul>
+          <li>2023年6月：天使轮，红杉中国、真格基金参投；同年10月获2亿元人民币融资</li>
+          <li>2024年2月：约10亿美元融资；同年8月：3亿美元融资</li>
+          <li>2025年12月：估值约43亿美元；2026年2月：追加7亿美元</li>
+          <li>2026年5月：完成20亿美元新一轮融资，投前估值升至约200亿美元</li>
+          <li>2026年7月：收尾轮估值达约315亿美元；累计融资规模超55亿美元</li>
+          <li>主要股东：腾讯、美团、IDG资本、中国移动、北京市人工智能产业投资基金等</li>
+        </ul>
+
+        <h4>业务发展情况</h4>
+        <p>公司收入随Kimi K系列模型迭代快速攀升：2026年3月ARR突破1亿美元，4月升至2亿美元，6月进一步达到3亿美元。据报道，公司计划8月启动新一轮融资谈判，作为上市前最后一轮外部融资，年内有望在香港挂牌上市。Kimi K3发布后引发的算力紧张，也从侧面印证其用户增长速度已超出现有基础设施承载能力。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">今日交易排行（按重要性排序）</h2>
+
+    <div class="news-item">
+      <div class="rank">01</div>
+      <div class="news-content">
+        <div class="news-head">
+          <span class="news-title">CuspAI 完成4.5亿美元B轮融资，估值达26亿美元</span>
+          <span class="amount">$450M</span>
+        </div>
+        <p class="news-desc">英国剑桥AI材料发现公司，聚焦半导体、电池、清洁能源材料研发，本轮由Kleiner Perkins与NEA领投，Bezos Expeditions、英国政府、AMD Ventures、Lux Capital等跟投，累计融资超6.5亿美元，是本轮周期最大单笔融资。</p>
+        <div class="news-tags"><span class="mini-tag">Kleiner Perkins</span><span class="mini-tag">NEA</span><span class="mini-tag">AMD Ventures</span><span class="mini-tag">AI材料科学</span></div>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="rank">02</div>
+      <div class="news-content">
+        <div class="news-head">
+          <span class="news-title">Colossal Biosciences 洽谈新一轮融资，估值或达200-300亿美元</span>
+          <span class="amount">$20-30B估值</span>
+        </div>
+        <p class="news-desc">这家因"复活"史前渡渡鸟基因、克隆出恐狼幼崽而闻名的"去灭绝"公司，正就新一轮融资进行谈判，估值较今年初的102亿美元大幅跃升，公司过去一年已开始产生收入。</p>
+        <div class="news-tags"><span class="mini-tag">TWG Global</span><span class="mini-tag">ARCH Venture</span><span class="mini-tag">Khosla Ventures</span><span class="mini-tag">合成生物</span></div>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="rank">03</div>
+      <div class="news-content">
+        <div class="news-head">
+          <span class="news-title">Neo 隐身模式获1亿美元融资，主攻AI时代企业安全</span>
+          <span class="amount">$100M</span>
+        </div>
+        <p class="news-desc">由前SentinelOne高管创立的波士顿网络安全公司，产品定位为AI原生应用的权限与风险控制平台，已在金融、能源、交通行业试点，a16z、Bessemer、Craft Ventures、Merlin Ventures联合投资。</p>
+        <div class="news-tags"><span class="mini-tag">a16z</span><span class="mini-tag">Bessemer</span><span class="mini-tag">Craft Ventures</span><span class="mini-tag">网络安全</span></div>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="rank">04</div>
+      <div class="news-content">
+        <div class="news-head">
+          <span class="news-title">Humanoid 完成1.52亿美元A轮融资，估值13.5亿美元</span>
+          <span class="amount">$152M</span>
+        </div>
+        <p class="news-desc">英国人形机器人初创公司，由Prime Movers Lab领投，博世（Bosch）、舍弗勒（Schaeffler）集团产业资本参投，累计融资达2.7亿美元，是本周期机器人赛道最大单笔A轮。</p>
+        <div class="news-tags"><span class="mini-tag">Prime Movers Lab</span><span class="mini-tag">Bosch</span><span class="mini-tag">Schaeffler</span><span class="mini-tag">人形机器人</span></div>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="rank">05</div>
+      <div class="news-content">
+        <div class="news-head">
+          <span class="news-title">Natural 获3000万美元A轮融资，搭建AI代理支付基础设施</span>
+          <span class="amount">$30M</span>
+        </div>
+        <p class="news-desc">解决AI代理（Agent）自主完成支付、采购等交易环节的合规与安全问题，由Forerunner创始人Kirsten Green领投，公司累计融资4000万美元，被视为"AI能安全花钱"赛道的关键卡位。</p>
+        <div class="news-tags"><span class="mini-tag">Forerunner</span><span class="mini-tag">AI代理支付</span><span class="mini-tag">Fintech</span></div>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="rank">06</div>
+      <div class="news-content">
+        <div class="news-head">
+          <span class="news-title">Empirical Security 完成2500万美元A轮融资</span>
+          <span class="amount">$25M</span>
+        </div>
+        <p class="news-desc">芝加哥网络安全公司，专注利用AI预测已被利用的漏洞威胁，由Brightmind Partners领投，老股东HPA、Costanoa Ventures跟投，累计融资3700万美元。</p>
+        <div class="news-tags"><span class="mini-tag">Brightmind Partners</span><span class="mini-tag">Costanoa Ventures</span><span class="mini-tag">威胁预测</span></div>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="rank">07</div>
+      <div class="news-content">
+        <div class="news-head">
+          <span class="news-title">Infinity 完成1500万美元种子轮，估值1亿美元</span>
+          <span class="amount">$15M</span>
+        </div>
+        <p class="news-desc">旧金山公司打造"芯片无关"的AI推理软件层，让新一代AI芯片能更快投入实际推理工作负载，被视为绕开英伟达生态锁定的关键基础设施拼图。</p>
+        <div class="news-tags"><span class="mini-tag">种子轮</span><span class="mini-tag">AI推理软件</span><span class="mini-tag">芯片基础设施</span></div>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="rank">08</div>
+      <div class="news-content">
+        <div class="news-head">
+          <span class="news-title">Quorum 获Enlightenment Capital战略投资，金额未披露</span>
+          <span class="amount">未披露</span>
+        </div>
+        <p class="news-desc">华盛顿AI政府事务平台，服务超2000家机构（含半数以上财富100强企业），本轮资金将用于加速产品路线图与AI代理能力扩展。</p>
+        <div class="news-tags"><span class="mini-tag">Enlightenment Capital</span><span class="mini-tag">战略投资</span><span class="mini-tag">GovTech</span></div>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="rank">09</div>
+      <div class="news-content">
+        <div class="news-head">
+          <span class="news-title">Brenus Pharma 追加1100万欧元A轮延伸融资</span>
+          <span class="amount">€11M</span>
+        </div>
+        <p class="news-desc">法国里昂肿瘤免疫疗法公司，围绕胃癌与结直肠癌在研药物STC-1010的临床与监管里程碑追加融资，累计融资达3800万欧元，并首次引入欧洲及亚太生命科学投资人。</p>
+        <div class="news-tags"><span class="mini-tag">A轮延伸</span><span class="mini-tag">肿瘤免疫</span><span class="mini-tag">生物科技</span></div>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="rank">10</div>
+      <div class="news-content">
+        <div class="news-head">
+          <span class="news-title">Plazza 完成1500万美元A轮融资，扩张印度即时送药网络</span>
+          <span class="amount">$15M</span>
+        </div>
+        <p class="news-desc">班加罗尔快消医药配送平台，由Accel、Elevation Capital、Nexus Venture Partners联合投资，用于扩大药房网络与即时送药运力覆盖。</p>
+        <div class="news-tags"><span class="mini-tag">Accel</span><span class="mini-tag">Elevation Capital</span><span class="mini-tag">即时零售</span></div>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <h3>信息来源</h3>
+    <ul>
+      <li><a href="https://techstartups.com/2026/07/20/venture-capital-startup-funding-roundup-july-20-2026/" target="_blank">TechStartups – Venture Capital & Startup Funding Roundup, July 20, 2026</a></li>
+      <li><a href="https://techcrunch.com/2026/07/20/colossal-biosciences-reportedly-in-talks-to-raise-new-capital-at-20b-30b-valuation/" target="_blank">TechCrunch – Colossal Biosciences reportedly in talks to raise new capital at $20B–$30B valuation</a></li>
+      <li><a href="https://www.bloomberg.com/news/articles/2026-07-21/china-s-moonshot-in-talks-on-pre-ipo-funds-at-50-billion-value" target="_blank">Bloomberg – China's Moonshot in Talks on Pre-IPO Funds at $50 Billion Value</a></li>
+      <li><a href="https://technode.com/2026/07/22/moonshot-ai-reportedly-plans-final-pre-ipo-round-at-50-billion-valuation/" target="_blank">TechNode – Moonshot AI reportedly plans final pre-IPO round at $50 billion valuation</a></li>
+      <li><a href="https://finance.yahoo.com/technology/ai/articles/robotics-startup-humanoid-raises-152-131649836.html" target="_blank">Yahoo Finance – Robotics startup Humanoid raises $152 million Series A at $1.35 billion valuation</a></li>
+      <li><a href="https://www.axios.com/2026/07/20/wooly-mammoth-colossal-20-billion" target="_blank">Axios – Woolly Mammoth startup Colossal seeking at least $20B valuation</a></li>
+    </ul>
+    <div class="disclaimer">
+      <strong>免责声明：</strong>本页面内容基于公开新闻报道自动整理生成，仅供参考，不构成任何投资建议。融资金额、估值等数据以原始信息源披露为准，可能随后续报道调整。市场有风险，投资需谨慎。
+    </div>
+  </footer>
+
+</div>
+
 </body>
 </html>
