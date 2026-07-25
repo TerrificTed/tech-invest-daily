@@ -3,377 +3,354 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日科技投资动态 | 2026年7月24日</title>
+<title>每日科技投资动态 | 2026年7月25日</title>
 <style>
   :root{
     --accent:#c8401a;
+    --accent-light:#fdf1ec;
     --ink:#1a1a1a;
     --sub:#6b6b6b;
-    --line:#e2ddd5;
-    --paper:#faf7f2;
+    --line:#e8e3dc;
+    --bg:#f5f1ea;
     --card:#ffffff;
   }
-  *{box-sizing:border-box;}
+  *{box-sizing:border-box;margin:0;padding:0;}
   body{
-    margin:0;
-    background:var(--paper);
+    font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;
+    background:var(--bg);
     color:var(--ink);
-    font-family:"PingFang SC","Microsoft YaHei","Noto Serif SC",serif;
     line-height:1.7;
+    padding:0 0 60px;
   }
-  .wrap{max-width:920px;margin:0 auto;padding:0 20px 60px;}
-  header{
-    border-bottom:4px solid var(--ink);
-    padding:36px 0 18px;
-    margin-bottom:28px;
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px;}
+
+  header.site-head{
+    background:var(--ink);
+    color:#f5f1ea;
+    padding:36px 0 28px;
+    border-bottom:6px solid var(--accent);
   }
-  .masthead{
-    display:flex;
-    justify-content:space-between;
-    align-items:baseline;
-    flex-wrap:wrap;
-    gap:10px;
-    border-bottom:1px solid var(--line);
-    padding-bottom:12px;
-    margin-bottom:14px;
-    font-size:13px;
-    color:var(--sub);
-    letter-spacing:.5px;
-  }
-  h1{
-    font-size:36px;
-    margin:0 0 8px;
+  header.site-head .wrap{text-align:center;}
+  header.site-head h1{
+    font-size:30px;
     letter-spacing:2px;
-    font-weight:900;
+    font-weight:700;
   }
-  .subtitle{
-    color:var(--sub);
+  header.site-head .sub{
+    margin-top:10px;
     font-size:14px;
+    color:#c9c4ba;
+    letter-spacing:1px;
   }
-  .accent{color:var(--accent);}
-  section{margin-bottom:38px;}
-  h2.section-title{
-    font-size:20px;
-    font-weight:900;
-    border-left:6px solid var(--accent);
+  header.site-head .meta{
+    margin-top:16px;
+    display:flex;
+    justify-content:center;
+    gap:24px;
+    font-size:13px;
+    color:#9d968a;
+    flex-wrap:wrap;
+  }
+  header.site-head .meta span{border-left:2px solid var(--accent);padding-left:10px;}
+  header.site-head .meta span:first-child{border-left:none;padding-left:0;}
+
+  section{margin-top:34px;}
+  h2.sec-title{
+    font-size:19px;
+    font-weight:700;
+    color:var(--ink);
+    border-left:5px solid var(--accent);
     padding-left:10px;
-    margin:0 0 16px;
+    margin-bottom:16px;
   }
+
+  /* 今日概览 */
   .overview-card{
     background:var(--card);
     border:1px solid var(--line);
-    border-radius:4px;
-    padding:20px 24px;
-    font-size:15px;
+    border-radius:6px;
+    padding:22px 24px;
     box-shadow:0 1px 3px rgba(0,0,0,.04);
   }
+  .overview-card p{font-size:14.5px;color:#333;margin-bottom:10px;}
+  .overview-card p:last-child{margin-bottom:0;}
+  .overview-stats{
+    display:flex;
+    gap:14px;
+    margin-top:16px;
+    flex-wrap:wrap;
+  }
+  .stat-box{
+    flex:1;
+    min-width:120px;
+    background:var(--accent-light);
+    border-radius:5px;
+    padding:12px 14px;
+    text-align:center;
+  }
+  .stat-box .num{font-size:20px;font-weight:700;color:var(--accent);}
+  .stat-box .label{font-size:12px;color:var(--sub);margin-top:4px;}
+
+  /* 重点卡片 */
   .highlight-card{
     background:var(--card);
     border:1px solid var(--line);
     border-top:5px solid var(--accent);
-    border-radius:4px;
-    padding:26px 28px;
+    border-radius:6px;
+    padding:26px 26px 24px;
     box-shadow:0 2px 8px rgba(0,0,0,.06);
   }
-  .highlight-tag{
+  .highlight-badge{
     display:inline-block;
     background:var(--accent);
     color:#fff;
     font-size:12px;
     padding:3px 10px;
-    border-radius:2px;
+    border-radius:3px;
     letter-spacing:1px;
     margin-bottom:12px;
-    font-weight:700;
   }
-  .highlight-title{
-    font-size:24px;
-    font-weight:900;
-    margin:0 0 6px;
-  }
-  .highlight-desc{
+  .highlight-card h3{font-size:22px;font-weight:700;margin-bottom:6px;}
+  .highlight-card .tagline{font-size:14px;color:var(--sub);margin-bottom:16px;}
+  .highlight-card p{font-size:14.5px;color:#333;margin-bottom:12px;}
+  .highlight-card h4{
     font-size:15px;
-    color:#333;
-    margin:10px 0 18px;
+    margin:20px 0 10px;
+    color:var(--ink);
+    border-bottom:1px solid var(--line);
+    padding-bottom:6px;
   }
-  .stat-grid{
+
+  .data-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
-    margin:18px 0;
+    gap:12px;
+    margin:14px 0 6px;
   }
-  .stat-box{
-    background:var(--card);
+  .data-cell{
+    background:var(--accent-light);
+    border-radius:5px;
     padding:14px 10px;
     text-align:center;
   }
-  .stat-label{font-size:12px;color:var(--sub);margin-bottom:6px;}
-  .stat-value{font-size:18px;font-weight:900;color:var(--accent);}
-  .highlight-block-title{
-    font-size:14px;
-    font-weight:900;
-    margin:18px 0 6px;
-    color:var(--ink);
-    border-bottom:1px dashed var(--line);
-    padding-bottom:4px;
+  .data-cell .val{font-size:18px;font-weight:700;color:var(--accent);}
+  .data-cell .key{font-size:11.5px;color:var(--sub);margin-top:5px;}
+
+  .fund-history{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+  .fund-history th,.fund-history td{
+    border:1px solid var(--line);
+    padding:8px 10px;
+    text-align:left;
   }
-  .highlight-body p{margin:6px 0;font-size:14px;color:#333;}
-  .news-list{display:flex;flex-direction:column;gap:14px;}
+  .fund-history th{background:#faf6f0;font-weight:700;color:var(--ink);}
+  .fund-history td{color:#444;}
+
+  /* 新闻列表 */
   .news-item{
     background:var(--card);
     border:1px solid var(--line);
-    border-radius:4px;
-    padding:16px 20px;
-    display:flex;
-    gap:16px;
-    align-items:flex-start;
+    border-radius:6px;
+    padding:18px 20px;
+    margin-bottom:14px;
   }
-  .news-rank{
-    font-size:20px;
-    font-weight:900;
-    color:var(--accent);
-    min-width:28px;
-  }
-  .news-content{flex:1;}
-  .news-title-row{
+  .news-item .rank-row{
     display:flex;
-    justify-content:space-between;
     align-items:baseline;
-    flex-wrap:wrap;
-    gap:8px;
+    gap:10px;
+    margin-bottom:6px;
   }
-  .news-title{font-size:16px;font-weight:700;}
-  .news-amount{
-    font-size:15px;
-    font-weight:900;
-    color:var(--accent);
-    white-space:nowrap;
+  .rank-num{
+    font-size:13px;
+    font-weight:700;
+    color:#fff;
+    background:var(--ink);
+    border-radius:3px;
+    padding:1px 8px;
+    flex-shrink:0;
   }
-  .news-desc{font-size:14px;color:#444;margin:6px 0 8px;}
+  .news-item h3{font-size:16.5px;font-weight:700;color:var(--ink);}
+  .amount-highlight{color:var(--accent);font-weight:700;}
+  .news-item p.desc{font-size:14px;color:#3a3a3a;margin:8px 0 10px;}
+  .tags{display:flex;gap:8px;flex-wrap:wrap;}
   .tag{
-    display:inline-block;
-    font-size:11px;
-    color:var(--sub);
-    border:1px solid var(--line);
-    border-radius:2px;
-    padding:2px 8px;
-    margin-right:6px;
+    font-size:11.5px;
+    color:var(--accent);
+    background:var(--accent-light);
+    border:1px solid #f0d9cd;
+    border-radius:12px;
+    padding:2px 10px;
   }
-  footer{
-    border-top:1px solid var(--line);
-    padding-top:18px;
-    font-size:12.5px;
-    color:var(--sub);
+
+  /* 来源与免责声明 */
+  footer{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);}
+  footer h4{font-size:14px;margin-bottom:10px;color:var(--ink);}
+  footer ul{list-style:none;font-size:12.5px;color:var(--sub);}
+  footer li{margin-bottom:6px;}
+  footer a{color:#8a5a45;text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+  .disclaimer{
+    margin-top:18px;
+    font-size:12px;
+    color:#9c9689;
+    background:#faf6f0;
+    padding:12px 14px;
+    border-radius:5px;
+    line-height:1.6;
   }
-  footer a{color:var(--sub);}
-  footer .sources{margin-bottom:12px;}
-  footer .sources a{display:block;margin:2px 0;color:#555;text-decoration:none;}
-  footer .sources a:hover{text-decoration:underline;}
-  .disclaimer{color:#999;font-size:11.5px;line-height:1.6;}
-  @media (max-width:600px){
-    .stat-grid{grid-template-columns:repeat(2,1fr);}
-    h1{font-size:26px;}
+
+  @media (max-width:640px){
+    .data-grid{grid-template-columns:repeat(2,1fr);}
+    header.site-head h1{font-size:22px;}
   }
 </style>
 </head>
 <body>
-<div class="wrap">
 
-<header>
-  <div class="masthead">
-    <span>每日科技投资动态 · DAILY TECH INVESTMENT BRIEF</span>
-    <span>信息源：TechCrunch · Bloomberg · CNBC · TechStartups.com</span>
+<header class="site-head">
+  <div class="wrap">
+    <h1>每日科技投资动态</h1>
+    <div class="sub">全球科技行业投融资情报 · 每日更新</div>
+    <div class="meta">
+      <span>2026年7月25日 星期六</span>
+      <span>覆盖时段：7月22日–7月24日（过去24–48小时）</span>
+      <span>信息源：TechCrunch · Reuters · TechStartups · SiliconANGLE</span>
+    </div>
   </div>
-  <h1>今日科技投资<span class="accent">动态</span></h1>
-  <div class="subtitle">2026年7月24日 · 覆盖过去24–48小时全球科技创投要闻</div>
 </header>
 
-<section>
-  <h2 class="section-title">今日概览</h2>
-  <div class="overview-card">
-    过去一天，全球科技创投市场延续"巨额押注、赛道集中"的特征。最大单笔交易来自前Uber CEO Travis Kalanick创办的工业AI公司Atoms，获a16z领投17亿美元，Uber亦罕见回投；AI芯片公司Etched在7个月内估值翻倍至103亿美元，刷新红杉领投Series C的最高估值纪录；保险科技公司Corgi在8周内完成第三轮融资，估值冲至40亿美元，成为今年insurtech赛道最快独角兽之一。此外，网络安全、国防科技、电池材料与跨境金融基础设施等领域也出现多笔重要融资，AI相关公司继续占据资金流入的主导地位。与此同时，市场对AI资本开支的担忧升温——周四"科技七巨头"单日市值蒸发近8000亿美元，为一级市场的火热行情增添了一丝紧张气氛。
-  </div>
-</section>
+<div class="wrap">
 
-<section>
-  <h2 class="section-title">今日最值得关注</h2>
-  <div class="highlight-card">
-    <span class="highlight-tag">头条 TOP PICK</span>
-    <div class="highlight-title">Atoms（Travis Kalanick）获a16z领投17亿美元，Uber罕见回投</div>
-    <div class="highlight-desc">
-      前Uber联合创始人兼CEO Travis Kalanick创办的工业AI控股公司Atoms宣布完成17亿美元股权融资，由Andreessen Horowitz（a16z）领投，Bain Capital、Fifth Wall、Chemistry、K5 Global、SV Angel、Alpha Square Group参投，其中最引人注目的是——被Kalanick于2017年赶下CEO之位的Uber，此次也参与了投资。a16z联合创始人Ben Horowitz将加入董事会。
-    </div>
-    <div class="stat-grid">
-      <div class="stat-box"><div class="stat-label">本轮融资额</div><div class="stat-value">17亿美元</div></div>
-      <div class="stat-box"><div class="stat-label">投后估值</div><div class="stat-value">未披露</div></div>
-      <div class="stat-box"><div class="stat-label">母体历史累计融资</div><div class="stat-value">约13亿美元</div></div>
-      <div class="stat-box"><div class="stat-label">领投方</div><div class="stat-value">a16z</div></div>
-    </div>
-
-    <div class="highlight-block-title">被投公司业务</div>
-    <div class="highlight-body">
-      <p>Atoms是Kalanick在2026年3月新设立的控股公司，整合了他此前的"暗厨房"（ghost kitchen）业务CloudKitchens，以及同月收购的重工业自动化公司Pronto（由前Uber自动驾驶高管Anthony Levandowski创办，专注矿业等重工业场景的自动驾驶系统）。公司下设Atoms Food（餐饮）、Atoms Mining（矿业）、Atoms Transport（运输）三大板块，目标是用软件、传感器、机器人与AI技术，把"物理世界"里制造、搬运、存储物资的重体力行业自动化——Kalanick将其形容为要为机器人打造"通用底盘"，复刻Uber当年对交通行业的改造。</p>
-    </div>
-
-    <div class="highlight-block-title">历史融资情况</div>
-    <div class="highlight-body">
-      <p>Kalanick于2018年以约1.5亿美元收购CloudKitchens母公司City Storage Systems控股权并出任CEO；2019年获沙特公共投资基金（PIF）注资4亿美元，估值约50亿美元；2021年完成8.5亿美元融资（微软等参投），估值升至约150亿美元，CloudKitchens历史累计融资约13亿美元。2026年3月，Kalanick收购Pronto并将两块业务合并为Atoms；本次17亿美元新轮为Atoms成立以来首轮外部融资，尚未披露最新投后估值。</p>
-    </div>
-
-    <div class="highlight-block-title">业务发展情况</div>
-    <div class="highlight-body">
-      <p>据现有公开报道，本轮融资公告未披露Pronto业务线的营收或部署数据，也未说明17亿美元资金在餐饮、矿业、运输三大板块间的具体分配。分析人士认为，这笔巨额融资更多是对Kalanick个人及其"物理世界AI"愿景的押注，而非基于已披露的财务指标；Uber的回投被视为具有象征意义的和解信号。后续营收与落地进展有待公司进一步披露。</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2 class="section-title">今日重要交易（按重要性排序）</h2>
-  <div class="news-list">
-
-    <div class="news-item">
-      <div class="news-rank">01</div>
-      <div class="news-content">
-        <div class="news-title-row">
-          <div class="news-title">Atoms（Kalanick工业AI）完成新一轮融资</div>
-          <div class="news-amount">17亿美元</div>
-        </div>
-        <div class="news-desc">a16z领投，Bain Capital、Fifth Wall等及Uber参投；整合CloudKitchens与Pronto，布局餐饮/矿业/运输自动化。</div>
-        <span class="tag">机器人/物理AI</span><span class="tag">a16z</span><span class="tag">Uber</span>
+  <section>
+    <h2 class="sec-title">今日概览</h2>
+    <div class="overview-card">
+      <p>过去24至48小时，全球科技投资的资金流向高度集中于"物理AI"（Physical AI）与AI基础设施两大主线：机器人、工业自动化、AI芯片推理硬件成为吸金主力，安全与企业级AI应用紧随其后。最大单笔交易来自Uber联合创始人Travis Kalanick的新公司Atoms，获a16z领投17亿美元，标志着"硬科技+软件"的工业自动化叙事重新获得顶级VC重仓押注。同时，AI芯片初创公司Etched完成3亿美元C轮融资，估值七个月内翻倍至103亿美元，成为红杉迄今规模最大的C轮项目；NVIDIA也以10亿美元战略投资韩国Naver，扩张其在亚太的AI数据中心版图。</p>
+      <p>整体来看，投资人正从"追捧AI概念"转向"押注具体瓶颈"：芯片推理经济性、机器人实地部署、训练数据基础设施、AI原生安全防护，均获得头部机构真金白银的验证。</p>
+      <div class="overview-stats">
+        <div class="stat-box"><div class="num">10</div><div class="label">今日收录重点交易</div></div>
+        <div class="stat-box"><div class="num">~$28亿</div><div class="label">收录交易披露总额</div></div>
+        <div class="stat-box"><div class="num">$17亿</div><div class="label">单笔最大交易（Atoms）</div></div>
+        <div class="stat-box"><div class="num">6+</div><div class="label">涉及知名VC/CVC</div></div>
       </div>
     </div>
+  </section>
+
+  <section>
+    <h2 class="sec-title">今日最值得关注</h2>
+    <div class="highlight-card">
+      <span class="highlight-badge">HIGHLIGHT · 重点解读</span>
+      <h3>Atoms（原CloudKitchens）完成17亿美元融资，a16z领投，Kalanick押注"物理AI"</h3>
+      <div class="tagline">工业自动化 / 机器人 · a16z 领投，Uber、Bain Capital、Fifth Wall 等跟投 · 2026年7月22日</div>
+
+      <p><strong>公司业务：</strong>Atoms是Uber联合创始人Travis Kalanick创立的工业自动化控股公司，今年3月由其经营八年的"影子厨房"业务CloudKitchens公开重组而来。公司目前分为三大业务板块：Atoms Food（涵盖餐饮云厨房平台Otter——据称处理美国约18%的外卖订单，以及自动化炒菜/装碗设备Lab37）、Atoms Mining（基于收购的自动驾驶矿卡公司Pronto AI，为矿山与采石场提供无人驾驶重卡系统）、以及Atoms Transport。Kalanick将公司愿景形容为打造"以原子为基础的计算机"：制造是CPU，地产是存储，交通运输是网络，目标是用软件、传感器、机器人和AI改造"制造、搬运、存储实体物质"的传统重工业。</p>
+
+      <h4>关键数据</h4>
+      <div class="data-grid">
+        <div class="data-cell"><div class="val">$17亿</div><div class="key">本轮融资额</div></div>
+        <div class="data-cell"><div class="val">未披露</div><div class="key">本轮投后估值</div></div>
+        <div class="data-cell"><div class="val">$12.5亿+</div><div class="key">CloudKitchens历史累计融资</div></div>
+        <div class="data-cell"><div class="val">18%</div><div class="key">Otter处理的美国外卖订单占比</div></div>
+      </div>
+
+      <h4>历史融资情况</h4>
+      <table class="fund-history">
+        <tr><th>时间</th><th>轮次/事件</th><th>金额</th><th>投资方/估值</th></tr>
+        <tr><td>创业初期</td><td>创始人自有资金</td><td>约$3亿</td><td>Kalanick个人出资</td></tr>
+        <tr><td>早期</td><td>Series A</td><td>未披露</td><td>Craft Ventures</td></tr>
+        <tr><td>2019年</td><td>战略投资</td><td>$4亿</td><td>沙特公共投资基金（PIF），估值约$50亿</td></tr>
+        <tr><td>2021年</td><td>后期融资</td><td>$8.5亿</td><td>估值约$150亿</td></tr>
+        <tr><td>2026年7月22日</td><td>Atoms（新一轮）</td><td>$17亿股权融资</td><td>a16z领投；Bain Capital、Fifth Wall、Chemistry、A*、K5 Global、Abstract、SV Angel、Alpha Square Group及Uber跟投；另有美国银行、高盛、富国银行、摩根大通、巴克莱提供未披露规模的债务融资</td></tr>
+      </table>
+
+      <h4>业务发展情况</h4>
+      <p><strong>研发与运营进度：</strong>Lab37的"Bowl Builder"自动化装碗设备已投入使用，通过18个食材分配器、传感器与蒸汽发生器实现餐食自动制作与部分包装；Pronto AI的无人驾驶矿卡系统已应用于矿山与采石场的实地作业。公司称正处于从"隐形运营"走向公开融资、加速跨行业规模化部署的阶段。</p>
+      <p><strong>投资亮点与看点：</strong>本轮由a16z联合创始人Ben Horowitz亲自加入董事会，被视为对Kalanick"卷土重来"的强背书；曾经将Kalanick赶下Uber CEO之位的Uber，此次也以投资人身份参与本轮融资，成为舆论关注焦点。收入与盈利情况官方未单独披露，但Otter在美国外卖生态中的高渗透率被视为其现金流基础之一。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="sec-title">今日融资交易（按重要性排序）</h2>
 
     <div class="news-item">
-      <div class="news-rank">02</div>
-      <div class="news-content">
-        <div class="news-title-row">
-          <div class="news-title">AI芯片公司Etched完成Series C</div>
-          <div class="news-amount">3亿美元 · 估值103亿美元</div>
-        </div>
-        <div class="news-desc">红杉资本领投，a16z、Jane Street、Diffusion、SK海力士跟投；7个月内估值翻倍，创红杉领投Series C最高估值纪录，已获超10亿美元客户订单。</div>
-        <span class="tag">AI芯片</span><span class="tag">红杉资本</span><span class="tag">SK海力士</span>
-      </div>
+      <div class="rank-row"><span class="rank-num">01</span><h3>Atoms（Kalanick新公司）融资 <span class="amount-highlight">$17亿</span>，a16z领投</h3></div>
+      <p class="desc">工业自动化控股公司，整合CloudKitchens、Pronto AI矿山机器人等业务，押注"物理AI"改造重工业；Uber与多家顶级基金联合出资，另获五大银行债务融资支持。</p>
+      <div class="tags"><span class="tag">物理AI</span><span class="tag">机器人</span><span class="tag">a16z</span><span class="tag">重点交易</span></div>
     </div>
 
     <div class="news-item">
-      <div class="news-rank">03</div>
-      <div class="news-content">
-        <div class="news-title-row">
-          <div class="news-title">保险科技公司Corgi 8周内第三次融资</div>
-          <div class="news-amount">估值40亿美元</div>
-        </div>
-        <div class="news-desc">Series B二次扩募，较8周前2.6亿美元轮估值再涨54%；年化营收从7个月前的4000万美元冲向年底目标4.5亿美元，为insurtech最快独角兽之一。</div>
-        <span class="tag">保险科技</span><span class="tag">AI</span><span class="tag">YC系</span>
-      </div>
+      <div class="rank-row"><span class="rank-num">02</span><h3>AI芯片公司Etched完成C轮 <span class="amount-highlight">$3亿</span>，估值达$103亿</h3></div>
+      <p class="desc">红杉资本领投，a16z、Jane Street、SK海力士等跟投，为红杉迄今规模最大的C轮项目；公司称已获得10亿美元订单并完成首批自研推理芯片Sohu量产，正对标英伟达。</p>
+      <div class="tags"><span class="tag">AI芯片</span><span class="tag">红杉资本</span><span class="tag">Series C</span></div>
     </div>
 
     <div class="news-item">
-      <div class="news-rank">04</div>
-      <div class="news-content">
-        <div class="news-title-row">
-          <div class="news-title">端点安全公司Glow脱离隐身模式</div>
-          <div class="news-amount">1.8亿美元 · 估值12亿美元</div>
-        </div>
-        <div class="news-desc">红杉资本、Cyberstarts、Greenoaks、Redpoint Ventures等领投；由前Meta工程VP创办，已在医疗、零售、金融等行业获得付费客户。</div>
-        <span class="tag">网络安全</span><span class="tag">红杉资本</span><span class="tag">Redpoint</span>
-      </div>
+      <div class="rank-row"><span class="rank-num">03</span><h3>英伟达（NVIDIA）向韩国Naver战略投资 <span class="amount-highlight">$10亿</span></h3></div>
+      <p class="desc">用于扩张Naver在韩国的AI数据中心项目，是英伟达近期在全球AI基础设施布局中的又一笔重要CVC出手，此前还增持AI云公司Nebius至9.3%股权。</p>
+      <div class="tags"><span class="tag">CVC</span><span class="tag">AI基础设施</span><span class="tag">英伟达</span></div>
     </div>
 
     <div class="news-item">
-      <div class="news-rank">05</div>
-      <div class="news-content">
-        <div class="news-title-row">
-          <div class="news-title">前DOGE成员创办的军事网络安全公司Cathedral</div>
-          <div class="news-amount">1.6亿美元 · 估值14亿美元</div>
-        </div>
-        <div class="news-desc">a16z与红杉资本联合领投，目标是用AI扩展美国军方进攻与防御性网络能力，是国防科技赛道近期最受关注的融资之一。</div>
-        <span class="tag">国防科技</span><span class="tag">a16z</span><span class="tag">红杉资本</span>
-      </div>
+      <div class="rank-row"><span class="rank-num">04</span><h3>网络安全公司Glow完成A轮 <span class="amount-highlight">$1.8亿</span></h3></div>
+      <p class="desc">红杉资本领投，聚焦企业网络安全赛道，是本周网络安全领域最大单笔早期融资之一，反映安全预算在AI浪潮下持续扩张。</p>
+      <div class="tags"><span class="tag">网络安全</span><span class="tag">红杉资本</span><span class="tag">Series A</span></div>
     </div>
 
     <div class="news-item">
-      <div class="news-rank">06</div>
-      <div class="news-content">
-        <div class="news-title-row">
-          <div class="news-title">电池材料公司Sila完成新一轮融资</div>
-          <div class="news-amount">3亿美元 · 累计16亿美元</div>
-        </div>
-        <div class="news-desc">Atreides Management、Sutter Hill Ventures、8VC、Bessemer、Matrix Partners参投，用于扩大下一代电池材料产能，服务能源基础设施及电动出行需求。</div>
-        <span class="tag">电池材料</span><span class="tag">能源</span><span class="tag">Bessemer</span>
-      </div>
+      <div class="rank-row"><span class="rank-num">05</span><h3>Augustus完成B轮 <span class="amount-highlight">$1.8亿</span>，估值达$10亿</h3></div>
+      <p class="desc">老虎环球基金（Tiger Global）领投，公司晋升独角兽行列，具体细分领域延续本周企业级AI应用的融资热度。</p>
+      <div class="tags"><span class="tag">独角兽</span><span class="tag">老虎环球</span><span class="tag">Series B</span></div>
     </div>
 
     <div class="news-item">
-      <div class="news-rank">07</div>
-      <div class="news-content">
-        <div class="news-title-row">
-          <div class="news-title">中国AI公司PsiBot估值破14.8亿美元</div>
-          <div class="news-amount">近1亿美元</div>
-        </div>
-        <div class="news-desc">彭博社报道，PsiBot成为最新一批估值突破10亿美元的中国AI初创公司之一，反映中国AI赛道融资热度持续升温。</div>
-        <span class="tag">中国AI</span><span class="tag">独角兽</span>
-      </div>
+      <div class="rank-row"><span class="rank-num">06</span><h3>Cathedral获融资 <span class="amount-highlight">$1.6亿</span>，估值$14亿</h3></div>
+      <p class="desc">由a16z与红杉资本联合投资，估值迈入独角兽门槛，是本周由两大顶级机构联合背书的稀缺案例。</p>
+      <div class="tags"><span class="tag">a16z</span><span class="tag">红杉资本</span><span class="tag">独角兽</span></div>
     </div>
 
     <div class="news-item">
-      <div class="news-rank">08</div>
-      <div class="news-content">
-        <div class="news-title-row">
-          <div class="news-title">跨境金融基础设施公司Augustus完成Series B</div>
-          <div class="news-amount">1.8亿美元 · 估值10亿美元</div>
-        </div>
-        <div class="news-desc">Tiger Global领投，公司打造"全球美元银行"，为国际金融科技公司与银行提供直连美元账户服务。</div>
-        <span class="tag">金融科技</span><span class="tag">Tiger Global</span>
-      </div>
+      <div class="rank-row"><span class="rank-num">07</span><h3>人形机器人公司Humanoid完成A轮 <span class="amount-highlight">$1.52亿</span>，估值$13.5亿</h3></div>
+      <p class="desc">Prime Movers Lab领投，博世（Bosch）、舍弗勒（Schaeffler）等产业资本跟投，是欧洲首家纯人形机器人独角兽，也是欧洲人形机器人赛道迄今最大A轮融资，计划2026年底在物流、制造场景启动试点部署。</p>
+      <div class="tags"><span class="tag">人形机器人</span><span class="tag">欧洲</span><span class="tag">产业资本</span></div>
     </div>
 
     <div class="news-item">
-      <div class="news-rank">09</div>
-      <div class="news-content">
-        <div class="news-title-row">
-          <div class="news-title">B2B创作者市场Passionfroot拓展美国业务</div>
-          <div class="news-amount">1500万美元</div>
-        </div>
-        <div class="news-desc">新一轮融资用于将其创作者与品牌撮合平台从欧洲市场扩展至美国，抢占创作者经济基础设施赛道。</div>
-        <span class="tag">创作者经济</span><span class="tag">出海</span>
-      </div>
+      <div class="rank-row"><span class="rank-num">08</span><h3>邮件安全公司AegisAI完成A轮 <span class="amount-highlight">$3600万</span>，累计融资$4900万</h3></div>
+      <p class="desc">Battery Ventures领投，Accel、Foundation Capital跟投，团队来自谷歌安全团队核心成员，主攻AI生成钓鱼邮件的自动化防御。</p>
+      <div class="tags"><span class="tag">AI安全</span><span class="tag">邮件安全</span><span class="tag">Series A</span></div>
     </div>
 
     <div class="news-item">
-      <div class="news-rank">10</div>
-      <div class="news-content">
-        <div class="news-title-row">
-          <div class="news-title">无广告社交应用Yope完成种子轮</div>
-          <div class="news-amount">1230万美元</div>
-        </div>
-        <div class="news-desc">主打不含算法推荐、不含广告的私密社交网络，瞄准年轻用户对传统社交媒体信任度下滑的市场空档。</div>
-        <span class="tag">消费社交</span><span class="tag">种子轮</span>
-      </div>
+      <div class="rank-row"><span class="rank-num">09</span><h3>AI设计工具公司Paper完成A轮 <span class="amount-highlight">$3400万</span></h3></div>
+      <p class="desc">Accel与ICONIQ领投，客户已包括Ramp、Lovable、Vercel等，据称年化经常性收入自今年初推出桌面版以来增长25倍，主攻AI编码时代的设计基础设施层。</p>
+      <div class="tags"><span class="tag">AI设计</span><span class="tag">Accel</span><span class="tag">Series A</span></div>
     </div>
 
-  </div>
-</section>
+    <div class="news-item">
+      <div class="rank-row"><span class="rank-num">10</span><h3>新加坡Ropedia完成Pre-A轮 <span class="amount-highlight">$3000万</span></h3></div>
+      <p class="desc">为机器人与具身智能构建真实世界交互数据平台，其可穿戴数据采集系统已积累超1000万条交互样本，是物理AI"训练数据"环节的代表性布局。</p>
+      <div class="tags"><span class="tag">物理AI</span><span class="tag">数据基础设施</span><span class="tag">新加坡</span></div>
+    </div>
 
-<footer>
-  <div class="sources">
-    <strong>信息来源：</strong>
-    <a href="https://techcrunch.com/2026/07/22/travis-kalanicks-robotics-company-raises-1-7b-led-by-a16z/" target="_blank">TechCrunch — Travis Kalanick's robotics company raises $1.7B, led by a16z</a>
-    <a href="https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/" target="_blank">TechCrunch — AI chip startup Etched hits $10.3B valuation</a>
-    <a href="https://techcrunch.com/2026/07/23/insurance-startup-corgi-reportedly-raised-more-money-at-4b-its-third-round-in-eight-weeks/" target="_blank">TechCrunch — Insurance startup Corgi reportedly raised more money at $4B</a>
-    <a href="https://techcrunch.com/2026/07/22/glow-emerges-from-stealth-at-1-2b-valuation-to-challenge-endpoint-security-in-the-ai-era/" target="_blank">TechCrunch — Glow emerges from stealth at $1.2B valuation</a>
-    <a href="https://techstartups.com/2026/07/22/venture-capital-startup-funding-roundup-july-22-2026-andreessen-horowitz-redpoint-ventures-sequoia-capital-insight-partners-more/" target="_blank">TechStartups.com — Venture Capital & Startup Funding Roundup, July 22, 2026</a>
-    <a href="https://techstartups.com/2026/07/21/venture-capital-startup-funding-roundup-july-21-2026-bosch-tiger-global-finsight-ventures-atreides-management-and-coinbase/" target="_blank">TechStartups.com — Venture Capital & Startup Funding Roundup, July 21, 2026</a>
-    <a href="https://www.bloomberg.com/news/articles/2026-07-23/china-s-psibot-becomes-latest-ai-startup-to-hit-1-billion-value" target="_blank">Bloomberg — China's PsiBot Hits $1.48 Billion Valuation</a>
-    <a href="https://www.bloomberg.com/news/articles/2026-07-23/magnificent-7-loses-767-billion-as-ai-skeptics-dump-tech-stocks" target="_blank">Bloomberg — Magnificent 7 Lose $797 Billion as AI Skeptics Dump Tech Stocks</a>
-    <a href="https://techcrunch.com/2026/07/22/passionfroot-raises-15m-to-expand-its-b2b-creator-marketplace-to-the-us/" target="_blank">TechCrunch — Passionfroot raises $15M</a>
-    <a href="https://techcrunch.com/2026/07/22/yope-raises-12-3m-to-build-a-private-social-network-without-algorithms-or-ads/" target="_blank">TechCrunch — Yope raises $12.3M</a>
-  </div>
-  <div class="disclaimer">
-    免责声明：本页内容基于公开新闻报道自动整理生成，仅供参考，不构成任何投资建议。文中金额、估值等数据来自各信息源的公开披露，可能存在报道口径差异或后续修正，请以官方公告为准。
-  </div>
-</footer>
+  </section>
+
+  <footer>
+    <h4>信息来源</h4>
+    <ul>
+      <li><a href="https://techcrunch.com/2026/07/22/travis-kalanicks-robotics-company-raises-1-7b-led-by-a16z/" target="_blank">TechCrunch — Travis Kalanick's robotics company raises $1.7B, led by a16z</a></li>
+      <li><a href="https://siliconangle.com/2026/07/23/industrial-automation-startup-atoms-raises-1-7b-funding/" target="_blank">SiliconANGLE — Travis Kalanick's industrial automation startup Atoms raises $1.7B</a></li>
+      <li><a href="https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/" target="_blank">TechCrunch — AI chip startup Etched hits $10.3B valuation</a></li>
+      <li><a href="https://techstartups.com/2026/07/23/etched-ai-chip-startup-founded-by-college-dropouts-raises-300m-at-10-3b-valuation-to-take-on-nvidia/" target="_blank">TechStartups — Etched raises $300M at $10.3B valuation</a></li>
+      <li><a href="https://techstartups.com/2026/07/23/venture-capital-startup-funding-roundup-july-23-2026-accel-andreessen-horowitz-battery-ventures-iconiq-jane-street-sequoia-more/" target="_blank">TechStartups — Venture capital & startup funding roundup, July 23, 2026</a></li>
+      <li><a href="https://techstartups.com/2026/07/22/venture-capital-startup-funding-roundup-july-22-2026-andreessen-horowitz-redpoint-ventures-sequoia-capital-insight-partners-more/" target="_blank">TechStartups — Venture capital & startup funding roundup, July 22, 2026</a></li>
+      <li><a href="https://techstartups.com/2026/07/21/venture-capital-startup-funding-roundup-july-21-2026-bosch-tiger-global-finsight-ventures-atreides-management-and-coinbase/" target="_blank">TechStartups — Venture capital & startup funding roundup, July 21, 2026</a></li>
+      <li><a href="https://techstartups.com/2026/07/21/humanoid-raises-152m-at-1-35b-valuation-to-build-ai-powered-industrial-humanoid-robots/" target="_blank">TechStartups — Humanoid raises $152M at $1.35B valuation</a></li>
+      <li><a href="https://techstartups.com/2026/07/21/nvidia-doubles-down-on-nebius-with-9-3-stake-as-ai-infrastructure-race-heats-up-nebius-stock-jumps-6/" target="_blank">TechStartups — Nvidia doubles down on Nebius with 9.3% stake</a></li>
+      <li><a href="https://www.gurufocus.com/news/8979017/nvidia-invests-1-billion-in-naver-for-ai-data-center-expansion" target="_blank">GuruFocus — NVIDIA Invests $1 Billion in Naver for AI Data Center Expansion</a></li>
+      <li><a href="https://www.nrn.com/restaurant-technology/cloudkitchens-owner-raises-1-7b-to-automate-restaurants-and-more" target="_blank">Nation's Restaurant News — CloudKitchens owner Atoms raises $1.7B</a></li>
+    </ul>
+    <div class="disclaimer">
+      免责声明：本页面内容基于公开新闻报道自动整理生成，仅供信息参考，不构成任何投资建议。文中金额、估值等数据以原始信息源披露为准，如有出入请以官方公告为准。本页面由AI自动生成并每日更新，可能存在遗漏或延迟，请审慎甄别。
+    </div>
+  </footer>
 
 </div>
 </body>
