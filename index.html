@@ -3,170 +3,173 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日科技投资动态 · 2026年7月28日</title>
+<title>每日科技投资动态 · 2026年7月30日</title>
 <style>
-  :root { --accent: #c8401a; }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
-    background: #f5f3ef; color: #222; line-height: 1.7;
-  }
-  .container { max-width: 860px; margin: 0 auto; padding: 0 20px 60px; }
-  header { border-bottom: 3px solid #222; padding: 36px 0 18px; margin-bottom: 8px; }
-  header h1 { font-size: 34px; letter-spacing: 2px; font-weight: 700; }
-  header h1 span { color: var(--accent); }
-  .meta { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-top: 10px; font-size: 13px; color: #666; }
-  .divider-thin { border-bottom: 1px solid #ccc; margin-bottom: 28px; }
-  h2.section { font-size: 20px; margin: 34px 0 16px; padding-left: 12px; border-left: 5px solid var(--accent); }
-  .overview { background: #fff; border: 1px solid #e5e0d8; border-radius: 8px; padding: 20px 24px; font-size: 15px; }
-  .overview b { color: var(--accent); }
-
-  .highlight-card { background: #fff; border: 2px solid var(--accent); border-radius: 10px; overflow: hidden; }
-  .highlight-head { background: var(--accent); color: #fff; padding: 14px 24px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-  .highlight-head .badge { background: #fff; color: var(--accent); font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 20px; }
-  .highlight-head h3 { font-size: 21px; }
-  .highlight-body { padding: 22px 24px; font-size: 15px; }
-  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 18px 0; }
-  .stat { background: #faf7f2; border: 1px solid #eee5d8; border-radius: 8px; padding: 12px; text-align: center; }
-  .stat .num { font-size: 22px; font-weight: 700; color: var(--accent); }
-  .stat .label { font-size: 12px; color: #777; margin-top: 2px; }
-  .highlight-body h4 { font-size: 15px; margin: 16px 0 6px; color: var(--accent); }
-  .highlight-body p { margin-bottom: 8px; }
-
-  .deal { background: #fff; border: 1px solid #e5e0d8; border-radius: 8px; padding: 18px 22px; margin-bottom: 14px; }
-  .deal-top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px; }
-  .deal-top h3 { font-size: 17px; }
-  .deal-top h3 .rank { color: #bbb; font-size: 14px; margin-right: 6px; }
-  .amount { color: var(--accent); font-weight: 700; font-size: 17px; white-space: nowrap; }
-  .deal p { font-size: 14px; color: #444; margin-top: 6px; }
-  .tags { margin-top: 10px; }
-  .tag { display: inline-block; font-size: 12px; background: #f4ece4; color: #8a5a3a; border-radius: 20px; padding: 1px 10px; margin-right: 6px; margin-bottom: 4px; }
-  .tag.hot { background: var(--accent); color: #fff; }
-
-  footer { margin-top: 44px; border-top: 2px solid #222; padding-top: 18px; font-size: 13px; color: #666; }
-  footer h4 { font-size: 14px; color: #222; margin-bottom: 8px; }
-  footer ul { list-style: none; }
-  footer li { margin-bottom: 4px; }
-  footer a { color: var(--accent); text-decoration: none; word-break: break-all; }
-  footer a:hover { text-decoration: underline; }
-  .disclaimer { margin-top: 16px; padding: 12px 16px; background: #efe9e0; border-radius: 6px; font-size: 12px; color: #777; }
+  :root { --accent:#c8401a; --ink:#1a1a1a; --muted:#6b6b6b; --bg:#f4f1ec; --card:#ffffff; --line:#e3ded6; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif; background:var(--bg); color:var(--ink); line-height:1.7; }
+  .wrap { max-width:860px; margin:0 auto; padding:0 20px 60px; }
+  header { border-bottom:3px solid var(--ink); padding:36px 0 18px; margin-bottom:8px; }
+  .kicker { color:var(--accent); font-size:13px; letter-spacing:3px; font-weight:600; }
+  h1 { font-size:34px; font-weight:700; letter-spacing:1px; margin:6px 0 10px; }
+  .meta { display:flex; flex-wrap:wrap; gap:16px; font-size:13px; color:var(--muted); border-top:1px solid var(--line); padding-top:10px; }
+  .meta b { color:var(--ink); font-weight:600; }
+  section { margin-top:30px; }
+  h2 { font-size:20px; font-weight:700; padding-left:10px; border-left:4px solid var(--accent); margin-bottom:14px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:22px 24px; box-shadow:0 1px 3px rgba(0,0,0,.04); }
+  .overview p + p { margin-top:10px; }
+  .hl { border-top:4px solid var(--accent); }
+  .hl-tag { display:inline-block; background:var(--accent); color:#fff; font-size:12px; font-weight:600; padding:2px 10px; border-radius:3px; letter-spacing:1px; }
+  .hl h3 { font-size:24px; margin:10px 0 2px; }
+  .hl .sub { color:var(--muted); font-size:14px; margin-bottom:14px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin:16px 0; }
+  .cell { background:#faf7f2; border:1px solid var(--line); border-radius:6px; padding:12px 14px; text-align:center; }
+  .cell .num { color:var(--accent); font-size:22px; font-weight:700; }
+  .cell .lbl { font-size:12px; color:var(--muted); margin-top:2px; }
+  .hl h4 { font-size:15px; color:var(--accent); margin:16px 0 6px; }
+  .hl p { font-size:14.5px; }
+  .item { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:16px 20px; margin-bottom:12px; display:flex; gap:16px; }
+  .rank { color:var(--accent); font-size:22px; font-weight:700; min-width:34px; line-height:1.3; }
+  .item h3 { font-size:16.5px; font-weight:700; }
+  .amt { color:var(--accent); font-weight:700; }
+  .item p { font-size:14px; color:#3a3a3a; margin-top:4px; }
+  .tags { margin-top:8px; }
+  .tag { display:inline-block; font-size:12px; color:var(--muted); background:#f1ede6; border-radius:3px; padding:1px 8px; margin-right:6px; }
+  footer { margin-top:40px; border-top:2px solid var(--ink); padding-top:16px; font-size:13px; color:var(--muted); }
+  footer h4 { font-size:14px; color:var(--ink); margin-bottom:8px; }
+  footer ul { list-style:none; }
+  footer li { margin-bottom:4px; }
+  footer a { color:var(--accent); text-decoration:none; word-break:break-all; }
+  footer a:hover { text-decoration:underline; }
+  .disclaimer { margin-top:14px; padding-top:10px; border-top:1px solid var(--line); font-size:12px; }
+  @media (max-width:600px){ h1{font-size:26px;} .item{flex-direction:column; gap:4px;} }
 </style>
 </head>
 <body>
-<div class="container">
+<div class="wrap">
 
 <header>
-  <h1>每日<span>科技投资</span>动态</h1>
+  <div class="kicker">DAILY TECH INVESTMENT BRIEF</div>
+  <h1>每日科技投资动态</h1>
   <div class="meta">
-    <div>2026年7月28日 · 星期二</div>
-    <div>信息源：Reuters / Bloomberg / TechCrunch / Crunchbase News / TechStartups / AlleyWatch</div>
+    <span><b>2026年7月30日 · 星期四</b></span>
+    <span>覆盖时段：过去24–48小时（7月28日–7月29日）</span>
+    <span>信息源：TechStartups · TechCrunch · PR Newswire 等</span>
   </div>
 </header>
-<div class="divider-thin"></div>
 
-<h2 class="section">今日概览</h2>
-<div class="overview">
-  <p>过去24-48小时最重磅的消息是 <b>NVIDIA 宣布向 Ilya Sutskever 的 Safe Superintelligence（SSI）投资 50 亿美元</b>——这是本轮 AI 热潮中芯片巨头最大手笔的单笔投资之一，一家成立仅两年、没有产品也没有收入的公司获得了 320 亿美元估值的战略背书。此外，电池材料公司 Sila 获 3 亿美元、中国具身智能公司 PsiBot（灵初智能）获奇瑞领投约 1 亿美元、Lux Capital 领投 Genius AI 的 4400 万美元 D 轮等交易，延续了资本向 AI、机器人和能源基础设施集中的态势。据 Crunchbase 数据，2026 年上半年全球创投总额已达创纪录的 <b>5100 亿美元</b>，其中二季度超七成资金流向 AI 相关公司。</p>
-</div>
-
-<h2 class="section">今日最值得关注</h2>
-<div class="highlight-card">
-  <div class="highlight-head">
-    <span class="badge">HIGHLIGHT</span>
-    <h3>NVIDIA 50亿美元战略投资 Safe Superintelligence（SSI）</h3>
+<section class="overview">
+  <h2>今日概览</h2>
+  <div class="card">
+    <p>过去48小时，全球创投资金没有追逐新的大模型头条，而是密集流向让 AI 与工业技术真正落地的「控制层」：云访问控制、AI 智能体治理、企业数据语义层、语音基础设施、病原体诊断、PFAS（永久化学品）降解、雷达卫星与新型量子架构。据 Crunchbase 数据，2026 年上半年全球初创融资已达创纪录的 <b style="color:var(--accent)">5100亿美元</b>，其中 AI×安全 交叉赛道年内已完成超 150 笔种子轮、共 8.55 亿美元。</p>
+    <p>两大信号值得注意：其一，网络安全与 AI 治理成为最强主线，Act Security（6000万美元）与 Hush Security（3000万美元）同日官宣；其二，战略投资者（CVC）异常活跃——三菱电机领投 Array Labs、Akamai 入股 Hush、大金与 Veralto 押注 Claros、Cedars-Sinai 联投 Vivid Dx，产业资本正在提前锁定采购与分发通道。此外，「大额种子轮」持续常态化：Fish Audio 5200万、ZuriQ 2550万、Vivid Dx 1500万均为种子轮。</p>
   </div>
-  <div class="highlight-body">
-    <div class="stats">
-      <div class="stat"><div class="num">$50亿</div><div class="label">本轮融资额（NVIDIA）</div></div>
-      <div class="stat"><div class="num">$320亿</div><div class="label">投后估值</div></div>
-      <div class="stat"><div class="num">约$70亿</div><div class="label">累计融资（含本轮，据报道）</div></div>
-      <div class="stat"><div class="num">0</div><div class="label">已发布产品 / 营收</div></div>
+</section>
+
+<section>
+  <h2>今日最值得关注</h2>
+  <div class="card hl">
+    <span class="hl-tag">FOCUS · 深度解读</span>
+    <h3>Fish Audio 完成 5200 万美元种子轮：一年做到 2100 万美元 ARR 的语音 AI 黑马</h3>
+    <div class="sub">领投：Coreline Ventures、Capital Today（今日资本）｜跟投：359 Capital、Play Time、HF0、645 Ventures、Parable 等｜总部：美国帕洛阿尔托</div>
+    <div class="grid">
+      <div class="cell"><div class="num">$5200万</div><div class="lbl">本轮融资（种子轮）</div></div>
+      <div class="cell"><div class="num">$5200万</div><div class="lbl">累计披露融资</div></div>
+      <div class="cell"><div class="num">$2100万</div><div class="lbl">年经常性收入 ARR</div></div>
+      <div class="cell"><div class="num">800万+</div><div class="lbl">用户数（成立一年）</div></div>
+      <div class="cell"><div class="num">83+</div><div class="lbl">支持语言</div></div>
     </div>
     <h4>公司业务</h4>
-    <p>SSI 由 OpenAI 联合创始人、前首席科学家 Ilya Sutskever 于 2024 年 6 月与 Daniel Gross、Daniel Levy 共同创立，唯一目标是"直接研发安全的超级智能"。公司刻意不做中间产品、不发论文，运营两年来几乎未披露任何研究方向，是硅谷最神秘的 AI 实验室。</p>
-    <h4>历史融资</h4>
-    <p>2024 年 9 月：10 亿美元种子轮，估值 50 亿美元（SV Angel、DST Global、红杉资本、a16z）。2025 年：20 亿美元融资，估值跃升至 320 亿美元，Greenoaks 领投 5 亿美元，Alphabet、NVIDIA、Lightspeed、DST 等参与。加上本轮 NVIDIA 的 50 亿美元，媒体报道其累计融资已达约 70 亿美元。</p>
-    <h4>业务进展与本轮意义</h4>
-    <p>SSI 至今没有产品、没有营收，处于纯研究阶段。7 月 27 日宣布的这笔交易兼具融资与战略合作性质：SSI 将获得 NVIDIA 下一代 Vera Rubin 平台的算力支持，并计划在未来 12 个月内将计算能力扩大 10 倍。对 NVIDIA 而言，这延续了其"投资换算力订单"的生态打法；对 SSI 而言，算力是其押注"规模化研究路线"的核心筹码。市场也再度讨论：零收入公司获得 320 亿美元估值，是 AI 信仰的体现还是泡沫信号。</p>
+    <p>Fish Audio 打造富有表现力、可精细控制的语音生成平台，覆盖实时文本转语音（TTS）、声音克隆与语音智能体：仅需 5 秒音频样本即可在约 15 秒内完成声音克隆，支持 83 种以上语言、词级情绪控制与 1.5 万余种自然语言控制指令。客户横跨创作者、独立开发者、游戏工作室与企业，已服务 HeyGen、Sanas 等公司，并与 LiveKit、Retell 等开发者平台深度集成。</p>
+    <h4>历史融资与团队</h4>
+    <p>公司由前 NVIDIA 视频研究员廖世佳（Shijia Liao）联合创立，起点是他在卧室里用一块游戏 GPU 训练的开源项目（Fish Speech / OpenAudio），凭开源社区完成早期冷启动。本轮 5200 万美元为公司首次大额机构融资，也是其目前全部披露融资；由 Coreline Ventures 与徐新掌舵的今日资本（Capital Today）共同领投，HF0、645 Ventures 等跟投。TechCrunch 评价其种子轮「规模与成熟度更像一轮 Series A」。</p>
+    <h4>业务发展与前景</h4>
+    <p>成立第一年即实现 2100 万美元 ARR 与 800 万用户，是当前增长最快的语音 AI 公司之一。新资金将用于从 TTS 扩展至完整「音频原生」技术栈（语音原生 LLM、Speech-to-Speech 等）、组建企业销售团队并深化开发者工具。挑战同样明确：赛道拥挤（ElevenLabs 今年 2 月已以 110 亿美元估值融资 5 亿美元），且声音克隆的授权与合规问题使「信任与版权管理」成为产品本身的一部分。</p>
   </div>
-</div>
+</section>
 
-<h2 class="section">今日交易速览（按重要性排序）</h2>
+<section>
+  <h2>今日交易列表 <span style="font-size:13px;color:var(--muted);font-weight:400">（按重要性排序）</span></h2>
 
-<div class="deal">
-  <div class="deal-top"><h3><span class="rank">01</span>Safe Superintelligence（美国）</h3><span class="amount">$50亿 · 战略投资</span></div>
-  <p>NVIDIA 单笔投资 50 亿美元，SSI 估值 320 亿美元，获 Vera Rubin 平台算力支持（7月27日，详见上方重点卡片）。</p>
-  <div class="tags"><span class="tag hot">NVIDIA</span><span class="tag">AGI / 前沿模型</span><span class="tag">超大额</span></div>
-</div>
+  <div class="item"><div class="rank">01</div><div>
+    <h3>Act Security 携 <span class="amt">6000万美元</span>（种子+A轮）出隐身模式</h3>
+    <p>以色列云安全公司，主打以「访问边界」取代告警式安全，管控人类、工作负载与 AI 智能体的实际触达范围。创始团队曾创办 Medigate（被 Claroty 以 4 亿美元收购）。种子轮由 Team8、Bessemer 投资，A 轮由 Notable Capital 领投。</p>
+    <div class="tags"><span class="tag">网络安全</span><span class="tag">AI智能体管控</span><span class="tag">以色列</span></div>
+  </div></div>
 
-<div class="deal">
-  <div class="deal-top"><h3><span class="rank">02</span>Sila（美国）</h3><span class="amount">$3亿 · PE轮</span></div>
-  <p>硅负极先进电池材料公司，由 Atreides Management 与 Sutter Hill Ventures 领投（7月25日）。电池材料是 AI 之外资本持续加注的硬科技赛道。</p>
-  <div class="tags"><span class="tag">电池材料</span><span class="tag">Sutter Hill</span><span class="tag">硬科技</span></div>
-</div>
+  <div class="item"><div class="rank">02</div><div>
+    <h3>Claros Technologies 完成 <span class="amt">5500万美元</span> B 轮</h3>
+    <p>明尼阿波利斯公司，商业化 PFAS「永久化学品」的永久性降解技术（ClarosTechUV），服务半导体、航空航天、制药等受监管行业。Treehouse Family Capital 领投，大金美国（Daikin America）、Veralto 等产业方跟投。</p>
+    <div class="tags"><span class="tag">气候科技</span><span class="tag">工业修复</span><span class="tag">战略投资</span></div>
+  </div></div>
 
-<div class="deal">
-  <div class="deal-top"><h3><span class="rank">03</span>PsiBot 灵初智能（中国）</h3><span class="amount">约$1亿 · 估值$14.8亿</span></div>
-  <p>中国具身智能/机器人公司，本轮由奇瑞汽车领投、蓝思科技等参与，成为中国最新一家 AI 独角兽（彭博，7月23日报道）。车企 CVC 深度入局具身智能。</p>
-  <div class="tags"><span class="tag hot">奇瑞CVC</span><span class="tag">具身智能</span><span class="tag">中国独角兽</span></div>
-</div>
+  <div class="item"><div class="rank">03</div><div>
+    <h3>Fish Audio 完成 <span class="amt">5200万美元</span> 种子轮（见上方深度解读）</h3>
+    <p>Coreline Ventures 与今日资本领投；成立一年 ARR 达 2100 万美元、用户超 800 万，将从 TTS 扩展至完整音频原生技术栈。</p>
+    <div class="tags"><span class="tag">语音AI</span><span class="tag">今日资本</span><span class="tag">巨额种子轮</span></div>
+  </div></div>
 
-<div class="deal">
-  <div class="deal-top"><h3><span class="rank">04</span>Genius AI（美国）</h3><span class="amount">$4400万 · D轮</span></div>
-  <p>为线下服务型商家自动化排班、收款、营销与客户管理的平台，Lux Capital 领投，Bessemer、Imaginary、L Catterton Growth 等跟投，累计融资超 1.25 亿美元（7月27日）。</p>
-  <div class="tags"><span class="tag hot">Lux Capital</span><span class="tag">SMB SaaS</span><span class="tag">AI应用</span></div>
-</div>
+  <div class="item"><div class="rank">04</div><div>
+    <h3>Hush Security 获 <span class="amt">3000万美元</span> A 轮，Akamai 战略入股</h3>
+    <p>治理「非人类身份」与企业 AI 智能体：中央注册表、无常驻凭证、即时授权与紧急停止开关。Akamai、Battery Ventures、YL Ventures 投资，累计融资 4100 万美元；Kyndryl 已内部部署并对外转售。</p>
+    <div class="tags"><span class="tag">网络安全</span><span class="tag">AI治理</span><span class="tag">CVC</span></div>
+  </div></div>
 
-<div class="deal">
-  <div class="deal-top"><h3><span class="rank">05</span>Paper（美国）</h3><span class="amount">$3400万 · A轮</span></div>
-  <p>"Agentic 时代"的设计平台，由 Accel 与 ICONIQ 投资（7月24日）。顶级基金持续押注 AI 原生生产力工具。</p>
-  <div class="tags"><span class="tag hot">Accel</span><span class="tag">ICONIQ</span><span class="tag">设计工具</span></div>
-</div>
+  <div class="item"><div class="rank">05</div><div>
+    <h3>ZuriQ 融资 <span class="amt">2550万美元</span>，重构离子阱量子架构</h3>
+    <p>ETH Zürich 衍生公司，Penning 微阱设计实现原生二维离子阵列，已与英飞凌合作芯片演示 3×3 九离子阵列。Quantonation 领投，累计披露约 2970 万美元。</p>
+    <div class="tags"><span class="tag">量子计算</span><span class="tag">前沿硬件</span><span class="tag">瑞士</span></div>
+  </div></div>
 
-<div class="deal">
-  <div class="deal-top"><h3><span class="rank">06</span>Gritt（美国）</h3><span class="amount">$3240万 · 种子前+A轮</span></div>
-  <p>结合机器人与 AI 加速基础设施建设（如电力与数据中心施工）的公司，携两轮合计 3240 万美元融资出世（7月25日）。</p>
-  <div class="tags"><span class="tag">机器人</span><span class="tag">基础设施</span><span class="tag">AI+建造</span></div>
-</div>
+  <div class="item"><div class="rank">06</div><div>
+    <h3>Array Labs 获 <span class="amt">2100万美元</span>，三菱电机领投并达成分销合作</h3>
+    <p>雷达卫星编队实现全天候高分辨率侦察，已获 DARPA、美国海军与空军研发合同；三菱电机将其海事/航空追踪服务引入亚太防务市场。累计披露融资约 5600 万美元。</p>
+    <div class="tags"><span class="tag">国防科技</span><span class="tag">卫星</span><span class="tag">CVC</span></div>
+  </div></div>
 
-<div class="deal">
-  <div class="deal-top"><h3><span class="rank">07</span>MyDecisive（美国）</h3><span class="amount">$1200万</span></div>
-  <p>企业可观测性/监控方向公司结束隐身模式，完成 1200 万美元融资（7月24日）。</p>
-  <div class="tags"><span class="tag">企业软件</span><span class="tag">出隐身</span></div>
-</div>
+  <div class="item"><div class="rank">07</div><div>
+    <h3>CORE Biomedicine 完成 <span class="amt">2100万美元</span> A 轮</h3>
+    <p>横跨波士顿、东京、苏州的「谱系精准肿瘤学」公司；东京大学创新平台（UTokyo IPC）与 Elikon Venture 共同领投，三菱UFJ资本、苏州资本等跟投，日本子公司另获 AMED 资助。</p>
+    <div class="tags"><span class="tag">生物科技</span><span class="tag">肿瘤</span><span class="tag">跨境</span></div>
+  </div></div>
 
-<div class="deal">
-  <div class="deal-top"><h3><span class="rank">08</span>Epic Markets（美国·纽约）</h3><span class="amount">$1000万 · 种子前</span></div>
-  <p>面向零售交易者提供机构级执行标准的多资产券商平台，Karatage 投资，为公司首轮融资（7月27日）。</p>
-  <div class="tags"><span class="tag">金融科技</span><span class="tag">零售交易</span></div>
-</div>
+  <div class="item"><div class="rank">08</div><div>
+    <h3>Healia 获 <span class="amt">1800万美元</span>（含 1400 万美元 A 轮）</h3>
+    <p>7月29日官宣。为双职工家庭与雇主优化健康福利成本，帮助员工利用配偶医保降低企业保费支出。</p>
+    <div class="tags"><span class="tag">健康福利</span><span class="tag">InsurTech</span><span class="tag">7月29日</span></div>
+  </div></div>
 
-<div class="deal">
-  <div class="deal-top"><h3><span class="rank">09</span>Sofab Inks（美国）</h3><span class="amount">$600万 · 种子轮</span></div>
-  <p>钙钛矿太阳能电池专用材料（导电油墨）公司完成种子轮（7月24日），清洁能源材料获早期资本关注。</p>
-  <div class="tags"><span class="tag">钙钛矿光伏</span><span class="tag">新材料</span></div>
-</div>
+  <div class="item"><div class="rank">09</div><div>
+    <h3>Vivid Dx 种子轮 <span class="amt">1500万美元</span>：败血症诊断从数天缩至数小时</h3>
+    <p>牛津公司，拉曼光谱+AI 直接从血液识别病原体并支持药敏测试；Oxford Science Enterprises 与 Cedars-Sinai IP Co. 共同领投。</p>
+    <div class="tags"><span class="tag">诊断</span><span class="tag">医疗AI</span><span class="tag">英国</span></div>
+  </div></div>
 
-<div class="deal">
-  <div class="deal-top"><h3><span class="rank">10</span>KelAI（美国·纽约）</h3><span class="amount">$500万</span></div>
-  <p>为对冲基金构建自主投研引擎（autonomous research engine）的 AI 公司完成 500 万美元融资（7月27日）。</p>
-  <div class="tags"><span class="tag">AI投研</span><span class="tag">对冲基金</span></div>
-</div>
+  <div class="item"><div class="rank">10</div><div>
+    <h3>Credible Data 种子轮 <span class="amt">1000万美元</span>：给企业 AI 一个语义层</h3>
+    <p>基于开源语义建模语言 Malloy，为 AI 智能体提供「可信业务上下文引擎」，防止其在结构化数据上产生幻觉。Gradient（谷歌旗下）、SignalFire、K5 Global 投资，天使包括 Wes McKinney（pandas 之父）。</p>
+    <div class="tags"><span class="tag">企业AI</span><span class="tag">数据基础设施</span><span class="tag">谷歌Gradient</span></div>
+  </div></div>
+
+  <div class="item"><div class="rank">11</div><div>
+    <h3>其他值得一提：Procode <span class="amt">1000万美元</span> A 轮 / Dopl <span class="amt">630万美元</span> 种子轮</h3>
+    <p>Procode（Health Velocity Capital 领投）用 AI 编码引擎整合外科医疗计费市场，已服务 350+ 医生，累计融资 1400 万美元；Dopl Technologies（7月29日，SpringTide Ventures 领投）开发机器人远程超声平台。</p>
+    <div class="tags"><span class="tag">垂直AI</span><span class="tag">医疗机器人</span></div>
+  </div></div>
+</section>
 
 <footer>
   <h4>信息来源</h4>
   <ul>
-    <li><a href="https://www.investing.com/news/stock-market-news/nvidia-to-invest-5-billion-in-ilya-sutskevers-ai-startup-source-says-4814862">Reuters（via Investing.com）：Nvidia to invest $5 billion in Ilya Sutskever's AI startup</a></li>
-    <li><a href="https://techcrunch.com/2026/07/27/ilya-sutskevers-safe-superintelligence-partners-with-nvidia-to-scale-its-ai-research/">TechCrunch：Safe Superintelligence partners with Nvidia to scale its AI research</a></li>
-    <li><a href="https://www.bloomberg.com/news/articles/2026-07-27/nvidia-makes-substantial-investment-in-sutskever-s-ai-startup">Bloomberg：Nvidia to Invest $5B in Sutskever's AI Startup</a></li>
-    <li><a href="https://www.calcalistech.com/ctechnews/article/hjfywdtajl">CTech：SSI raises $2B at $32B valuation（历史融资）</a></li>
-    <li><a href="https://techfundingnews.com/inside-the-32b-ai-unicorn-backed-by-alphabet-nvidia-5-facts-about-openai-co-founders-safe-superintelligence/">Tech Funding News：5 facts about Safe Superintelligence</a></li>
-    <li><a href="https://www.bloomberg.com/news/articles/2026-07-23/china-s-psibot-becomes-latest-ai-startup-to-hit-1-billion-value">Bloomberg：China's PsiBot Hits $1.48 Billion Valuation</a></li>
-    <li><a href="https://techstartups.com/2026/07/23/venture-capital-startup-funding-roundup-july-23-2026-accel-andreessen-horowitz-battery-ventures-iconiq-jane-street-sequoia-more/">TechStartups：VC & Startup Funding Roundup（Sila、Gritt、Paper 等）</a></li>
-    <li><a href="https://www.alleywatch.com/2026/07/the-alleywatch-startup-daily-funding-report-7-27-2026/">AlleyWatch Daily Funding Report 7/27/2026（Epic Markets、Lithos、Genius AI、KelAI）</a></li>
-    <li><a href="https://news.crunchbase.com/venture/global-startup-exits-ipo-ma-soar-ai-q2-h1-2026/">Crunchbase News：Global Startup Investment Hit Record $510B In H1 2026</a></li>
+    <li><a href="https://techstartups.com/2026/07/28/venture-capital-startup-funding-roundup-july-28-2026-battery-ventures-bessemer-gradient-team8-y-combinator-more/">TechStartups：Venture Capital &amp; Startup Funding Roundup, July 28, 2026</a></li>
+    <li><a href="https://techcrunch.com/2026/07/28/fish-audio-raises-50m-seed-to-build-ai-voice-models-for-creators-and-enterprises/">TechCrunch：Fish Audio raises $52M seed to build AI voice models</a></li>
+    <li><a href="https://www.prnewswire.com/news-releases/fish-audio-raises-52m-in-seed-funding-after-turning-passion-project-into-one-of-voice-ais-fastest-growing-companies-302836233.html">PR Newswire：Fish Audio Raises $52M in Seed Funding</a></li>
+    <li><a href="https://mlq.ai/news/fish-audio-raises-52m-seed-round-with-21m-arr-across-8-million-users/">MLQ News：Fish Audio $52M Seed With $21M ARR Across 8 Million Users</a></li>
+    <li><a href="https://www.prnewswire.com/news-releases/act-security-launches-action-centric-cloud-security-platform-with-60-million-in-funding-302836148.html">PR Newswire：Act Security Launches With $60 Million in Funding</a></li>
+    <li><a href="https://www.prnewswire.com/news-releases/claros-technologies-raises-55-million-series-b-financing-to-accelerate-global-commercialization-of-pfas-destruction-technology-302835890.html">PR Newswire：Claros Technologies Raises $55 Million Series B</a></li>
+    <li><a href="https://vcnewsdaily.com/">VC News Daily（Healia、Dopl、Freight Hero 等 7月29日交易）</a></li>
   </ul>
-  <div class="disclaimer">免责声明：本页面内容基于 2026 年 7 月 28 日公开新闻报道自动汇总生成，仅供信息参考，不构成任何投资建议。金额、估值等数据以官方公告为准。</div>
+  <div class="disclaimer">免责声明：本页面内容基于 2026年7月30日 公开新闻报道整理，仅供信息参考，不构成任何投资建议。金额与估值以公司官方披露为准。</div>
 </footer>
 
 </div>
