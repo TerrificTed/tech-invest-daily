@@ -3,46 +3,145 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日科技投资动态 · 2026年7月30日</title>
+<title>每日科技投资动态 · 2026年7月31日</title>
 <style>
-  :root { --accent:#c8401a; --ink:#1a1a1a; --muted:#6b6b6b; --bg:#f4f1ec; --card:#ffffff; --line:#e3ded6; }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif; background:var(--bg); color:var(--ink); line-height:1.7; }
-  .wrap { max-width:860px; margin:0 auto; padding:0 20px 60px; }
-  header { border-bottom:3px solid var(--ink); padding:36px 0 18px; margin-bottom:8px; }
-  .kicker { color:var(--accent); font-size:13px; letter-spacing:3px; font-weight:600; }
-  h1 { font-size:34px; font-weight:700; letter-spacing:1px; margin:6px 0 10px; }
-  .meta { display:flex; flex-wrap:wrap; gap:16px; font-size:13px; color:var(--muted); border-top:1px solid var(--line); padding-top:10px; }
-  .meta b { color:var(--ink); font-weight:600; }
-  section { margin-top:30px; }
-  h2 { font-size:20px; font-weight:700; padding-left:10px; border-left:4px solid var(--accent); margin-bottom:14px; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:22px 24px; box-shadow:0 1px 3px rgba(0,0,0,.04); }
-  .overview p + p { margin-top:10px; }
-  .hl { border-top:4px solid var(--accent); }
-  .hl-tag { display:inline-block; background:var(--accent); color:#fff; font-size:12px; font-weight:600; padding:2px 10px; border-radius:3px; letter-spacing:1px; }
-  .hl h3 { font-size:24px; margin:10px 0 2px; }
-  .hl .sub { color:var(--muted); font-size:14px; margin-bottom:14px; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin:16px 0; }
-  .cell { background:#faf7f2; border:1px solid var(--line); border-radius:6px; padding:12px 14px; text-align:center; }
-  .cell .num { color:var(--accent); font-size:22px; font-weight:700; }
-  .cell .lbl { font-size:12px; color:var(--muted); margin-top:2px; }
-  .hl h4 { font-size:15px; color:var(--accent); margin:16px 0 6px; }
-  .hl p { font-size:14.5px; }
-  .item { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:16px 20px; margin-bottom:12px; display:flex; gap:16px; }
-  .rank { color:var(--accent); font-size:22px; font-weight:700; min-width:34px; line-height:1.3; }
-  .item h3 { font-size:16.5px; font-weight:700; }
-  .amt { color:var(--accent); font-weight:700; }
-  .item p { font-size:14px; color:#3a3a3a; margin-top:4px; }
-  .tags { margin-top:8px; }
-  .tag { display:inline-block; font-size:12px; color:var(--muted); background:#f1ede6; border-radius:3px; padding:1px 8px; margin-right:6px; }
-  footer { margin-top:40px; border-top:2px solid var(--ink); padding-top:16px; font-size:13px; color:var(--muted); }
-  footer h4 { font-size:14px; color:var(--ink); margin-bottom:8px; }
-  footer ul { list-style:none; }
-  footer li { margin-bottom:4px; }
-  footer a { color:var(--accent); text-decoration:none; word-break:break-all; }
-  footer a:hover { text-decoration:underline; }
-  .disclaimer { margin-top:14px; padding-top:10px; border-top:1px solid var(--line); font-size:12px; }
-  @media (max-width:600px){ h1{font-size:26px;} .item{flex-direction:column; gap:4px;} }
+  :root{
+    --accent:#c8401a;
+    --ink:#1a1a1a;
+    --muted:#6b6b6b;
+    --line:#e3ded7;
+    --bg:#f5f2ed;
+    --card:#ffffff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC","Noto Sans CJK SC",sans-serif;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px 60px;}
+
+  /* ---------- 页头 ---------- */
+  header{
+    border-bottom:3px double var(--ink);
+    padding:38px 0 20px;
+    margin-bottom:28px;
+  }
+  .kicker{
+    font-size:12px;letter-spacing:.32em;color:var(--accent);
+    text-transform:uppercase;font-weight:700;margin-bottom:10px;
+  }
+  h1{
+    font-size:40px;line-height:1.2;margin:0 0 12px;
+    font-weight:800;letter-spacing:-.01em;
+  }
+  .masthead-meta{
+    display:flex;flex-wrap:wrap;gap:8px 22px;
+    font-size:13px;color:var(--muted);
+    border-top:1px solid var(--line);padding-top:12px;margin-top:16px;
+  }
+  .masthead-meta b{color:var(--ink);font-weight:600;}
+
+  /* ---------- 概览 ---------- */
+  .overview{
+    background:var(--card);border:1px solid var(--line);
+    padding:22px 26px;margin-bottom:30px;
+  }
+  .overview h2{
+    font-size:15px;margin:0 0 12px;letter-spacing:.16em;
+    color:var(--accent);font-weight:700;
+  }
+  .overview p{margin:0 0 12px;font-size:15px;}
+  .overview p:last-child{margin-bottom:0;}
+  .stat-row{
+    display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--line);
+    margin-top:18px;background:#fbf9f6;
+  }
+  .stat{flex:1 1 140px;padding:14px 16px;border-right:1px solid var(--line);}
+  .stat:last-child{border-right:none;}
+  .stat .n{font-size:22px;font-weight:800;color:var(--accent);line-height:1.2;}
+  .stat .l{font-size:12px;color:var(--muted);margin-top:3px;}
+
+  /* ---------- 重点卡片 ---------- */
+  .spotlight{
+    background:var(--card);border:2px solid var(--accent);
+    margin-bottom:38px;
+  }
+  .spotlight-head{
+    background:var(--accent);color:#fff;padding:10px 24px;
+    font-size:13px;letter-spacing:.24em;font-weight:700;
+  }
+  .spotlight-body{padding:26px 26px 28px;}
+  .spotlight h3{font-size:27px;margin:0 0 6px;font-weight:800;}
+  .spotlight .sub{color:var(--muted);font-size:14px;margin:0 0 20px;}
+  .grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    border:1px solid var(--line);margin-bottom:22px;
+  }
+  .cell{padding:14px 16px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .cell .k{font-size:11px;color:var(--muted);letter-spacing:.1em;margin-bottom:4px;}
+  .cell .v{font-size:19px;font-weight:800;color:var(--accent);line-height:1.3;}
+  .cell .v small{font-size:12px;color:var(--muted);font-weight:500;display:block;margin-top:2px;}
+  .sec-title{
+    font-size:14px;font-weight:700;margin:20px 0 8px;
+    padding-left:10px;border-left:3px solid var(--accent);
+  }
+  .spotlight p{font-size:14.5px;margin:0 0 10px;}
+  table.rounds{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:8px;}
+  table.rounds th,table.rounds td{
+    text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);
+  }
+  table.rounds th{background:#faf7f3;font-weight:600;color:var(--muted);font-size:12px;letter-spacing:.06em;}
+  table.rounds td.amt{font-weight:700;color:var(--accent);white-space:nowrap;}
+
+  /* ---------- 新闻列表 ---------- */
+  .list-title{
+    font-size:16px;font-weight:800;letter-spacing:.1em;
+    border-bottom:2px solid var(--ink);padding-bottom:8px;margin:0 0 20px;
+  }
+  .item{
+    background:var(--card);border:1px solid var(--line);
+    padding:18px 22px;margin-bottom:14px;display:flex;gap:18px;
+  }
+  .rank{
+    font-size:24px;font-weight:800;color:var(--line);
+    line-height:1;min-width:34px;padding-top:2px;
+  }
+  .item-main{flex:1;}
+  .item h4{margin:0 0 6px;font-size:18px;font-weight:700;}
+  .item h4 .amount{color:var(--accent);}
+  .item p{margin:0 0 10px;font-size:14px;color:#333;}
+  .meta{font-size:12.5px;color:var(--muted);margin:0 0 10px;}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;}
+  .tag{
+    font-size:11.5px;padding:2px 9px;border:1px solid var(--line);
+    border-radius:2px;color:var(--muted);background:#fbf9f6;
+  }
+  .tag.hot{border-color:var(--accent);color:var(--accent);background:#fdf1ec;}
+
+  /* ---------- 页脚 ---------- */
+  footer{
+    margin-top:40px;border-top:3px double var(--ink);padding-top:22px;
+    font-size:13px;color:var(--muted);
+  }
+  footer h5{font-size:13px;color:var(--ink);margin:0 0 10px;letter-spacing:.12em;}
+  footer ul{margin:0 0 20px;padding-left:20px;}
+  footer li{margin-bottom:5px;word-break:break-all;}
+  footer a{color:var(--accent);text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+  .disclaimer{
+    background:#fbf9f6;border:1px solid var(--line);
+    padding:14px 16px;font-size:12.5px;line-height:1.7;
+  }
+  @media(max-width:600px){
+    h1{font-size:29px;}
+    .spotlight h3{font-size:22px;}
+    .item{flex-direction:column;gap:6px;}
+    .rank{font-size:18px;}
+  }
 </style>
 </head>
 <body>
@@ -51,125 +150,201 @@
 <header>
   <div class="kicker">DAILY TECH INVESTMENT BRIEF</div>
   <h1>每日科技投资动态</h1>
-  <div class="meta">
-    <span><b>2026年7月30日 · 星期四</b></span>
-    <span>覆盖时段：过去24–48小时（7月28日–7月29日）</span>
-    <span>信息源：TechStartups · TechCrunch · PR Newswire 等</span>
+  <div style="font-size:15px;color:#444;">全球科技行业投融资 24–48 小时要闻速递</div>
+  <div class="masthead-meta">
+    <span>发布日期：<b>2026年7月31日（周五）</b></span>
+    <span>覆盖窗口：<b>7月29日 – 7月30日</b></span>
+    <span>信息源：<b>TechCrunch · TechStartups · PR Newswire · Crunchbase · SecurityWeek</b></span>
   </div>
 </header>
 
 <section class="overview">
-  <h2>今日概览</h2>
-  <div class="card">
-    <p>过去48小时，全球创投资金没有追逐新的大模型头条，而是密集流向让 AI 与工业技术真正落地的「控制层」：云访问控制、AI 智能体治理、企业数据语义层、语音基础设施、病原体诊断、PFAS（永久化学品）降解、雷达卫星与新型量子架构。据 Crunchbase 数据，2026 年上半年全球初创融资已达创纪录的 <b style="color:var(--accent)">5100亿美元</b>，其中 AI×安全 交叉赛道年内已完成超 150 笔种子轮、共 8.55 亿美元。</p>
-    <p>两大信号值得注意：其一，网络安全与 AI 治理成为最强主线，Act Security（6000万美元）与 Hush Security（3000万美元）同日官宣；其二，战略投资者（CVC）异常活跃——三菱电机领投 Array Labs、Akamai 入股 Hush、大金与 Veralto 押注 Claros、Cedars-Sinai 联投 Vivid Dx，产业资本正在提前锁定采购与分发通道。此外，「大额种子轮」持续常态化：Fish Audio 5200万、ZuriQ 2550万、Vivid Dx 1500万均为种子轮。</p>
+  <h2>今 日 概 览</h2>
+  <p>过去 48 小时的资金流向延续了 2026 年的主线：钱没有涌向新的通用大模型，而是流进了"让 AI 真正能在企业里跑起来"的那一层——零信任访问控制、供应链支出自动化、客户交互数据挖掘、车联网数据管道、商业地产文档处理。十余笔已披露交易中，七笔与 AI 直接相关，但几乎没有一笔是在卖"通用助手"，卖的都是嵌进某个具体工作流、能被 CFO 用省下的钱来核算的"执行系统"。</p>
+  <p>另一个值得注意的信号是<b>战略资本占比明显上升</b>：信用社集体投了 InvestiFi，Penske 与 Intact 进了 Terminal，商业银行和保险公司在用过产品之后投了 Encore AI，Thomson Reuters Ventures 进了 Henry AI，Koch Disruptive Technologies 进了 ThreatLocker。买方、渠道方直接上了股东名册——融资越来越像采购的下游动作。</p>
+  <p>宏观背景上，Crunchbase 数据显示 2026 上半年全球风险投资达到创纪录的 <b>5,100 亿美元</b>，二季度逾 70% 的资金流向 AI 相关公司，但集中度极高——仅 OpenAI 与 Anthropic 两家就占了上半年融资额的 43%。本窗口内红杉、a16z、Khosla 等头部基金未出现在已披露交易中，主导方换成了 Elephant、Battery Ventures、Insight Partners、NEA、FirstMark 等成长期与垂直型机构。</p>
+  <div class="stat-row">
+    <div class="stat"><div class="n">11 笔</div><div class="l">已披露交易</div></div>
+    <div class="stat"><div class="n">4.51 亿</div><div class="l">合计披露金额（美元）</div></div>
+    <div class="stat"><div class="n">1.9 亿</div><div class="l">单笔最大（ThreatLocker）</div></div>
+    <div class="stat"><div class="n">7 / 11</div><div class="l">AI 直接相关</div></div>
   </div>
 </section>
 
-<section>
-  <h2>今日最值得关注</h2>
-  <div class="card hl">
-    <span class="hl-tag">FOCUS · 深度解读</span>
-    <h3>Fish Audio 完成 5200 万美元种子轮：一年做到 2100 万美元 ARR 的语音 AI 黑马</h3>
-    <div class="sub">领投：Coreline Ventures、Capital Today（今日资本）｜跟投：359 Capital、Play Time、HF0、645 Ventures、Parable 等｜总部：美国帕洛阿尔托</div>
+<section class="spotlight">
+  <div class="spotlight-head">今 日 最 值 得 关 注</div>
+  <div class="spotlight-body">
+    <h3>ThreatLocker 完成 1.9 亿美元 F 轮</h3>
+    <p class="sub">零信任端点安全 · 美国佛罗里达州奥兰多 · 2026年7月29日 · Elephant 领投</p>
+
     <div class="grid">
-      <div class="cell"><div class="num">$5200万</div><div class="lbl">本轮融资（种子轮）</div></div>
-      <div class="cell"><div class="num">$5200万</div><div class="lbl">累计披露融资</div></div>
-      <div class="cell"><div class="num">$2100万</div><div class="lbl">年经常性收入 ARR</div></div>
-      <div class="cell"><div class="num">800万+</div><div class="lbl">用户数（成立一年）</div></div>
-      <div class="cell"><div class="num">83+</div><div class="lbl">支持语言</div></div>
+      <div class="cell"><div class="k">本轮融资</div><div class="v">$190M<small>Series F</small></div></div>
+      <div class="cell"><div class="k">累计融资</div><div class="v">≈$490M<small>含 C/D/E/F 四轮</small></div></div>
+      <div class="cell"><div class="k">上一轮估值</div><div class="v">$1.2B<small>2025年4月 E 轮</small></div></div>
+      <div class="cell"><div class="k">本轮估值</div><div class="v">未披露<small>第三方推测超 $2B</small></div></div>
+      <div class="cell"><div class="k">保护组织数</div><div class="v">70,000+<small>2024年4月为 50,000</small></div></div>
+      <div class="cell"><div class="k">营收（第三方估算）</div><div class="v">≈$71.5M<small>Getlatka 对 ARR 的估算，公司未披露</small></div></div>
     </div>
-    <h4>公司业务</h4>
-    <p>Fish Audio 打造富有表现力、可精细控制的语音生成平台，覆盖实时文本转语音（TTS）、声音克隆与语音智能体：仅需 5 秒音频样本即可在约 15 秒内完成声音克隆，支持 83 种以上语言、词级情绪控制与 1.5 万余种自然语言控制指令。客户横跨创作者、独立开发者、游戏工作室与企业，已服务 HeyGen、Sanas 等公司，并与 LiveKit、Retell 等开发者平台深度集成。</p>
-    <h4>历史融资与团队</h4>
-    <p>公司由前 NVIDIA 视频研究员廖世佳（Shijia Liao）联合创立，起点是他在卧室里用一块游戏 GPU 训练的开源项目（Fish Speech / OpenAudio），凭开源社区完成早期冷启动。本轮 5200 万美元为公司首次大额机构融资，也是其目前全部披露融资；由 Coreline Ventures 与徐新掌舵的今日资本（Capital Today）共同领投，HF0、645 Ventures 等跟投。TechCrunch 评价其种子轮「规模与成熟度更像一轮 Series A」。</p>
-    <h4>业务发展与前景</h4>
-    <p>成立第一年即实现 2100 万美元 ARR 与 800 万用户，是当前增长最快的语音 AI 公司之一。新资金将用于从 TTS 扩展至完整「音频原生」技术栈（语音原生 LLM、Speech-to-Speech 等）、组建企业销售团队并深化开发者工具。挑战同样明确：赛道拥挤（ElevenLabs 今年 2 月已以 110 亿美元估值融资 5 亿美元），且声音克隆的授权与合规问题使「信任与版权管理」成为产品本身的一部分。</p>
+
+    <div class="sec-title">被投公司在做什么</div>
+    <p>ThreatLocker 成立于 2017 年，由 Danny Jenkins、Sami Jenkins 与 John Carolan 共同创办，总部位于奥兰多。它做的不是"检测"，而是"预防"——核心产品是默认拒绝的应用白名单（Allowlisting）与 Ringfencing 隔离技术，再叠加零信任网络访问、零信任云访问、特权访问管理、存储设备管控、补丁管理、EDR/MDR 等模块，全部收在一个平台里。客户从 MSP/MSSP 一路覆盖到金融机构、医疗机构和航司（阿联酋航空、捷蓝航空是公开客户）。</p>
+    <p>本轮的叙事重心是 <b>AI 智能体带来的新攻击面</b>：当企业开始让 AI agent 直接访问内部系统、并把 AI 生成的代码推进生产环境，"限制软件和智能体被允许做什么"这件事的价值反而上升了。这是网络安全少数能同时承接 AI 上行与 AI 风险两个故事的位置，也是为什么在一个被 AI 叙事主导的市场里，这笔钱能拿到当日最大单。</p>
+
+    <div class="sec-title">历史融资情况</div>
+    <table class="rounds">
+      <thead><tr><th>时间</th><th>轮次</th><th>金额</th><th>主要投资方</th><th>投后估值</th></tr></thead>
+      <tbody>
+        <tr><td>2021—2022</td><td>早期轮次</td><td class="amt">≈$28M</td><td>早期投资人（合计，据 Tracxn）</td><td>—</td></tr>
+        <tr><td>2023年</td><td>Series C</td><td class="amt">$100M</td><td>General Atlantic（领投）</td><td>未披露</td></tr>
+        <tr><td>2024年4月</td><td>Series D</td><td class="amt">$115M</td><td>General Atlantic（领投）、StepStone Group、D. E. Shaw</td><td>≈$879M</td></tr>
+        <tr><td>2025年4月</td><td>Series E</td><td class="amt">$60M</td><td>现有股东跟投</td><td>≈$1.2B</td></tr>
+        <tr><td>2026年7月29日</td><td>Series F</td><td class="amt">$190M</td><td>Elephant（领投）、D. E. Shaw Ventures、Arthur Ventures、Koch Disruptive Technologies（新进）</td><td>未披露</td></tr>
+      </tbody>
+    </table>
+
+    <div class="sec-title">业务发展与经营情况</div>
+    <p><b>规模扩张：</b>保护的组织数量从 2024 年 4 月的 5 万家增长至目前的 7 万家以上，两年增长约 40%；员工规模约 730 人。2024 年 D 轮前的一年里，公司营收翻倍、团队扩张 50%。第三方数据商 Getlatka 对其 ARR 的估算约为 7,150 万美元（公司本身从未公开披露营收或盈利数据，此为外部估算，仅供参考）。</p>
+    <p><b>研发方向：</b>本轮资金将投向三处——面向 AI 相关安全风险的新控制能力、零信任平台的整体产品迭代，以及国际化扩张。产品线近两年已从最初的应用白名单扩展到 EDR、MDR、DAC（配置防御）、集中化配置管理、零信任端点防火墙等十余个模块。</p>
+    <p><b>地域扩张：</b>现有办公室分布在奥兰多（总部）、都柏林、迪拜、布里斯班；本轮后将在英国 Reading 新设办公室，作为欧洲业务的落点。考虑到欧盟 AI 法案与数据合规要求趋严，这个时点的欧洲布局带有明显的合规先手意味。</p>
+    <p><b>股东层面的新变量：</b>Koch Disruptive Technologies（科氏工业旗下）为本轮新进投资方，除资金外将提供其合作伙伴网络、行业资源与 Koch Labs 能力，并计划在 ThreatLocker 拓展运营和开发新安全产品时展开合作——这是一笔带渠道属性的战略投资，而非单纯的财务跟投。</p>
   </div>
 </section>
 
-<section>
-  <h2>今日交易列表 <span style="font-size:13px;color:var(--muted);font-weight:400">（按重要性排序）</span></h2>
+<h2 class="list-title">按重要性排序 · 今日交易一览</h2>
 
-  <div class="item"><div class="rank">01</div><div>
-    <h3>Act Security 携 <span class="amt">6000万美元</span>（种子+A轮）出隐身模式</h3>
-    <p>以色列云安全公司，主打以「访问边界」取代告警式安全，管控人类、工作负载与 AI 智能体的实际触达范围。创始团队曾创办 Medigate（被 Claroty 以 4 亿美元收购）。种子轮由 Team8、Bessemer 投资，A 轮由 Notable Capital 领投。</p>
-    <div class="tags"><span class="tag">网络安全</span><span class="tag">AI智能体管控</span><span class="tag">以色列</span></div>
-  </div></div>
+<div class="item">
+  <div class="rank">01</div>
+  <div class="item-main">
+    <h4>ThreatLocker 完成 <span class="amount">1.9 亿美元</span> F 轮</h4>
+    <p class="meta">Elephant 领投 · D. E. Shaw Ventures、Arthur Ventures 跟投 · Koch Disruptive Technologies 新进 · 7月29日 · 美国奥兰多</p>
+    <p>当日最大单。零信任端点安全平台，已保护逾 7 万家组织，资金用于 AI 相关安全控制、平台迭代与欧洲扩张（英国 Reading 办公室）。在 AI 智能体开始获得内部系统访问权限的背景下，"预防优先"的策略执行层价值上升。</p>
+    <div class="tags"><span class="tag hot">当日最大</span><span class="tag">网络安全</span><span class="tag">零信任</span><span class="tag">成长期</span><span class="tag">CVC 进场</span></div>
+  </div>
+</div>
 
-  <div class="item"><div class="rank">02</div><div>
-    <h3>Claros Technologies 完成 <span class="amt">5500万美元</span> B 轮</h3>
-    <p>明尼阿波利斯公司，商业化 PFAS「永久化学品」的永久性降解技术（ClarosTechUV），服务半导体、航空航天、制药等受监管行业。Treehouse Family Capital 领投，大金美国（Daikin America）、Veralto 等产业方跟投。</p>
-    <div class="tags"><span class="tag">气候科技</span><span class="tag">工业修复</span><span class="tag">战略投资</span></div>
-  </div></div>
+<div class="item">
+  <div class="rank">02</div>
+  <div class="item-main">
+    <h4>Freehand 完成 <span class="amount">7,500 万美元</span> B 轮</h4>
+    <p class="meta">Battery Ventures 与 NewRoad Capital Partners 联合领投 · PSP Growth、Nexus Venture Partners 跟投 · 7月29日 · 美国旧金山 · 累计融资 1 亿美元</p>
+    <p>用自主 AI 智能体接管大企业的供应链支出管理：采购、供应商流程、发票核对、付款与对账。已部署于 Meta、联合利华、强生、Dunkin'、辉瑞、Cardinal Health 等客户；公司称早期客户在复杂品类中挽回了 5%–10% 的支出，采购到付款周期缩短逾 70%。据 Crunchbase，估值较上一轮有明显提升（具体数字未披露）。</p>
+    <div class="tags"><span class="tag hot">企业 AI</span><span class="tag">供应链金融</span><span class="tag">Battery Ventures</span><span class="tag">财务可核算</span></div>
+  </div>
+</div>
 
-  <div class="item"><div class="rank">03</div><div>
-    <h3>Fish Audio 完成 <span class="amt">5200万美元</span> 种子轮（见上方深度解读）</h3>
-    <p>Coreline Ventures 与今日资本领投；成立一年 ARR 达 2100 万美元、用户超 800 万，将从 TTS 扩展至完整音频原生技术栈。</p>
-    <div class="tags"><span class="tag">语音AI</span><span class="tag">今日资本</span><span class="tag">巨额种子轮</span></div>
-  </div></div>
+<div class="item">
+  <div class="rank">03</div>
+  <div class="item-main">
+    <h4>Inforcer 完成 <span class="amount">5,000 万美元</span> C 轮</h4>
+    <p class="meta">Insight Partners 领投 · Dawn Capital、Meritech Capital 为现有股东 · 7月30日 · 英国伦敦 · 18 个月内累计融资 1.1 亿美元</p>
+    <p>为托管服务商（MSP）提供统一平台，集中管理其中小企业客户的 Microsoft 365 账户。联合创始人兼 CEO Jamie Daum 称业务同比增长 300%，B 轮到 C 轮估值翻倍（具体数字未披露）。产品已扩展至影子 AI 检测（发现员工在公司设备上使用未授权 AI 工具）与实时威胁检测响应，定价模式正从按客户计费转向按用户计费。</p>
+    <div class="tags"><span class="tag">网络安全</span><span class="tag">中小企业 IT</span><span class="tag">欧洲</span><span class="tag">Insight Partners</span></div>
+  </div>
+</div>
 
-  <div class="item"><div class="rank">04</div><div>
-    <h3>Hush Security 获 <span class="amt">3000万美元</span> A 轮，Akamai 战略入股</h3>
-    <p>治理「非人类身份」与企业 AI 智能体：中央注册表、无常驻凭证、即时授权与紧急停止开关。Akamai、Battery Ventures、YL Ventures 投资，累计融资 4100 万美元；Kyndryl 已内部部署并对外转售。</p>
-    <div class="tags"><span class="tag">网络安全</span><span class="tag">AI治理</span><span class="tag">CVC</span></div>
-  </div></div>
+<div class="item">
+  <div class="rank">04</div>
+  <div class="item-main">
+    <h4>Encore AI 完成 <span class="amount">3,000 万美元</span> A 轮</h4>
+    <p class="meta">Team8、Planven、The Garage 领投 · Lukatz 及多家商业银行、保险公司跟投 · 7月29日 · 美国纽约</p>
+    <p>"交互挖掘"（Interaction Mining）技术：从通话、聊天、邮件和 CRM 信号中学习顶尖销售的行为模式，再部署 AI 智能体在客户交互中复制这些行为。卖点不是降本减员而是增收。据 TechCrunch，公司已有 40 余家企业客户（以金融机构为主），ARR 自种子轮以来增长逾 5 倍（具体营收与估值未披露）。银行和保险公司先用产品、再投钱，是本轮最值得注意的信号。</p>
+    <div class="tags"><span class="tag hot">企业 AI</span><span class="tag">客户运营</span><span class="tag">Team8</span><span class="tag">客户即股东</span></div>
+  </div>
+</div>
 
-  <div class="item"><div class="rank">05</div><div>
-    <h3>ZuriQ 融资 <span class="amt">2550万美元</span>，重构离子阱量子架构</h3>
-    <p>ETH Zürich 衍生公司，Penning 微阱设计实现原生二维离子阵列，已与英飞凌合作芯片演示 3×3 九离子阵列。Quantonation 领投，累计披露约 2970 万美元。</p>
-    <div class="tags"><span class="tag">量子计算</span><span class="tag">前沿硬件</span><span class="tag">瑞士</span></div>
-  </div></div>
+<div class="item">
+  <div class="rank">05</div>
+  <div class="item-main">
+    <h4>Terminal 完成 <span class="amount">2,000 万美元</span> A 轮</h4>
+    <p class="meta">Battery Ventures 领投 · Intact Private Capital、Penske、Y Combinator、Wayfinder Ventures 跟投 · 7月29日 · 加拿大多伦多 · 累计融资 2,600 万美元</p>
+    <p>整合并标准化来自各类设备与服务商的车联网（telematics）数据，服务车队与保险公司。Battery 合伙人 Marcus Ryu 称，车联网数据对未来风险的预测能力是任何其他核保变量的三倍。Penske（车队）与 Intact（保险）作为产业方入局，说明这条数据管道直接影响他们的经济账。</p>
+    <div class="tags"><span class="tag">数据基础设施</span><span class="tag">车联网</span><span class="tag">保险科技</span><span class="tag">产业资本</span></div>
+  </div>
+</div>
 
-  <div class="item"><div class="rank">06</div><div>
-    <h3>Array Labs 获 <span class="amt">2100万美元</span>，三菱电机领投并达成分销合作</h3>
-    <p>雷达卫星编队实现全天候高分辨率侦察，已获 DARPA、美国海军与空军研发合同；三菱电机将其海事/航空追踪服务引入亚太防务市场。累计披露融资约 5600 万美元。</p>
-    <div class="tags"><span class="tag">国防科技</span><span class="tag">卫星</span><span class="tag">CVC</span></div>
-  </div></div>
+<div class="item">
+  <div class="rank">06</div>
+  <div class="item-main">
+    <h4>InvestiFi 完成 <span class="amount">2,000 万美元</span> 融资</h4>
+    <p class="meta">Vibe Credit Union 领投 · BankTech Ventures、ICCU、Navari、Coastal、Truity 等多家信用社跟投 · 7月29日 · 美国特拉华州 · 轮次未披露</p>
+    <p>让信用社和社区银行能在自有 App 内提供数字投资服务——碎片化股票与 ETF、投顾组合、IRA、加密货币交易与稳定币，资金可直接从支票或储蓄账户流入。客户数从 2024 年的 4 家增至 2026 年 7 月的 60 余家签约机构。这轮的逻辑不是颠覆在位者，而是武装弱势在位者以守住存款和钱包份额。</p>
+    <div class="tags"><span class="tag">金融科技</span><span class="tag">嵌入式投资</span><span class="tag">渠道即股东</span></div>
+  </div>
+</div>
 
-  <div class="item"><div class="rank">07</div><div>
-    <h3>CORE Biomedicine 完成 <span class="amt">2100万美元</span> A 轮</h3>
-    <p>横跨波士顿、东京、苏州的「谱系精准肿瘤学」公司；东京大学创新平台（UTokyo IPC）与 Elikon Venture 共同领投，三菱UFJ资本、苏州资本等跟投，日本子公司另获 AMED 资助。</p>
-    <div class="tags"><span class="tag">生物科技</span><span class="tag">肿瘤</span><span class="tag">跨境</span></div>
-  </div></div>
+<div class="item">
+  <div class="rank">07</div>
+  <div class="item-main">
+    <h4>Henry AI 完成 <span class="amount">1,650 万美元</span> A 轮</h4>
+    <p class="meta">FirstMark Capital 领投 · Thomson Reuters Ventures 战略跟投 · Y Combinator、Susa Ventures、1Sharpe、RXR Arden Digital Ventures 等跟投 · 7月29日 · 美国纽约</p>
+    <p>自动化商业地产的文档层：招商备忘录、核保、路演材料、买家名单。公司称平台已覆盖逾 150 家机构（含全部头部商业地产经纪行的团队），累计生成 2 万余份可直接交付客户的文件，对应底层交易额逾 1,500 亿美元；分析师产出时间下降 90%，原本约 15 小时的交付物现在只需约 30 分钟人工复核。</p>
+    <div class="tags"><span class="tag">地产科技</span><span class="tag">垂直 AI</span><span class="tag">Thomson Reuters Ventures</span></div>
+  </div>
+</div>
 
-  <div class="item"><div class="rank">08</div><div>
-    <h3>Healia 获 <span class="amt">1800万美元</span>（含 1400 万美元 A 轮）</h3>
-    <p>7月29日官宣。为双职工家庭与雇主优化健康福利成本，帮助员工利用配偶医保降低企业保费支出。</p>
-    <div class="tags"><span class="tag">健康福利</span><span class="tag">InsurTech</span><span class="tag">7月29日</span></div>
-  </div></div>
+<div class="item">
+  <div class="rank">08</div>
+  <div class="item-main">
+    <h4>Centralize 完成 <span class="amount">1,500 万美元</span> A 轮</h4>
+    <p class="meta">NEA 领投 · Salesforce Ventures、Y Combinator、20Sales、Ritual Capital 跟投 · 天使包括 Stewart Butterfield、Scott Woody · 7月29日 · 美国旧金山 · 累计融资 1,900 万美元</p>
+    <p>从 CRM、邮件、日历和通话数据中实时构建企业客户内部的"决策关系图"，告诉销售谁重要、谁缺席、下一步该找谁。已被 CoreWeave、Cognition、LangChain、Decagon、Brex、Webflow、Cresta 等使用。NEA 的 Hilarie Koplow-McAdams 指出，50 万美元以上的交易平均涉及超过 20 个决策相关方，传统"记录系统"已不够用。</p>
+    <div class="tags"><span class="tag">企业软件</span><span class="tag">收入智能</span><span class="tag">NEA</span><span class="tag">Salesforce Ventures</span></div>
+  </div>
+</div>
 
-  <div class="item"><div class="rank">09</div><div>
-    <h3>Vivid Dx 种子轮 <span class="amt">1500万美元</span>：败血症诊断从数天缩至数小时</h3>
-    <p>牛津公司，拉曼光谱+AI 直接从血液识别病原体并支持药敏测试；Oxford Science Enterprises 与 Cedars-Sinai IP Co. 共同领投。</p>
-    <div class="tags"><span class="tag">诊断</span><span class="tag">医疗AI</span><span class="tag">英国</span></div>
-  </div></div>
+<div class="item">
+  <div class="rank">09</div>
+  <div class="item-main">
+    <h4>Precise Behavioral 完成 <span class="amount">1,420 万美元</span> 融资</h4>
+    <p class="meta">A1 Health Ventures 领投 · Ziegler Link-Age Fund、Converge Capital Partners、Granite Financial Holdings（爱达荷蓝十字关联方）跟投 · 7月29日 · 美国洛杉矶 · 轮次未披露</p>
+    <p>医生主导的行为健康服务与技术公司，可线上线下同时交付诊疗并管理收入周期。公司称<b>已实现盈利</b>，成立不到三年完成逾 10 万人次诊疗并建成全国临床网络——在数字健康融资整体趋紧的环境下，"先赚钱再融资"的画像明显不同于上一周期。</p>
+    <div class="tags"><span class="tag">医疗健康</span><span class="tag">行为健康</span><span class="tag hot">已盈利</span></div>
+  </div>
+</div>
 
-  <div class="item"><div class="rank">10</div><div>
-    <h3>Credible Data 种子轮 <span class="amt">1000万美元</span>：给企业 AI 一个语义层</h3>
-    <p>基于开源语义建模语言 Malloy，为 AI 智能体提供「可信业务上下文引擎」，防止其在结构化数据上产生幻觉。Gradient（谷歌旗下）、SignalFire、K5 Global 投资，天使包括 Wes McKinney（pandas 之父）。</p>
-    <div class="tags"><span class="tag">企业AI</span><span class="tag">数据基础设施</span><span class="tag">谷歌Gradient</span></div>
-  </div></div>
+<div class="item">
+  <div class="rank">10</div>
+  <div class="item-main">
+    <h4>UNIT AI 完成 <span class="amount">1,200 万美元</span> 融资</h4>
+    <p class="meta">Prologis Ventures、Dynamo Ventures、Ground Up Ventures 联合领投 · eGateway Capital、Recursive Ventures 等跟投 · 7月29日 · 美国旧金山 · 轮次未披露</p>
+    <p>模块化 AI 仓储自动化平台，服务零售商与第三方物流的履约与退货环节。关键在部署模型：最小 1,000 平方英尺即可上线，投资回收期低于 12 个月，把买方范围从少数能承担全面机器人改造的巨头扩展到中小运营商。创始人 Guy Glass 与 Avihou Barkay 来自 Caja Robotics 与 Plus One Robotics。</p>
+    <div class="tags"><span class="tag">具身智能</span><span class="tag">仓储自动化</span><span class="tag">Prologis Ventures</span></div>
+  </div>
+</div>
 
-  <div class="item"><div class="rank">11</div><div>
-    <h3>其他值得一提：Procode <span class="amt">1000万美元</span> A 轮 / Dopl <span class="amt">630万美元</span> 种子轮</h3>
-    <p>Procode（Health Velocity Capital 领投）用 AI 编码引擎整合外科医疗计费市场，已服务 350+ 医生，累计融资 1400 万美元；Dopl Technologies（7月29日，SpringTide Ventures 领投）开发机器人远程超声平台。</p>
-    <div class="tags"><span class="tag">垂直AI</span><span class="tag">医疗机器人</span></div>
-  </div></div>
-</section>
+<div class="item">
+  <div class="rank">11</div>
+  <div class="item-main">
+    <h4>Adjuvia Therapeutics 完成 <span class="amount">800 万美元</span> 种子轮</h4>
+    <p class="meta">JLO Ventures 领投 · Portfolia Ventures 及多位生物医药行业资深人士跟投 · 7月29日 · 美国旧金山</p>
+    <p>研发线粒体功能障碍相关疗法。资金将支持主打候选药物 ATI-105 的 IND 申报、2026 年秋季健康志愿者 I 期试验，以及 2027 年初针对 Friedreich 共济失调患者的 I/II 期试验。ATI-105 是一种可穿透血脑屏障的新型虾青素分子脂质纳米颗粒制剂，靶向氧化应激、慢性炎症与器官退化。在被 AI 主导的市场里，有明确临床里程碑的生物科技仍能拿到钱。</p>
+    <div class="tags"><span class="tag">生物科技</span><span class="tag">罕见病</span><span class="tag">临床里程碑</span></div>
+  </div>
+</div>
 
 <footer>
-  <h4>信息来源</h4>
+  <h5>信 息 来 源</h5>
   <ul>
-    <li><a href="https://techstartups.com/2026/07/28/venture-capital-startup-funding-roundup-july-28-2026-battery-ventures-bessemer-gradient-team8-y-combinator-more/">TechStartups：Venture Capital &amp; Startup Funding Roundup, July 28, 2026</a></li>
-    <li><a href="https://techcrunch.com/2026/07/28/fish-audio-raises-50m-seed-to-build-ai-voice-models-for-creators-and-enterprises/">TechCrunch：Fish Audio raises $52M seed to build AI voice models</a></li>
-    <li><a href="https://www.prnewswire.com/news-releases/fish-audio-raises-52m-in-seed-funding-after-turning-passion-project-into-one-of-voice-ais-fastest-growing-companies-302836233.html">PR Newswire：Fish Audio Raises $52M in Seed Funding</a></li>
-    <li><a href="https://mlq.ai/news/fish-audio-raises-52m-seed-round-with-21m-arr-across-8-million-users/">MLQ News：Fish Audio $52M Seed With $21M ARR Across 8 Million Users</a></li>
-    <li><a href="https://www.prnewswire.com/news-releases/act-security-launches-action-centric-cloud-security-platform-with-60-million-in-funding-302836148.html">PR Newswire：Act Security Launches With $60 Million in Funding</a></li>
-    <li><a href="https://www.prnewswire.com/news-releases/claros-technologies-raises-55-million-series-b-financing-to-accelerate-global-commercialization-of-pfas-destruction-technology-302835890.html">PR Newswire：Claros Technologies Raises $55 Million Series B</a></li>
-    <li><a href="https://vcnewsdaily.com/">VC News Daily（Healia、Dopl、Freight Hero 等 7月29日交易）</a></li>
+    <li><a href="https://techstartups.com/2026/07/29/venture-capital-startup-funding-roundup-july-29-2026-more/" target="_blank">TechStartups — Venture Capital &amp; Startup Funding Roundup, July 29, 2026</a></li>
+    <li><a href="https://techstartups.com/2026/07/28/venture-capital-startup-funding-roundup-july-28-2026-battery-ventures-bessemer-gradient-team8-y-combinator-more/" target="_blank">TechStartups — Venture Capital &amp; Startup Funding Roundup, July 28, 2026</a></li>
+    <li><a href="https://techcrunch.com/2026/07/30/inforcer-raises-50m-to-help-prepare-smbs-for-a-new-world-of-ai-and-security-risks/" target="_blank">TechCrunch — Inforcer raises $50M to help prepare smaller businesses for a new world of AI and security risks（7月30日）</a></li>
+    <li><a href="https://techcrunch.com/2026/07/29/encore-ai-raises-30m-to-build-ai-agents-that-learn-from-customer-calls/" target="_blank">TechCrunch — Encore AI raises $30M to build AI agents that learn from customer calls</a></li>
+    <li><a href="https://www.prnewswire.com/news-releases/threatlocker-secures-190-million-in-series-f-funding-to-drive-product-innovation-and-global-expansion-302837156.html" target="_blank">PR Newswire — ThreatLocker Secures $190 Million in Series F Funding</a></li>
+    <li><a href="https://www.threatlocker.com/press-release/threatlocker-115m-series-d" target="_blank">ThreatLocker — $115M Series D 新闻稿（2024年4月24日）</a></li>
+    <li><a href="https://www.securityweek.com/threatlocker-raises-190-million-in-series-f-funding/" target="_blank">SecurityWeek — ThreatLocker Raises $190 Million in Series F Funding</a></li>
+    <li><a href="https://www.govinfosecurity.com/threatlocker-raises-190m-to-counter-malicious-ai-agents-a-32379" target="_blank">GovInfoSecurity — ThreatLocker Raises $190M to Counter Malicious AI Agents</a></li>
+    <li><a href="https://www.saasrise.com/news/threatlocker-secures-190m-series-f-to-scale-aidriven-zero-trust-platform-c5da520d-8e69-4581-8951-802f367b3a15" target="_blank">SaaS News（SaasRise）— ThreatLocker Series F 分析（估值推算来源）</a></li>
+    <li><a href="https://tracxn.com/d/companies/threatlocker/__Zqg2ua081sGKrR2M5mie6wnPRNJ4NKPv9OD0JL0zlpI/funding-and-investors" target="_blank">Tracxn — ThreatLocker 融资轮次与投资人数据库</a></li>
+    <li><a href="https://getlatka.com/companies/threatlocker.com" target="_blank">Getlatka — ThreatLocker 营收（ARR）第三方估算</a></li>
+    <li><a href="https://www.generalatlantic.com/media-article/threatlocker-raises-100m-series-c-to-bring-zero-trust-endpoint-security-to-more-organizations/" target="_blank">General Atlantic — ThreatLocker $100M Series C</a></li>
+    <li><a href="https://news.crunchbase.com/" target="_blank">Crunchbase News — 2026 上半年全球风险投资数据</a></li>
   </ul>
-  <div class="disclaimer">免责声明：本页面内容基于 2026年7月30日 公开新闻报道整理，仅供信息参考，不构成任何投资建议。金额与估值以公司官方披露为准。</div>
+
+  <div class="disclaimer">
+    <b>免责声明：</b>本页面内容由 AI 依据上述公开媒体报道与公司新闻稿自动汇编生成，覆盖 2026 年 7 月 29 日至 30 日已公开披露的交易，不构成完整市场统计。融资金额、估值、营收等数据以各交易公告披露为准；标注为"第三方估算""未披露"的数据来自数据库推算或媒体推测，未经公司确认，准确性无法保证。本页面仅供信息参考，<b>不构成任何投资建议、要约或推荐</b>。读者在做出任何投资决策前应自行核实信息并咨询持牌专业人士。
+    <br><br>
+    生成时间：2026年7月31日 · 数据截至 7月30日 24:00（美东时间）
+  </div>
 </footer>
 
 </div>
