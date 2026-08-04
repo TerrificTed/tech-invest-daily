@@ -3,341 +3,341 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日科技投资动态 · 2026年8月3日</title>
+<title>每日科技投资动态 · 2026年8月4日</title>
 <style>
-  :root{
-    --accent:#c8401a;
-    --ink:#1a1a1a;
-    --muted:#6b6b6b;
-    --line:#e2ddd6;
-    --paper:#f5f2ed;
-  }
-  *{box-sizing:border-box;}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Helvetica Neue",Arial,sans-serif;
-    line-height:1.75;
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:860px;margin:0 auto;padding:0 20px 60px;}
+:root{
+  --accent:#c8401a;
+  --ink:#1a1a1a;
+  --muted:#6b6b6b;
+  --line:#e3ded7;
+  --bg:#f6f3ee;
+  --card:#ffffff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC",-apple-system,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px 60px}
 
-  /* 页头 */
-  header{
-    border-bottom:3px double var(--ink);
-    padding:38px 0 20px;
-    margin-bottom:28px;
-  }
-  .kicker{
-    font-size:12px;letter-spacing:.32em;color:var(--accent);
-    text-transform:uppercase;font-weight:700;margin-bottom:10px;
-  }
-  h1{
-    font-size:40px;line-height:1.2;margin:0 0 14px;
-    font-weight:800;letter-spacing:-.5px;
-  }
-  .meta{
-    display:flex;flex-wrap:wrap;gap:10px 22px;
-    font-size:13px;color:var(--muted);
-    border-top:1px solid var(--line);padding-top:12px;
-  }
-  .meta b{color:var(--ink);font-weight:600;}
+/* 页头 */
+header{
+  border-bottom:3px double var(--ink);
+  padding:38px 0 20px;
+  margin-bottom:28px;
+  text-align:center;
+}
+header .kicker{
+  font-size:12px;letter-spacing:.32em;color:var(--accent);
+  font-weight:600;margin-bottom:10px;
+}
+header h1{
+  font-size:40px;font-weight:800;letter-spacing:.06em;line-height:1.25;
+}
+header .meta{
+  margin-top:14px;font-size:13px;color:var(--muted);
+  display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;
+}
+header .meta b{color:var(--ink);font-weight:600}
 
-  /* 概览 */
-  .overview{
-    background:#fff;border:1px solid var(--line);
-    border-left:4px solid var(--accent);
-    padding:22px 24px;margin-bottom:32px;
-  }
-  .overview h2{
-    font-size:17px;margin:0 0 12px;font-weight:700;
-    display:flex;align-items:center;gap:8px;
-  }
-  .overview p{margin:0 0 10px;font-size:15px;}
-  .overview p:last-child{margin-bottom:0;}
+/* 通用卡片 */
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:4px;
+  padding:24px 26px;
+  margin-bottom:20px;
+}
+h2.sec{
+  font-size:15px;font-weight:700;letter-spacing:.18em;
+  color:var(--accent);margin:38px 0 16px;
+  padding-bottom:8px;border-bottom:1px solid var(--line);
+}
+h2.sec:first-of-type{margin-top:0}
 
-  h2.section{
-    font-size:15px;letter-spacing:.14em;font-weight:700;
-    border-bottom:2px solid var(--ink);padding-bottom:8px;
-    margin:0 0 22px;
-  }
+/* 概览 */
+.overview p{font-size:15.5px;margin-bottom:12px;text-align:justify}
+.overview p:last-child{margin-bottom:0}
+.stats{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+  gap:1px;background:var(--line);border:1px solid var(--line);
+  margin-top:20px;
+}
+.stats div{background:#fff;padding:14px 12px;text-align:center}
+.stats .n{font-size:22px;font-weight:800;color:var(--accent);letter-spacing:-.01em}
+.stats .l{font-size:11.5px;color:var(--muted);margin-top:3px}
 
-  /* 重点卡片 */
-  .feature{
-    background:#fff;border:1px solid var(--line);
-    padding:28px;margin-bottom:38px;
-    box-shadow:0 1px 3px rgba(0,0,0,.05);
-  }
-  .badge{
-    display:inline-block;background:var(--accent);color:#fff;
-    font-size:11px;letter-spacing:.2em;font-weight:700;
-    padding:4px 12px;margin-bottom:14px;
-  }
-  .feature h3{font-size:27px;margin:0 0 6px;font-weight:800;line-height:1.3;}
-  .feature .sub{color:var(--muted);font-size:14px;margin:0 0 20px;}
-  .grid{
-    display:grid;grid-template-columns:repeat(4,1fr);
-    gap:1px;background:var(--line);border:1px solid var(--line);
-    margin-bottom:22px;
-  }
-  .cell{background:#fff;padding:14px 12px;text-align:center;}
-  .cell .num{font-size:22px;font-weight:800;color:var(--accent);line-height:1.25;}
-  .cell .lbl{font-size:11px;color:var(--muted);margin-top:4px;letter-spacing:.05em;}
-  .feature h4{
-    font-size:14px;font-weight:700;margin:20px 0 8px;
-    color:var(--accent);letter-spacing:.05em;
-  }
-  .feature p{margin:0 0 10px;font-size:14.5px;}
-  .feature ul{margin:0 0 10px;padding-left:20px;font-size:14.5px;}
-  .feature li{margin-bottom:5px;}
+/* 重点卡片 */
+.hl{border:2px solid var(--accent);border-radius:4px;background:#fff;overflow:hidden}
+.hl-top{background:var(--accent);color:#fff;padding:9px 24px;font-size:12px;letter-spacing:.24em;font-weight:600}
+.hl-body{padding:26px}
+.hl h3{font-size:26px;font-weight:800;line-height:1.35}
+.hl .sub{color:var(--muted);font-size:13.5px;margin-top:6px;margin-bottom:20px}
+.grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:22px;
+}
+.grid div{background:#fdfbf9;padding:15px 14px}
+.grid .k{font-size:11.5px;color:var(--muted);letter-spacing:.06em}
+.grid .v{font-size:19px;font-weight:800;color:var(--accent);margin-top:4px;line-height:1.3}
+.grid .v small{font-size:12px;font-weight:600;color:var(--muted);display:block;margin-top:2px}
+.hl h4{
+  font-size:13.5px;font-weight:700;letter-spacing:.1em;
+  margin:20px 0 8px;padding-left:10px;border-left:3px solid var(--accent);
+}
+.hl p{font-size:14.5px;text-align:justify;color:#2c2c2c}
+.hl ul{margin:6px 0 0 18px;font-size:14.5px;color:#2c2c2c}
+.hl ul li{margin-bottom:5px}
 
-  /* 新闻列表 */
-  .item{
-    background:#fff;border:1px solid var(--line);
-    padding:20px 22px;margin-bottom:14px;
-    display:flex;gap:18px;align-items:flex-start;
-  }
-  .rank{
-    font-size:26px;font-weight:800;color:var(--line);
-    line-height:1;min-width:34px;padding-top:2px;
-  }
-  .body{flex:1;min-width:0;}
-  .item h3{
-    font-size:18px;margin:0 0 4px;font-weight:700;
-    display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;
-  }
-  .amt{
-    color:var(--accent);font-weight:800;font-size:17px;
-    white-space:nowrap;
-  }
-  .item p{margin:6px 0 10px;font-size:14.5px;color:#333;}
-  .tags{display:flex;flex-wrap:wrap;gap:6px;}
-  .tag{
-    font-size:11px;color:var(--muted);
-    border:1px solid var(--line);border-radius:2px;
-    padding:2px 8px;background:#fbf9f6;
-  }
-  .tag.hot{color:var(--accent);border-color:#e8bfae;background:#fdf3ef;}
+/* 新闻列表 */
+.item{
+  background:#fff;border:1px solid var(--line);border-radius:4px;
+  padding:20px 22px;margin-bottom:14px;display:flex;gap:18px;
+}
+.rank{
+  flex:0 0 34px;height:34px;border-radius:50%;
+  background:var(--ink);color:#fff;font-size:15px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+.item .body{flex:1;min-width:0}
+.item h3{font-size:18px;font-weight:700;line-height:1.4}
+.amt{
+  display:inline-block;background:#fdece6;color:var(--accent);
+  font-weight:800;font-size:14px;padding:1px 9px;border-radius:3px;margin-left:8px;
+  white-space:nowrap;
+}
+.item .inv{font-size:13px;color:var(--muted);margin-top:5px}
+.item p{font-size:14.5px;margin-top:9px;text-align:justify;color:#2c2c2c}
+.tags{margin-top:11px;display:flex;flex-wrap:wrap;gap:6px}
+.tag{
+  font-size:11.5px;border:1px solid var(--line);color:var(--muted);
+  padding:2px 9px;border-radius:20px;background:#faf8f5;
+}
 
-  .brief{
-    background:#fff;border:1px dashed var(--line);
-    padding:18px 22px;margin-top:20px;font-size:14px;
-  }
-  .brief b{color:var(--accent);}
-  .brief ul{margin:8px 0 0;padding-left:20px;}
-  .brief li{margin-bottom:5px;}
-
-  /* 页脚 */
-  footer{
-    margin-top:44px;border-top:3px double var(--ink);
-    padding-top:22px;font-size:13px;color:var(--muted);
-  }
-  footer h3{font-size:13px;letter-spacing:.14em;color:var(--ink);margin:0 0 10px;}
-  footer ol{padding-left:20px;margin:0 0 20px;}
-  footer li{margin-bottom:5px;word-break:break-all;}
-  footer a{color:var(--accent);text-decoration:none;}
-  footer a:hover{text-decoration:underline;}
-  .disclaimer{
-    background:#fff;border:1px solid var(--line);
-    padding:14px 18px;font-size:12.5px;line-height:1.7;
-  }
-
-  @media (max-width:640px){
-    h1{font-size:29px;}
-    .grid{grid-template-columns:repeat(2,1fr);}
-    .feature{padding:20px;}
-    .item{flex-direction:column;gap:6px;}
-    .rank{font-size:20px;}
-  }
+/* 底部 */
+footer{margin-top:44px;border-top:3px double var(--ink);padding-top:22px}
+footer h3{font-size:13px;letter-spacing:.18em;color:var(--accent);margin-bottom:12px}
+footer ol{margin-left:20px;font-size:13px;color:#444}
+footer ol li{margin-bottom:5px;word-break:break-all}
+footer a{color:#1a5a8a;text-decoration:none}
+footer a:hover{text-decoration:underline}
+.disc{
+  margin-top:20px;font-size:12px;color:var(--muted);
+  background:#efece6;border-left:3px solid var(--line);padding:12px 14px;
+}
+@media(max-width:600px){
+  header h1{font-size:28px}
+  .hl h3{font-size:21px}
+  .item{flex-direction:column;gap:10px}
+  .rank{flex:0 0 auto;width:30px;height:30px;font-size:13px}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <header>
-  <div class="kicker">Global Tech Investment Daily</div>
+  <div class="kicker">GLOBAL TECH INVESTMENT DAILY</div>
   <h1>每日科技投资动态</h1>
   <div class="meta">
-    <span><b>2026年8月3日</b> 星期一</span>
-    <span>覆盖窗口：<b>7月29日 – 8月1日</b>（周末无重大交易披露）</span>
-    <span>信息源：Crunchbase News · TechCrunch · POWER · TechStartups · Bloomberg（转引）</span>
+    <span><b>2026年8月4日</b>（星期二）</span>
+    <span>覆盖周期：过去 24–48 小时</span>
+    <span>信息源：TechCrunch · Bloomberg · TechStartups · Fortune · BusinessWire</span>
   </div>
 </header>
 
-<section class="overview">
-  <h2>今日概览</h2>
-  <p>刚刚过去的这一周，美国创投市场延续「能源 + AI 基础设施」双主线。<strong>能源相关交易罕见地包揽了前四中的三席</strong>：核聚变公司 Commonwealth Fusion Systems 再融 10 亿美元、热储能公司 Antora Energy 完成 5.5 亿美元 C 轮、微型核反应堆公司 Antares 拿到 3.7 亿美元股权融资。资本正在为 AI 数据中心的电力缺口提前下注。</p>
-  <p>AI 侧最大手笔仍是英伟达对 Ilya Sutskever 的 Safe Superintelligence 约 50 亿美元的战略投资（7月27日宣布，本周计入榜单），SSI 自 2024 年 6 月成立以来累计融资已达 91 亿美元，却仍未发布任何产品。</p>
-  <p>宏观层面，Crunchbase 数据显示 2026 上半年全球创投总额达到创纪录的 <strong>5,100 亿美元</strong>，超过 2025 年全年的 4,400 亿美元；二季度逾 70% 的资金流向 AI 公司，其中 OpenAI 与 Anthropic 两家就占据上半年总额的 43%。资金充沛但高度集中，是当前市场最鲜明的特征。</p>
-</section>
-
-<h2 class="section">今日最值得关注</h2>
-
-<div class="feature">
-  <div class="badge">FOCUS · 重点解读</div>
-  <h3>Commonwealth Fusion Systems 再融 10 亿美元</h3>
-  <p class="sub">核聚变 · 美国马萨诸塞州 Devens · 2026年7月30日宣布 · 养老金、主权财富基金及产业资本参与</p>
-
-  <div class="grid">
-    <div class="cell"><div class="num">10亿美元</div><div class="lbl">本轮股权融资</div></div>
-    <div class="cell"><div class="num">40亿美元</div><div class="lbl">累计融资</div></div>
-    <div class="cell"><div class="num">约30%</div><div class="lbl">占全球聚变行业融资比重</div></div>
-    <div class="cell"><div class="num">400MW</div><div class="lbl">首座商业电站净输出</div></div>
-  </div>
-
-  <h4>业务内容</h4>
-  <p>CFS 由 MIT 等离子体科学与聚变中心团队分拆成立，走「高温超导磁体 + 紧凑型托卡马克」路线。其核心思路是用比传统装置强得多的磁场，把聚变装置从「体育场级」缩小到「厂房级」，从而大幅压缩建造成本与周期。公司同时推进两条产品线：示范堆 <strong>SPARC</strong>（验证净能量增益）与首座商业电站 <strong>ARC</strong>（并网售电）。</p>
-
-  <h4>历史融资情况</h4>
-  <ul>
-    <li><b>2021 年</b>：18 亿美元，此前行业最大单笔融资</li>
-    <li><b>2025 年 8 月</b>：8.63 亿美元，投资方包括英伟达、谷歌、Khosla Ventures、比尔·盖茨的 Breakthrough Energy Ventures</li>
-    <li><b>2026 年 7 月 30 日</b>：10 亿美元，公司称这是自 2021 年以来聚变行业最大单笔融资；本轮首次引入养老金、主权财富基金及基础设施与工业类产业投资人，公司未披露估值</li>
-    <li><b>累计</b>：40 亿美元，约占全球聚变行业融资总额的 30%</li>
-  </ul>
-
-  <h4>研发进度</h4>
-  <ul>
-    <li>SPARC 托卡马克整体建造完成度约 <strong>80%</strong>，CEO Bob Mumgaard 表示已「深度进入托卡马克本体装配阶段」，未更新具体完工日期</li>
-    <li>科学盈亏平衡（净能量增益）目标定在 <strong>2027 年</strong>；迄今全球仅劳伦斯利弗莫尔国家实验室的国家点火装置实现过这一里程碑</li>
-    <li>2026 年 6 月，公司在《Journal of Plasma Physics》特刊发表 5 篇同行评审论文，公开 ARC 电站的物理基础</li>
-    <li>ARC 选址弗吉尼亚州 Chesterfield County 的 Fall Line Fusion Power Station，目前处于许可审批阶段；4 月 28 日已向美国最大批发电力市场 PJM 提交并网申请，为首家提出此类申请的美国聚变公司</li>
-  </ul>
-
-  <h4>营收与商业化</h4>
-  <ul>
-    <li>公司目前<strong>尚无发电收入</strong>，处于纯研发投入期，未披露估值与财务数据</li>
-    <li>已锁定长期购电协议：意大利能源集团 Eni 承诺采购超过 <strong>10 亿美元</strong>电力，谷歌承诺采购 <strong>200MW</strong>（约为 ARC 总输出的一半）——两家合计买断该电站过半产能，且均为 CFS 股东</li>
-    <li>目标于 <strong>2030 年代初</strong>实现商业聚变电力并网</li>
-    <li>今年新任 CFO 为前 Moderna 首席财务官、高盛生物科技银行业务前联席主管 Lorence Kim；其明确表示本轮融资并非 IPO 前奏，但不排除未来考虑</li>
-  </ul>
-
-  <h4>为何值得关注</h4>
-  <p>这轮融资的信号价值大于金额本身。养老金与主权财富基金入场，意味着聚变正从风险投资的「科学赌注」向基础设施类资产过渡——这类 LP 通常只在技术风险明显收敛后才会配置。同时 Mumgaard 也坦承中国在聚变上的公共投入估计达 60 亿至 120 亿美元，远超美国私营部门，中国官方目标是 2035 年前建成工业聚变原型堆。SPARC 能否在 2027 年如期实现盈亏平衡，将是判断这条路线的关键节点。</p>
-</div>
-
-<h2 class="section">重要交易排行（按重要性）</h2>
-
-<div class="item">
-  <div class="rank">01</div>
-  <div class="body">
-    <h3>Commonwealth Fusion Systems <span class="amt">10 亿美元</span></h3>
-    <p>核聚变。累计融资达 40 亿美元，为 2021 年 18 亿美元轮次以来聚变行业最大单笔融资。本轮投资方为养老金、主权财富基金及基础设施与工业产业伙伴，公司未具名披露。资金用于加速从 SPARC 示范堆向 ARC 商业电站过渡。</p>
-    <div class="tags"><span class="tag hot">头条</span><span class="tag">清洁能源</span><span class="tag">核聚变</span><span class="tag">机构资本入场</span></div>
+<h2 class="sec">今 日 概 览</h2>
+<div class="card overview">
+  <p>过去 24 小时全球创投资金明显向「AI 的物理底座」倾斜。两笔 10 亿美元级别的融资同日落地：红杉领投的核反应堆公司 <b>Valar Atomics</b> 与 Zach Dell 创办的家用储能公司 <b>Base Power</b>，均直指 AI 数据中心带来的电力缺口。叠加英国光子芯片公司 OLIX 的 3.12 亿美元，当日仅能源与算力硬件三笔就超过 23 亿美元。</p>
+  <p>第二条主线是 <b>AI 安全与 AI 落地</b>。Horizon3.ai 以超 20 亿美元估值拿下 2.5 亿美元 E 轮，Zenity 获 Norwest 领投的 1.25 亿美元 C 轮（软银愿景二期、日立、LG、Intel Capital 跟投），共同押注「AI 智能体时代的安全治理」。而 Salesforce 前高管创办的 June 以 2000 万美元 pre-seed 出圈，Marc Benioff 的 Time Ventures 领投、Michael Dell 与 Aaron Levie 跟投，切入企业 AI 部署的「最后一公里」。</p>
+  <p>头部机构方面，红杉、NEA、Founders Fund、Khosla、Thrive、a16z、Coatue、Lightspeed、CapitalG、软银愿景基金、Intel Capital、高通创投、联想创投、IDG 等悉数出现在当日名单中。中国方面，上海脑机接口公司 Active Technology 完成约 3.3 亿元人民币天使轮，创下国内 BCI 赛道天使轮纪录。</p>
+  <div class="stats">
+    <div><div class="n">11</div><div class="l">当日重点交易</div></div>
+    <div><div class="n">≈$29.1亿</div><div class="l">披露融资总额</div></div>
+    <div><div class="n">2笔</div><div class="l">10亿美元级别</div></div>
+    <div><div class="n">3笔</div><div class="l">能源 / 硬件</div></div>
+    <div><div class="n">3笔</div><div class="l">网络与 AI 安全</div></div>
   </div>
 </div>
 
+<h2 class="sec">今 日 最 值 得 关 注</h2>
+<div class="hl">
+  <div class="hl-top">HIGHLIGHT · 红杉领投 10 亿美元</div>
+  <div class="hl-body">
+    <h3>Valar Atomics：用工厂流水线造核反应堆，估值三个月翻三倍至 60 亿美元</h3>
+    <div class="sub">美国加州 El Segundo · 小型模块化核反应堆（SMR）· 成立于 2023 年 · 创始人兼 CEO Isaiah Taylor</div>
+
+    <div class="grid">
+      <div><div class="k">本轮融资</div><div class="v">$10 亿<small>Series B 股权融资</small></div></div>
+      <div><div class="k">配套信贷</div><div class="v">$2 亿<small>Erebor 等银行授信额度</small></div></div>
+      <div><div class="k">投后估值</div><div class="v">$60 亿<small>彭博社报道，公司未官宣</small></div></div>
+      <div><div class="k">累计融资</div><div class="v">≈$14.5 亿<small>含此前 $4.5 亿（股权+债务）</small></div></div>
+      <div><div class="k">估值涨幅</div><div class="v">3 倍<small>数月前为 $20 亿</small></div></div>
+      <div><div class="k">营收状况</div><div class="v">未披露<small>仍处示范验证阶段</small></div></div>
+    </div>
+
+    <h4>业务内容</h4>
+    <p>Valar Atomics 研发小型模块化核反应堆（SMR）——本质是「微缩化、工厂预制」的核电站，目标是像生产设备一样批量制造后运至数据中心或工业现场部署，从而在造价与工期上大幅优于传统核电。公司主打的 Ward 250 采用氦冷技术，配合闭环设计可实现近乎零本地取水，恰好击中数据中心「既缺电又缺水」的双重痛点。CEO Isaiah Taylor 的判断是：「AI 建设速度极快，我们在每个方向上都需要大量电力。」</p>
+
+    <h4>历史融资情况</h4>
+    <ul>
+      <li><b>2026 年 8 月（B 轮）：</b>10 亿美元股权 + 2 亿美元信贷额度，估值 60 亿美元。红杉资本（Sequoia）合伙人 Shaun Maguire 领投并进入董事会；跟投方包括 Atreides Management、Point72 Ventures、Valor Equity Partners、Conviction、Apandion Capital、Dream Ventures、HOF Capital、Riot Ventures、Snowpoint Ventures。</li>
+      <li><b>2026 年 3 月（前一轮）：</b>据彭博社报道共 4.5 亿美元，其中股权 3.4 亿、债务 1.1 亿，估值 20 亿美元。</li>
+      <li><b>估值路径：</b>成立仅三年即从 20 亿美元跃升至 60 亿美元，反映市场对「核能 × 算力经济」的激进定价。</li>
+    </ul>
+
+    <h4>业务发展与研发进度</h4>
+    <ul>
+      <li><b>2026 年 6 月 18 日：</b>Ward 250 反应堆在犹他州实现受控临界（美国能源部确认）。</li>
+      <li><b>2026 年 7 月 1 日：</b>在犹他州 Orangeville 现场演示，用 Ward 250 直接为英伟达 DGX Spark / Blackwell 系统供电——被称为美国下一代核能的首次公开算力供电。</li>
+      <li><b>与英伟达合作：</b>双方宣布在犹他州 Emery County 共建 30 兆瓦「AI 工厂」试点数据中心，采用闭环设计、几乎不消耗本地水资源。</li>
+      <li><b>迭代速度：</b>公司称 NOVA 核心研发耗时两年，而 Ward 250 从启动到临界仅用七个月；本轮资金将把公司从「犹他州单台试验堆」推向「反应堆量产线」。</li>
+      <li><b>营收与盈利：</b>公司尚未披露任何营收或盈利数据，目前收入主要来自演示与合作项目，仍处于重资本投入期。</li>
+    </ul>
+
+    <h4>竞争格局与风险</h4>
+    <p>核能赛道近月竞争激烈：Antares 融资 4.7 亿美元为美军建反应堆，X-energy 通过 IPO 募资 10 亿美元。Valar 的差异化在于「工厂铸造 + 整机运输」的制造路线，理论上可压缩成本与周期。但需注意，60 亿美元估值建立在示范级成果之上，量产爬坡、核监管审批与长周期资本开支仍是主要不确定性。</p>
+  </div>
+</div>
+
+<h2 class="sec">重 要 交 易 一 览（按重要性排序）</h2>
+
 <div class="item">
-  <div class="rank">02</div>
+  <div class="rank">1</div>
   <div class="body">
-    <h3>Antora Energy <span class="amt">5.5 亿美元</span></h3>
-    <p>热储能 · C 轮。由 G2 Venture Partners 与 Eclipse 联合领投，Decarbonization Partners（贝莱德/淡马锡）、Lowercarbon Capital、比尔·盖茨的 Breakthrough Energy Ventures、Kleiner Perkins 主席 John Doerr、Ribbit Capital 等跟投。公司用固体碳块以热的形式储存廉价电力，可全天候输出热或电，服务化工厂、钢厂与数据中心。自 2017 年成立累计融资 7.7 亿美元，5 月刚在南达科他州投运 5GWh 级储能项目，未披露估值。本轮为今年清洁技术领域最大融资之一。</p>
-    <div class="tags"><span class="tag hot">Breakthrough Energy</span><span class="tag hot">John Doerr</span><span class="tag">贝莱德/淡马锡</span><span class="tag">数据中心供电</span></div>
+    <h3>Valar Atomics<span class="amt">$10 亿 · B 轮</span></h3>
+    <div class="inv">领投：红杉资本（Shaun Maguire）｜跟投：Atreides、Point72 Ventures、Valor Equity、Conviction、Riot Ventures 等｜估值 $60 亿</div>
+    <p>工厂化量产小型模块化核反应堆，专供 AI 数据中心。另获 2 亿美元信贷额度。7 月刚用自研反应堆为英伟达芯片供电，并与英伟达规划 30MW 无水 AI 工厂。</p>
+    <div class="tags"><span class="tag">核能</span><span class="tag">AI 基础设施</span><span class="tag">红杉领投</span><span class="tag">英伟达合作</span></div>
   </div>
 </div>
 
 <div class="item">
-  <div class="rank">03</div>
+  <div class="rank">2</div>
   <div class="body">
-    <h3>Function <span class="amt">4.5 亿美元</span></h3>
-    <p>消费级健康检测 · 成长期融资，由 General Catalyst 单独提供。总部位于奥斯汀，向消费者直接提供实验室化验、影像与个人健康数据管理服务。单一顶级基金独立开出 4.5 亿美元支票，在当下数字健康融资仍显低迷的背景下相当罕见。</p>
-    <div class="tags"><span class="tag hot">General Catalyst</span><span class="tag">数字健康</span><span class="tag">消费医疗</span></div>
+    <h3>Base Power<span class="amt">$10 亿 · D 轮</span></h3>
+    <div class="inv">领投：Ribbit、Addition、Valor Equity、摩根大通战略投资部｜跟投：a16z、Coatue、Thrive Capital、Lightspeed、CapitalG、Altimeter、D1 Capital、Sands Capital、Energy Impact Partners 等｜投后估值 $130 亿</div>
+    <p>由 Zach Dell（戴尔 CEO 之子）联合创办的家用储能公司，把电池装进用户后院并以订阅制运营，再在用电高峰把电卖回电网。目前已部署超 500 兆瓦时储能，日装机约 100 台，年底目标翻倍。距上一轮 10 亿美元融资不到一年，同日发布新一代 39.2 千瓦时家用电池 Base Core。</p>
+    <div class="tags"><span class="tag">储能</span><span class="tag">电网</span><span class="tag">$130亿估值</span><span class="tag">a16z / Coatue</span></div>
   </div>
 </div>
 
 <div class="item">
-  <div class="rank">04</div>
+  <div class="rank">3</div>
   <div class="body">
-    <h3>Antares <span class="amt">3.7 亿美元</span></h3>
-    <p>核裂变微型反应堆 · C 轮股权，另配套 1 亿美元债权融资。Paradigm 与 Caffeinated Capital 领投。公司成立仅三年，为国防与太空应用开发紧凑型微堆。与 CFS、Antora 同周登榜，凸显资本对「AI 时代新增电力供给」的集中押注。</p>
-    <div class="tags"><span class="tag">核能</span><span class="tag">国防科技</span><span class="tag">太空</span><span class="tag">股权+债权</span></div>
+    <h3>OLIX Computing<span class="amt">$3.12 亿 · B 轮</span></h3>
+    <div class="inv">领投：Fundomo｜跟投：Arm、Hudson River Trading、Reed Hastings（Netflix 联合创始人）、Creandum、Plural 等｜估值约 €28 亿（$33 亿）</div>
+    <p>英国伦敦光子 AI 推理芯片公司，研发「光学张量处理单元（OTPU）」，用片上光互连替代铜线传输数据，并以高速 SRAM 取代片外 DRAM 以绕开「内存墙」。资金将用于芯片流片与软件工具链，目标 2027 年底前向客户交付。</p>
+    <div class="tags"><span class="tag">半导体</span><span class="tag">光子计算</span><span class="tag">Arm 战投</span><span class="tag">欧洲</span></div>
   </div>
 </div>
 
 <div class="item">
-  <div class="rank">05</div>
+  <div class="rank">4</div>
   <div class="body">
-    <h3>Simile <span class="amt">2 亿美元+</span></h3>
-    <p>AI 仿真 · 投后估值 20 亿美元，Greenoaks 领投。这家帕洛阿尔托公司产品上线仅五个月即拿下该估值，是本周估值倍数最激进的一笔。开发用于运行大规模仿真的 AI 工具。</p>
-    <div class="tags"><span class="tag hot">20亿美元估值</span><span class="tag">Greenoaks</span><span class="tag">AI 工具</span><span class="tag">超速轮次</span></div>
+    <h3>Horizon3.ai<span class="amt">$2.5 亿 · E 轮</span></h3>
+    <div class="inv">领投：NEA、NightDragon｜跟投：高通创投（Qualcomm Ventures）、SAIC、EDBI（新加坡）、Quartz Creek｜估值超 $20 亿</div>
+    <p>加州红木城网络安全公司，其 NodeZero 平台提供「自主渗透测试」，用 AI 持续扫描并模拟攻击，替代一年一次的人工红队。据披露拥有约 7200 家客户（含约一半美国联邦机构），ARR 约 1 亿美元。估值较去年 6.5 亿美元 D 轮增长三倍以上。</p>
+    <div class="tags"><span class="tag">网络安全</span><span class="tag">自主渗透测试</span><span class="tag">ARR $1亿</span><span class="tag">CVC 参投</span></div>
   </div>
 </div>
 
 <div class="item">
-  <div class="rank">06</div>
+  <div class="rank">5</div>
   <div class="body">
-    <h3>ThreatLocker <span class="amt">1.9 亿美元</span></h3>
-    <p>网络安全 · F 轮，Elephant 领投，D. E. Shaw Ventures、Arthur Ventures 继续加注，Koch Disruptive Technologies 新进入。公司做零信任端点与应用白名单管控，称已服务全球逾 7 万家机构。募资用于面向 AI 智能体时代的安全控制、平台建设与国际扩张（首站英国）。逻辑很清晰：企业内部 AI 智能体权限越多，「允许做什么」的管控价值越高。</p>
-    <div class="tags"><span class="tag">零信任</span><span class="tag">AI 智能体安全</span><span class="tag">Series F</span></div>
+    <h3>Zenity<span class="amt">$1.25 亿 · C 轮</span></h3>
+    <div class="inv">领投：Norwest｜跟投：软银愿景基金二期、日立创投、LG Technology Ventures、Intel Capital、Qumra Capital、Vertex Ventures、Third Point Ventures、DTCP｜累计融资 ≥$1.8 亿</div>
+    <p>以色列 AI 智能体安全与治理平台，由 8200 部队与微软背景的 Ben Kliger、Michael Bargury 于 2021 年创办。主张「保护智能体而非模型」，应对企业内即将出现的十亿级 AI 智能体的权限与数据风险。上一轮为 2024 年 10 月的 3800 万美元 B 轮。</p>
+    <div class="tags"><span class="tag">AI 安全</span><span class="tag">智能体治理</span><span class="tag">软银 / Intel</span><span class="tag">以色列</span></div>
   </div>
 </div>
 
 <div class="item">
-  <div class="rank">07</div>
+  <div class="rank">6</div>
   <div class="body">
-    <h3>CAIS <span class="amt">1.7 亿美元</span></h3>
-    <p>金融科技 · D 轮，Vista Equity Partners 领投，估值超过 20 亿美元。纽约公司，为独立财务顾问提供另类投资交易平台。私募股权巨头下注财富管理基础设施。</p>
-    <div class="tags"><span class="tag">Vista Equity</span><span class="tag">另类投资</span><span class="tag">20亿+估值</span></div>
+    <h3>Freehand<span class="amt">$7500 万</span></h3>
+    <div class="inv">共同领投：Battery Ventures、NewRoad Capital｜跟投：PSP Growth、Nexus 等</div>
+    <p>旧金山企业软件公司（原名 ScopeAI），用 AI 智能体自动化企业采购与供应商管理，读取发票、合同与流程以辅助采购决策并强制合规。客户包含多家《财富》500 强企业，资金将用于向应付账款、库存等相邻场景扩张。</p>
+    <div class="tags"><span class="tag">企业软件</span><span class="tag">供应链</span><span class="tag">AI 智能体</span></div>
   </div>
 </div>
 
 <div class="item">
-  <div class="rank">08</div>
+  <div class="rank">7</div>
   <div class="body">
-    <h3>PEX <span class="amt">1.6 亿美元</span></h3>
-    <p>金融科技 · 股权与债权组合融资，Bluff Point Associates 领投。为企业提供预付卡、记账卡及 AI 驱动的费用追踪工具。</p>
-    <div class="tags"><span class="tag">企业支付</span><span class="tag">费用管理</span></div>
+    <h3>P-1 AI<span class="amt">$5000 万 · A 轮</span></h3>
+    <div class="inv">领投：NEA｜跟投：Founders Fund、Atlantic Bridge、Radical Ventures、Gula Tech Adventures｜累计约 $7300 万</div>
+    <p>由前 DeepMind 科学家创办的圣马特奥公司，产品「Archie」是可自主完成机械与电气设计任务的 AI 智能体，能理解 CAD、原理图与工业需求。NEA 合伙人称其在打造「AI 机械与电气工程师」，瞄准制造业技术工程师短缺。此前已完成 2300 万美元种子轮。</p>
+    <div class="tags"><span class="tag">工业 AI</span><span class="tag">DeepMind 系</span><span class="tag">Founders Fund</span></div>
   </div>
 </div>
 
 <div class="item">
-  <div class="rank">09</div>
+  <div class="rank">8</div>
   <div class="body">
-    <h3>Eliyan <span class="amt">1.45 亿美元</span></h3>
-    <p>AI 基础设施 · C 轮完成，累计该轮 1.45 亿美元，估值 10 亿美元，Seligman Ventures 领投。这家成立五年的圣克拉拉公司做芯片互连技术，正处于 AI 算力堆栈中最紧俏的环节之一。</p>
-    <div class="tags"><span class="tag hot">新晋独角兽</span><span class="tag">芯片互连</span><span class="tag">AI 基础设施</span></div>
+    <h3>Active Technology（上海）<span class="amt">≈$4570 万 · 天使轮</span></h3>
+    <div class="inv">投资方：360 系基金、54 Capital、联想创投、云启资本、IDG 资本等｜约人民币 3.3 亿元</div>
+    <p>上海非侵入式脑机接口（BCI）公司，创下中国 BCI 赛道天使轮融资纪录。产品目标是让用户通过意念控制数字系统或增强认知，已在体育与游戏场景开展试用。本轮资金用于人体试验与供应链爬坡。周鸿祎等知名投资人参与。</p>
+    <div class="tags"><span class="tag">脑机接口</span><span class="tag">中国</span><span class="tag">联想 / IDG</span><span class="tag">天使轮纪录</span></div>
+  </div>
+</div>
+
+<div class="item">
+  <div class="rank">9</div>
+  <div class="body">
+    <h3>June<span class="amt">$2000 万 · pre-seed</span></h3>
+    <div class="inv">领投：Time Ventures（Marc Benioff）｜跟投：Michael Dell、Aaron Levie（Box CEO）、George Kurtz（CrowdStrike CEO）</div>
+    <p>由 Salesforce 前高管 Efrat Rapoport 等四位 Bonobo AI（2019 年被 Salesforce 收购）原班人马创办，本周一从隐身状态走出。平台自动扫描企业既有系统，识别流程瓶颈与脏数据，生成智能体落地的分步路线图并直接代为搭建，目标是让企业不必再依赖高成本的「前置部署工程师（FDE）」。创始人称本轮「连 BP 都没做」。</p>
+    <div class="tags"><span class="tag">企业 AI 落地</span><span class="tag">Benioff 领投</span><span class="tag">豪华天使阵容</span></div>
   </div>
 </div>
 
 <div class="item">
   <div class="rank">10</div>
   <div class="body">
-    <h3>Index Ventures 新基金 <span class="amt">20 亿美元</span></h3>
-    <p>基金募集（7月31日）。三只基金合计 20 亿美元：4 亿美元种子基金、9 亿美元创投基金，并向 2024 年的 15 亿美元成长基金追加 7 亿美元，可投资本总额达 35 亿美元。Index 今年因 Wiz 以 320 亿美元被 Alphabet 收购获得巨额回报——其种子轮进入并持股约 12%，价值约 38 亿美元。与多家同行大幅膨胀基金规模不同，Index 保持了克制。其 AI 版图包括 Physical Intelligence、Fireworks AI 与 Anthropic。</p>
-    <div class="tags"><span class="tag hot">头部 VC</span><span class="tag">基金募集</span><span class="tag">Wiz 退出</span></div>
+    <h3>Balance Theory<span class="amt">$1900 万 · A 轮</span></h3>
+    <div class="inv">领投：SYN Ventures｜跟投：DataTribe、TEDCO</div>
+    <p>美国马里兰州公司，帮助 CISO 与安全团队用 AI 优化安全预算与供应商组合：把企业全部安全产品、支出与风险纳入统一模型，推荐资金再配置方案。公司称平台目前管理超 10 亿美元安全支出。</p>
+    <div class="tags"><span class="tag">安全支出管理</span><span class="tag">CISO 工具</span></div>
   </div>
 </div>
 
-<div class="brief">
-  <b>同期其他交易</b>
-  <ul>
-    <li><b>Safe Superintelligence</b>：英伟达约 50 亿美元战略投资（7月27日宣布），SSI 将获得 Vera Rubin 系统，未来 12 个月算力提升约 10 倍；公司自 2024 年 6 月成立累计融资 91 亿美元，仍未发布产品。</li>
-    <li><b>Freehand</b> 7,500 万美元 B 轮，Battery Ventures 与 NewRoad Capital 联合领投，累计 1 亿美元；用自主 AI 智能体管理 Meta、联合利华、辉瑞等企业的供应链支出。</li>
-    <li><b>Inforcer</b> 5,000 万美元（7月30日），面向中小企业的 AI 与安全风险管理。</li>
-    <li><b>Okta</b> 收购 AI 安全公司 <b>Permiso</b>，消息人士称交易金额约 2 亿美元。</li>
-    <li><b>Anduril</b> 正与投资人洽谈以约 1,000 亿美元估值融资（距 5 月的 610 亿美元估值仅两个多月），交易尚未落定。</li>
-  </ul>
+<div class="item">
+  <div class="rank">11</div>
+  <div class="body">
+    <h3>Ellis AI<span class="amt">$1000 万 · 种子轮</span></h3>
+    <div class="inv">领投：First Round Capital、645 Ventures｜跟投：Khosla Ventures、Thrive Capital、Harlem Capital、Slow Ventures、Mellody Hobson</div>
+    <p>纽约金融科技公司，创始人 Ryan Williams 此前创办地产平台 Cadre。用生成式 AI 智能体自动化私募信贷的中后台流程——聚合表格、文档与市场数据，自动提取与对账以加速月末关账、报告与尽调。</p>
+    <div class="tags"><span class="tag">私募信贷</span><span class="tag">垂直 AI</span><span class="tag">Khosla / Thrive</span></div>
+  </div>
 </div>
 
 <footer>
-  <h3>信息来源</h3>
+  <h3>信 息 来 源</h3>
   <ol>
-    <li><a href="https://news.crunchbase.com/venture/biggest-funding-rounds-safe-superintelligence-commonwealth-fusion/">Crunchbase News：The Week's 10 Biggest Funding Rounds（2026年7月31日）</a></li>
-    <li><a href="https://www.powermag.com/commonwealth-fusion-systems-raises-another-1-billion-as-work-on-commercial-power-plant-continues/">POWER Magazine：Commonwealth Fusion Systems Raises Another $1 Billion（2026年7月30日）</a></li>
-    <li><a href="https://techcrunch.com/2026/07/30/fusion-power-darling-commonwealth-fusion-systems-raises-another-1b/">TechCrunch：Fusion power darling Commonwealth Fusion Systems raises another $1B（2026年7月30日）</a></li>
-    <li><a href="https://news.crunchbase.com/clean-tech-and-energy/battery-storage-startup-antora-550m-series-c/">Crunchbase News：Antora Closes $550M Series C（2026年7月30日）</a></li>
-    <li><a href="https://techcrunch.com/2026/07/31/fresh-off-its-wiz-payout-index-ventures-raises-2b-across-three-funds/">TechCrunch：Index Ventures raises $2B across three funds（2026年7月31日）</a></li>
-    <li><a href="https://techstartups.com/2026/07/29/venture-capital-startup-funding-roundup-july-29-2026-more/">TechStartups：Venture Capital &amp; Startup Funding Roundup（2026年7月29日）</a></li>
-    <li><a href="https://techcrunch.com/2026/07/27/ilya-sutskevers-safe-superintelligence-partners-with-nvidia-to-scale-its-ai-research/">TechCrunch：Safe Superintelligence partners with Nvidia（2026年7月27日）</a></li>
-    <li><a href="https://techcrunch.com/2026/07/24/anduril-reportedly-in-talks-to-raise-funding-at-100b-valuation-more-than-3x-last-years-mark/">TechCrunch：Anduril in talks at $100B valuation（2026年7月24日）</a></li>
-    <li><a href="https://news.crunchbase.com/venture/global-startup-exits-ipo-ma-soar-ai-q2-h1-2026/">Crunchbase News：2026 上半年全球创投与退出数据</a></li>
-    <li><a href="https://techcrunch.com/category/venture/">TechCrunch Venture 频道</a></li>
+    <li>TechCrunch — <a href="https://techcrunch.com/2026/08/03/sequoias-shaun-maguire-leads-1b-round-for-nuclear-startup-valar-atomics/">Sequoia's Shaun Maguire leads $1B round for nuclear startup Valar Atomics</a>（2026-08-03）</li>
+    <li>TechCrunch — <a href="https://techcrunch.com/2026/08/03/base-power-raises-another-1b-to-save-the-grid-using-backyard-batteries/">Base Power raises another $1B to save the grid using backyard batteries</a>（2026-08-03）</li>
+    <li>TechCrunch — <a href="https://techcrunch.com/2026/08/03/horizon3-hits-2-billion-valuation-with-250m-series-e-as-ai-threats-escalate/">Horizon3 hits $2 billion valuation with $250M Series E</a>（2026-08-03）</li>
+    <li>TechCrunch — <a href="https://techcrunch.com/2026/08/03/a-marc-benioff-backed-startup-thinks-ai-can-solve-the-ai-deployment-problem/">A Marc Benioff-backed startup thinks AI can solve the AI deployment problem（June）</a>（2026-08-03）</li>
+    <li>TechStartups — <a href="https://techstartups.com/2026/08/03/venture-capital-startup-funding-roundup-august-3-2026-atreides-battery-ventures-nea-sequoia-point72-more/">Venture Capital &amp; Startup Funding Roundup, August 3, 2026</a></li>
+    <li>TechStartups — <a href="https://techstartups.com/2026/08/03/valar-atomics-raises-1-billion-series-b-led-by-sequoia-to-mass-produce-nuclear-reactors-for-ai-data-centers/">Valar Atomics raises $1 billion Series B led by Sequoia</a></li>
+    <li>TechStartups — <a href="https://techstartups.com/2026/08/03/ai-security-startup-zenity-raises-125m-to-secure-the-coming-wave-of-1-billion-ai-agents/">AI security startup Zenity raises $125M</a></li>
+    <li>Bloomberg — <a href="https://www.bloomberg.com/news/articles/2026-08-03/sequoia-leads-1-billion-funding-round-for-nuclear-startup-valar">Sequoia Leads $1 Billion Investment in Nuclear Startup Valar Atomics</a>（估值 $60 亿来源）</li>
+    <li>Axios Pro — <a href="https://www.axios.com/pro/climate-deals/2026/08/03/sequoia-1b-valar-atomics">Valar Atomics closed $1B Series B at $6B valuation led by Sequoia Capital</a></li>
+    <li>Fortune — <a href="https://fortune.com/2026/08/03/softbank-hitachi-lg-back-zenitys-125-million-round-to-police-ai-agents/">SoftBank, Hitachi, LG back Zenity's $125 million round</a></li>
+    <li>BusinessWire — <a href="https://www.businesswire.com/news/home/20260803963850/en/Zenity-Raises-$125-Million-to-Secure-the-Era-of-1-Billion-AI-Agents">Zenity Raises $125 Million</a>；<a href="https://www.businesswire.com/news/home/20260731406877/en/Balance-Theory-Raises-%2419M-to-Reinvent-How-Enterprises-Manage-Cybersecurity-Investments">Balance Theory Raises $19M</a></li>
+    <li>Deseret News — <a href="https://www.deseret.com/u-s-world/2026/07/01/valar-atomics-nvidia-milestone/">Valar Atomics and Nvidia announce data center collaboration in Utah</a>（2026-07-01）</li>
+    <li>Tom's Hardware — <a href="https://www.tomshardware.com/tech-industry/data-centers/startup-activates-nuclear-microreactor-live-on-stage-to-power-an-nvidia-rtx-spark-desktop-pc-firm-working-with-nvidia-to-build-a-30mw-closed-loop-ai-factory-that-doesnt-use-local-water">Startup activates nuclear microreactor live on stage to power an Nvidia chip</a></li>
+    <li>TechCrunch — <a href="https://techcrunch.com/2026/07/31/repeat-founder-ryan-williams-raises-10m-seed-for-an-ai-startup-for-private-credit-managers/">Repeat founder Ryan Williams raises $10M seed（Ellis AI）</a></li>
   </ol>
-
-  <div class="disclaimer">
-    <b>免责声明：</b>本页内容由 AI 依据公开媒体报道自动汇编生成，仅供信息参考，不构成任何投资建议、要约或推荐。融资金额、估值与投资方信息以各公司官方公告为准，部分数据为媒体转引或未经披露方确认，可能存在出入。<br>
-    本期覆盖窗口为 2026 年 7 月 29 日至 8 月 1 日（8 月 1–2 日为周末，无重大交易披露）。生成时间：2026 年 8 月 3 日。
+  <div class="disc">
+    <b>免责声明：</b>本页内容由公开媒体报道整理生成，仅供信息参考，不构成任何投资建议或要约。融资金额、估值与经营数据均以引述来源为准，部分估值为媒体报道而非公司官方披露（如 Valar Atomics 的 60 亿美元估值），可能存在偏差或后续修正。汇率换算为近似值。请在做出任何决策前自行核实原始信息来源。
+  </div>
+  <div class="disc" style="margin-top:10px;border-left-color:var(--accent)">
+    生成时间：2026年8月4日 · 覆盖 2026年8月2日–8月4日公开报道 · 本页每日更新
   </div>
 </footer>
 
