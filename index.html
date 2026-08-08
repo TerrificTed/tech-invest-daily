@@ -3,271 +3,370 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日科技投资动态 · 2026年8月7日</title>
+<title>每日科技投资动态 · 2026年8月8日</title>
 <style>
   :root{
     --accent:#c8401a;
     --ink:#1a1a1a;
     --muted:#6b6b6b;
-    --line:#e2ded8;
-    --paper:#f4f1ec;
+    --line:#e2ddd6;
+    --bg:#f4f1ec;
   }
-  *{box-sizing:border-box;margin:0;padding:0;}
+  *{box-sizing:border-box;margin:0;padding:0}
   body{
-    background:var(--paper);
+    background:var(--bg);
     color:var(--ink);
-    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC",sans-serif;
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC","Noto Sans CJK SC",sans-serif;
     line-height:1.75;
-    padding:32px 16px 64px;
+    -webkit-font-smoothing:antialiased;
   }
-  .wrap{max-width:880px;margin:0 auto;}
+  .wrap{max-width:880px;margin:0 auto;padding:32px 20px 64px}
 
   /* 页头 */
-  header{border-bottom:3px double var(--ink);padding-bottom:18px;margin-bottom:28px;}
-  .kicker{font-size:12px;letter-spacing:.25em;color:var(--accent);font-weight:700;margin-bottom:10px;}
-  h1{font-size:40px;letter-spacing:.06em;font-weight:800;line-height:1.25;}
-  .subline{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;font-size:13px;color:var(--muted);}
-  .subline b{color:var(--ink);font-weight:600;}
+  header.masthead{
+    border-top:5px solid var(--accent);
+    border-bottom:1px solid var(--line);
+    background:#fff;
+    padding:34px 30px 26px;
+    text-align:center;
+  }
+  .kicker{
+    font-size:12px;letter-spacing:.32em;color:var(--accent);
+    font-weight:700;margin-bottom:12px;
+  }
+  h1.title{
+    font-size:40px;font-weight:800;letter-spacing:.06em;line-height:1.25;
+  }
+  .subtitle{margin-top:10px;font-size:14px;color:var(--muted)}
+  .datebar{
+    margin-top:18px;padding-top:14px;border-top:1px dotted var(--line);
+    display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;
+    font-size:13px;color:var(--muted);
+  }
+  .datebar b{color:var(--ink);font-weight:600}
 
-  /* 卡片通用 */
-  .card{background:#fff;border:1px solid var(--line);border-radius:4px;padding:22px 24px;margin-bottom:18px;
-        box-shadow:0 1px 0 rgba(0,0,0,.03);}
-  h2{font-size:15px;letter-spacing:.18em;font-weight:800;color:var(--accent);
-     border-left:4px solid var(--accent);padding-left:10px;margin:34px 0 16px;}
+  /* 通用卡片 */
+  .card{
+    background:#fff;border:1px solid var(--line);
+    padding:26px 28px;margin-top:22px;
+  }
+  h2.sec{
+    font-size:19px;font-weight:800;letter-spacing:.04em;
+    padding-bottom:10px;margin-bottom:16px;
+    border-bottom:2px solid var(--ink);
+    display:flex;align-items:center;gap:10px;
+  }
+  h2.sec::before{
+    content:"";width:9px;height:9px;background:var(--accent);
+    display:inline-block;transform:rotate(45deg);
+  }
+  p{font-size:15px}
+  p + p{margin-top:12px}
 
-  /* 概览 */
-  .overview p{font-size:15px;color:#333;margin-bottom:10px;}
-  .overview p:last-child{margin-bottom:0;}
-  .stats{display:flex;flex-wrap:wrap;gap:14px;margin-top:18px;}
-  .stat{flex:1 1 150px;border:1px solid var(--line);border-radius:3px;padding:12px 14px;background:#fbfaf8;}
-  .stat .n{font-size:22px;font-weight:800;color:var(--accent);letter-spacing:.02em;}
-  .stat .l{font-size:12px;color:var(--muted);margin-top:2px;}
+  .stats-row{
+    display:flex;flex-wrap:wrap;gap:12px;margin-top:18px;
+  }
+  .stat{
+    flex:1 1 150px;border:1px solid var(--line);background:#faf8f5;
+    padding:12px 14px;
+  }
+  .stat .n{font-size:22px;font-weight:800;color:var(--accent);letter-spacing:.02em}
+  .stat .l{font-size:12px;color:var(--muted);margin-top:2px}
 
-  /* 重点卡片 */
-  .highlight{border:2px solid var(--accent);border-radius:4px;background:#fff;padding:26px 26px 24px;}
-  .hl-tag{display:inline-block;background:var(--accent);color:#fff;font-size:11px;font-weight:700;
-          letter-spacing:.2em;padding:4px 10px;border-radius:2px;}
-  .highlight h3{font-size:27px;font-weight:800;margin:14px 0 4px;line-height:1.35;}
-  .highlight .en{font-size:13px;color:var(--muted);letter-spacing:.04em;margin-bottom:14px;}
-  .grid{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0 20px;}
-  .cell{flex:1 1 140px;border:1px solid var(--line);border-radius:3px;padding:12px 14px;background:#fdfcfa;}
-  .cell .k{font-size:11px;color:var(--muted);letter-spacing:.08em;}
-  .cell .v{font-size:19px;font-weight:800;color:var(--accent);margin-top:3px;}
-  .cell .v.small{font-size:15px;color:var(--ink);}
-  .highlight h4{font-size:13px;font-weight:800;letter-spacing:.1em;color:var(--ink);
-                margin:18px 0 8px;padding-bottom:5px;border-bottom:1px solid var(--line);}
-  .highlight p{font-size:14.5px;color:#333;margin-bottom:8px;}
-  .rounds{list-style:none;font-size:14px;}
-  .rounds li{padding:7px 0;border-bottom:1px dashed var(--line);display:flex;flex-wrap:wrap;gap:6px 12px;}
-  .rounds li:last-child{border-bottom:none;}
-  .rounds .r{font-weight:700;min-width:118px;}
-  .rounds .a{color:var(--accent);font-weight:700;min-width:92px;}
-  .rounds .i{color:var(--muted);flex:1 1 220px;}
+  /* 头条 highlight */
+  .highlight{
+    border:2px solid var(--accent);background:#fff;
+    margin-top:26px;
+  }
+  .hl-head{
+    background:var(--accent);color:#fff;padding:9px 22px;
+    font-size:13px;letter-spacing:.24em;font-weight:700;
+  }
+  .hl-body{padding:26px 28px}
+  .hl-body h3{font-size:26px;font-weight:800;line-height:1.4}
+  .hl-meta{margin-top:8px;font-size:13px;color:var(--muted)}
+  .hl-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:1px;background:var(--line);border:1px solid var(--line);margin:20px 0 4px;
+  }
+  .hl-grid div{background:#fdfbf8;padding:14px 16px}
+  .hl-grid .v{font-size:20px;font-weight:800;color:var(--accent)}
+  .hl-grid .k{font-size:12px;color:var(--muted);margin-top:2px}
+  h4.sub{
+    font-size:15px;font-weight:700;margin:22px 0 8px;
+    padding-left:10px;border-left:3px solid var(--accent);
+  }
+  ul.rounds{list-style:none;font-size:14.5px}
+  ul.rounds li{
+    padding:9px 0 9px 0;border-bottom:1px dashed var(--line);
+    display:flex;gap:14px;align-items:baseline;
+  }
+  ul.rounds li:last-child{border-bottom:0}
+  ul.rounds .when{
+    flex:0 0 96px;color:var(--muted);font-size:13px;font-weight:600;
+  }
+  ul.rounds .amt{font-weight:800;color:var(--accent);white-space:nowrap}
 
   /* 新闻列表 */
-  .item{background:#fff;border:1px solid var(--line);border-radius:4px;padding:18px 20px;margin-bottom:14px;
-        display:flex;gap:16px;align-items:flex-start;}
-  .rank{flex:0 0 30px;font-size:22px;font-weight:800;color:var(--line);line-height:1.1;padding-top:2px;}
-  .body{flex:1;}
-  .head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-bottom:6px;}
-  .name{font-size:18px;font-weight:800;}
-  .amt{font-size:17px;font-weight:800;color:var(--accent);}
-  .val{font-size:12.5px;color:var(--muted);}
-  .desc{font-size:14px;color:#3a3a3a;margin-bottom:9px;}
-  .tags{display:flex;flex-wrap:wrap;gap:6px;}
-  .tag{font-size:11px;color:#7a4a38;background:#f6ece7;border:1px solid #ecd9d1;
-       border-radius:2px;padding:2px 8px;letter-spacing:.04em;}
+  ol.news{list-style:none;counter-reset:n}
+  ol.news > li{
+    counter-increment:n;background:#fff;border:1px solid var(--line);
+    padding:20px 24px 18px;margin-top:14px;position:relative;
+  }
+  ol.news > li::before{
+    content:counter(n,decimal-leading-zero);
+    position:absolute;top:16px;right:20px;
+    font-size:30px;font-weight:800;color:#eee7de;letter-spacing:-.02em;
+  }
+  .n-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;padding-right:44px}
+  .n-name{font-size:18px;font-weight:800}
+  .n-amt{
+    font-size:16px;font-weight:800;color:#fff;background:var(--accent);
+    padding:1px 9px;letter-spacing:.02em;
+  }
+  .n-stage{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:1px 7px}
+  .n-desc{margin-top:10px;font-size:14.5px;color:#333}
+  .n-inv{margin-top:8px;font-size:13.5px;color:var(--muted)}
+  .n-inv b{color:#333;font-weight:600}
+  .tags{margin-top:11px;display:flex;flex-wrap:wrap;gap:6px}
+  .tag{
+    font-size:11.5px;background:#f4efe8;color:#7a5c4c;
+    padding:2px 9px;border-radius:2px;letter-spacing:.02em;
+  }
+  .tag.hot{background:#fbe6de;color:var(--accent);font-weight:600}
 
-  /* 页脚 */
-  footer{margin-top:40px;border-top:1px solid var(--line);padding-top:20px;font-size:13px;color:var(--muted);}
-  footer h5{font-size:12px;letter-spacing:.16em;color:var(--ink);font-weight:800;margin-bottom:10px;}
-  footer ul{list-style:none;margin-bottom:18px;}
-  footer li{padding:3px 0;}
-  footer a{color:#8a4a30;text-decoration:none;border-bottom:1px solid #e6d5cd;word-break:break-all;}
-  footer a:hover{color:var(--accent);}
-  .disclaimer{font-size:12px;line-height:1.7;color:#8a8a8a;border-top:1px dashed var(--line);padding-top:14px;}
-
+  /* 底部 */
+  footer{margin-top:34px;border-top:2px solid var(--ink);padding-top:20px}
+  footer h3{font-size:14px;font-weight:800;letter-spacing:.1em;margin-bottom:10px}
+  footer ol{font-size:13px;color:var(--muted);padding-left:20px}
+  footer ol li{margin-bottom:5px;word-break:break-all}
+  footer a{color:#8a5a44;text-decoration:none;border-bottom:1px solid #dcd2c8}
+  footer a:hover{color:var(--accent)}
+  .disclaimer{
+    margin-top:20px;padding:14px 16px;background:#efeae2;
+    font-size:12.5px;color:#77706a;line-height:1.7;
+  }
   @media(max-width:600px){
-    h1{font-size:28px;}
-    .highlight h3{font-size:21px;}
-    .rank{display:none;}
+    h1.title{font-size:28px}
+    .hl-body h3{font-size:20px}
+    .card,.hl-body{padding:20px 18px}
+    ul.rounds li{flex-wrap:wrap}
+    ul.rounds .when{flex:0 0 100%}
   }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<header>
-  <div class="kicker">每 日 科 技 行 业 投 资 动 态</div>
-  <h1>全球科技投资简报</h1>
-  <div class="subline">
-    <span><b>2026年8月7日</b>（星期五）</span>
-    <span>覆盖区间：8月5日–8月7日</span>
-    <span>信息源：TechCrunch · FinSMEs · TechStartups · Bloomberg</span>
-  </div>
-</header>
+  <header class="masthead">
+    <div class="kicker">DAILY TECH INVESTMENT BRIEF</div>
+    <h1 class="title">每日科技投资动态</h1>
+    <div class="subtitle">全球科技行业创投交易日报 · 覆盖过去 24–48 小时</div>
+    <div class="datebar">
+      <span><b>2026年8月8日</b>（星期六）</span>
+      <span>数据区间：8月6日–8月7日为主</span>
+      <span>来源：TechCrunch · Bloomberg · CNBC · Reuters · TechStartups</span>
+    </div>
+  </header>
 
-<h2>今 日 概 览</h2>
-<div class="card overview">
-  <p>过去 48 小时的主线只有一条：<b>资本正在为 AI 修地基</b>。规模最大的两笔交易——洛杉矶国防制造公司 Hadrian 的 13.7 亿美元 D 轮，和硅谷光互连公司 Lumilens 逾 7 亿美元的 C 轮——都不是模型公司，而是让 AI 与国防工业真正跑起来的物理层：自动化工厂与光模块。</p>
-  <p>投资方阵容同样说明问题。Hadrian 一轮就集齐了 Founders Fund、a16z、Lux Capital、CapitalG（Alphabet 旗下成长基金）、摩根大通战略投资集团、T. Rowe Price、Apollo、贝莱德系资管等一长串名字——顶级 VC、企业 CVC 与传统资管在同一张 cap table 上会师，这在两年前的硬科技融资中并不常见。Lumilens 则拉进了高通创投（Qualcomm Ventures）、贝恩资本创投与 Peak XV。</p>
-  <p>与此同时，应用层的钱转向"有真实 ROI"的标的：成立于 2002 年的希腊语音客服公司 Omilia 以 6000 万美元 ARR 拿到 6700 万美元 B 轮，创始人直言不打算和 Sierra、Decagon 比"性感"。亚洲方面，新加坡边缘 AI 芯片公司 Acrab 获 Vertex 领投的 1.3 亿美元 B 轮，印度电动两轮车公司 River 完成 1.2 亿美元 C 轮。</p>
-  <div class="stats">
-    <div class="stat"><div class="n">10 笔</div><div class="l">本期收录交易</div></div>
-    <div class="stat"><div class="n">~28 亿美元</div><div class="l">合计披露融资额</div></div>
-    <div class="stat"><div class="n">2 笔</div><div class="l">超 5 亿美元大单</div></div>
-    <div class="stat"><div class="n">国防制造 · 光互连</div><div class="l">最热赛道</div></div>
-  </div>
-</div>
+  <section class="card">
+    <h2 class="sec">今日概览</h2>
+    <p>过去 48 小时，全球风投资金高度集中在两条主线：<strong>AI 算力基础设施</strong>与<strong>国防／工业自动化</strong>。两笔十亿美元级交易几乎定义了本轮周期的资金流向——澳大利亚 AI 数据中心公司 <strong>Firmus</strong> 获 20 亿美元战略股权投资，估值四个月内从 55 亿美元翻倍至 105 亿美元以上；美国国防制造科技公司 <strong>Hadrian</strong> 完成 13.7 亿美元 D 轮，估值近 79 亿美元。</p>
+    <p>资金分布呈现明显的"两头集中"：一端是重资产、强战略属性的算力与国防制造，背后站着 NVIDIA、Blackstone、Coatue、Mubadala、丰田 Woven 等产业资本与主权基金；另一端则是"让 AI 变便宜"的基础设施软件——Sapiom（AI 模型路由，Anthropic 参投）、Naïve（AI 智能体运行时）等 A 轮公司拿到资金，投资人开始要求 AI 项目给出可量化的 ROI 而非概念叙事。生物医药同步回暖，LifeMine 的 1.88 亿美元 E 轮同时集齐了贝索斯、盖茨与 Google 三家基金。</p>
+    <div class="stats-row">
+      <div class="stat"><div class="n">~44亿美元</div><div class="l">榜单 11 笔交易合计</div></div>
+      <div class="stat"><div class="n">2 笔</div><div class="l">十亿美元级交易</div></div>
+      <div class="stat"><div class="n">AI 基础设施</div><div class="l">最热赛道</div></div>
+      <div class="stat"><div class="n">NVIDIA / a16z</div><div class="l">最活跃产业与顶级 VC</div></div>
+    </div>
+  </section>
 
-<h2>今 日 最 值 得 关 注</h2>
-<div class="highlight">
-  <span class="hl-tag">重 点 深 度</span>
-  <h3>Hadrian：13.7 亿美元 D 轮，估值一年翻五倍至 78.7 亿美元</h3>
-  <div class="en">Hadrian · 美国加州洛杉矶 · 国防与航天自动化制造 · 2026年8月6日宣布</div>
+  <section class="highlight">
+    <div class="hl-head">今日最值得关注</div>
+    <div class="hl-body">
+      <h3>Firmus Technologies 获 20 亿美元战略股权投资，估值突破 105 亿美元</h3>
+      <div class="hl-meta">澳大利亚 · AI 算力基础设施 · 2026年8月7日公布 · 投资方：NVIDIA、Coatue、Blackstone、Jane Street</div>
 
-  <div class="grid">
-    <div class="cell"><div class="k">本轮融资</div><div class="v">$13.7 亿</div></div>
-    <div class="cell"><div class="k">投后估值</div><div class="v">$78.7 亿</div></div>
-    <div class="cell"><div class="k">累计融资</div><div class="v">≈$20 亿</div></div>
-    <div class="cell"><div class="k">估值变化</div><div class="v">≈5×</div></div>
-    <div class="cell"><div class="k">轮次</div><div class="v small">Series D</div></div>
-  </div>
+      <div class="hl-grid">
+        <div><div class="v">$20亿</div><div class="k">本轮融资额（全额认购）</div></div>
+        <div><div class="v">&gt;$105亿</div><div class="k">投后估值（约 A$150亿）</div></div>
+        <div><div class="v">&gt;$30亿</div><div class="k">过去一年股权融资累计</div></div>
+        <div><div class="v">$100亿</div><div class="k">2月 Blackstone 领投债务包</div></div>
+        <div><div class="v">1.6 GW</div><div class="k">2028年前澳洲算力部署目标</div></div>
+        <div><div class="v">4个月</div><div class="k">估值从 55 亿翻倍用时</div></div>
+      </div>
 
-  <h4>它做什么</h4>
-  <p>Hadrian 由 CEO Chris Power 于 2020 年创立，总部位于洛杉矶。它的定位在国防科技公司里相当特别——<b>不造武器，只造"造武器的工厂"</b>。公司以"工厂即服务"（Factories as a Service, FaaS）模式建设高度自动化的精密制造设施，用机器人、AI 驱动的刀具管理和实时制造情报系统，为航空航天、国防与关键基础设施客户批量生产任务级零部件乃至整机产品线。</p>
-  <p>美国国防供应链的瓶颈长期不在设计而在产能：精密加工车间高度分散、老龄化、交付周期以月计。Hadrian 试图用软件定义的自动化工厂把这条链条重做一遍。今年 3 月，公司在阿拉巴马州开出第四座工厂，专门为哥伦比亚级与弗吉尼亚级潜艇量产零部件——该项目以公私合营（PPP）形式落地，Hadrian 披露的交易规模达 24 亿美元。</p>
+      <h4 class="sub">业务：不做模型，做模型底下的"AI 工厂"</h4>
+      <p>Firmus 2019 年创立于悉尼，创始团队为 Oliver Curtis、Tim Rosenfield 与 Jonathan Levee，公司最早以比特币矿场起家，后转型为 AI 云与算力基础设施运营商。它不做大模型也不做消费级应用，而是围绕 NVIDIA 的 <em>DSX AI Factory 参考架构</em>建设与运营大规模训练与推理数据中心，即所谓"AI 工厂"。核心项目 <strong>Project Southgate</strong> 是一项覆盖澳大利亚全国的多年期部署计划，目标是在 2028 年前落地最高 1.6 吉瓦的 AI 算力容量，本地媒体测算总投资规模可达约 730 亿澳元。</p>
 
-  <h4>历史融资</h4>
-  <ul class="rounds">
-    <li><span class="r">2021 · A轮起步</span><span class="a">—</span><span class="i">A 轮后于 2021 年 11 月开建第二座工厂</span></li>
-    <li><span class="r">2025年7月 · C轮</span><span class="a">$2.6 亿</span><span class="i">Founders Fund（Peter Thiel）与 Lux Capital 领投；同期宣布进入整机制造并开设亚利桑那州 Mesa 工厂</span></li>
-    <li><span class="r">2026年8月 · D轮</span><span class="a">$13.7 亿</span><span class="i">WCM Investment Management、Washington Harbour Partners、Valor Equity Partners、137 Ventures、Baillie Gifford 共同领投；摩根大通战略投资集团作为锚定联合领投方加入</span></li>
-    <li><span class="r">跟投方</span><span class="a">—</span><span class="i">a16z、Founders Fund、Lux Capital、CapitalG、Altimeter、Construct Capital、1789 Capital、Apollo 旗下基金、T. Rowe Price 顾问账户、摩根士丹利财富管理等</span></li>
-    <li><span class="r">累计融资</span><span class="a">≈$20 亿</span><span class="i">据 PitchBook 估算（TechCrunch 引述）</span></li>
-  </ul>
+      <h4 class="sub">历史融资：一年之内从数亿到百亿估值</h4>
+      <ul class="rounds">
+        <li><span class="when">2025年9月</span><span class="amt">$3.3亿</span><span>定向增发，Ellerston Capital 与 NVIDIA 参与</span></li>
+        <li><span class="when">2026年2月</span><span class="amt">$100亿</span><span>Blackstone 领投的债务融资包，用于澳洲 AI 数据中心网络建设</span></li>
+        <li><span class="when">2026年4月</span><span class="amt">$5.05亿</span><span>战略股权融资，Coatue 领投、NVIDIA 参与，投后估值 55 亿美元</span></li>
+        <li><span class="when">2026年8月</span><span class="amt">$20亿</span><span>本轮：Blackstone Tactical Opportunities 加入，Coatue、NVIDIA 追加，Jane Street 首次入局；估值 &gt;105 亿美元</span></li>
+      </ul>
+      <p style="margin-top:12px;font-size:14px;color:#6b6b6b">合计：过去 12 个月新增股权融资超过 30 亿美元，另有 100 亿美元规模的债务融资安排。</p>
 
-  <h4>业务与财务进展</h4>
-  <p><b>营收轨迹：</b>2023 年是 Hadrian 第一个对外销售年份，收入约 300 万美元；2024 年 8 月公司预计当年将做到约 3000 万美元；2025 年 7 月，Chris Power 确认公司完成了"营收同比 10 倍"的目标。这是一条从零到规模化的陡峭曲线，也是本轮估值一年内从约 15 亿美元区间跳升至 78.7 亿美元的核心依据。</p>
-  <p><b>产能扩张：</b>亚利桑那州 Mesa 的新工厂规划面积 27 万平方英尺，资本投入约 2 亿美元，预计创造 350 个新岗位；阿拉巴马潜艇零部件工厂为第四座设施。本轮资金将用于继续新建工厂、扩大研发、加码自动化与 AI 工具链，并扩展劳动力培训项目——后者是自动化制造扩张中最容易被低估的瓶颈。</p>
-  <p><b>为什么重要：</b>这笔交易把"美国再工业化"从政策口号变成了一张可定价的资产负债表。当 Founders Fund、a16z 这类风险偏好极高的基金，与摩根大通、T. Rowe Price、Baillie Gifford 这类看重现金流的资管同时下注同一家制造企业时，说明市场对国防产能缺口的判断已经从"主题投资"进入"确定性投资"阶段。风险同样明确：估值隐含的产能爬坡与订单转化假设相当激进，制造业的规模化远比软件更难，且高度依赖国防预算周期。</p>
-</div>
+      <h4 class="sub">业务进展与财务</h4>
+      <p>今年 6 月，Firmus 与 NVIDIA 进一步深化合作，签署覆盖 NVIDIA 基础设施采购与基于 NVIDIA 的云服务的协议，锁定了全球最紧俏的算力供给。新资金将用于加速 Project Southgate 的全国铺开，并推进亚太扩张——首站为已宣布的印尼项目，面向 AI 原生客户。公司为非上市企业，<strong>未公开披露营收与盈利数据</strong>；此前有报道称其在推进 ASX 上市的相关准备。</p>
 
-<h2>今 日 交 易 一 览（按重要性排序）</h2>
+      <h4 class="sub">为什么值得关注</h4>
+      <p>这笔交易的投资人名单本身就是信号：NVIDIA 提供芯片、Blackstone 是全球最大的数据中心金主之一、Coatue 押注 AI 全栈、Jane Street 带来又一池机构资金——四方利益在"算力＋数据中心＋电力"的交汇点上重合。更值得注意的是地理逻辑：在 AI 叙事高度集中于美国和少数巨头之际，资本开始为"亚太需要自己的算力池"这一判断下重注。四个月估值翻倍，也说明在当前市场里，AI 基础设施仍被视为少数"资本稀缺"的机会之一。同时需留意另一面——关于芯片、数据中心与电力上的巨额支出何时能转化为回报，市场质疑声正在变大。</p>
+    </div>
+  </section>
 
-<div class="item">
-  <div class="rank">01</div>
-  <div class="body">
-    <div class="head"><span class="name">Hadrian</span><span class="amt">$13.7 亿</span><span class="val">D 轮 · 估值 $78.7 亿 · 美国</span></div>
-    <div class="desc">国防与航天自动化工厂运营商，"工厂即服务"模式。WCM、Washington Harbour、Valor Equity、137 Ventures、Baillie Gifford 共同领投，摩根大通战投锚定跟投，a16z、Founders Fund、Lux Capital、CapitalG 等跟投。估值较一年前 C 轮增长约 5 倍，累计融资约 20 亿美元。</div>
-    <div class="tags"><span class="tag">国防科技</span><span class="tag">先进制造</span><span class="tag">Founders Fund</span><span class="tag">a16z</span><span class="tag">CapitalG</span></div>
-  </div>
-</div>
+  <section class="card" style="margin-top:26px">
+    <h2 class="sec">今日交易榜（按重要性排序）</h2>
+    <ol class="news">
 
-<div class="item">
-  <div class="rank">02</div>
-  <div class="body">
-    <div class="head"><span class="name">Lumilens</span><span class="amt">$7 亿+</span><span class="val">C 轮 · 估值 $55.1 亿 · 美国圣何塞</span></div>
-    <div class="desc">AI 数据中心光互连平台。其 LumiCore 覆盖硅光、混合信号 IC、电光中介层与光学系统，提供近封装光学（NPO）、共封装光学（CPO）与可插拔光模块。Atreides Management、贝恩资本创投、Meritech、Seligman Ventures、Spark Capital 共同领投，高通创投、摩根大通私人资本、Peak XV、Redpoint 等跟投，累计融资超 9 亿美元。</div>
-    <div class="tags"><span class="tag">AI 基础设施</span><span class="tag">硅光子</span><span class="tag">半导体</span><span class="tag">高通创投</span></div>
-  </div>
-</div>
+      <li>
+        <div class="n-head">
+          <span class="n-name">Firmus Technologies</span>
+          <span class="n-amt">$20亿</span>
+          <span class="n-stage">战略股权 · 估值 &gt;$105亿</span>
+        </div>
+        <div class="n-desc">澳大利亚 AI 算力基础设施商，基于 NVIDIA DSX 架构建设"AI 工厂"，推进 Project Southgate 全国部署及印尼等亚太扩张。估值四个月内从 55 亿美元翻倍。</div>
+        <div class="n-inv"><b>投资方：</b>NVIDIA、Coatue Management、Blackstone（Tactical Opportunities）、Jane Street</div>
+        <div class="tags"><span class="tag hot">今日头条</span><span class="tag">AI 基础设施</span><span class="tag">数据中心</span><span class="tag">NVIDIA CVC</span><span class="tag">亚太</span></div>
+      </li>
 
-<div class="item">
-  <div class="rank">03</div>
-  <div class="body">
-    <div class="head"><span class="name">Moove</span><span class="amt">$2.5 亿</span><span class="val">C 轮 · 迪拜/拉各斯</span></div>
-    <div class="desc">自动驾驶车队基础设施运营商，在 13 个国家运营约 4.2 万辆网约车，并与 Waymo 在凤凰城、迈阿密合作。阿布扎比主权基金 Mubadala 领投，丰田旗下 Woven Capital 与 Ion Pacific 联合领投，贝莱德、富兰克林邓普顿、Uber 参与。资金用于扩建充换电与维保枢纽网络"Nests"。据 TechStartups 报道估值约 21 亿美元，此前累计融资 4.2 亿美元。</div>
-    <div class="tags"><span class="tag">自动驾驶</span><span class="tag">出行基础设施</span><span class="tag">丰田 CVC</span><span class="tag">主权基金</span></div>
-  </div>
-</div>
+      <li>
+        <div class="n-head">
+          <span class="n-name">Hadrian</span>
+          <span class="n-amt">$13.7亿</span>
+          <span class="n-stage">D 轮 · 估值 $78.7亿</span>
+        </div>
+        <div class="n-desc">美国国防科技公司，不造武器而造"造武器的工厂"——建设高度自动化的制造基地，为军用车辆、潜艇、航空部件提供量产能力，本质是把五角大楼的供应链数字化。本轮估值较上一轮跳升约 5 倍，累计融资约 20 亿美元。</div>
+        <div class="n-inv"><b>投资方：</b>WCM Investment Management、Washington Harbour Partners、Valor Equity Partners、137 Ventures、Baillie Gifford 领投；<b>Andreessen Horowitz、Founders Fund、CapitalG、Lux Capital</b>、Altimeter、1789 Capital、Apollo、T. Rowe Price、摩根士丹利财富管理等参与</div>
+        <div class="tags"><span class="tag hot">十亿美元级</span><span class="tag">国防科技</span><span class="tag">工业自动化</span><span class="tag">a16z</span><span class="tag">Founders Fund</span><span class="tag">Google CapitalG</span></div>
+      </li>
 
-<div class="item">
-  <div class="rank">04</div>
-  <div class="body">
-    <div class="head"><span class="name">Acrab</span><span class="amt">$1.3 亿</span><span class="val">B 轮 · 新加坡</span></div>
-    <div class="desc">2024 年成立的 agentic AI 算力基础设施公司，将专用芯片、端侧 AI 模型与智能软件编排结合，把 AI Agent 部署到边缘环境执行实时任务。Vertex Ventures SEA & India 与 Vertex Growth 领投，欧洲及东南亚机构投资人跟投，累计融资超 3.5 亿美元。</div>
-    <div class="tags"><span class="tag">边缘 AI</span><span class="tag">AI 芯片</span><span class="tag">东南亚</span><span class="tag">Vertex</span></div>
-  </div>
-</div>
+      <li>
+        <div class="n-head">
+          <span class="n-name">Moove</span>
+          <span class="n-amt">$2.5亿</span>
+          <span class="n-stage">C 轮 · 估值约 $21亿</span>
+        </div>
+        <div class="n-desc">迪拜／拉各斯的出行金融科技公司，从非洲网约车购车融资转向为自动驾驶车队提供融资与运营服务，已在凤凰城、迈阿密运营 Waymo 车队。目前在 13–14 个国家运营约 4.2 万辆车，ARR 约 4.2 亿美元。</div>
+        <div class="n-inv"><b>投资方：</b>Mubadala（阿布扎比主权基金）领投，Woven Capital（丰田）、Ion Pacific 联合领投；BlackRock、Franklin Templeton、Uber 等参与</div>
+        <div class="tags"><span class="tag">自动驾驶</span><span class="tag">出行金融</span><span class="tag">主权基金</span><span class="tag">丰田 CVC</span></div>
+      </li>
 
-<div class="item">
-  <div class="rank">05</div>
-  <div class="body">
-    <div class="head"><span class="name">River</span><span class="amt">$1.2 亿</span><span class="val">C 轮 · 印度班加罗尔</span></div>
-    <div class="desc">印度电动两轮车制造商，主打单一高销量车型 Indie，面向通勤与配送人群。日产量已从一年前的约 20 台提升至约 300 台。Elev8 Venture Partners 与 Claypond Capital 领投，雅马哈发动机、三井、Al-Futtaim、HDFC AMC 等参与，累计融资 1.44 亿美元。资金用于扩产与扩张经销网络。</div>
-    <div class="tags"><span class="tag">电动车</span><span class="tag">印度</span><span class="tag">制造扩产</span><span class="tag">雅马哈</span></div>
-  </div>
-</div>
+      <li>
+        <div class="n-head">
+          <span class="n-name">LifeMine Therapeutics</span>
+          <span class="n-amt">$1.88亿</span>
+          <span class="n-stage">E 轮</span>
+        </div>
+        <div class="n-desc">马萨诸塞州生物科技公司，核心管线 LIFE-001 为口服免疫抑制剂，用于预防器官移植排斥反应。资金将支持肾移植 II 期与胰岛细胞移植 Ib 期临床，累计融资超 3 亿美元。</div>
+        <div class="n-inv"><b>投资方：</b>Bezos Expeditions（Milky Way Investments，贝索斯）、Gates Frontier（盖茨）、Google Ventures、RA Capital、Arch Venture 等</div>
+        <div class="tags"><span class="tag hot">贝索斯 × 盖茨 × 谷歌</span><span class="tag">生物医药</span><span class="tag">Google CVC</span></div>
+      </li>
 
-<div class="item">
-  <div class="rank">06</div>
-  <div class="body">
-    <div class="head"><span class="name">NavVis</span><span class="amt">$8500 万</span><span class="val">德国慕尼黑</span></div>
-    <div class="desc">工业与建筑领域的"空间孪生"平台，用 NavVis VLX/MLX 移动扫描设备加 IVION 云平台，把物理空间实时同步为数字孪生。客户包括宝马、大众、丰田、奔驰、埃克森美孚、巴斯夫、西门子、博世等，覆盖 50 多国 1500 余家客户、逾 15 万用户。The Jordan Company 领投，Yttrium、日本 KKE、Cipio Partners 跟投。</div>
-    <div class="tags"><span class="tag">数字孪生</span><span class="tag">工业软件</span><span class="tag">欧洲</span></div>
-  </div>
-</div>
+      <li>
+        <div class="n-head">
+          <span class="n-name">HappyRobot</span>
+          <span class="n-amt">$1.5亿</span>
+          <span class="n-stage">C 轮 · 估值约 $12亿（新晋独角兽）</span>
+        </div>
+        <div class="n-desc">美国／西班牙团队的企业级 AI Agent 公司，用语音与对话智能体自动化物流单证、保险理赔、能源调度等多步骤流程，客户包括 DHL、Uber。计划从货运物流扩展至保险、能源、电信与航空。</div>
+        <div class="n-inv"><b>投资方：</b>Prysm Capital 领投、Eurazeo 联合领投；<b>Andreessen Horowitz、Y Combinator</b>、Base10、Koch Disruptive Technologies、Orange Ventures 等参与</div>
+        <div class="tags"><span class="tag">AI Agent</span><span class="tag">企业软件</span><span class="tag">新晋独角兽</span><span class="tag">a16z</span><span class="tag">YC</span></div>
+      </li>
 
-<div class="item">
-  <div class="rank">07</div>
-  <div class="body">
-    <div class="head"><span class="name">Omilia</span><span class="amt">$6700 万</span><span class="val">B 轮 · 希腊雅典</span></div>
-    <div class="desc">成立于 2002 年的语音与客服自动化公司，主张"不是所有客服请求都值得调用大模型"。Expedition Growth Capital 领投，是其继 2020 年 2000 万美元融资后的第二轮外部融资；期间 ARR 增长 10 倍至 6000 万美元。客户含 Capital One、Discover、加拿大皇家银行、Taco Bell（已部署逾 1000 家门店）。现有约 500 名员工，年底目标 600 人。</div>
-    <div class="tags"><span class="tag">语音 AI</span><span class="tag">客服自动化</span><span class="tag">高 ARR</span></div>
-  </div>
-</div>
+      <li>
+        <div class="n-head">
+          <span class="n-name">Expedition Therapeutics</span>
+          <span class="n-amt">$1.15亿</span>
+          <span class="n-stage">B 轮（超额认购）</span>
+        </div>
+        <div class="n-desc">旧金山生物科技公司，开发口服 DPP1 抑制剂 EXDP-101，针对合并心血管疾病的慢阻肺（COPD）患者。资金将推动其在 I 期成功后进入 II 期临床。</div>
+        <div class="n-inv"><b>投资方：</b>General Atlantic 领投；RA Capital、Vivo Capital、Novo Holdings、Sofinnova、Forbion 等参与</div>
+        <div class="tags"><span class="tag">生物医药</span><span class="tag">慢阻肺</span><span class="tag">General Atlantic</span></div>
+      </li>
 
-<div class="item">
-  <div class="rank">08</div>
-  <div class="body">
-    <div class="head"><span class="name">Vedanta Biosciences</span><span class="amt">$6000 万</span><span class="val">美国马萨诸塞州剑桥</span></div>
-    <div class="desc">临床后期生物制药公司，开发针对胃肠道疾病的口服微生物组疗法——从纯克隆菌种库中理性筛选菌株、组成配方明确的粉末制剂，不依赖供体粪便材料。AMR Action Fund 与法国巴黎银行资产管理另类投资部领投，美国 BARDA 参与。资金用于推进 VE303 预防复发性艰难梭菌感染的 III 期 RESTORATiVE303 研究。</div>
-    <div class="tags"><span class="tag">生物科技</span><span class="tag">微生物组疗法</span><span class="tag">III 期临床</span><span class="tag">BARDA</span></div>
-  </div>
-</div>
+      <li>
+        <div class="n-head">
+          <span class="n-name">Omilia</span>
+          <span class="n-amt">$6,700万</span>
+          <span class="n-stage">B 轮</span>
+        </div>
+        <div class="n-desc">雅典的企业语音 AI 公司，为大型企业提供自学习客服语音智能体，刻意控制大模型调用以压低成本。自 2020 年以来经常性收入增长 10 倍至 6,000 万美元，客户包括 Capital One、RBC、Discover、Taco Bell。累计融资 8,700 万美元。</div>
+        <div class="n-inv"><b>投资方：</b>Expedition Growth Capital 领投</div>
+        <div class="tags"><span class="tag">企业 AI</span><span class="tag">语音智能体</span><span class="tag">已验证 ROI</span><span class="tag">欧洲</span></div>
+      </li>
 
-<div class="item">
-  <div class="rank">09</div>
-  <div class="body">
-    <div class="head"><span class="name">Naïve</span><span class="amt">$2850 万</span><span class="val">A 轮 · 美国</span></div>
-    <div class="desc">把公司注册、支付、邮箱、电话号码、云资源等"开公司的杂活"打包成单一 API，供 AI Agent 调用。上线数月签下逾 3 万开发者客户，近六个月 ARR 增长 10 倍至千万美元量级。Nexus Venture Partners 领投，YC、Zetta、Liquid 2 及 Gokul Rajaram 等天使跟投，累计融资约 3200 万美元。团队仅 10 人。</div>
-    <div class="tags"><span class="tag">AI Agent</span><span class="tag">开发者工具</span><span class="tag">YC</span></div>
-  </div>
-</div>
+      <li>
+        <div class="n-head">
+          <span class="n-name">Convex</span>
+          <span class="n-amt">$5,700万</span>
+          <span class="n-stage">B 轮</span>
+        </div>
+        <div class="n-desc">旧金山开发者工具公司，提供面向 AI 时代的响应式、ACID 兼容的 Serverless 后端，替代传统数据库与服务器架构，主打在 AI 大量生成代码的场景下保证类型安全与一致性。累计融资 8,200 万美元。</div>
+        <div class="n-inv"><b>投资方：</b>Insight Partners 领投；<b>Andreessen Horowitz</b>、Spark Capital、Etna Labs、Justin Kan 参与</div>
+        <div class="tags"><span class="tag">开发者工具</span><span class="tag">AI 基础设施</span><span class="tag">a16z</span></div>
+      </li>
 
-<div class="item">
-  <div class="rank">10</div>
-  <div class="body">
-    <div class="head"><span class="name">HealthSnap</span><span class="amt">$2500 万</span><span class="val">美国迈阿密</span></div>
-    <div class="desc">AI 驱动的虚拟照护管理平台，服务慢病远程监测与照护协同场景，8 月 6 日完成 2500 万美元融资（据 FinSMEs）。数字医疗在本期属于中等规模但持续有资金流入的板块。</div>
-    <div class="tags"><span class="tag">数字医疗</span><span class="tag">远程照护</span></div>
-  </div>
-</div>
+      <li>
+        <div class="n-head">
+          <span class="n-name">Faye</span>
+          <span class="n-amt">$5,000万</span>
+          <span class="n-stage">C 轮</span>
+        </div>
+        <div class="n-desc">美国旅行保险科技公司，用 AI 完成承保与理赔自动化，航班延误可主动触发退款与改签。公司称去年营收翻倍，目标年内让 AI 自主处理过半理赔。累计融资 1 亿美元。</div>
+        <div class="n-inv"><b>投资方：</b>Madrona Venture Group 领投；BRM、Portage Ventures、F2 Venture Capital、Viola Ventures、Lumir Ventures 参与</div>
+        <div class="tags"><span class="tag">保险科技</span><span class="tag">垂直 AI</span></div>
+      </li>
 
-<footer>
-  <h5>信 息 来 源</h5>
-  <ul>
-    <li>TechCrunch — <a href="https://techcrunch.com/2026/08/06/defense-tech-hadrian-raises-1-37b-at-8b-valuation/">Defense tech Hadrian raises $1.37B at $8B valuation</a></li>
-    <li>TechCrunch — <a href="https://techcrunch.com/2026/08/06/omilia-raises-67m-to-scale-its-customer-support-platform/">Omilia raises $67M to scale its customer support platform</a></li>
-    <li>TechCrunch — <a href="https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company/">Naïve raises $28.5M to automate the grunt work of setting up and running a company</a></li>
-    <li>FinSMEs — <a href="https://www.finsmes.com/2026/08/hadrian-raises-1-37-billion-in-series-d-funding.html">Hadrian Raises $1.37 Billion in Series D Funding</a></li>
-    <li>FinSMEs — <a href="https://www.finsmes.com/2026/08/lumilens-raises-over-700m-in-series-c-funding.html">Lumilens Raises Over $700M in Series C Funding</a></li>
-    <li>FinSMEs — <a href="https://www.finsmes.com/2026/08/acrab-raises-130m-in-series-b-funding.html">Acrab Raises $130M in Series B Funding</a></li>
-    <li>FinSMEs — <a href="https://www.finsmes.com/2026/08/navvis-raises-85m-in-funding.html">NavVis Raises $85M in Funding</a></li>
-    <li>FinSMEs — <a href="https://www.finsmes.com/2026/08/healthsnap-raises-25m-in-funding.html">HealthSnap Raises $25M in Funding</a></li>
-    <li>FinSMEs — <a href="https://www.finsmes.com/2026/08/vedanta-biosciences-raises-60m-in-funding.html">Vedanta Biosciences Raises $60M in Funding</a></li>
-    <li>FinSMEs — <a href="https://www.finsmes.com/">FinSMEs 首页（8月6日当日交易全量列表）</a></li>
-    <li>TechStartups — <a href="https://techstartups.com/2026/08/05/venture-capital-startup-funding-roundup-august-5-2026-a16z-blackrock-base10-franklin-templeton-general-catalyst-insight-partners-y-combinator-more/">Venture Capital &amp; Startup Funding Roundup, August 5, 2026</a></li>
-    <li>PR Newswire — <a href="https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html">Hadrian Raises $1.37B Series D（官方新闻稿）</a></li>
-    <li>PR Newswire — <a href="https://www.prnewswire.com/news-releases/hadrian-raises-260m-to-build-ai-powered-factories-for-america-adds-full-product-manufacturing-opens-arizona-site-302508179.html">Hadrian Raises $260M Series C（2025年，历史融资参考）</a></li>
-    <li>CNBC — <a href="https://www.cnbc.com/2025/07/17/hadrian-funding-round-thiel-founders-fund.html">Hadrian closes $260 million round led by Founders Fund（历史融资与营收参考）</a></li>
-    <li>Bloomberg — <a href="https://www.bloomberg.com/news/articles/2026-08-06/defense-startup-hadrian-valued-at-7-87-billion-in-new-round">Hadrian Secures $7.87 Billion Valuation in JPMorgan-Led Funding Round</a></li>
-  </ul>
-  <div class="disclaimer">
-    <b>免责声明：</b>本页内容由自动化流程于 2026 年 8 月 7 日基于公开媒体报道整理生成，仅供信息参考，不构成任何投资建议、要约或推荐。融资金额、估值、营收等数据均引自上述公开来源，未经独立核实，部分数字为媒体估算或公司自述，可能与最终工商登记或审计结果存在差异。"累计融资""估值"等口径在不同数据源之间可能不一致。读者在据此作出任何决策前，应自行核实原始信息并咨询专业顾问。
-  </div>
-</footer>
+      <li>
+        <div class="n-head">
+          <span class="n-name">Sapiom</span>
+          <span class="n-amt">$3,500万</span>
+          <span class="n-stage">A 轮</span>
+        </div>
+        <div class="n-desc">旧金山 AI 基础设施公司，产品位于 AI 智能体与模型之间，自动把每次调用路由到"能胜任的最便宜模型"。测试中曾帮客户把月度模型账单从 120 万美元压到约 10 万美元。距 1,500 万美元种子轮仅 11 个月，累计 5,000 万美元。</div>
+        <div class="n-inv"><b>投资方：</b>Dragonfly Capital 领投；<b>Anthropic</b>、Menlo Ventures、Okta Ventures、Accel、Coinbase Ventures、VanEck Ventures 等参与</div>
+        <div class="tags"><span class="tag hot">Anthropic 参投</span><span class="tag">AI 推理成本</span><span class="tag">模型路由</span></div>
+      </li>
+
+      <li>
+        <div class="n-head">
+          <span class="n-name">Naïve</span>
+          <span class="n-amt">$2,850万</span>
+          <span class="n-stage">A 轮</span>
+        </div>
+        <div class="n-desc">加州门洛帕克的 AI 开发者工具公司，提供模型路由、记忆存储与 Serverless 运行时，让开发者部署可端到端自主运营业务的 AI 智能体，已有约 3 万名注册开发者。</div>
+        <div class="n-inv"><b>投资方：</b>Nexus Venture Partners 领投；Y Combinator Continuity、Zetta Venture Partners、Liquid 2 Ventures 等参与</div>
+        <div class="tags"><span class="tag">AI Agent 基础设施</span><span class="tag">开发者工具</span><span class="tag">YC</span></div>
+      </li>
+
+    </ol>
+  </section>
+
+  <footer>
+    <h3>信息来源</h3>
+    <ol>
+      <li><a href="https://techstartups.com/2026/08/07/nvidia-backed-firmus-raises-2-billion-at-10-5-billion-valuation-to-build-ai-factories-across-asia-pacific/">TechStartups：Nvidia-backed Firmus raises $2 billion at $10.5 billion valuation to build AI factories across Asia-Pacific（2026年8月7日）</a></li>
+      <li><a href="https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific">Firmus 官方新闻稿：Fully Subscribed USD$2 Billion Strategic Equity Investment</a></li>
+      <li><a href="https://www.reuters.com/technology/firmus-nearly-doubles-valuation-over-105-billion-4-months-with-nvidia-backed-2026-08-07/">Reuters：Firmus nearly doubles valuation to over $10.5 billion in 4 months</a></li>
+      <li><a href="https://www.bloomberg.com/news/articles/2026-08-07/ai-data-center-group-firmus-draws-2-billion-from-coatue-nvidia">Bloomberg：AI Data Center Group Firmus Draws $2 Billion From Coatue, Nvidia</a></li>
+      <li><a href="https://techcrunch.com/2026/04/07/firmus-the-southgate-ai-datacenter-builder-backed-by-nvidia-hits-5-5b-valuation/">TechCrunch：Firmus, the "Southgate" AI data center builder backed by Nvidia, hits $5.5B valuation（4月轮次）</a></li>
+      <li><a href="https://www.smartcompany.com.au/artificial-intelligence/firmus-raises-2-85-billion-ai-infrastructure/">SmartCompany：Firmus raises A$2.85 billion in latest blockbuster funding for AI infrastructure</a></li>
+      <li><a href="https://techcrunch.com/2026/08/06/defense-tech-hadrian-raises-1-37b-at-8b-valuation/">TechCrunch：Defense tech Hadrian raises $1.37B at $8B valuation（2026年8月6日）</a></li>
+      <li><a href="https://www.cnbc.com/2026/08/06/hadrian-defense-tech-ai-manufacturing.html">CNBC：Hadrian valued at nearly $8 billion after fresh funding as money pours into defense tech</a></li>
+      <li><a href="https://www.bloomberg.com/news/articles/2026-08-06/defense-startup-hadrian-valued-at-7-87-billion-in-new-round">Bloomberg：Hadrian Secures $7.87 Billion Valuation in JPMorgan-Led Funding Round</a></li>
+      <li><a href="https://techstartups.com/2026/08/06/venture-capital-startup-funding-roundup-august-6-2026-bessemer-venture-partners-gates-frontier-general-atlantic-google-ventures-gradient-ventures-menlo-ventures-y-combinator-more/">TechStartups：Venture Capital &amp; Startup Funding Roundup, August 6, 2026</a></li>
+      <li><a href="https://techstartups.com/2026/08/05/venture-capital-startup-funding-roundup-august-5-2026-a16z-blackrock-base10-franklin-templeton-general-catalyst-insight-partners-y-combinator-more/">TechStartups：Venture Capital &amp; Startup Funding Roundup, August 5, 2026</a></li>
+      <li><a href="https://www.happyrobot.ai/blog/happyrobot-seriesc-fundraising-announcement">HappyRobot 官方公告：Series C Fundraising Announcement</a></li>
+      <li><a href="https://expeditiontx.com/news/expedition-therapeutics-announces-oversubscribed-115-million-series-b-financing-to-advance-next-generation-dpp1-inhibitor-for-copd/">Expedition Therapeutics 官方新闻稿：$115M Series B Financing</a></li>
+      <li><a href="https://omilia.com/resources/news/omilia-secures-67-million-in-series-b-funding-to-accelerate-global-expansion-of-its-agentic-cx-platform-for-large-enterprises/">Omilia 官方新闻稿：$67 Million Series B Funding</a></li>
+    </ol>
+
+    <div class="disclaimer">
+      <strong>免责声明：</strong>本页面由自动化流程根据 2026 年 8 月 8 日当天公开检索到的媒体报道汇总生成，内容仅供信息参考，不构成任何投资建议、要约或推荐。融资金额、估值、营收等数据均引自上述公开来源，部分为公司自述或媒体估算，可能存在口径差异、汇率换算差异或后续更正；未披露项已在文中注明。所涉公司财务与经营数据未经独立核实。读者在据此作出任何决策前，应自行查证原始信息并咨询专业顾问。
+    </div>
+  </footer>
 
 </div>
 </body>
