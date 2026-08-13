@@ -3,303 +3,334 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日科技投资动态 · 2026年8月12日</title>
+<title>每日科技投资动态 · 2026年8月13日</title>
 <style>
-:root{
-  --accent:#c8401a;
-  --ink:#1a1a1a;
-  --muted:#6b6b6b;
-  --line:#e2ddd6;
-  --bg:#f4f1ec;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{
-  background:var(--bg);
-  color:var(--ink);
-  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Helvetica Neue",Arial,sans-serif;
-  line-height:1.75;
-  -webkit-font-smoothing:antialiased;
-}
-.wrap{max-width:880px;margin:0 auto;padding:32px 20px 64px}
+  :root{
+    --accent:#c8401a;
+    --ink:#1a1a1a;
+    --muted:#6b6b6b;
+    --line:#e2ded8;
+    --paper:#f4f1ec;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC",-apple-system,sans-serif;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:32px 20px 64px;}
 
-/* 页头 */
-header{border-bottom:3px double var(--ink);padding-bottom:18px;margin-bottom:28px}
-.kicker{font-size:12px;letter-spacing:.28em;color:var(--accent);font-weight:700;margin-bottom:8px}
-h1{font-size:40px;letter-spacing:.04em;font-weight:800;line-height:1.2}
-.subline{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;font-size:13px;color:var(--muted)}
-.subline b{color:var(--ink);font-weight:600}
+  /* 页头 */
+  header.masthead{
+    border-bottom:3px double var(--ink);
+    padding-bottom:18px;margin-bottom:28px;
+  }
+  .kicker{
+    font-size:12px;letter-spacing:.28em;color:var(--accent);
+    font-weight:700;text-transform:uppercase;margin-bottom:10px;
+  }
+  h1.title{
+    font-size:40px;line-height:1.2;margin:0 0 12px;
+    font-weight:800;letter-spacing:-.01em;
+  }
+  .meta{
+    display:flex;flex-wrap:wrap;gap:8px 18px;
+    font-size:13px;color:var(--muted);
+    border-top:1px solid var(--line);padding-top:12px;
+  }
+  .meta strong{color:var(--ink);font-weight:600;}
 
-/* 卡片 */
-.card{background:#fff;border:1px solid var(--line);border-radius:4px;padding:24px 26px;margin-bottom:22px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
-h2{font-size:15px;letter-spacing:.2em;font-weight:700;color:var(--accent);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  /* 概览 */
+  .overview{
+    background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);
+    padding:20px 22px;margin-bottom:32px;
+  }
+  .overview h2{font-size:17px;margin:0 0 10px;letter-spacing:.04em;}
+  .overview p{margin:0 0 10px;font-size:15px;}
+  .overview p:last-child{margin-bottom:0;}
 
-/* 概览 */
-.overview p{margin-bottom:10px;font-size:15px}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:16px}
-.stat{background:#fff;padding:14px 12px;text-align:center}
-.stat .n{font-size:24px;font-weight:800;color:var(--accent);letter-spacing:-.02em}
-.stat .l{font-size:12px;color:var(--muted);margin-top:2px}
+  /* 重点卡片 */
+  .spotlight{
+    background:#fff;border:1px solid var(--line);
+    box-shadow:0 2px 0 rgba(0,0,0,.04);
+    margin-bottom:38px;overflow:hidden;
+  }
+  .spotlight-band{
+    background:var(--accent);color:#fff;
+    padding:8px 22px;font-size:12px;font-weight:700;letter-spacing:.24em;
+  }
+  .spotlight-body{padding:24px 22px;}
+  .spotlight h2{font-size:26px;margin:0 0 6px;line-height:1.3;}
+  .spotlight .sub{color:var(--muted);font-size:14px;margin:0 0 20px;}
+  .stats{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:22px;
+  }
+  .stat{background:#fdfcfa;padding:14px 12px;}
+  .stat .label{font-size:11px;color:var(--muted);letter-spacing:.1em;margin-bottom:4px;}
+  .stat .value{font-size:21px;font-weight:800;color:var(--accent);line-height:1.2;}
+  .stat .note{font-size:11px;color:var(--muted);margin-top:2px;}
+  .spotlight h3{
+    font-size:15px;margin:20px 0 8px;padding-left:10px;
+    border-left:3px solid var(--accent);
+  }
+  .spotlight p{font-size:14.5px;margin:0 0 10px;}
+  table.rounds{
+    width:100%;border-collapse:collapse;font-size:13.5px;margin:6px 0 4px;
+  }
+  table.rounds th,table.rounds td{
+    text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);
+  }
+  table.rounds th{background:#faf8f5;font-weight:600;font-size:12.5px;color:var(--muted);}
+  table.rounds td.amt{font-weight:700;color:var(--accent);white-space:nowrap;}
 
-/* 重点 */
-.feature{border:2px solid var(--accent);background:#fff;border-radius:4px;padding:0;margin-bottom:26px;overflow:hidden}
-.feature-head{background:var(--accent);color:#fff;padding:10px 26px;font-size:13px;letter-spacing:.2em;font-weight:700}
-.feature-body{padding:24px 26px}
-.feature h3{font-size:27px;font-weight:800;line-height:1.3;margin-bottom:6px}
-.feature .tagline{color:var(--muted);font-size:14px;margin-bottom:18px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:20px}
-.cell{background:#fdfbf8;padding:13px 10px;text-align:center}
-.cell .v{font-size:19px;font-weight:800;color:var(--accent)}
-.cell .k{font-size:11px;color:var(--muted);margin-top:3px;letter-spacing:.05em}
-.feature h4{font-size:14px;font-weight:700;margin:18px 0 7px;padding-left:9px;border-left:3px solid var(--accent)}
-.feature p,.feature li{font-size:14.5px}
-.feature ul{padding-left:20px}
-.feature li{margin-bottom:5px}
-table.hist{width:100%;border-collapse:collapse;margin-top:8px;font-size:13.5px}
-table.hist th,table.hist td{border:1px solid var(--line);padding:7px 10px;text-align:left}
-table.hist th{background:#faf7f3;font-weight:600;color:var(--muted);font-size:12.5px}
-table.hist td.amt{color:var(--accent);font-weight:700;white-space:nowrap}
+  /* 列表 */
+  h2.section{
+    font-size:20px;border-bottom:2px solid var(--ink);
+    padding-bottom:8px;margin:0 0 20px;
+  }
+  .item{
+    background:#fff;border:1px solid var(--line);
+    padding:18px 20px;margin-bottom:14px;
+    display:flex;gap:16px;align-items:flex-start;
+  }
+  .rank{
+    flex:0 0 34px;height:34px;line-height:34px;text-align:center;
+    background:var(--ink);color:#fff;font-weight:700;font-size:15px;
+  }
+  .item-body{flex:1;min-width:0;}
+  .item h3{font-size:17px;margin:0 0 6px;line-height:1.4;}
+  .amount{
+    color:var(--accent);font-weight:800;
+    background:linear-gradient(transparent 62%, rgba(200,64,26,.16) 62%);
+    padding:0 2px;
+  }
+  .item p{margin:0 0 10px;font-size:14.5px;color:#333;}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;}
+  .tag{
+    font-size:11.5px;color:var(--muted);border:1px solid var(--line);
+    background:#faf8f5;padding:2px 8px;border-radius:2px;
+  }
+  .tag.hot{color:var(--accent);border-color:rgba(200,64,26,.35);background:rgba(200,64,26,.06);}
 
-/* 列表 */
-ol.deals{list-style:none;counter-reset:d}
-ol.deals li{counter-increment:d;display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
-ol.deals li:last-child{border-bottom:none;padding-bottom:0}
-.rank{flex:0 0 30px;font-size:22px;font-weight:800;color:var(--line);line-height:1.1}
-ol.deals li:nth-child(-n+3) .rank{color:var(--accent)}
-.rank::before{content:counter(d,decimal-leading-zero)}
-.deal-main{flex:1;min-width:0}
-.deal-title{font-size:17px;font-weight:700;margin-bottom:3px}
-.amt-hl{color:var(--accent);font-weight:800}
-.deal-meta{font-size:12.5px;color:var(--muted);margin-bottom:6px}
-.deal-desc{font-size:14px}
-.tags{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px}
-.tag{font-size:11.5px;padding:2px 9px;border:1px solid var(--line);border-radius:2px;color:var(--muted);background:#faf8f5}
-.tag.hot{color:var(--accent);border-color:#e8c4b8;background:#fdf3f0}
-
-/* 底部 */
-footer{margin-top:32px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
-footer h2{font-size:13px}
-footer ul{list-style:none;columns:2;column-gap:24px}
-footer li{margin-bottom:5px;break-inside:avoid}
-footer a{color:var(--accent);text-decoration:none;border-bottom:1px dotted #d8b5a8}
-footer a:hover{border-bottom-style:solid}
-.disc{margin-top:16px;padding:12px 14px;background:#faf7f3;border-left:3px solid var(--line);font-size:12px;line-height:1.7}
-@media(max-width:640px){
-  h1{font-size:29px}
-  .wrap{padding:20px 14px 44px}
-  .card,.feature-body{padding:18px 16px}
-  .feature-head{padding:9px 16px}
-  footer ul{columns:1}
-}
+  /* 页脚 */
+  footer{
+    margin-top:40px;padding-top:20px;border-top:3px double var(--ink);
+    font-size:13px;color:var(--muted);
+  }
+  footer h3{font-size:14px;color:var(--ink);margin:0 0 10px;}
+  footer ul{margin:0 0 18px;padding-left:20px;}
+  footer li{margin-bottom:5px;word-break:break-all;}
+  footer a{color:var(--accent);text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+  .disclaimer{
+    background:#fff;border:1px solid var(--line);padding:14px 16px;
+    font-size:12.5px;line-height:1.7;
+  }
+  @media(max-width:640px){
+    h1.title{font-size:28px;}
+    .stats{grid-template-columns:repeat(2,1fr);}
+    .item{flex-direction:column;gap:10px;}
+    .rank{flex:none;width:34px;}
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<header>
-  <div class="kicker">全球科技行业投资日报</div>
-  <h1>每日科技投资动态</h1>
-  <div class="subline">
-    <span><b>2026年8月12日</b>　星期三</span>
-    <span>覆盖窗口：8月10日—8月12日（含本周内最大规模交易）</span>
-    <span>信息源：TechStartups · Bloomberg · Parsers VC · BusinessWire · FinSMEs 等</span>
-  </div>
-</header>
-
-<section class="card overview">
-  <h2>今日概览</h2>
-  <p>过去48小时，风险资本继续高度集中在<b>"硬基础设施"</b>三条主线：AI算力与光互连、国防与反无人机、能源与电网。软件类小额轮次持续降温，而与国家安全、算力瓶颈直接相关的重资产公司仍在以数月为单位刷新估值。</p>
-  <p>最鲜明的信号来自英国——成立不足两年的反无人机公司 Cambridge Aerospace 在四个月内把估值从13亿美元推高到34亿美元；与此同时，Palmer Luckey 支持的科技银行 Erebor 传出以80亿美元投前估值募集15亿美元，显示投资人正在重建"创业公司金融管道"。本周最大单笔仍是 NVIDIA、Blackstone、Coatue 联手投向澳大利亚 AI 数据中心公司 Firmus 的20亿美元。</p>
-  <div class="stats">
-    <div class="stat"><div class="n">11</div><div class="l">重点交易</div></div>
-    <div class="stat"><div class="n">$78亿+</div><div class="l">本页交易合计</div></div>
-    <div class="stat"><div class="n">$20亿</div><div class="l">单笔最大（Firmus）</div></div>
-    <div class="stat"><div class="n">5</div><div class="l">国防/AI基建赛道</div></div>
-  </div>
-</section>
-
-<div class="feature">
-  <div class="feature-head">今日最值得关注</div>
-  <div class="feature-body">
-    <h3>Cambridge Aerospace 完成3亿美元C轮，估值34亿美元</h3>
-    <div class="tagline">英国 剑桥 · 反无人机拦截弹 · DFJ Growth 领投 · 2026年8月10日公布</div>
-
-    <div class="grid">
-      <div class="cell"><div class="v">$3亿</div><div class="k">本轮融资</div></div>
-      <div class="cell"><div class="v">$34亿</div><div class="k">投后估值</div></div>
-      <div class="cell"><div class="v">$6.3亿+</div><div class="k">累计融资</div></div>
-      <div class="cell"><div class="v">2.6×</div><div class="k">4个月估值涨幅</div></div>
-      <div class="cell"><div class="v">250+</div><div class="k">员工（2/3为工程师）</div></div>
-      <div class="cell"><div class="v">2,500/月</div><div class="k">2027年3月产能目标</div></div>
+  <header class="masthead">
+    <div class="kicker">每日科技行业投资动态</div>
+    <h1 class="title">AI 编程双雄同日刷新估值，硬科技与国防继续吸金</h1>
+    <div class="meta">
+      <span><strong>2026年8月13日</strong>（星期四）</span>
+      <span>覆盖区间：8月11日 – 8月13日</span>
+      <span>信息源：TechCrunch · Bloomberg · Crunchbase News · TechStartups · PYMNTS</span>
     </div>
+  </header>
 
-    <h4>业务内容</h4>
-    <p>Cambridge Aerospace 于2024年9月在英国剑桥注册成立，创始人兼CEO 是前MIT航空工程师、现剑桥大学教授 <b>Steven Barrett</b>。公司主打产品 <b>Skyhammer</b> 是一款低成本拦截导弹，专门用于击落"沙赫德"（Shahed）式廉价自杀式无人机。其商业逻辑直击当前防空的成本失衡：一架造价约2万美元的攻击无人机，往往迫使防守方发射一枚约100万美元的爱国者导弹。公司定位在"防守侧"，与主打进攻型无人机/武器系统的 Helsing、Stark 等欧洲同行形成区隔。</p>
+  <section class="overview">
+    <h2>今日概览</h2>
+    <p>过去 24–48 小时，全球创投最响亮的声音来自 <strong>AI 编程赛道</strong>：瑞典的 Lovable 官宣 4 亿美元 C 轮、估值 133 亿美元，八个月内翻倍；同一天彭博社爆出 Devin 母公司 Cognition 正洽谈新一轮，估值不低于 <strong>400 亿美元</strong>——距其 5 月刚以 260 亿美元完成 10 亿美元融资仅三个月。资本对"能直接产生收入的 AI 应用层"给出了极高溢价。</p>
+    <p>与此同时，<strong>硬科技与国防</strong>依旧是大额资金的主要去向：Neros 拿下红杉与美国国防部战略科技基金联合领投的 2.5 亿美元 C 轮（投后估值 25 亿美元），inKind 完成花旗牵头的 4.14 亿美元融资授信，Vertical Aerospace 获约 1 亿美元 eVTOL 融资承诺。生物医药方面，Vaderis 的 1.52 亿美元 B 轮由高盛生命科学领投。</p>
+    <p>另一条值得留意的动向：David Sacks 离开白宫后，其 Craft Ventures 正为新基金募集约 10 亿美元，这是他重返一线投资的首只新基金。</p>
+  </section>
 
-    <h4>历史融资情况</h4>
-    <table class="hist">
-      <tr><th>时间</th><th>轮次</th><th>金额</th><th>估值</th><th>主要投资方</th></tr>
-      <tr><td>2025年</td><td>Pre-seed / 种子 / A轮</td><td class="amt">约 $1.36亿</td><td>$4亿（出隐身时）</td><td>早期机构及天使</td></tr>
-      <tr><td>2026年4月</td><td>B轮</td><td class="amt">$2亿</td><td>$13亿</td><td>Elad Gil &amp; Co、Spark Capital 联合领投</td></tr>
-      <tr><td>2026年8月10日</td><td>C轮</td><td class="amt">$3亿</td><td>$34亿</td><td>DFJ Growth 领投；Lux Capital、Accel、Lakestar、Never Lift、Ora Global 及 Elad Gil 个人跟投</td></tr>
-      <tr><td colspan="2"><b>累计融资</b></td><td class="amt"><b>$6.3亿以上</b></td><td colspan="2">成立不足两年</td></tr>
-    </table>
+  <section class="spotlight">
+    <div class="spotlight-band">今日最值得关注</div>
+    <div class="spotlight-body">
+      <h2>Lovable：4 亿美元 C 轮，估值 133 亿美元</h2>
+      <p class="sub">瑞典斯德哥尔摩 · AI "氛围编程"（vibe coding）平台 · 8月12日官宣</p>
 
-    <h4>业务发展与研发进度</h4>
+      <div class="stats">
+        <div class="stat">
+          <div class="label">本轮融资</div>
+          <div class="value">$400M</div>
+          <div class="note">C 轮</div>
+        </div>
+        <div class="stat">
+          <div class="label">投后估值</div>
+          <div class="value">$13.3B</div>
+          <div class="note">较去年12月翻倍</div>
+        </div>
+        <div class="stat">
+          <div class="label">累计融资</div>
+          <div class="value">约 $1.05B</div>
+          <div class="note">成立不足两年</div>
+        </div>
+        <div class="stat">
+          <div class="label">年化收入(ARR)</div>
+          <div class="value">$500M+</div>
+          <div class="note">6月数据，8月底看向 $600M</div>
+        </div>
+      </div>
+
+      <h3>业务是什么</h3>
+      <p>Lovable 让用户用自然语言描述需求，直接生成可运行的软件与网站——即所谓"氛围编程"。产品于 2024 年 11 月上线，定位从"做个网页"扩展到"帮人跑一整门生意"：本轮资金将重点投向自动化运营、支付能力，以及主动式多智能体编排（multi-agent orchestration）。技术上，公司除接入主流前沿模型外，还自研并上线了内部训练的 AI 模型。</p>
+
+      <h3>历次融资</h3>
+      <table class="rounds">
+        <tr><th>时间</th><th>轮次</th><th>金额</th><th>主要投资方 / 估值</th></tr>
+        <tr><td>2024年10月</td><td>种子轮</td><td class="amt">$7.5M</td><td>Hummingbird VC、byFounders</td></tr>
+        <tr><td>2025年2月</td><td>Pre-A</td><td class="amt">$15M</td><td>Creandum 领投</td></tr>
+        <tr><td>2025年7月</td><td>A 轮</td><td class="amt">$200M</td><td>Accel 领投，估值 $1.8B（跻身独角兽）</td></tr>
+        <tr><td>2025年12月</td><td>B 轮</td><td class="amt">$330M</td><td>CapitalG 与 Menlo Ventures 共同领投，估值 $6.6B</td></tr>
+        <tr><td>2026年8月</td><td>C 轮</td><td class="amt">$400M</td><td>Menlo Ventures 与 Scaleup Europe Fund（EQT 管理）领投，估值 $13.3B</td></tr>
+      </table>
+      <p>本轮新进投资方阵容颇具看点：<strong>腾讯</strong>、Balderton Capital、Carmignac、Kaszek Ventures、World Innovation Lab、Regent 等；老股东 Accel、CapitalG、DST Global、Salesforce Ventures、HubSpot Ventures、Antler、Creandum 等继续跟投。欧盟旗下的 Scaleup Europe Fund 共同领投，也带有明显的"欧洲科技主权"色彩。</p>
+
+      <h3>业务与财务进展</h3>
+      <p>收入端增长陡峭：ARR 从约 2 亿美元近乎三倍增长，6 月突破 5 亿美元年化，公司称 8 月底有望摸到 6 亿美元。使用量方面，平台累计承载超过 <strong>6000 万个项目</strong>，由 Lovable 生成的应用每月带来 <strong>9 亿次以上访问</strong>。</p>
+      <p>基础设施与生态上，公司 6 月与 Google Cloud 签下多年期协议，用量提升约五倍；同时以投资方身份布局欧洲生态，例如投资丹麦的 Atech（把氛围编程延伸到硬件设计）。人员规模计划于今年扩张至约 450 人，重点招募机器学习、产品、基础设施与安全岗位，并扩建伦敦、波士顿、旧金山与纽约办公室。</p>
+      <p>需要留意的是，公开报道未披露其盈利情况；对照同赛道的 Cognition（年化收入接近 10 亿美元、估值洽谈至 400 亿美元），AI 编程赛道的估值/收入倍数目前普遍处于高位区间。</p>
+    </div>
+  </section>
+
+  <h2 class="section">今日交易速览（按重要性排序）</h2>
+
+  <div class="item">
+    <div class="rank">1</div>
+    <div class="item-body">
+      <h3>Lovable 完成 <span class="amount">4 亿美元</span> C 轮，估值 133 亿美元</h3>
+      <p>Menlo Ventures 与欧盟 Scaleup Europe Fund（EQT 管理）领投，腾讯、Balderton、Kaszek、Regent 等新进，Accel、CapitalG、DST Global、Salesforce Ventures 等老股东跟投。ARR 已过 5 亿美元。</p>
+      <div class="tags"><span class="tag hot">头条</span><span class="tag">AI 编程</span><span class="tag">瑞典</span><span class="tag">Menlo Ventures</span><span class="tag">腾讯</span><span class="tag">DST Global</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="rank">2</div>
+    <div class="item-body">
+      <h3>Cognition 传洽谈新一轮，估值不低于 <span class="amount">400 亿美元</span></h3>
+      <p>据彭博社 8 月 12 日报道，AI 编程智能体 Devin 的母公司 Cognition 正与投资方接触，拟以至少 400 亿美元估值融资超 10 亿美元。公司年化收入已接近 10 亿美元，约为 5 月融资时（4.92 亿美元）的两倍；彼时估值为 260 亿美元。企业客户对 Devin 的月度使用量此前连续六个月保持约 50% 环比增长。交易尚未最终敲定。</p>
+      <div class="tags"><span class="tag hot">未官宣</span><span class="tag">AI 智能体</span><span class="tag">美国</span><span class="tag">估值三个月翻 1.5 倍</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="rank">3</div>
+    <div class="item-body">
+      <h3>inKind 完成 <span class="amount">4.14 亿美元</span> 融资授信，累计资本超 12 亿美元</h3>
+      <p>餐饮商业金融平台 inKind 由花旗（出资 1.75 亿美元）与 Cross River Bank（1.5 亿美元）牵头，Sagard、Varadero、Trinity Capital 等提供夹层资金，Liberty Mutual Investments 为基石出资方。公司为独立餐厅提供前置资金并以营收分成回收，计划未来一年向近 1 万家餐厅投放超 10 亿美元。全球性银行以优先级贷款人身份入局，是该模式走向成熟资产类别的信号。</p>
+      <div class="tags"><span class="tag">金融科技</span><span class="tag">美国</span><span class="tag">花旗</span><span class="tag">债权+股权</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="rank">4</div>
+    <div class="item-body">
+      <h3>Neros Technologies 获 <span class="amount">2.5 亿美元</span> C 轮，红杉与美国防部基金联合领投</h3>
+      <p>南加州自主无人机公司，投后估值 25 亿美元。红杉资本（Sequoia）与美国国防部 American Strategic Technology Fund（ASTF）共同领投，Valor Equity Partners、Thiel Capital、Spark Capital、Allen & Co、Interlagos 等参投。资金用于扩产 "Archer AI" 攻击型无人机与 "Bandit" 反无人机拦截器，目标 2028 年实现年产 100 万架。VC 与政府资金同时下注国防机器人自主化，是本周最具战略意味的一笔。</p>
+      <div class="tags"><span class="tag hot">国防科技</span><span class="tag">美国</span><span class="tag">红杉资本</span><span class="tag">Thiel Capital</span><span class="tag">政府基金</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="rank">5</div>
+    <div class="item-body">
+      <h3>Vaderis Therapeutics 超额认购 <span class="amount">1.52 亿美元</span> B 轮</h3>
+      <p>瑞士巴塞尔罕见病生物技术公司，高盛生命科学（Goldman Sachs Life Sciences）与 TCGX Life Sciences 联合领投，Omega Funds、Perceptive Advisors、Medicxi、Droia Ventures、Kalehua Capital 参投。资金用于推动核心神经领域管线进入关键性临床试验。在整体融资收紧的环境下，硬科学 + 明确监管路径依然能拿到大额支票。</p>
+      <div class="tags"><span class="tag">生物医药</span><span class="tag">瑞士</span><span class="tag">高盛</span><span class="tag">罕见病</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="rank">6</div>
+    <div class="item-body">
+      <h3>Vertical Aerospace 获约 <span class="amount">1 亿美元</span>（8660 万欧元）融资承诺</h3>
+      <p>英国布里斯托 eVTOL 制造商（纽交所代码 EVTL），资金结构为债务与股权组合：Mudrick Capital 提供 3460 万欧元票据提取额度与 3500 万欧元包销股权融资，Yorkville Advisors 提供 2160 万欧元优先股。资金用于 Valo 电动垂直起降机型的适航认证与商业化推进。空中交通赛道在完成载人验证飞行后重获资本关注。</p>
+      <div class="tags"><span class="tag">航空航天</span><span class="tag">英国</span><span class="tag">eVTOL</span><span class="tag">上市公司融资</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="rank">7</div>
+    <div class="item-body">
+      <h3>Aureka Biotechnologies 完成 <span class="amount">1 亿美元</span> B 轮，累计约 2 亿美元</h3>
+      <p>中美两地布局（加州拉古纳山 + 上海）的 AI 药物发现公司，Granite Asia 领投首笔交割，多家战略生物制药投资方及 HighLight Capital、MPCi、NRL Capital 等老股东跟投。公司以"生物世界模型"式的大型 AI 基础模型结合实验室自动化做药物设计，已从药企合作中获得实质收入。资金将投向大规模算力训练与实验室自动化扩产。</p>
+      <div class="tags"><span class="tag">AI + 生物</span><span class="tag">中美</span><span class="tag">Granite Asia</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="rank">8</div>
+    <div class="item-body">
+      <h3>Flagler Health 获 <span class="amount">5000 万美元</span> B 轮，Bessemer 领投</h3>
+      <p>纽约的肌肉骨骼（MSK）疾病 AI 诊疗平台，累计融资达 6300 万美元。Bessemer Venture Partners 领投，SignalFire、Alumni Ventures、Streamlined Ventures、186 Ventures、Tribeca Venture Partners 等参投。平台整合患者数据、AI 模型与诊疗路径，切入美国规模超 4000 亿美元的 MSK 市场。</p>
+      <div class="tags"><span class="tag">医疗 AI</span><span class="tag">美国</span><span class="tag">Bessemer</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="rank">9</div>
+    <div class="item-body">
+      <h3>Blacksmith 完成 <span class="amount">4500 万美元</span> B 轮，估值一年内涨约 10 倍至 5.5 亿美元</h3>
+      <p>旧金山的 CI（持续集成）加速公司，在定制硬件上运行构建与测试任务。Peak XV Partners 领投，老股东 Y Combinator 与 GV 加倍下注。估值从不到一年前 A 轮的 6000 万美元跃升至 5.5 亿美元；客户数从 A 轮时约 800 家增至 6000 多家，包括 Supabase、Clerk、Ashby、Mercury。这是"AI 写码越快、验证环节越值钱"的直接受益标的。</p>
+      <div class="tags"><span class="tag hot">估值 10 倍</span><span class="tag">开发者工具</span><span class="tag">美国</span><span class="tag">Peak XV</span><span class="tag">GV</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="rank">10</div>
+    <div class="item-body">
+      <h3>Yuno 完成 <span class="amount">4500 万美元</span> B 轮，a16z 与 Tiger Global 参投</h3>
+      <p>哥伦比亚起家的全球支付基础设施公司，Global PayTech Ventures 领投，Andreessen Horowitz、Tiger Global、Revolut CEO 创立的 QuantumLight Capital、Monashees、Kaszek、Endeavor Catalyst 参投；卡塔尔主权基金背景的 Rasmal Ventures、阿布扎比 Further Ventures 等区域战略方入局。平台以单一 API 连接 190 个国家超 1000 种支付方式，客户含麦当劳、网易游戏、GoFundMe、inDrive、Rappi，预计未来 12 个月年化交易额将达 1000 亿美元。</p>
+      <div class="tags"><span class="tag">支付基建</span><span class="tag">拉美 / 全球</span><span class="tag">a16z</span><span class="tag">Tiger Global</span><span class="tag">主权基金</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="rank">11</div>
+    <div class="item-body">
+      <h3>ClearJet 获 <span class="amount">2500 万美元</span> B 轮，做"货运版 Uber"</h3>
+      <p>奥斯汀的 AI 物流公司，Edison Partners 领投，Venture53、Origin Ventures、SaltVC、SpringTime Ventures 跟投，累计融资 4000 万美元；早期投资方包括 JetBlue Ventures（现 Sky VC）。公司不自建机队，而是把电商包裹塞进商业客机的闲置货舱，网络覆盖 95 个美国机场，宣称可降低运费最多 35%、提速 1–3 天。公司称已实现盈利，收入同比增长超三倍，接近九位数。</p>
+      <div class="tags"><span class="tag">物流科技</span><span class="tag">美国</span><span class="tag">已盈利</span><span class="tag">轻资产模式</span></div>
+    </div>
+  </div>
+
+  <footer>
+    <h3>信息来源</h3>
     <ul>
-      <li><b>研发节奏极快：</b>2025年1月启动 Skyhammer 研发，6周内完成首次飞行试验。</li>
-      <li><b>订单落地：</b>2026年4月，英国国防部（MoD）下达"数百枚"Skyhammer 拦截弹的数百万英镑级订单，英国国防大臣 John Healey 公开宣布；首批导弹与发射装置于5月交付，其余在六个月内陆续交付，合同还包含集成、技术支持与用户培训。公司同时被报道将向海湾地区伙伴国供货。</li>
-      <li><b>产能建设：</b>正在英格兰诺福克郡建设<b>欧洲最大的固体火箭发动机工厂</b>，目标在2027年3月前实现每月2,500枚 Skyhammer 的生产节奏；第二座产线已进入最后调试阶段。</li>
-      <li><b>团队扩张：</b>员工数从2025年9月的60人增至125人，目前已超过250人，其中约三分之二为技术与工程岗位。</li>
-      <li><b>营收与盈利：</b>公司未公开披露具体营收与利润数据。已知收入来源为英国国防部合同（"数百万英镑"量级）及盟国订单，本轮资金主要用于扩产而非弥补亏损；按当前披露信息判断，规模化交付尚处早期，尚无盈利数据可循。</li>
+      <li><a href="https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m/">TechCrunch：Lovable confirms new $13.3B valuation, raises another $400M（2026-08-12）</a></li>
+      <li><a href="https://lovable.dev/blog/series-c">Lovable 官方博客：We just raised $400M in Series C funding</a></li>
+      <li><a href="https://www.bloomberg.com/news/articles/2026-08-12/ai-coding-startup-lovable-raises-400-million-at-13-3-billion-valuation">Bloomberg：Tencent, EU Fund Invest in AI Coding Startup Lovable at $13 Billion Valuation</a></li>
+      <li><a href="https://techcrunch.com/2026/08/12/ai-coding-startup-cognition-reportedly-already-in-talks-to-raise-at-40b-valuation/">TechCrunch：AI coding startup Cognition reportedly already in talks to raise at $40B valuation</a></li>
+      <li><a href="https://www.bloomberg.com/news/articles/2026-08-12/ai-startup-cognition-in-new-funding-talks-at-40-billion-value">Bloomberg：AI Startup Cognition in New Funding Talks at $40 Billion Value</a></li>
+      <li><a href="https://techcrunch.com/2026/08/12/blacksmiths-valuation-jumps-10x-to-550m-as-ai-coding-fuels-software-validation/">TechCrunch：AI code-testing startup Blacksmith's valuation jumps almost 10x to $550M</a></li>
+      <li><a href="https://techstartups.com/2026/08/11/venture-capital-startup-funding-roundup-august-11-2026-bessemer-venture-partners-citi-sequoia-capital-thiel-capital-more/">TechStartups：Venture Capital &amp; Startup Funding Roundup, August 11, 2026</a></li>
+      <li><a href="https://news.crunchbase.com/transportation/clearjet-raises-25m-logistics-ai-seriesb/">Crunchbase News：Exclusive — ClearJet raises $25M to build the 'Uber of Cargo'（2026-08-12）</a></li>
+      <li><a href="https://www.pymnts.com/news/b2b-payments/2026/yuno-raises-45-million-to-drive-global-payments-push/">PYMNTS：Yuno Raises $45 Million to Drive Global Payments Push</a></li>
+      <li><a href="https://www.globenewswire.com/news-release/2026/08/12/3343819/0/en/yuno-raises-45-million-series-b-to-scale-the-ai-native-operating-system-of-global-payments-and-financial-services.html">GlobeNewswire：Yuno Raises $45 Million Series B（新闻通稿）</a></li>
+      <li><a href="https://techstartups.com/2026/08/11/david-sacks-craft-ventures-targets-1-billion-for-first-new-fund-since-leaving-white-house/">TechStartups：David Sacks' Craft Ventures targets $1 billion for first new fund</a></li>
+      <li><a href="https://techcrunch.com/2025/12/18/vibe-coding-startup-lovable-raises-330m-at-a-6-6b-valuation/">TechCrunch：Lovable raises $330M at a $6.6B valuation（历史轮次）</a></li>
+      <li><a href="https://lovable.dev/blog/200m-series-a-fundraise">Lovable 官方博客：$200M Series A, valued at $1.8B（历史轮次）</a></li>
     </ul>
 
-    <h4>为什么值得关注</h4>
-    <p>这笔交易是过去48小时内估值跃升最剧烈的一笔，也是欧洲国防科技融资热度的直接读数——英国政府近期已向初创企业投入21亿英镑。如果 Skyhammer 的低成本拦截路线被验证，可能改变北约的防空采购结构。风险在于：估值高度依赖政府订单节奏，而诺福克工厂能否按期爬产是2027年前的核心考验。</p>
-  </div>
-</div>
-
-<section class="card">
-  <h2>今日交易一览（按重要性排序）</h2>
-  <ol class="deals">
-
-    <li>
-      <div class="rank"></div>
-      <div class="deal-main">
-        <div class="deal-title">Firmus 获 <span class="amt-hl">20亿美元</span>战略股权投资，估值超105亿美元</div>
-        <div class="deal-meta">NVIDIA、Coatue 追投 · Blackstone Tactical Opportunities 新进 · Jane Street 参与 · 澳大利亚 · 8月7日</div>
-        <div class="deal-desc">前比特币矿企转型的 AI 数据中心公司，基于 NVIDIA DSX AI Factory 参考架构建设"AI工厂"。本轮使其过去一年新增股权融资超30亿美元，估值较4月的55亿美元近乎翻倍。资金用于推进澳大利亚 Project Southgate，并向印尼等亚太市场扩张。</div>
-        <div class="tags"><span class="tag hot">本周最大单笔</span><span class="tag">AI基础设施</span><span class="tag">NVIDIA CVC</span><span class="tag">数据中心</span></div>
-      </div>
-    </li>
-
-    <li>
-      <div class="rank"></div>
-      <div class="deal-main">
-        <div class="deal-title">Hadrian 完成 <span class="amt-hl">13.7亿美元</span> D轮，估值78.7亿美元</div>
-        <div class="deal-meta">摩根大通战略投资集团压舱；WCM、Washington Harbour、Valor Equity、137 Ventures、Baillie Gifford 联合领投；Founders Fund、a16z、Lux、CapitalG、T. Rowe Price、Altimeter 等跟投 · 洛杉矶 · 8月6日</div>
-        <div class="deal-desc">用软件控制的自动化工厂为航空航天与国防制造零部件，客户包括五角大楼与洛克希德·马丁。资金用于扩建工厂、扩大技工培训体系，并继续投入自动化与实时制造情报系统。</div>
-        <div class="tags"><span class="tag hot">国防科技</span><span class="tag">智能制造</span><span class="tag">Founders Fund</span><span class="tag">a16z</span></div>
-      </div>
-    </li>
-
-    <li>
-      <div class="rank"></div>
-      <div class="deal-main">
-        <div class="deal-title">ICEYE 完成 <span class="amt-hl">11.55亿美元</span> F轮，估值115.7亿美元</div>
-        <div class="deal-meta">EQT、General Atlantic · 芬兰 · 本周披露</div>
-        <div class="deal-desc">合成孔径雷达（SAR）卫星运营商，可穿透云层持续对地成像，主要服务国防侦察、灾害监测与保险理赔。本轮为欧洲太空科技领域规模最大的私募融资之一。</div>
-        <div class="tags"><span class="tag">太空</span><span class="tag">卫星遥感</span><span class="tag">国防情报</span></div>
-      </div>
-    </li>
-
-    <li>
-      <div class="rank"></div>
-      <div class="deal-main">
-        <div class="deal-title">Lumilens 出隐身，累计融资超 <span class="amt-hl">9亿美元</span>，估值55.1亿美元</div>
-        <div class="deal-meta">C轮逾7亿美元，Atreides、Bain Capital Ventures、Meritech、Seligman、Spark Capital 联合领投；Addition、Qualcomm Ventures、Peak XV、Redpoint、J.P. Morgan Private Capital 等跟投 · 加州圣何塞 · 8月6—11日</div>
-        <div class="deal-desc">2024年初成立，做AI数据中心用高速光互连芯片，以电-光中介层（interposer）技术简化光子芯片封装，替代GPU之间的铜缆。公司称成立两年即已按一份数十亿美元级客户协议向超大规模数据中心量产交付。</div>
-        <div class="tags"><span class="tag hot">硅光子</span><span class="tag">AI算力瓶颈</span><span class="tag">半导体</span></div>
-      </div>
-    </li>
-
-    <li>
-      <div class="rank"></div>
-      <div class="deal-main">
-        <div class="deal-title">Erebor 传以80亿美元投前估值募集 <span class="amt-hl">约15亿美元</span></div>
-        <div class="deal-meta">传 Lux Capital、a16z、Valor Equity、SV Angel 等参与 · Palmer Luckey 支持 · 俄亥俄州哥伦布 · 8月10日报道（尚未正式官宣）</div>
-        <div class="deal-desc">2025年成立的科技导向数字银行，服务AI、国防、加密与制造业客户——即SVB倒闭后被传统银行冷落的群体。存款规模自今年春季以来翻两番，夏季已约40亿美元。若成交将是史上规模最大的非SPAC金融科技融资之一。</div>
-        <div class="tags"><span class="tag">金融科技</span><span class="tag">传闻阶段</span><span class="tag">a16z</span></div>
-      </div>
-    </li>
-
-    <li>
-      <div class="rank"></div>
-      <div class="deal-main">
-        <div class="deal-title">Whatnot 完成 <span class="amt-hl">5.45亿美元</span> G轮，估值200亿美元</div>
-        <div class="deal-meta">ICONIQ、Lightspeed、Avra 联合领投；新进 Kleiner Perkins、Wellington、Robinhood Ventures；老股东 CapitalG、YC、a16z、DST 全部跟投 · 加州帕洛阿尔托 · 8月9日</div>
-        <div class="deal-desc">直播电商平台，主打收藏品与潮流服饰。2026年上半年GMV超80亿美元，已超过2025年全年；估值较去年秋季的115亿美元近乎翻倍。欧洲市场同比增长360%，Gucci 等品牌已开始在其平台做直播活动。</div>
-        <div class="tags"><span class="tag">直播电商</span><span class="tag">消费</span><span class="tag">估值翻倍</span></div>
-      </div>
-    </li>
-
-    <li>
-      <div class="rank"></div>
-      <div class="deal-main">
-        <div class="deal-title">Cambridge Aerospace 完成 <span class="amt-hl">3亿美元</span> C轮，估值34亿美元</div>
-        <div class="deal-meta">DFJ Growth 领投；Lux、Accel、Lakestar、Never Lift、Ora Global、Elad Gil 跟投 · 英国剑桥 · 8月10日</div>
-        <div class="deal-desc">低成本反无人机拦截弹 Skyhammer 制造商，已获英国国防部订单。四个月内估值从13亿升至34亿美元，累计融资逾6.3亿美元。详见上方重点解析。</div>
-        <div class="tags"><span class="tag hot">今日重点</span><span class="tag">反无人机</span><span class="tag">Accel</span><span class="tag">Lux Capital</span></div>
-      </div>
-    </li>
-
-    <li>
-      <div class="rank"></div>
-      <div class="deal-main">
-        <div class="deal-title">Dwelly 完成 <span class="amt-hl">1.7亿美元</span> B轮</div>
-        <div class="deal-meta">投资方未公开披露 · 英国伦敦 · 8月10日</div>
-        <div class="deal-desc">房产科技公司，不做又一个房源门户，而是直接收购英国独立租赁中介机构、把它们的运营搬上自研AI平台，用自动化处理租客沟通、物业管理、合规与后台事务。联合创始人表示下一轮融资可能很快到来。对高度分散的服务业做"软件+并购"的典型样本。</div>
-        <div class="tags"><span class="tag">房产科技</span><span class="tag">AI自动化</span><span class="tag">并购整合</span></div>
-      </div>
-    </li>
-
-    <li>
-      <div class="rank"></div>
-      <div class="deal-main">
-        <div class="deal-title">Zenity 完成 <span class="amt-hl">1.25亿美元</span> C轮</div>
-        <div class="deal-meta">SoftBank Vision Fund、Intel Capital、Qumra、Third Point Ventures、LG Technology Ventures、DTCP、Vertex Ventures US、Norwest · 以色列 · 本周披露</div>
-        <div class="deal-desc">为企业环境中的自主AI智能体提供安全治理层，管控智能体的权限与行为边界。Intel Capital 与 SoftBank 同时出现，反映大厂CVC正押注"AI智能体安全"这一新兴品类。</div>
-        <div class="tags"><span class="tag">AI安全</span><span class="tag">Intel Capital</span><span class="tag">软银愿景基金</span></div>
-      </div>
-    </li>
-
-    <li>
-      <div class="rank"></div>
-      <div class="deal-main">
-        <div class="deal-title">Obsidian Security 完成 <span class="amt-hl">8,500万美元</span> D轮，估值11亿美元晋身独角兽</div>
-        <div class="deal-meta">Crescent Cove Advisors 领投；GV、Greylock、Menlo Ventures、IVP、Norwest、Wing 等全部老股东跟投 · 加州 · 8月4日</div>
-        <div class="deal-desc">治理第三方SaaS应用中的数据、AI与智能体，提供可见性、访问控制与运行时防护。公司称第三方应用内"非人类身份"与人类身份之比已达144:1。目前有100多家客户年付费超10万美元，14家超100万美元，客户含 T-Mobile、Workday、S&amp;P Global。</div>
-        <div class="tags"><span class="tag">网络安全</span><span class="tag">Google Ventures</span><span class="tag">新晋独角兽</span></div>
-      </div>
-    </li>
-
-    <li>
-      <div class="rank"></div>
-      <div class="deal-main">
-        <div class="deal-title">Corma 出隐身，完成 <span class="amt-hl">6,000万美元</span>种子轮</div>
-        <div class="deal-meta">红杉资本（Sequoia）领投，Khosla Ventures、Coatue 跟投 · 特拉维夫 / 旧金山 · 8月10日</div>
-        <div class="deal-desc">前 DeepMind 工程师 Alon Pluda 创立，专为"网络防御"训练AI基础模型与自主智能体，机器速度筛查日志、告警与网络流量。公司称在财富100强的早期部署中把威胁响应时间缩短90%以上。红杉的 Shaun Maguire 称其在"构建防御侧真正需要的智能层"。一家成立仅数周的公司拿到红杉+Khosla+Coatue 的6,000万美元，本身就是信号。</div>
-        <div class="tags"><span class="tag hot">红杉领投</span><span class="tag">Khosla</span><span class="tag">Coatue</span><span class="tag">AI网络安全</span></div>
-      </div>
-    </li>
-
-  </ol>
-</section>
-
-<footer>
-  <h2>信息来源</h2>
-  <ul>
-    <li><a href="https://techstartups.com/2026/08/10/venture-capital-startup-funding-roundup-august-10-2026-accel-coatue-management-general-atlantic-khosla-ventures-sequoia-capital-more/" target="_blank">TechStartups — VC &amp; Startup Funding Roundup, Aug 10, 2026</a></li>
-    <li><a href="https://parsers.substack.com/p/funding-rounds-report-weekly-of-august-f0b" target="_blank">Parsers VC — Funding Rounds Report, Weekly of Aug 11, 2026</a></li>
-    <li><a href="https://www.bloomberg.com/news/articles/2026-08-06/defense-startup-hadrian-valued-at-7-87-billion-in-new-round" target="_blank">Bloomberg — Hadrian Valued at $7.87 Billion</a></li>
-    <li><a href="https://www.bloomberg.com/news/articles/2026-08-07/ai-data-center-group-firmus-draws-2-billion-from-coatue-nvidia" target="_blank">Bloomberg — Firmus Draws $2 Billion From Coatue, Nvidia</a></li>
-    <li><a href="https://firmus.co/newsroom/firmus-announces-fully-subscribed-usdusd2-billion-strategic-equity-investment-to-accelerate-nvidia-ai-factory-expansion-across-australia-and-asia-pacific" target="_blank">Firmus — 官方新闻稿（20亿美元战略股权投资）</a></li>
-    <li><a href="https://www.businesswire.com/news/home/20260806444241/en/Lumilens-Emerges-from-Stealth-with-More-Than-$900-Million-in-Funding-to-Break-AIs-Connectivity-Bottlenecks-in-the-Data-Center" target="_blank">BusinessWire — Lumilens 出隐身官方公告</a></li>
-    <li><a href="https://www.cambridgeaerospace.com/news/series-c/" target="_blank">Cambridge Aerospace — Series C 官方公告</a></li>
-    <li><a href="https://thenextweb.com/news/cambridge-aerospace-300m-series-c-skyhammer-air-defence" target="_blank">The Next Web — Cambridge Aerospace $300M / $3.4B</a></li>
-    <li><a href="https://www.finsmes.com/2026/08/cambridge-aerospace-raises-300m-in-series-c-funding.html" target="_blank">FinSMEs — Cambridge Aerospace Raises $300M</a></li>
-    <li><a href="https://www.flightglobal.com/defence/2026/04/uk-mod-orders-skyhammer-counter-drone-missiles-to-guard-against-iranian-shahed-threat/" target="_blank">FlightGlobal — UK MoD Orders Skyhammer</a></li>
-    <li><a href="https://www.obsidiansecurity.com/news/unlocking-ai-potential-securely" target="_blank">Obsidian Security — $85M Series D 官方公告</a></li>
-    <li><a href="https://siliconangle.com/2026/08/04/obsidian-security-raises-85m-ai-agents-create-cybersecuritys-next-major-attack-surface/" target="_blank">SiliconANGLE — Obsidian Security Raises $85M</a></li>
-    <li><a href="https://techstartups.com/2026/08/10/corma-raises-60m-to-build-defensive-cybersecurity-ai-as-ai-powered-attacks-surge/" target="_blank">TechStartups — Corma Raises $60M</a></li>
-    <li><a href="https://techstartups.com/2026/08/10/palmer-luckeys-startup-bank-erebor-in-talks-to-raise-1-5-billion-at-8-billion-valuation/" target="_blank">TechStartups — Erebor in Talks to Raise $1.5B</a></li>
-    <li><a href="https://www.prnewswire.com/news-releases/hadrian-raises-1-37b-series-d-to-build-highly-automated-factories-to-accelerate-americas-industrial-renewal-302844408.html" target="_blank">PR Newswire — Hadrian $1.37B Series D 官方稿</a></li>
-    <li><a href="https://technode.global/2026/08/07/australias-firmus-raises-2b-from-blackstone-coatue-nvidia-to-expand-ai-factories-in-apac/" target="_blank">TNGlobal — Firmus Raises $2B</a></li>
-  </ul>
-  <div class="disc">
-    <b>免责声明：</b>本页内容由公开媒体报道与公司官方公告整理而成，仅供信息参考，不构成任何投资建议、要约或推荐。融资金额、估值与业务数据以各公司及监管披露为准；标注"传闻""报道"的交易尚未正式完成，存在变动可能。部分交易的公布日期与实际交割日期可能不同。使用者应自行核实信息并独立作出判断。<br>
-    生成时间：2026年8月12日 · 覆盖窗口 8月10日—8月12日，并纳入本周内规模最大的若干笔交易以保证完整性。
-  </div>
-</footer>
+    <div class="disclaimer">
+      <strong>免责声明：</strong>本页内容由 AI 依据上述公开报道自动汇总生成，仅供信息参考，不构成任何投资建议或要约。融资金额、估值与财务数据均以原始报道口径为准；未官宣交易（如 Cognition 轮次）为媒体援引消息人士的报道，存在变动可能，最终以公司官方公告为准。部分数据（如累计融资额）来自不同数据源，口径可能存在差异。请读者自行核实后再做决策。
+    </div>
+  </footer>
 
 </div>
 </body>
