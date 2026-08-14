@@ -3,334 +3,369 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日科技投资动态 · 2026年8月13日</title>
+<title>每日科技投资动态 · 2026年8月14日</title>
 <style>
   :root{
     --accent:#c8401a;
     --ink:#1a1a1a;
     --muted:#6b6b6b;
     --line:#e2ded8;
-    --paper:#f4f1ec;
+    --bg:#f4f1ec;
   }
   *{box-sizing:border-box;}
   body{
     margin:0;
-    background:var(--paper);
+    background:var(--bg);
     color:var(--ink);
-    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC",-apple-system,sans-serif;
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Helvetica Neue",Arial,sans-serif;
     line-height:1.75;
     -webkit-font-smoothing:antialiased;
   }
-  .wrap{max-width:880px;margin:0 auto;padding:32px 20px 64px;}
+  .wrap{max-width:900px;margin:0 auto;padding:32px 20px 64px;}
 
   /* 页头 */
   header.masthead{
     border-bottom:3px double var(--ink);
-    padding-bottom:18px;margin-bottom:28px;
+    padding-bottom:18px;margin-bottom:26px;
   }
   .kicker{
     font-size:12px;letter-spacing:.28em;color:var(--accent);
-    font-weight:700;text-transform:uppercase;margin-bottom:10px;
+    text-transform:uppercase;font-weight:700;margin-bottom:8px;
   }
   h1.title{
     font-size:40px;line-height:1.2;margin:0 0 12px;
-    font-weight:800;letter-spacing:-.01em;
+    font-weight:800;letter-spacing:.02em;
   }
   .meta{
-    display:flex;flex-wrap:wrap;gap:8px 18px;
+    display:flex;flex-wrap:wrap;gap:8px 20px;
     font-size:13px;color:var(--muted);
-    border-top:1px solid var(--line);padding-top:12px;
   }
   .meta strong{color:var(--ink);font-weight:600;}
 
-  /* 概览 */
-  .overview{
-    background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);
-    padding:20px 22px;margin-bottom:32px;
+  /* 卡片通用 */
+  .card{
+    background:#fff;border:1px solid var(--line);
+    border-radius:4px;padding:22px 24px;margin-bottom:20px;
+    box-shadow:0 1px 2px rgba(0,0,0,.03);
   }
-  .overview h2{font-size:17px;margin:0 0 10px;letter-spacing:.04em;}
-  .overview p{margin:0 0 10px;font-size:15px;}
+  h2.sec{
+    font-size:15px;letter-spacing:.18em;font-weight:700;
+    color:var(--accent);margin:36px 0 14px;
+    padding-bottom:6px;border-bottom:1px solid var(--line);
+  }
+
+  /* 概览 */
+  .overview p{margin:0 0 12px;font-size:15.5px;}
   .overview p:last-child{margin-bottom:0;}
+  .stats{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+    gap:1px;background:var(--line);border:1px solid var(--line);margin-top:18px;
+  }
+  .stat{background:#fff;padding:14px 12px;text-align:center;}
+  .stat .n{font-size:22px;font-weight:800;color:var(--accent);display:block;line-height:1.3;}
+  .stat .l{font-size:12px;color:var(--muted);}
 
   /* 重点卡片 */
-  .spotlight{
-    background:#fff;border:1px solid var(--line);
-    box-shadow:0 2px 0 rgba(0,0,0,.04);
-    margin-bottom:38px;overflow:hidden;
+  .highlight{
+    border:2px solid var(--accent);border-radius:4px;background:#fff;
+    padding:0;overflow:hidden;margin-bottom:8px;
   }
-  .spotlight-band{
-    background:var(--accent);color:#fff;
-    padding:8px 22px;font-size:12px;font-weight:700;letter-spacing:.24em;
+  .highlight .hl-bar{
+    background:var(--accent);color:#fff;padding:8px 24px;
+    font-size:12.5px;letter-spacing:.24em;font-weight:700;
   }
-  .spotlight-body{padding:24px 22px;}
-  .spotlight h2{font-size:26px;margin:0 0 6px;line-height:1.3;}
-  .spotlight .sub{color:var(--muted);font-size:14px;margin:0 0 20px;}
-  .stats{
-    display:grid;grid-template-columns:repeat(4,1fr);
-    gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:22px;
+  .highlight .hl-body{padding:22px 24px 24px;}
+  .highlight h3{font-size:26px;margin:0 0 6px;line-height:1.35;}
+  .hl-sub{color:var(--muted);font-size:13.5px;margin-bottom:18px;}
+  .grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:1px;background:var(--line);border:1px solid var(--line);margin:0 0 20px;
   }
-  .stat{background:#fdfcfa;padding:14px 12px;}
-  .stat .label{font-size:11px;color:var(--muted);letter-spacing:.1em;margin-bottom:4px;}
-  .stat .value{font-size:21px;font-weight:800;color:var(--accent);line-height:1.2;}
-  .stat .note{font-size:11px;color:var(--muted);margin-top:2px;}
-  .spotlight h3{
-    font-size:15px;margin:20px 0 8px;padding-left:10px;
-    border-left:3px solid var(--accent);
+  .cell{background:#fdfcfa;padding:14px 12px;}
+  .cell .v{font-size:19px;font-weight:800;color:var(--accent);display:block;}
+  .cell .k{font-size:12px;color:var(--muted);margin-top:2px;}
+  .hl-body h4{
+    font-size:14px;margin:20px 0 8px;color:var(--ink);
+    padding-left:10px;border-left:3px solid var(--accent);
   }
-  .spotlight p{font-size:14.5px;margin:0 0 10px;}
-  table.rounds{
-    width:100%;border-collapse:collapse;font-size:13.5px;margin:6px 0 4px;
+  .hl-body p{margin:0 0 10px;font-size:15px;}
+  table.hist{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:6px;}
+  table.hist th,table.hist td{
+    border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top;
   }
-  table.rounds th,table.rounds td{
-    text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);
-  }
-  table.rounds th{background:#faf8f5;font-weight:600;font-size:12.5px;color:var(--muted);}
-  table.rounds td.amt{font-weight:700;color:var(--accent);white-space:nowrap;}
+  table.hist th{color:var(--muted);font-weight:600;background:#faf8f5;}
+  table.hist td.amt{font-weight:700;color:var(--accent);white-space:nowrap;}
 
-  /* 列表 */
-  h2.section{
-    font-size:20px;border-bottom:2px solid var(--ink);
-    padding-bottom:8px;margin:0 0 20px;
+  /* 新闻列表 */
+  ol.deals{list-style:none;counter-reset:d;padding:0;margin:0;}
+  ol.deals li{
+    counter-increment:d;background:#fff;border:1px solid var(--line);
+    border-radius:4px;padding:18px 22px 18px 62px;position:relative;margin-bottom:12px;
   }
-  .item{
-    background:#fff;border:1px solid var(--line);
-    padding:18px 20px;margin-bottom:14px;
-    display:flex;gap:16px;align-items:flex-start;
+  ol.deals li::before{
+    content:counter(d);position:absolute;left:20px;top:17px;
+    font-size:20px;font-weight:800;color:var(--accent);opacity:.55;
   }
-  .rank{
-    flex:0 0 34px;height:34px;line-height:34px;text-align:center;
-    background:var(--ink);color:#fff;font-weight:700;font-size:15px;
+  .dl-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-bottom:6px;}
+  .dl-name{font-size:18px;font-weight:700;}
+  .dl-amt{
+    background:#fdece6;color:var(--accent);font-weight:800;font-size:14px;
+    padding:2px 9px;border-radius:3px;white-space:nowrap;
   }
-  .item-body{flex:1;min-width:0;}
-  .item h3{font-size:17px;margin:0 0 6px;line-height:1.4;}
-  .amount{
-    color:var(--accent);font-weight:800;
-    background:linear-gradient(transparent 62%, rgba(200,64,26,.16) 62%);
-    padding:0 2px;
+  .dl-date{font-size:12px;color:var(--muted);margin-left:auto;}
+  .dl-desc{font-size:14.5px;margin:0 0 10px;}
+  .tags span{
+    display:inline-block;font-size:11.5px;color:var(--muted);
+    border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:0 6px 4px 0;
   }
-  .item p{margin:0 0 10px;font-size:14.5px;color:#333;}
-  .tags{display:flex;flex-wrap:wrap;gap:6px;}
-  .tag{
-    font-size:11.5px;color:var(--muted);border:1px solid var(--line);
-    background:#faf8f5;padding:2px 8px;border-radius:2px;
-  }
-  .tag.hot{color:var(--accent);border-color:rgba(200,64,26,.35);background:rgba(200,64,26,.06);}
 
-  /* 页脚 */
-  footer{
-    margin-top:40px;padding-top:20px;border-top:3px double var(--ink);
-    font-size:13px;color:var(--muted);
-  }
-  footer h3{font-size:14px;color:var(--ink);margin:0 0 10px;}
-  footer ul{margin:0 0 18px;padding-left:20px;}
+  /* 底部 */
+  footer{margin-top:40px;font-size:13px;color:var(--muted);}
+  footer h2{font-size:14px;letter-spacing:.16em;color:var(--accent);margin-bottom:10px;}
+  footer ul{padding-left:18px;margin:0 0 18px;}
   footer li{margin-bottom:5px;word-break:break-all;}
-  footer a{color:var(--accent);text-decoration:none;}
-  footer a:hover{text-decoration:underline;}
+  footer a{color:#8a4b34;}
   .disclaimer{
-    background:#fff;border:1px solid var(--line);padding:14px 16px;
-    font-size:12.5px;line-height:1.7;
+    border-top:1px solid var(--line);padding-top:14px;font-size:12px;line-height:1.7;
   }
-  @media(max-width:640px){
-    h1.title{font-size:28px;}
-    .stats{grid-template-columns:repeat(2,1fr);}
-    .item{flex-direction:column;gap:10px;}
-    .rank{flex:none;width:34px;}
+  @media(max-width:620px){
+    h1.title{font-size:30px;}
+    .highlight h3{font-size:21px;}
+    ol.deals li{padding-left:52px;}
   }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <header class="masthead">
-    <div class="kicker">每日科技行业投资动态</div>
-    <h1 class="title">AI 编程双雄同日刷新估值，硬科技与国防继续吸金</h1>
-    <div class="meta">
-      <span><strong>2026年8月13日</strong>（星期四）</span>
-      <span>覆盖区间：8月11日 – 8月13日</span>
-      <span>信息源：TechCrunch · Bloomberg · Crunchbase News · TechStartups · PYMNTS</span>
-    </div>
-  </header>
-
-  <section class="overview">
-    <h2>今日概览</h2>
-    <p>过去 24–48 小时，全球创投最响亮的声音来自 <strong>AI 编程赛道</strong>：瑞典的 Lovable 官宣 4 亿美元 C 轮、估值 133 亿美元，八个月内翻倍；同一天彭博社爆出 Devin 母公司 Cognition 正洽谈新一轮，估值不低于 <strong>400 亿美元</strong>——距其 5 月刚以 260 亿美元完成 10 亿美元融资仅三个月。资本对"能直接产生收入的 AI 应用层"给出了极高溢价。</p>
-    <p>与此同时，<strong>硬科技与国防</strong>依旧是大额资金的主要去向：Neros 拿下红杉与美国国防部战略科技基金联合领投的 2.5 亿美元 C 轮（投后估值 25 亿美元），inKind 完成花旗牵头的 4.14 亿美元融资授信，Vertical Aerospace 获约 1 亿美元 eVTOL 融资承诺。生物医药方面，Vaderis 的 1.52 亿美元 B 轮由高盛生命科学领投。</p>
-    <p>另一条值得留意的动向：David Sacks 离开白宫后，其 Craft Ventures 正为新基金募集约 10 亿美元，这是他重返一线投资的首只新基金。</p>
-  </section>
-
-  <section class="spotlight">
-    <div class="spotlight-band">今日最值得关注</div>
-    <div class="spotlight-body">
-      <h2>Lovable：4 亿美元 C 轮，估值 133 亿美元</h2>
-      <p class="sub">瑞典斯德哥尔摩 · AI "氛围编程"（vibe coding）平台 · 8月12日官宣</p>
-
-      <div class="stats">
-        <div class="stat">
-          <div class="label">本轮融资</div>
-          <div class="value">$400M</div>
-          <div class="note">C 轮</div>
-        </div>
-        <div class="stat">
-          <div class="label">投后估值</div>
-          <div class="value">$13.3B</div>
-          <div class="note">较去年12月翻倍</div>
-        </div>
-        <div class="stat">
-          <div class="label">累计融资</div>
-          <div class="value">约 $1.05B</div>
-          <div class="note">成立不足两年</div>
-        </div>
-        <div class="stat">
-          <div class="label">年化收入(ARR)</div>
-          <div class="value">$500M+</div>
-          <div class="note">6月数据，8月底看向 $600M</div>
-        </div>
-      </div>
-
-      <h3>业务是什么</h3>
-      <p>Lovable 让用户用自然语言描述需求，直接生成可运行的软件与网站——即所谓"氛围编程"。产品于 2024 年 11 月上线，定位从"做个网页"扩展到"帮人跑一整门生意"：本轮资金将重点投向自动化运营、支付能力，以及主动式多智能体编排（multi-agent orchestration）。技术上，公司除接入主流前沿模型外，还自研并上线了内部训练的 AI 模型。</p>
-
-      <h3>历次融资</h3>
-      <table class="rounds">
-        <tr><th>时间</th><th>轮次</th><th>金额</th><th>主要投资方 / 估值</th></tr>
-        <tr><td>2024年10月</td><td>种子轮</td><td class="amt">$7.5M</td><td>Hummingbird VC、byFounders</td></tr>
-        <tr><td>2025年2月</td><td>Pre-A</td><td class="amt">$15M</td><td>Creandum 领投</td></tr>
-        <tr><td>2025年7月</td><td>A 轮</td><td class="amt">$200M</td><td>Accel 领投，估值 $1.8B（跻身独角兽）</td></tr>
-        <tr><td>2025年12月</td><td>B 轮</td><td class="amt">$330M</td><td>CapitalG 与 Menlo Ventures 共同领投，估值 $6.6B</td></tr>
-        <tr><td>2026年8月</td><td>C 轮</td><td class="amt">$400M</td><td>Menlo Ventures 与 Scaleup Europe Fund（EQT 管理）领投，估值 $13.3B</td></tr>
-      </table>
-      <p>本轮新进投资方阵容颇具看点：<strong>腾讯</strong>、Balderton Capital、Carmignac、Kaszek Ventures、World Innovation Lab、Regent 等；老股东 Accel、CapitalG、DST Global、Salesforce Ventures、HubSpot Ventures、Antler、Creandum 等继续跟投。欧盟旗下的 Scaleup Europe Fund 共同领投，也带有明显的"欧洲科技主权"色彩。</p>
-
-      <h3>业务与财务进展</h3>
-      <p>收入端增长陡峭：ARR 从约 2 亿美元近乎三倍增长，6 月突破 5 亿美元年化，公司称 8 月底有望摸到 6 亿美元。使用量方面，平台累计承载超过 <strong>6000 万个项目</strong>，由 Lovable 生成的应用每月带来 <strong>9 亿次以上访问</strong>。</p>
-      <p>基础设施与生态上，公司 6 月与 Google Cloud 签下多年期协议，用量提升约五倍；同时以投资方身份布局欧洲生态，例如投资丹麦的 Atech（把氛围编程延伸到硬件设计）。人员规模计划于今年扩张至约 450 人，重点招募机器学习、产品、基础设施与安全岗位，并扩建伦敦、波士顿、旧金山与纽约办公室。</p>
-      <p>需要留意的是，公开报道未披露其盈利情况；对照同赛道的 Cognition（年化收入接近 10 亿美元、估值洽谈至 400 亿美元），AI 编程赛道的估值/收入倍数目前普遍处于高位区间。</p>
-    </div>
-  </section>
-
-  <h2 class="section">今日交易速览（按重要性排序）</h2>
-
-  <div class="item">
-    <div class="rank">1</div>
-    <div class="item-body">
-      <h3>Lovable 完成 <span class="amount">4 亿美元</span> C 轮，估值 133 亿美元</h3>
-      <p>Menlo Ventures 与欧盟 Scaleup Europe Fund（EQT 管理）领投，腾讯、Balderton、Kaszek、Regent 等新进，Accel、CapitalG、DST Global、Salesforce Ventures 等老股东跟投。ARR 已过 5 亿美元。</p>
-      <div class="tags"><span class="tag hot">头条</span><span class="tag">AI 编程</span><span class="tag">瑞典</span><span class="tag">Menlo Ventures</span><span class="tag">腾讯</span><span class="tag">DST Global</span></div>
-    </div>
+<header class="masthead">
+  <div class="kicker">全球科技行业投资日报</div>
+  <h1 class="title">每日科技投资动态</h1>
+  <div class="meta">
+    <span><strong>2026年8月14日</strong>（星期五）</span>
+    <span>覆盖时段：8月12日 — 8月14日</span>
+    <span>信息源：TechCrunch · Bloomberg · Crunchbase · TechStartups · BusinessWire</span>
   </div>
+</header>
 
-  <div class="item">
-    <div class="rank">2</div>
-    <div class="item-body">
-      <h3>Cognition 传洽谈新一轮，估值不低于 <span class="amount">400 亿美元</span></h3>
-      <p>据彭博社 8 月 12 日报道，AI 编程智能体 Devin 的母公司 Cognition 正与投资方接触，拟以至少 400 亿美元估值融资超 10 亿美元。公司年化收入已接近 10 亿美元，约为 5 月融资时（4.92 亿美元）的两倍；彼时估值为 260 亿美元。企业客户对 Devin 的月度使用量此前连续六个月保持约 50% 环比增长。交易尚未最终敲定。</p>
-      <div class="tags"><span class="tag hot">未官宣</span><span class="tag">AI 智能体</span><span class="tag">美国</span><span class="tag">估值三个月翻 1.5 倍</span></div>
-    </div>
+<h2 class="sec">今 日 概 览</h2>
+<div class="card overview">
+  <p>过去 24–48 小时，全球一级市场的资金继续向"硬科技基础设施"与"垂直行业 AI"两端集中，消费类项目几乎全面缺席前十榜单。单笔金额最大的是电网储能公司 <strong>Form Energy 的 7.5 亿美元 G 轮</strong>（T. Rowe Price 领投，红杉、Coatue 跟投）；估值动作最引人注目的则是瑞典 AI 编程平台 <strong>Lovable 以 133 亿美元估值完成 4 亿美元 C 轮</strong>——距其上一轮估值仅过去 8 个月，估值翻倍。</p>
+  <p>AI 编码工具赛道当日出现"三连击"：Lovable 融资、CodeRabbit 以 15 亿美元估值拿下 1.43 亿美元 C 轮、Blacksmith 估值一年内涨 10 倍至 5.5 亿美元；同时彭博社披露 Devin 开发商 <strong>Cognition 正洽谈以不低于 400 亿美元估值再融资</strong>，较 5 月的 260 亿美元估值上调逾 50%。</p>
+  <p>产业资本同样活跃：英伟达与 AMD Ventures 战略投资 xAI 联合创始人新公司 River AI 的 11 亿美元轮次，AMD 收购硬连线推理芯片初创 Taalas，BMW i Ventures 加注 CodeRabbit，戴尔资本、花旗创投、三星创投、Google Ventures 分别现身企业软件、AI 基础设施与开发者工具交易。Crunchbase 数据显示 2026 上半年全球风投总额已创下 5100 亿美元纪录，其中约八成流向 AI 相关公司。</p>
+  <div class="stats">
+    <div class="stat"><span class="n">10+</span><span class="l">重点交易</span></div>
+    <div class="stat"><span class="n">$26亿+</span><span class="l">披露融资总额</span></div>
+    <div class="stat"><span class="n">$13.3B</span><span class="l">当日最高估值（Lovable）</span></div>
+    <div class="stat"><span class="n">$750M</span><span class="l">单笔最大（Form Energy）</span></div>
+    <div class="stat"><span class="n">~80%</span><span class="l">H1 风投流向 AI 的比例</span></div>
   </div>
+</div>
 
-  <div class="item">
-    <div class="rank">3</div>
-    <div class="item-body">
-      <h3>inKind 完成 <span class="amount">4.14 亿美元</span> 融资授信，累计资本超 12 亿美元</h3>
-      <p>餐饮商业金融平台 inKind 由花旗（出资 1.75 亿美元）与 Cross River Bank（1.5 亿美元）牵头，Sagard、Varadero、Trinity Capital 等提供夹层资金，Liberty Mutual Investments 为基石出资方。公司为独立餐厅提供前置资金并以营收分成回收，计划未来一年向近 1 万家餐厅投放超 10 亿美元。全球性银行以优先级贷款人身份入局，是该模式走向成熟资产类别的信号。</p>
-      <div class="tags"><span class="tag">金融科技</span><span class="tag">美国</span><span class="tag">花旗</span><span class="tag">债权+股权</span></div>
+<h2 class="sec">今 日 最 值 得 关 注</h2>
+<div class="highlight">
+  <div class="hl-bar">重 点 深 度</div>
+  <div class="hl-body">
+    <h3>Lovable：4 亿美元 C 轮，估值 133 亿美元</h3>
+    <div class="hl-sub">瑞典斯德哥尔摩 · "氛围编程"（vibe coding）平台 · Menlo Ventures 与 Scaleup Europe Fund 联合领投 · 2026年8月12日公布</div>
+
+    <div class="grid">
+      <div class="cell"><span class="v">$400M</span><span class="k">本轮融资额（C 轮）</span></div>
+      <div class="cell"><span class="v">$13.3B</span><span class="k">投后估值</span></div>
+      <div class="cell"><span class="v">~$730M</span><span class="k">累计融资额</span></div>
+      <div class="cell"><span class="v">$500M</span><span class="k">年化收入（ARR，6月）</span></div>
+      <div class="cell"><span class="v">6,000万</span><span class="k">托管项目数</span></div>
+      <div class="cell"><span class="v">9亿次/月</span><span class="k">平台月访问量</span></div>
     </div>
+
+    <h4>业务内容</h4>
+    <p>Lovable 成立于瑞典，主打"用自然语言直接生成可运行应用"的 AI 编程平台，是欧洲最具代表性的 vibe-coding 公司。用户以对话方式描述需求，平台自动完成前端、后端与部署，非专业开发者也能上线完整 Web 应用。随着规模扩大，公司已不再只做外部大模型的封装层：Lovable 自研并上线了内部训练的专有模型，与主流前沿模型并行提供，并在博客中明确提出"模型选择器是一条死路"的产品观点，转向由平台自动调度模型。</p>
+
+    <h4>历史融资情况</h4>
+    <table class="hist">
+      <tr><th>时间</th><th>轮次</th><th>金额</th><th>估值 / 领投方</th></tr>
+      <tr><td>2024年10月</td><td>Pre-seed</td><td class="amt">$7.5M</td><td>Hummingbird VC、byFounders 领投；2024年11月21日公开发布</td></tr>
+      <tr><td>2025年2月</td><td>Pre-Series A</td><td class="amt">$15M</td><td>A 轮前累计融资约 2,250 万美元</td></tr>
+      <tr><td>2025年7月</td><td>Series A</td><td class="amt">$200M</td><td>估值 18 亿美元；Accel 领投，20VC、byFounders、Creandum、Hummingbird、Visionaries Club 跟投</td></tr>
+      <tr><td>2025年12月</td><td>Series B</td><td class="amt">$330M</td><td>估值 66 亿美元；CapitalG 与 Menlo Ventures（Anthology 基金）领投，英伟达 NVentures、Salesforce Ventures、Databricks Ventures、Atlassian Ventures、HubSpot Ventures、Khosla Ventures、DST Global、EQT Growth 等跟投</td></tr>
+      <tr><td>2026年8月</td><td>Series C</td><td class="amt">$400M</td><td>估值 133 亿美元；Menlo Ventures 与 Scaleup Europe Fund 领投，十余家机构参与（含 EQT、CapitalG）</td></tr>
+    </table>
+    <p style="margin-top:10px;">本轮后累计融资约 7.3 亿美元。值得注意的是估值节奏：2025年7月 18 亿 → 2025年12月 66 亿 → 2026年8月 133 亿美元，13 个月内估值增长逾 7 倍，其中最近 8 个月翻倍。</p>
+
+    <h4>业务发展与财务表现</h4>
+    <p><strong>收入：</strong>公司 2026 年 6 月向 TechCrunch 确认年化收入（ARR）达 5 亿美元；第三方数据机构 Sacra 的估算轨迹为 2025年7月 1 亿、2025年11月 2 亿、2025年底 2.5 亿、2026年1月 3 亿、2026年2月 4 亿美元 ARR。行业媒体在本轮报道中提到其 ARR 正逼近 6 亿美元。公司未披露盈利情况。</p>
+    <p><strong>规模与基础设施：</strong>平台托管项目已达 6,000 万个，月访问量约 9 亿次，新建项目一度达到每周 100 万个。为支撑算力需求，Lovable 于 2026 年 6 月与 Google Cloud 签订多年协议，用量提升约 5 倍。</p>
+    <p><strong>对外投资：</strong>公司已开始以战略投资方身份反哺欧洲创业生态，例如投资丹麦初创 Atech——后者试图把 vibe coding 的思路带入硬件设计领域。</p>
+    <p><strong>观察要点：</strong>Lovable 的这轮融资是欧洲科技公司少见的"本土大额续命+估值跃升"样本，Scaleup Europe Fund 的领投带有明显的欧洲主权科技政策色彩；但同期 Cognition 传出 400 亿美元估值洽谈、CodeRabbit 与 Blacksmith 同日融资，说明 AI 编码这条赛道的资金密度与竞争强度正同步上升，后续能否维持收入增速将决定估值的可持续性。</p>
   </div>
+</div>
 
-  <div class="item">
-    <div class="rank">4</div>
-    <div class="item-body">
-      <h3>Neros Technologies 获 <span class="amount">2.5 亿美元</span> C 轮，红杉与美国防部基金联合领投</h3>
-      <p>南加州自主无人机公司，投后估值 25 亿美元。红杉资本（Sequoia）与美国国防部 American Strategic Technology Fund（ASTF）共同领投，Valor Equity Partners、Thiel Capital、Spark Capital、Allen & Co、Interlagos 等参投。资金用于扩产 "Archer AI" 攻击型无人机与 "Bandit" 反无人机拦截器，目标 2028 年实现年产 100 万架。VC 与政府资金同时下注国防机器人自主化，是本周最具战略意味的一笔。</p>
-      <div class="tags"><span class="tag hot">国防科技</span><span class="tag">美国</span><span class="tag">红杉资本</span><span class="tag">Thiel Capital</span><span class="tag">政府基金</span></div>
+<h2 class="sec">重 点 交 易 · 按 重 要 性 排 序</h2>
+<ol class="deals">
+
+  <li>
+    <div class="dl-head">
+      <span class="dl-name">Lovable</span>
+      <span class="dl-amt">$400M · C 轮</span>
+      <span class="dl-date">8月12日</span>
     </div>
+    <p class="dl-desc">瑞典 AI 编程平台，估值 133 亿美元，Menlo Ventures 与 Scaleup Europe Fund 联合领投，十余家机构参与。6 月 ARR 达 5 亿美元，托管 6,000 万个项目。详见上方深度卡片。</p>
+    <div class="tags"><span>AI 编程</span><span>欧洲</span><span>Menlo Ventures</span><span>CapitalG</span><span>独角兽</span></div>
+  </li>
+
+  <li>
+    <div class="dl-head">
+      <span class="dl-name">Form Energy</span>
+      <span class="dl-amt">$750M · G 轮</span>
+      <span class="dl-date">8月12日</span>
+    </div>
+    <p class="dl-desc">波士顿地区"铁-空气"多日储能电池公司，本轮由 T. Rowe Price 领投，红杉资本、Janus Henderson、Franklin Templeton、Breakthrough Energy、Coatue、TPG Rise、GE Vernova 等参与，累计股权融资超 20 亿美元。资金用于西弗吉尼亚州 Weirton 的 Form Factory 1 工厂与首批商业化系统交付；公司已拿下 Xcel Energy、Google 等吉瓦时级订单，今年订单储备增至三倍。</p>
+    <div class="tags"><span>储能</span><span>气候科技</span><span>红杉资本</span><span>Coatue</span><span>当日最大单笔</span></div>
+  </li>
+
+  <li>
+    <div class="dl-head">
+      <span class="dl-name">Cognition（Devin）</span>
+      <span class="dl-amt">洽谈中 · 估值 $40B+</span>
+      <span class="dl-date">8月12日</span>
+    </div>
+    <p class="dl-desc">彭博社报道，AI 编程智能体 Devin 的开发商 Cognition 已与投资人早期接洽新一轮融资，估值有望从 5 月的 260 亿美元上调逾 50% 至不低于 400 亿美元；距上一轮（10 亿美元融资）不足三个月。其年化收入接近 10 亿美元，约为上轮融资时的两倍，客户包括高盛、梅赛德斯-奔驰及多家美国政府机构。</p>
+    <div class="tags"><span>AI 智能体</span><span>估值跃升</span><span>Bloomberg 独家</span><span>尚未落定</span></div>
+  </li>
+
+  <li>
+    <div class="dl-head">
+      <span class="dl-name">River AI</span>
+      <span class="dl-amt">$1.1B</span>
+      <span class="dl-date">8月11日</span>
+    </div>
+    <p class="dl-desc">xAI 联合创始人 Igor Babuschkin 创办仅两个月的全栈 AI 公司，由 General Catalyst 与 AMP PBC 领投，<strong>英伟达与 AMD Ventures 作为战略投资方</strong>参与，Y Combinator、淡马锡跟投。River API 让开发者与企业无需自建基础设施即可训练、微调与部署开放权重模型，主张"AI 所有权归使用者"，并计划推出包含专用硬件的个人 AI 全栈。</p>
+    <div class="tags"><span>基础模型</span><span>英伟达 CVC</span><span>AMD Ventures</span><span>General Catalyst</span><span>开放权重</span></div>
+  </li>
+
+  <li>
+    <div class="dl-head">
+      <span class="dl-name">CodeRabbit</span>
+      <span class="dl-amt">$143M · C 轮</span>
+      <span class="dl-date">8月12日</span>
+    </div>
+    <p class="dl-desc">AI 代码审查平台，估值约 15 亿美元，Atomico 与 Smash Capital 联合领投，<strong>宝马旗下 BMW i Ventures 参投</strong>——双方已合作两年，CodeRabbit 服务宝马全球逾 1,000 名开发者。累计融资约 2 亿美元，资金用于伦敦与日本新办公室及"Agentic Change Management"研发。</p>
+    <div class="tags"><span>开发者工具</span><span>代码审查</span><span>宝马 CVC</span><span>Atomico</span></div>
+  </li>
+
+  <li>
+    <div class="dl-head">
+      <span class="dl-name">AMD 收购 Taalas</span>
+      <span class="dl-amt">并购 · 金额未披露</span>
+      <span class="dl-date">8月12日</span>
+    </div>
+    <p class="dl-desc">AMD 收购硬连线 AI 推理芯片初创公司 Taalas。Taalas 的加速器绕开传统 GPU 的显存墙，针对特定模型可将推理输出速度提升数个数量级，主攻低时延生成式 AI 场景，将被整合进 AMD 的 Helios 机架级系统，与 Instinct GPU 路线图互补。</p>
+    <div class="tags"><span>半导体并购</span><span>AI 推理</span><span>AMD</span><span>战略整合</span></div>
+  </li>
+
+  <li>
+    <div class="dl-head">
+      <span class="dl-name">Yulu</span>
+      <span class="dl-amt">$93M · C 轮</span>
+      <span class="dl-date">8月12日</span>
+    </div>
+    <p class="dl-desc">印度班加罗尔共享电动两轮出行（EV MaaS）平台，其中股权 6,300 万美元、债权 3,000 万美元，GEF Capital Partners 领投，产业方 Bajaj Auto 与 Magna International 参投。计划将运营车队扩至 20 万辆（增至四倍）。公司自 FY2023 起收入增长 7 倍并维持 EBITDA 为正，累计融资约 1.75 亿美元。</p>
+    <div class="tags"><span>电动出行</span><span>印度</span><span>产业资本</span><span>股+债</span></div>
+  </li>
+
+  <li>
+    <div class="dl-head">
+      <span class="dl-name">Boulevard Bio</span>
+      <span class="dl-amt">$65M · 种子轮</span>
+      <span class="dl-date">8月12日</span>
+    </div>
+    <p class="dl-desc">纽约生物技术公司，从 Deerfield Management 孵化体系中独立并走出隐身状态，Deerfield 为唯一创始投资方。管线聚焦慢性肾病（IgA 肾病），核心候选药物为季度给药的 BAFF/APRIL 双靶点工程化抗体，资金用于后期临床前与早期临床开发。</p>
+    <div class="tags"><span>生物医药</span><span>免疫学</span><span>大额种子轮</span><span>Deerfield</span></div>
+  </li>
+
+  <li>
+    <div class="dl-head">
+      <span class="dl-name">Skan AI</span>
+      <span class="dl-amt">$63M · B 轮</span>
+      <span class="dl-date">8月12日</span>
+    </div>
+    <p class="dl-desc">企业级"工作情境图谱"（context graph）平台，Cathay Innovation 与 <strong>戴尔资本（Dell Technologies Capital）</strong>联合领投，花旗创投、Bloomberg Beta、State Farm Ventures、Wipro Ventures 参投。产品把企业流程与数据映射成图谱，为 AI 智能体提供真实业务上下文，同期发布 Skan AI Blueprint 与 Agents 两款新品。</p>
+    <div class="tags"><span>企业 AI</span><span>流程智能</span><span>戴尔资本</span><span>花旗创投</span></div>
+  </li>
+
+  <li>
+    <div class="dl-head">
+      <span class="dl-name">Blacksmith</span>
+      <span class="dl-amt">$45M · B 轮</span>
+      <span class="dl-date">8月12–13日</span>
+    </div>
+    <p class="dl-desc">纽约代码测试与验证云平台，估值约 5.5 亿美元，较一年前的 6,000 万美元上涨约 10 倍。<strong>Peak XV Partners 领投，Google Ventures（GV）与 Y Combinator 跟投</strong>。其 CI 服务与 AI 助手 Codesmith 可自动修复失败测试，客户包括 Mercury、Supabase、Clerk，收入过去一年增长 7 倍，累计融资 5,850 万美元。</p>
+    <div class="tags"><span>CI/CD</span><span>开发者工具</span><span>Google Ventures</span><span>Peak XV</span><span>估值 10 倍</span></div>
+  </li>
+
+  <li>
+    <div class="dl-head">
+      <span class="dl-name">Remepy</span>
+      <span class="dl-amt">$36M · A 轮</span>
+      <span class="dl-date">8月12日</span>
+    </div>
+    <p class="dl-desc">纽约"混合药物"（hybrid drugs）平台，O.G. Venture Partners 领投，<strong>默克集团旗下 M Ventures</strong> 联合领投，NFX、Vine Ventures、Qumra Capital 等老股东跟投。核心项目 Hybridopa（帕金森病）计划 2026 年底进入全球三期临床，累计融资 6,200 万美元。</p>
+    <div class="tags"><span>生物医药</span><span>帕金森病</span><span>默克 CVC</span><span>三期在即</span></div>
+  </li>
+
+  <li>
+    <div class="dl-head">
+      <span class="dl-name">Silicon Data</span>
+      <span class="dl-amt">$30.5M · A 轮</span>
+      <span class="dl-date">8月12日</span>
+    </div>
+    <p class="dl-desc">为"算力经济"提供独立基准与验证层，对 AI 加速器与云厂商性能、成本做标准化评测，自称要做"芯片界的标普 500"。Valor Atreides AI Fund 领投，CME Group、DRW、F-Prime、<strong>三星创投（Samsung Ventures）</strong>、VanEck、Jump Trading、Wintermute 等金融与产业机构参投。</p>
+    <div class="tags"><span>AI 基础设施</span><span>算力基准</span><span>三星创投</span><span>金融机构入局</span></div>
+  </li>
+
+  <li>
+    <div class="dl-head">
+      <span class="dl-name">Mindgard</span>
+      <span class="dl-amt">$30M · A 轮</span>
+      <span class="dl-date">8月12日</span>
+    </div>
+    <p class="dl-desc">AI 安全公司，聚焦保护"非人类身份"与跨云服务运行的 AI 智能体，Album VC 领投，Karma Ventures、.406 Ventures、Atlantic Bridge、IQ Capital、Lakestar 参投。随着企业大规模部署智能体，机器驱动工作流的攻击面成为新的安全焦点。</p>
+    <div class="tags"><span>AI 安全</span><span>网络安全</span><span>智能体治理</span></div>
+  </li>
+
+  <li>
+    <div class="dl-head">
+      <span class="dl-name">Craft Ventures（基金募集）</span>
+      <span class="dl-amt">目标 $1B · 五期基金</span>
+      <span class="dl-date">8月11日</span>
+    </div>
+    <p class="dl-desc">据 The Information 报道，David Sacks 旗下 Craft Ventures 正为新基金募集约 10 亿美元，8 月 7 日已向 SEC 提交 Craft Ventures V, LP 备案。这是 Sacks 于 2026 年 3 月底卸任白宫 AI 与加密事务职务后的首只新基金，被视为"政商旋转门"与 AI 投资热潮叠加的标志性事件。</p>
+    <div class="tags"><span>基金募集</span><span>David Sacks</span><span>LP 市场</span></div>
+  </li>
+
+</ol>
+
+<footer>
+  <h2>信 息 来 源</h2>
+  <ul>
+    <li><a href="https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m/">TechCrunch — Lovable confirms new $13.3B valuation, raises another $400M（2026年8月12日）</a></li>
+    <li><a href="https://techstartups.com/2026/08/12/venture-capital-startup-funding-roundup-august-12-2026-coatue-franklin-templeton-janus-henderson-sequoia-capital-t-rowe-price-more/">TechStartups — Venture Capital &amp; Startup Funding Roundup, August 12, 2026</a></li>
+    <li><a href="https://techcrunch.com/2026/08/12/ai-coding-startup-cognition-reportedly-already-in-talks-to-raise-at-40b-valuation/">TechCrunch — AI coding startup Cognition reportedly already in talks to raise at $40B valuation</a></li>
+    <li><a href="https://www.bloomberg.com/news/articles/2026-08-12/ai-startup-cognition-in-new-funding-talks-at-40-billion-value">Bloomberg — AI Startup Cognition in New Funding Talks at $40 Billion Value</a></li>
+    <li><a href="https://techcrunch.com/2026/08/11/general-catalyst-leads-1-1b-round-into-2-month-old-river-ai/">TechCrunch — General Catalyst leads $1.1B round into 2-month-old River AI</a></li>
+    <li><a href="https://www.businesswire.com/news/home/20260811845258/en/River-AI-Raises-$1.1B-Led-by-General-Catalyst-and-AMP-PBC-to-Build-Open-AI-Stack">BusinessWire — River AI Raises $1.1B Led by General Catalyst and AMP PBC</a></li>
+    <li><a href="https://techcrunch.com/2026/08/12/blacksmiths-valuation-jumps-10x-to-550m-as-ai-coding-fuels-software-validation/">TechCrunch — Blacksmith's valuation jumps 10x to $550M as AI coding fuels software validation</a></li>
+    <li><a href="https://parsers.substack.com/p/weekly-top-startup-vc-news-of-august-4c7">Parsers VC — Weekly TOP Startup / VC news of August 13, 2026（River AI、AMD/Taalas、Lumilens 等）</a></li>
+    <li><a href="https://news.crunchbase.com/">Crunchbase News — 每周最大融资轮次与行业数据</a></li>
+    <li><a href="https://techstartups.com/2026/08/11/david-sacks-craft-ventures-targets-1-billion-for-first-new-fund-since-leaving-white-house/">TechStartups — David Sacks' Craft Ventures targets $1 billion for first new fund</a></li>
+    <li><a href="https://startuptalky.com/news/daily-indian-funding-roundup-key-news-13-august-2026/">StartupTalky — Daily Indian Funding Roundup, 13 August 2026</a></li>
+    <li><a href="https://lovable.dev/blog/series-c">Lovable 官方博客 — Series C 公告</a></li>
+  </ul>
+  <div class="disclaimer">
+    <strong>免责声明：</strong>本页面内容由公开报道整理生成，仅供信息参考，不构成任何投资建议、要约或推荐。融资金额、估值、收入等数据以各公司或媒体披露为准，部分数字（如累计融资额、ARR）在不同信息源之间存在口径差异，已尽量标注来源；处于"洽谈中"的交易尚未最终完成，存在变动可能。请读者在做出任何决策前自行核实原始信息。<br>
+    生成时间：2026年8月14日。
   </div>
-
-  <div class="item">
-    <div class="rank">5</div>
-    <div class="item-body">
-      <h3>Vaderis Therapeutics 超额认购 <span class="amount">1.52 亿美元</span> B 轮</h3>
-      <p>瑞士巴塞尔罕见病生物技术公司，高盛生命科学（Goldman Sachs Life Sciences）与 TCGX Life Sciences 联合领投，Omega Funds、Perceptive Advisors、Medicxi、Droia Ventures、Kalehua Capital 参投。资金用于推动核心神经领域管线进入关键性临床试验。在整体融资收紧的环境下，硬科学 + 明确监管路径依然能拿到大额支票。</p>
-      <div class="tags"><span class="tag">生物医药</span><span class="tag">瑞士</span><span class="tag">高盛</span><span class="tag">罕见病</span></div>
-    </div>
-  </div>
-
-  <div class="item">
-    <div class="rank">6</div>
-    <div class="item-body">
-      <h3>Vertical Aerospace 获约 <span class="amount">1 亿美元</span>（8660 万欧元）融资承诺</h3>
-      <p>英国布里斯托 eVTOL 制造商（纽交所代码 EVTL），资金结构为债务与股权组合：Mudrick Capital 提供 3460 万欧元票据提取额度与 3500 万欧元包销股权融资，Yorkville Advisors 提供 2160 万欧元优先股。资金用于 Valo 电动垂直起降机型的适航认证与商业化推进。空中交通赛道在完成载人验证飞行后重获资本关注。</p>
-      <div class="tags"><span class="tag">航空航天</span><span class="tag">英国</span><span class="tag">eVTOL</span><span class="tag">上市公司融资</span></div>
-    </div>
-  </div>
-
-  <div class="item">
-    <div class="rank">7</div>
-    <div class="item-body">
-      <h3>Aureka Biotechnologies 完成 <span class="amount">1 亿美元</span> B 轮，累计约 2 亿美元</h3>
-      <p>中美两地布局（加州拉古纳山 + 上海）的 AI 药物发现公司，Granite Asia 领投首笔交割，多家战略生物制药投资方及 HighLight Capital、MPCi、NRL Capital 等老股东跟投。公司以"生物世界模型"式的大型 AI 基础模型结合实验室自动化做药物设计，已从药企合作中获得实质收入。资金将投向大规模算力训练与实验室自动化扩产。</p>
-      <div class="tags"><span class="tag">AI + 生物</span><span class="tag">中美</span><span class="tag">Granite Asia</span></div>
-    </div>
-  </div>
-
-  <div class="item">
-    <div class="rank">8</div>
-    <div class="item-body">
-      <h3>Flagler Health 获 <span class="amount">5000 万美元</span> B 轮，Bessemer 领投</h3>
-      <p>纽约的肌肉骨骼（MSK）疾病 AI 诊疗平台，累计融资达 6300 万美元。Bessemer Venture Partners 领投，SignalFire、Alumni Ventures、Streamlined Ventures、186 Ventures、Tribeca Venture Partners 等参投。平台整合患者数据、AI 模型与诊疗路径，切入美国规模超 4000 亿美元的 MSK 市场。</p>
-      <div class="tags"><span class="tag">医疗 AI</span><span class="tag">美国</span><span class="tag">Bessemer</span></div>
-    </div>
-  </div>
-
-  <div class="item">
-    <div class="rank">9</div>
-    <div class="item-body">
-      <h3>Blacksmith 完成 <span class="amount">4500 万美元</span> B 轮，估值一年内涨约 10 倍至 5.5 亿美元</h3>
-      <p>旧金山的 CI（持续集成）加速公司，在定制硬件上运行构建与测试任务。Peak XV Partners 领投，老股东 Y Combinator 与 GV 加倍下注。估值从不到一年前 A 轮的 6000 万美元跃升至 5.5 亿美元；客户数从 A 轮时约 800 家增至 6000 多家，包括 Supabase、Clerk、Ashby、Mercury。这是"AI 写码越快、验证环节越值钱"的直接受益标的。</p>
-      <div class="tags"><span class="tag hot">估值 10 倍</span><span class="tag">开发者工具</span><span class="tag">美国</span><span class="tag">Peak XV</span><span class="tag">GV</span></div>
-    </div>
-  </div>
-
-  <div class="item">
-    <div class="rank">10</div>
-    <div class="item-body">
-      <h3>Yuno 完成 <span class="amount">4500 万美元</span> B 轮，a16z 与 Tiger Global 参投</h3>
-      <p>哥伦比亚起家的全球支付基础设施公司，Global PayTech Ventures 领投，Andreessen Horowitz、Tiger Global、Revolut CEO 创立的 QuantumLight Capital、Monashees、Kaszek、Endeavor Catalyst 参投；卡塔尔主权基金背景的 Rasmal Ventures、阿布扎比 Further Ventures 等区域战略方入局。平台以单一 API 连接 190 个国家超 1000 种支付方式，客户含麦当劳、网易游戏、GoFundMe、inDrive、Rappi，预计未来 12 个月年化交易额将达 1000 亿美元。</p>
-      <div class="tags"><span class="tag">支付基建</span><span class="tag">拉美 / 全球</span><span class="tag">a16z</span><span class="tag">Tiger Global</span><span class="tag">主权基金</span></div>
-    </div>
-  </div>
-
-  <div class="item">
-    <div class="rank">11</div>
-    <div class="item-body">
-      <h3>ClearJet 获 <span class="amount">2500 万美元</span> B 轮，做"货运版 Uber"</h3>
-      <p>奥斯汀的 AI 物流公司，Edison Partners 领投，Venture53、Origin Ventures、SaltVC、SpringTime Ventures 跟投，累计融资 4000 万美元；早期投资方包括 JetBlue Ventures（现 Sky VC）。公司不自建机队，而是把电商包裹塞进商业客机的闲置货舱，网络覆盖 95 个美国机场，宣称可降低运费最多 35%、提速 1–3 天。公司称已实现盈利，收入同比增长超三倍，接近九位数。</p>
-      <div class="tags"><span class="tag">物流科技</span><span class="tag">美国</span><span class="tag">已盈利</span><span class="tag">轻资产模式</span></div>
-    </div>
-  </div>
-
-  <footer>
-    <h3>信息来源</h3>
-    <ul>
-      <li><a href="https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m/">TechCrunch：Lovable confirms new $13.3B valuation, raises another $400M（2026-08-12）</a></li>
-      <li><a href="https://lovable.dev/blog/series-c">Lovable 官方博客：We just raised $400M in Series C funding</a></li>
-      <li><a href="https://www.bloomberg.com/news/articles/2026-08-12/ai-coding-startup-lovable-raises-400-million-at-13-3-billion-valuation">Bloomberg：Tencent, EU Fund Invest in AI Coding Startup Lovable at $13 Billion Valuation</a></li>
-      <li><a href="https://techcrunch.com/2026/08/12/ai-coding-startup-cognition-reportedly-already-in-talks-to-raise-at-40b-valuation/">TechCrunch：AI coding startup Cognition reportedly already in talks to raise at $40B valuation</a></li>
-      <li><a href="https://www.bloomberg.com/news/articles/2026-08-12/ai-startup-cognition-in-new-funding-talks-at-40-billion-value">Bloomberg：AI Startup Cognition in New Funding Talks at $40 Billion Value</a></li>
-      <li><a href="https://techcrunch.com/2026/08/12/blacksmiths-valuation-jumps-10x-to-550m-as-ai-coding-fuels-software-validation/">TechCrunch：AI code-testing startup Blacksmith's valuation jumps almost 10x to $550M</a></li>
-      <li><a href="https://techstartups.com/2026/08/11/venture-capital-startup-funding-roundup-august-11-2026-bessemer-venture-partners-citi-sequoia-capital-thiel-capital-more/">TechStartups：Venture Capital &amp; Startup Funding Roundup, August 11, 2026</a></li>
-      <li><a href="https://news.crunchbase.com/transportation/clearjet-raises-25m-logistics-ai-seriesb/">Crunchbase News：Exclusive — ClearJet raises $25M to build the 'Uber of Cargo'（2026-08-12）</a></li>
-      <li><a href="https://www.pymnts.com/news/b2b-payments/2026/yuno-raises-45-million-to-drive-global-payments-push/">PYMNTS：Yuno Raises $45 Million to Drive Global Payments Push</a></li>
-      <li><a href="https://www.globenewswire.com/news-release/2026/08/12/3343819/0/en/yuno-raises-45-million-series-b-to-scale-the-ai-native-operating-system-of-global-payments-and-financial-services.html">GlobeNewswire：Yuno Raises $45 Million Series B（新闻通稿）</a></li>
-      <li><a href="https://techstartups.com/2026/08/11/david-sacks-craft-ventures-targets-1-billion-for-first-new-fund-since-leaving-white-house/">TechStartups：David Sacks' Craft Ventures targets $1 billion for first new fund</a></li>
-      <li><a href="https://techcrunch.com/2025/12/18/vibe-coding-startup-lovable-raises-330m-at-a-6-6b-valuation/">TechCrunch：Lovable raises $330M at a $6.6B valuation（历史轮次）</a></li>
-      <li><a href="https://lovable.dev/blog/200m-series-a-fundraise">Lovable 官方博客：$200M Series A, valued at $1.8B（历史轮次）</a></li>
-    </ul>
-
-    <div class="disclaimer">
-      <strong>免责声明：</strong>本页内容由 AI 依据上述公开报道自动汇总生成，仅供信息参考，不构成任何投资建议或要约。融资金额、估值与财务数据均以原始报道口径为准；未官宣交易（如 Cognition 轮次）为媒体援引消息人士的报道，存在变动可能，最终以公司官方公告为准。部分数据（如累计融资额）来自不同数据源，口径可能存在差异。请读者自行核实后再做决策。
-    </div>
-  </footer>
+</footer>
 
 </div>
 </body>
