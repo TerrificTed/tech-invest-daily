@@ -3,229 +3,275 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日科技投资动态 · 2026年8月15日</title>
+<title>每日科技投资动态 · 2026年8月16日</title>
 <style>
-:root{--accent:#c8401a;--ink:#1a1a1a;--muted:#6b6b6b;--line:#e2ddd6;--bg:#f4f1ec;}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{background:var(--bg);color:var(--ink);font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC",sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased;}
-.wrap{max-width:880px;margin:0 auto;padding:32px 20px 64px;}
-header{border-bottom:3px double var(--ink);padding-bottom:18px;margin-bottom:28px;}
-.kicker{font-size:12px;letter-spacing:.28em;color:var(--accent);font-weight:700;text-transform:uppercase;}
-h1{font-size:40px;letter-spacing:.06em;font-weight:800;margin:8px 0 10px;line-height:1.2;}
-.meta{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--muted);}
-.meta b{color:var(--ink);font-weight:600;}
-.card{background:#fff;border:1px solid var(--line);border-radius:4px;padding:24px 26px;margin-bottom:22px;box-shadow:0 1px 2px rgba(0,0,0,.04);}
-h2{font-size:19px;font-weight:700;letter-spacing:.04em;margin-bottom:14px;padding-left:11px;border-left:4px solid var(--accent);}
-.overview p{font-size:15px;color:#333;margin-bottom:10px;}
-.overview p:last-child{margin-bottom:0;}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:18px 0;}
-.stat{background:#fff;padding:14px 12px;text-align:center;}
-.stat .v{font-size:22px;font-weight:800;color:var(--accent);letter-spacing:-.01em;}
-.stat .l{font-size:11px;color:var(--muted);margin-top:4px;letter-spacing:.05em;}
-.hl{border:2px solid var(--accent);position:relative;}
-.hl .badge{position:absolute;top:-12px;left:22px;background:var(--accent);color:#fff;font-size:12px;font-weight:700;letter-spacing:.14em;padding:3px 12px;border-radius:2px;}
-.hl h3{font-size:26px;font-weight:800;margin:8px 0 4px;}
-.hl .sub{font-size:13px;color:var(--muted);margin-bottom:6px;}
-.hl h4{font-size:14px;font-weight:700;margin:18px 0 6px;color:var(--accent);}
-.hl p{font-size:14.5px;color:#333;}
-table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:8px;}
-th,td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;}
-th{background:#faf8f5;font-weight:600;font-size:12.5px;color:var(--muted);}
-td.amt{font-weight:700;color:var(--accent);white-space:nowrap;}
-ol.deals{list-style:none;counter-reset:d;}
-ol.deals li{counter-increment:d;background:#fff;border:1px solid var(--line);border-radius:4px;padding:18px 20px 18px 56px;margin-bottom:12px;position:relative;}
-ol.deals li::before{content:counter(d);position:absolute;left:18px;top:18px;font-size:20px;font-weight:800;color:var(--line);}
-.dh{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px;margin-bottom:6px;}
-.dh .name{font-size:17px;font-weight:700;}
-.dh .amount{font-size:17px;font-weight:800;color:var(--accent);}
-.dh .stage{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:1px 7px;border-radius:2px;}
-.desc{font-size:14px;color:#333;}
-.inv{font-size:13px;color:var(--muted);margin-top:6px;}
-.tags{margin-top:9px;display:flex;flex-wrap:wrap;gap:6px;}
-.tag{font-size:11.5px;background:#f6f1ec;color:#8a4b30;border:1px solid #ead9cd;padding:2px 9px;border-radius:11px;}
-footer{margin-top:30px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);}
-footer h5{font-size:13px;color:var(--ink);font-weight:700;margin-bottom:8px;}
-footer ul{list-style:none;columns:2;column-gap:24px;}
-footer li{margin-bottom:4px;break-inside:avoid;}
-footer a{color:#8a4b30;text-decoration:none;}
-footer a:hover{text-decoration:underline;}
-.disc{margin-top:16px;padding:12px 14px;background:#fbf9f6;border-left:3px solid var(--line);font-size:12px;line-height:1.7;}
-@media(max-width:600px){h1{font-size:28px;}footer ul{columns:1;}ol.deals li{padding-left:20px;}ol.deals li::before{position:static;display:block;margin-bottom:2px;}}
+  :root{
+    --accent:#c8401a;
+    --ink:#1a1a1a;
+    --muted:#6b6660;
+    --line:#e3ded6;
+    --bg:#f4f1ea;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;padding:0;background:var(--bg);color:var(--ink);
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC","Noto Sans CJK SC",sans-serif;
+    line-height:1.75;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:28px 20px 60px;}
+
+  /* 页头 */
+  header.masthead{
+    border-top:6px solid var(--accent);
+    border-bottom:3px double #cfc8bd;
+    background:#fff;padding:26px 28px 20px;margin-bottom:22px;
+  }
+  .kicker{font-size:12px;letter-spacing:.32em;color:var(--accent);font-weight:700;margin-bottom:8px;}
+  h1.title{font-size:38px;margin:0 0 10px;letter-spacing:.04em;font-weight:800;line-height:1.25;}
+  .meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px;margin-top:12px;}
+  .meta b{color:var(--ink);font-weight:600;}
+
+  /* 卡片通用 */
+  .card{background:#fff;border:1px solid var(--line);padding:22px 26px;margin-bottom:18px;}
+  h2.sec{
+    font-size:15px;letter-spacing:.2em;color:var(--accent);margin:0 0 14px;font-weight:700;
+    border-bottom:2px solid var(--accent);display:inline-block;padding-bottom:5px;
+  }
+  p{margin:0 0 12px;font-size:15px;}
+  .overview p:last-child{margin-bottom:0;}
+
+  /* 概览数字条 */
+  .stripe{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:16px 0 4px;}
+  .stripe div{background:#fff;padding:12px 14px;}
+  .stripe .n{font-size:22px;font-weight:800;color:var(--accent);line-height:1.2;}
+  .stripe .l{font-size:12px;color:var(--muted);margin-top:3px;}
+
+  /* 重点卡片 */
+  .spotlight{border:2px solid var(--accent);background:#fff;padding:0;margin-bottom:22px;}
+  .spotlight .hd{background:var(--accent);color:#fff;padding:8px 20px;font-size:13px;letter-spacing:.24em;font-weight:700;}
+  .spotlight .bd{padding:22px 26px;}
+  .spotlight h3{font-size:27px;margin:0 0 6px;line-height:1.3;font-weight:800;}
+  .spotlight .sub{color:var(--muted);font-size:13px;margin-bottom:18px;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:20px;}
+  .grid .cell{background:#fdfaf6;padding:14px 16px;}
+  .grid .v{font-size:20px;font-weight:800;color:var(--accent);line-height:1.25;}
+  .grid .k{font-size:12px;color:var(--muted);margin-top:4px;}
+  h4.sh{font-size:14px;margin:20px 0 8px;padding-left:9px;border-left:4px solid var(--accent);font-weight:700;}
+  ul.hist{margin:0 0 4px;padding-left:0;list-style:none;font-size:14px;}
+  ul.hist li{padding:7px 0;border-bottom:1px dotted var(--line);display:flex;gap:12px;flex-wrap:wrap;}
+  ul.hist li span.d{color:var(--accent);font-weight:700;min-width:120px;}
+  ul.hist li:last-child{border-bottom:none;}
+
+  /* 新闻列表 */
+  ol.news{list-style:none;counter-reset:n;margin:0;padding:0;}
+  ol.news li{
+    counter-increment:n;background:#fff;border:1px solid var(--line);
+    padding:18px 22px 16px 62px;margin-bottom:12px;position:relative;
+  }
+  ol.news li::before{
+    content:counter(n);position:absolute;left:20px;top:17px;
+    font-size:22px;font-weight:800;color:#d9d2c7;font-family:Georgia,serif;
+  }
+  ol.news h3{font-size:18px;margin:0 0 6px;line-height:1.4;font-weight:700;}
+  .amt{color:var(--accent);font-weight:800;}
+  ol.news p{font-size:14px;color:#3d3a36;margin:0 0 10px;}
+  .inv{font-size:13px;color:var(--muted);margin:0 0 10px;}
+  .tags span{
+    display:inline-block;font-size:11px;padding:3px 9px;margin:0 6px 5px 0;
+    border:1px solid #ddd5c9;color:#8a7f70;background:#fbf9f5;border-radius:2px;
+  }
+  .tags span.hot{border-color:var(--accent);color:var(--accent);background:#fdf3ef;}
+
+  /* 页脚 */
+  footer{margin-top:28px;font-size:13px;color:var(--muted);}
+  footer .card{padding:20px 26px;}
+  footer a{color:#8a5a45;text-decoration:none;border-bottom:1px solid #e0d0c6;word-break:break-all;}
+  footer a:hover{color:var(--accent);}
+  footer ul{margin:0;padding-left:18px;}
+  footer li{margin-bottom:6px;line-height:1.6;}
+  .disc{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:#918a80;line-height:1.7;}
+  @media(max-width:620px){
+    h1.title{font-size:27px;}
+    .spotlight h3{font-size:21px;}
+    .card,.spotlight .bd{padding:18px;}
+    ol.news li{padding:16px 16px 14px 52px;}
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<header>
-  <div class="kicker">Daily Tech Investment Brief</div>
-  <h1>每日科技投资动态</h1>
-  <div class="meta">
-    <span><b>2026年8月15日</b>（星期六）</span>
-    <span>覆盖周期：8月13日–8月15日</span>
-    <span>信息源：Crunchbase News · CNBC · Bloomberg · TechCrunch · TechStartups · Forbes</span>
-  </div>
-</header>
+  <header class="masthead">
+    <div class="kicker">全球科技行业投资日报</div>
+    <h1 class="title">每日科技投资动态</h1>
+    <div class="meta">
+      <span><b>2026年8月16日</b>（星期日）</span>
+      <span>覆盖周期：8月13日–8月15日</span>
+      <span>信息源：TechCrunch · CNBC · Bloomberg · Reuters · Financial Times · TechStartups · Crunchbase News</span>
+    </div>
+  </header>
 
-<section class="card overview">
-  <h2>今日概览</h2>
-  <p>过去48小时，全球风险资本继续向 <b>AI 基础设施与数据平台</b> 高度集中。最重磅的一笔是 <b>Databricks 完成 50 亿美元融资、估值跃升至 1900 亿美元</b>，由 Coatue 领投，成为全球估值最高的私有科技公司之一；这已是该公司八个月内第二次拿下同等规模的资金。</p>
-  <p>紧随其后的是 xAI 联合创始人 Igor Babuschkin 创立仅两个月的 <b>River AI，一次性拿下 11 亿美元</b>种子轮+A轮，General Catalyst 与 AMP PBC 领投，NVIDIA、AMD Ventures 战略跟投——这是本年度最激进的"神级团队溢价"案例之一。</p>
-  <p>主题上呈现四条主线：<b>AI 数据与智能体平台</b>（Databricks、Lovable、CodeRabbit）、<b>算力与电网基础设施</b>（Form Energy、Point2）、<b>国防科技</b>（Neros、Cambridge Aerospace），以及 <b>AI 驱动的生物医药</b>（Aureka、Bridge to Life）。红杉、a16z、Coatue、Thiel Capital、Khosla 等头部机构与 NVIDIA、Arm、AMD 等产业资本同时出现在名单中，产业战投的参与度明显高于以往。</p>
-  <div class="stats">
-    <div class="stat"><div class="v">$8.5B+</div><div class="l">本期披露交易总额</div></div>
-    <div class="stat"><div class="v">12</div><div class="l">重点交易数</div></div>
-    <div class="stat"><div class="v">$190B</div><div class="l">最高估值（Databricks）</div></div>
-    <div class="stat"><div class="v">~65%</div><div class="l">AI 相关交易占比</div></div>
-  </div>
-</section>
+  <section class="card overview">
+    <h2 class="sec">今日概览</h2>
+    <p>过去 48 小时的资金流向高度集中：<b>AI 基础设施</b>依然是最大的吸金池，而且开始出现"从股权融资走向金融工程"的新形态。最重磅的两条消息互为镜像——<b>Databricks 单笔募得 50 亿美元、投后估值冲上 1900 亿美元</b>；同时，<b>英伟达 5000 亿美元 AI 融资计划</b>由高盛牵头与银行、保险、资管及私募信贷机构洽谈，试图把 GPU 算力打包成可交易的资产类别。</p>
+    <p>第二条主线是<b>并购与估值重估提速</b>：Anthropic 传出以约 60 亿美元洽购英伟达投资的以色列公司 Decart；瑞典法律 AI 公司 Legora 在上一轮四个月后即寻求 100 亿美元以上估值；Alphabet 十年前投给 SpaceX 的 9 亿美元在 IPO 后账面价值升至 941 亿美元，成为本轮 AI/航天周期最醒目的一笔回报。</p>
+    <p>第三条主线是<b>资本对"战略性硬科技"的对冲</b>：红杉与 Thiel Capital 领投国防无人机公司 Neros 2.5 亿美元 C 轮，Founders Fund 系创始人的免疫学新药公司 Khartis 拿下 5000 万美元 B 轮，a16z 与 Tiger Global 押注跨境支付基础设施 Yuno。周末为传统淡季，8月15–16日无重大新增交易披露。</p>
+    <div class="stripe">
+      <div><div class="n">50亿</div><div class="l">单日最大单笔融资（美元）</div></div>
+      <div><div class="n">1900亿</div><div class="l">Databricks 投后估值（美元）</div></div>
+      <div><div class="n">5000亿</div><div class="l">英伟达 AI 融资计划规模（美元）</div></div>
+      <div><div class="n">约11笔</div><div class="l">本期覆盖重点交易</div></div>
+    </div>
+  </section>
 
-<section class="card hl">
-  <div class="badge">今日最值得关注</div>
-  <h3>Databricks 融资 50 亿美元，估值 1900 亿美元</h3>
-  <div class="sub">2026年8月13日 · 美国旧金山 · 企业级 AI 与数据平台 · 战略增长轮</div>
+  <section class="spotlight">
+    <div class="hd">今 日 最 值 得 关 注</div>
+    <div class="bd">
+      <h3>Databricks 融资 50 亿美元，估值 1900 亿美元</h3>
+      <div class="sub">2026年8月13日 · 美国旧金山 · 企业级 AI / 数据平台 · 领投方：Coatue，联合 Blackstone、MGX、T. Rowe Price、Sixth Street Growth</div>
 
-  <div class="stats">
-    <div class="stat"><div class="v">$50亿</div><div class="l">本轮融资额</div></div>
-    <div class="stat"><div class="v">$1900亿</div><div class="l">投后估值</div></div>
-    <div class="stat"><div class="v">≈$250亿</div><div class="l">历史累计融资</div></div>
-    <div class="stat"><div class="v">$70亿+</div><div class="l">年化收入运行率</div></div>
-    <div class="stat"><div class="v">&gt;80%</div><div class="l">收入同比增速</div></div>
-  </div>
+      <div class="grid">
+        <div class="cell"><div class="v">50亿美元</div><div class="k">本轮融资额</div></div>
+        <div class="cell"><div class="v">1900亿美元</div><div class="k">投后估值</div></div>
+        <div class="cell"><div class="v">逾250亿美元</div><div class="k">累计融资（含本轮）</div></div>
+        <div class="cell"><div class="v">70亿美元</div><div class="k">年化收入运行率（ARR）</div></div>
+        <div class="cell"><div class="v">+80%</div><div class="k">收入同比增速</div></div>
+        <div class="cell"><div class="v">现金流为正</div><div class="k">盈利状况</div></div>
+      </div>
 
-  <h4>业务内容</h4>
-  <p>Databricks 成立于 2013 年，由 Apache Spark 的创造者团队创立，提供统一的"数据 + AI"湖仓（Lakehouse）平台，让企业在同一套架构上完成数据存储、治理、分析与 AI 模型的训练和部署。本轮资金将主要投向三条面向 AI 智能体（AI Agent）的产品线：<b>Lakebase</b>（为智能体设计的 Serverless Postgres 数据库）、<b>Genie</b>（把企业数据转化为可信答案与操作的"AI 同事"）、以及 <b>Unity AI Gateway</b>（多模型治理与成本管控网关）。CEO Ali Ghodsi 对 CNBC 表示，AI 推理成本飙升正让 CFO 们警觉，这直接推高了企业对成本管控工具和开源模型选项的需求——据报道本轮认购需求高达约 150 亿美元，远超实际发行规模。</p>
+      <h4 class="sh">公司业务</h4>
+      <p>Databricks 由加州大学伯克利分校 AMPLab 的 Apache Spark 创始团队于 2013 年创办，CEO 为联合创始人 Ali Ghodsi。公司提供统一的"数据+AI"平台（Lakehouse 架构），让企业在同一套系统里完成数据存储、治理、分析与大模型的训练和部署。核心产品线包括云数据仓库、面向 AI Agent 的数据库 Lakebase（2025年6月推出）、以及可即时做业务分析的 AI 助手 Genie。</p>
 
-  <h4>历史融资情况</h4>
-  <table>
-    <tr><th>时间</th><th>轮次</th><th>金额</th><th>估值</th><th>主要投资方</th></tr>
-    <tr><td>2013</td><td>A 轮</td><td class="amt">$1300万</td><td>—</td><td>Andreessen Horowitz</td></tr>
-    <tr><td>2024年12月</td><td>J 轮</td><td class="amt">$100亿</td><td>$620亿</td><td>Thrive Capital 领投，a16z、DST Global、GIC、Insight Partners、WCM 共同投资</td></tr>
-    <tr><td>2025年8月</td><td>K 轮</td><td class="amt">$10亿</td><td>&gt;$1000亿</td><td>现有投资人跟投</td></tr>
-    <tr><td>2025年12月</td><td>增长轮</td><td class="amt">$50亿</td><td>$1340亿</td><td>彼时收入运行率超 48 亿美元</td></tr>
-    <tr><td>2026年8月</td><td>战略增长轮</td><td class="amt">$50亿</td><td>$1900亿</td><td>Coatue 领投；Blackstone、MGX、T. Rowe Price、新投资人 Sixth Street Growth；a16z、Thrive Capital、Goldman Sachs Alternatives、淡马锡等老股东跟投</td></tr>
-  </table>
-  <p style="margin-top:10px;font-size:13.5px;color:#555;">据 Crunchbase 数据，成立 13 年以来 Databricks 累计融资约 <b>250 亿美元</b>；估值从 2024 年 12 月的 620 亿美元，到 2025 年底的 1340 亿美元，再到本次 1900 亿美元，20 个月内增长约 3 倍。</p>
+      <h4 class="sh">历史融资情况</h4>
+      <ul class="hist">
+        <li><span class="d">2013–2021</span><span>种子轮至 I 轮，累计约 5 亿美元</span></li>
+        <li><span class="d">2024.12–2025.1</span><span>J 轮 100 亿美元，估值 620 亿美元</span></li>
+        <li><span class="d">2025.9</span><span>K 轮 10 亿美元，估值突破 1000 亿美元</span></li>
+        <li><span class="d">2025.12</span><span>约 40 亿美元，估值 1340 亿美元（另有 20 亿美元债务额度）</span></li>
+        <li><span class="d">2026.7</span><span>新一轮，估值 1880 亿美元（金额未披露）</span></li>
+        <li><span class="d">2026.8.13</span><span><b>本轮 50 亿美元，估值 1900 亿美元</b></span></li>
+      </ul>
+      <p style="margin-top:12px;">按 Tracxn 口径，本轮之前累计融资约 202 亿美元（15 轮、114 家投资方）；PitchBook 口径更高。TechCrunch 指出，公司仅在过去 20 个月就融资约 200 亿美元。本轮新进投资方包括 Sixth Street Growth、BOND、Clearlake Capital、Point72、Premji Invest、TPG；老股东 Andreessen Horowitz、Dragoneer、Goldman Sachs Alternatives、Thrive Capital 等继续跟投，参与方合计约二十余家。</p>
 
-  <h4>业务发展与财务表现</h4>
-  <p>公司在 2026 财年第二季度宣布跨过 <b>70 亿美元年化收入运行率</b>，同比增速超过 80%——相比 2025 年底的 48 亿美元运行率进一步加速。Databricks 自 2025 年 1 月起实现自由现金流转正，并在此后维持正的 TTM 自由现金流。客户方面，公司此前披露服务超过 1.5 万家组织，财富 500 强渗透率超过 60%，年化贡献 100 万美元以上的高价值客户超过 650 家。</p>
-  <p>关于 IPO，Ghodsi 表示上市"仍是计划的一部分"，但对时间点并不急迫："我们并不是一家只想留在私募市场的公司，但眼下我认为公开市场会带来太多干扰。"这也印证了当前的一个结构性现象：<b>充沛的后期私募资本正在持续推迟头部 AI 公司的 IPO 时点</b>。同日 Ghodsi 在接受 Forbes 采访时更抛出"AGI 其实已经到来"的判断，进一步为公司的估值叙事加码。</p>
+      <h4 class="sh">业务发展、营收与盈利</h4>
+      <p>Ghodsi 向 TechCrunch 透露，公司年化收入运行率已达 <b>70 亿美元</b>，同比增长 <b>80%</b>，且<b>经营性现金流为正</b>。其中核心云数据仓库业务贡献 15 亿美元 ARR，同比增速仍保持 100%；面向 Agent 的 Lakebase 上线一年即达到 1 亿美元收入运行率。研发端，公司组建了约 100 人的 AI 研究团队，并与三大云厂商签有数十亿美元级别的算力承诺。并购方面动作密集：2026年3月收购 Lakewatch 与 Antimatter，6月收购 AI 安全公司 Panther，8月收购 PGlite 开发商 Electric。</p>
 
-  <div class="tags">
-    <span class="tag">企业AI</span><span class="tag">数据平台</span><span class="tag">AI智能体</span><span class="tag">Coatue领投</span><span class="tag">Pre-IPO</span>
-  </div>
-</section>
+      <h4 class="sh">为什么值得关注</h4>
+      <p>这轮融资的戏剧性在于供需倒挂：Ghodsi 称公司原计划只融 10 亿美元，但在 The Information 报道其融资计划后"电话被打爆"，仅在筛选过的投资人范围内意向资金就达到 <b>150 亿美元</b>，最终折中为 50 亿美元。一家现金流为正、增速 80% 的公司仍在持续私募而非上市，本身说明了当前 AI 基础设施的资本开支强度——Ghodsi 的解释很直接："AI 很贵。"他重申仍希望有朝一日上市，但短期内不着急。对行业而言，1900 亿美元的估值意味着企业级 AI 数据平台的定价权正在向头部集中，中小数据创业公司在人才与心智份额上的竞争将更艰难。</p>
+    </div>
+  </section>
 
-<section>
-  <h2 style="margin-bottom:16px;">按重要性排序 · 重点交易</h2>
-  <ol class="deals">
+  <section class="card">
+    <h2 class="sec">按重要性排序 · 交易清单</h2>
+  </section>
 
+  <ol class="news">
     <li>
-      <div class="dh"><span class="name">Databricks</span><span class="amount">$50亿</span><span class="stage">战略增长轮 · 估值 $1900亿</span></div>
-      <div class="desc">企业级数据与 AI 湖仓平台，Q2 年化收入运行率突破 70 亿美元、同比增长超 80%。资金投向 Lakebase、Genie、Unity AI Gateway 等 AI 智能体产品线。跻身全球估值最高的私有科技公司之列。</div>
-      <div class="inv">投资方：Coatue（领投）、Blackstone、MGX、T. Rowe Price、Sixth Street Growth（新进）；a16z、Thrive Capital、Goldman Sachs Alternatives、淡马锡跟投</div>
-      <div class="tags"><span class="tag">美国</span><span class="tag">企业AI</span><span class="tag">8月13日</span></div>
+      <h3>Databricks 完成 <span class="amt">50 亿美元</span> 战略融资，估值达 1900 亿美元</h3>
+      <p>年化收入运行率突破 70 亿美元、同比增长 80% 且现金流为正。原计划募资 10 亿美元，因投资人意向达 150 亿美元而扩大规模。募资将用于 AI 研发、云算力承诺与持续并购。</p>
+      <p class="inv">投资方：Coatue（领投）、Blackstone、MGX、T. Rowe Price、Sixth Street Growth、BOND、Clearlake、Point72、Premji Invest、TPG、a16z、Dragoneer、Goldman Sachs Alternatives、Thrive Capital 等</p>
+      <div class="tags"><span class="hot">最大单笔</span><span>企业级 AI</span><span>数据平台</span><span>美国</span><span>8月13日</span></div>
     </li>
 
     <li>
-      <div class="dh"><span class="name">River AI</span><span class="amount">$11亿</span><span class="stage">种子轮 + A 轮</span></div>
-      <div class="desc">由 xAI 联合创始人、曾任职 Google DeepMind 与 OpenAI 的 Igor Babuschkin 于今年创立，成立仅两个月即完成超十亿美元融资。目标是让企业和个人能够自行训练、微调并"拥有"专属 AI 模型，强调开放权重与用户对智能的所有权。</div>
-      <div class="inv">投资方：General Catalyst、AMP PBC（共同领投）；NVIDIA、AMD Ventures 战略投资；Y Combinator、淡马锡参与</div>
-      <div class="tags"><span class="tag">美国</span><span class="tag">基础模型</span><span class="tag">NVIDIA战投</span><span class="tag">明星创始人</span></div>
+      <h3>英伟达 <span class="amt">5000 亿美元</span> AI 基础设施融资计划推进，高盛牵头对接机构资金</h3>
+      <p>据路透社报道，高盛正与银行、保险公司、资管机构及私募信贷基金洽谈，为英伟达 8月10日发布的 5000 亿美元 AI 基建融资计划募集第三方资本，合作方包括 Apollo、Blackstone、BlackRock、Brookfield、KKR。黄仁勋称英伟达最多兜底 1250 亿美元（约占潜在交易的 25%），其余风险由财团承担。这一结构的深层意图，是把 GPU 算力打造成可打包、可交易的资产类别。高盛研究预计四大超大规模厂商到 2030 年的技术与数据中心支出将超过 5 万亿美元。</p>
+      <p class="inv">参与方：高盛（独家贷款方）、Apollo、Blackstone、BlackRock、Brookfield、KKR</p>
+      <div class="tags"><span class="hot">结构性金融</span><span>AI 基础设施</span><span>英伟达</span><span>8月14日</span></div>
     </li>
 
     <li>
-      <div class="dh"><span class="name">Form Energy</span><span class="amount">$7.5亿</span><span class="stage">G 轮</span></div>
-      <div class="desc">研发 100 小时长时储能铁-空气电池，用于电网级电力存储——在 AI 数据中心推高电力需求的背景下，长时储能成为算力基础设施的关键配套。</div>
-      <div class="inv">投资方：T. Rowe Price（领投）；Breakthrough Energy Ventures、Energy Impact Partners、GE Vernova、Gigascale Capital、NGP、Prelude Ventures、TPG Rise Climate、Blindspot Ventures</div>
-      <div class="tags"><span class="tag">美国</span><span class="tag">能源基础设施</span><span class="tag">气候科技</span></div>
+      <h3>Anthropic 洽购英伟达投资的 Decart，交易规模约 <span class="amt">60 亿美元</span></h3>
+      <p>Decart 由以色列 Leitersdorf 兄弟与 Moshe Shalev 于 2023 年创办，主攻世界模型与提升芯片利用效率、降低 AI 训练成本的软件。2026年5月该公司刚由 Radical Ventures 领投完成 3 亿美元融资、英伟达作为新投资方入场，当时估值近 40 亿美元；60 亿美元报价意味着约 50% 溢价。若成交将是 Anthropic 迄今最大规模收购、也是其年内第五笔。双方均未正式宣布，交易仍存变数。</p>
+      <p class="inv">Decart 现有投资方：Radical Ventures、NVIDIA 等</p>
+      <div class="tags"><span class="hot">并购</span><span>AI 推理效率</span><span>以色列</span><span>8月13日</span></div>
     </li>
 
     <li>
-      <div class="dh"><span class="name">Lovable</span><span class="amount">$4亿</span><span class="stage">C 轮 · 估值 $133亿</span></div>
-      <div class="desc">瑞典"氛围编程"（vibe-coding）平台，用自然语言生成完整应用。官方称月访问量达 9 亿次、累计创建 6000 万个项目。估值较 2025 年 12 月 B 轮的 66 亿美元翻倍。</div>
-      <div class="inv">投资方：EQT、Menlo Ventures（共同领投）、Scaleup Europe Fund</div>
-      <div class="tags"><span class="tag">瑞典</span><span class="tag">AI编程</span><span class="tag">欧洲独角兽</span><span class="tag">8月12日</span></div>
+      <h3>国防无人机公司 Neros Technologies 获 <span class="amt">2.5 亿美元</span> C 轮，投后估值 25 亿美元</h3>
+      <p>加州 Torrance 的军用无人机制造商，规划"无人机舱工厂"，目标 2028 年为美军及盟军年产 100 万架无人机，已获陆军、海军陆战队与 SOCOM 合同。本轮由红杉资本与五角大楼背景的 American Strategic Technology Fund 共同支持，是本期地缘政治驱动型投资的最典型样本。</p>
+      <p class="inv">投资方：Sequoia Capital、American Strategic Technology Fund、Interlagos、Valor Equity Partners、Allen &amp; Company、Thiel Capital、Spark Capital、Dylan Field</p>
+      <div class="tags"><span class="hot">红杉 / Thiel</span><span>国防科技</span><span>无人机</span><span>8月13日</span></div>
     </li>
 
     <li>
-      <div class="dh"><span class="name">Cambridge Aerospace</span><span class="amount">$3亿</span><span class="stage">C 轮</span></div>
-      <div class="desc">英国国防科技公司，成立仅两年。其 Skyhammer 防空系统用于拦截无人机与低速导弹，已获英国国防部采购承诺。4 月刚完成 2 亿美元 B 轮。</div>
-      <div class="inv">投资方：DFJ Growth（领投）；此前 B 轮由 Spark Capital、Gil Capital 领投</div>
-      <div class="tags"><span class="tag">英国</span><span class="tag">国防科技</span><span class="tag">反无人机</span></div>
+      <h3>法律 AI 公司 Legora 寻求 <span class="amt">100 亿美元以上</span> 估值，四个月估值近乎翻倍</h3>
+      <p>据《金融时报》，这家瑞典公司正与投资人早期接触，交易可能包含老股转让与新增资本。今年3月其 5.5 亿美元 D 轮（Accel 领投）估值为 55.5 亿美元。二季度 ARR 环比增长 50% 至 1.5 亿美元，客户数增长四分之一至 1500 家律所及企业法务团队，团队从 40 人扩张至 700 人。竞争对手 Harvey 同期传出以 155 亿美元估值融资、年化收入超 3.5 亿美元。</p>
+      <p class="inv">现有投资方：Accel 等</p>
+      <div class="tags"><span>法律 AI</span><span>估值重估</span><span>瑞典</span><span>8月13日</span></div>
     </li>
 
     <li>
-      <div class="dh"><span class="name">Neros Technologies</span><span class="amount">$2.5亿</span><span class="stage">C 轮 · 投后估值 $25亿</span></div>
-      <div class="desc">美国军用无人机制造商，计划到 2028 年实现年产 100 万架无人机，已与美军及欧亚中东六个盟国签订合同。累计融资 3.7 亿美元。国防制造本土化的标志性交易。</div>
-      <div class="inv">投资方：红杉资本、American Strategic Technology Fund（共同领投）；Thiel Capital、Valor Equity Partners、Spark Capital、Interlagos、Allen &amp; Company、Dylan Field</div>
-      <div class="tags"><span class="tag">美国</span><span class="tag">国防科技</span><span class="tag">红杉</span><span class="tag">8月13日</span></div>
+      <h3>Alphabet 十年前投给 SpaceX 的 9 亿美元，IPO 后账面价值达 <span class="amt">941 亿美元</span></h3>
+      <p>SpaceX 于2026年5月20日递交 S-1、6月完成 IPO。Alphabet 季末持有 5.512 亿股，按 6月30日 170.86 美元收盘价计算价值约 942 亿美元，约为 2015 年投入的 100 倍，Alphabet 由此成为 SpaceX 最大机构股东。其中约 800 亿美元受常规 IPO 后短期锁定限制，剩余 141 亿美元锁定至 2027年9月。</p>
+      <p class="inv">投资方：Alphabet（Google，2015年，约 7.5% 股权）</p>
+      <div class="tags"><span class="hot">CVC 回报</span><span>航天</span><span>IPO</span><span>8月14日</span></div>
     </li>
 
     <li>
-      <div class="dh"><span class="name">CodeRabbit</span><span class="amount">$1.43亿</span><span class="stage">C 轮 · 估值 $15亿</span></div>
-      <div class="desc">AI 代码审查平台，服务 15 万个开源项目和 1.7 万家客户。随着编码日益自动化，代码审查成为判断产出是否达到生产标准的关键环节。计划在伦敦设立办公室拓展欧洲市场。</div>
-      <div class="inv">投资方：Atomico、Smash Capital（共同领投）</div>
-      <div class="tags"><span class="tag">美国</span><span class="tag">开发者工具</span><span class="tag">新晋独角兽</span></div>
+      <h3>器官保存技术公司 Bridge to Life 完成 <span class="amt">1.1 亿美元</span> C 轮股权融资并追加债务</h3>
+      <p>位于美国佐治亚州 Duluth，产品 VitaSmart™ 用于延长移植器官的体外存活时间。公司已实现商业化，本轮资金用于新产品上市与全球扩张，并同步对债务做了再融资以降低杠杆。股权+结构化债务的混合方案，反映出成长期医疗器械公司在当前环境下的融资取向。</p>
+      <p class="inv">投资方：Soleus Capital（领投）、Lauxera Capital Partners；债务由 Soleus Capital Credit Opportunities 提供</p>
+      <div class="tags"><span>医疗科技</span><span>器官移植</span><span>股权+债务</span><span>8月13日</span></div>
     </li>
 
     <li>
-      <div class="dh"><span class="name">Point2 Technology</span><span class="amount">$1.36亿</span><span class="stage">B 轮扩展</span></div>
-      <div class="desc">为 AI 数据中心提供高速互连（interconnect）解决方案，切入算力集群内部的带宽瓶颈。Arm 的战略投资显示芯片巨头正在向数据中心互连层延伸布局。</div>
-      <div class="inv">投资方：LB Investment（韩国，领投）；Arm Holdings 战略投资；Maverick Silicon 跟投</div>
-      <div class="tags"><span class="tag">美国/韩国</span><span class="tag">数据中心</span><span class="tag">Arm战投</span></div>
+      <h3>免疫学新药公司 Khartis Therapeutics 获 <span class="amt">5000 万美元</span> B 轮，累计融资 9500 万美元</h3>
+      <p>由前 Founders Fund 投资人联合创办，位于加州 Redwood City，开发针对系统性红斑狼疮、肌炎等自身免疫疾病的口服小分子药物，已有早期人体（一期）数据。本轮资金将推动管线进入二期临床。团队在药物设计中引入机器学习模型，并吸纳了基因泰克的前工程师。</p>
+      <p class="inv">投资方：Founders Fund、Andera Partners、Redmile Group 等（本轮领投方未披露）</p>
+      <div class="tags"><span class="hot">Founders Fund</span><span>生物科技</span><span>免疫学</span><span>8月13日</span></div>
     </li>
 
     <li>
-      <div class="dh"><span class="name">Bridge to Life</span><span class="amount">$1.1亿</span><span class="stage">C 轮 + 债权</span></div>
-      <div class="desc">成立 21 年的器官保存与灌注技术公司，其 VitaSmart 系统可延长移植器官的体外存活时间。本轮采用股权+结构化债权的混合方式，同时用于降低杠杆并推进器官活性评估工具在全美移植中心的落地。</div>
-      <div class="inv">投资方：Soleus Capital、Lauxera Capital Partners（共同领投）</div>
-      <div class="tags"><span class="tag">美国</span><span class="tag">医疗器械</span><span class="tag">8月13日</span></div>
+      <h3>跨境支付基础设施 Yuno 获 <span class="amt">4500 万美元</span> B 轮，主权基金与硅谷同场</h3>
+      <p>总部位于哥伦比亚波哥大，以单一 API 连接商户、银行与 1000 多种支付方式，提供智能路由、反欺诈与 KYC，自称"全球支付的 AI 原生操作系统"。资金用于全球扩张，包括线下支付与中东北非市场。CEO Ortega 强调本轮是为"匹配客户增长"，并明确指向盈利路径。</p>
+      <p class="inv">投资方：Global PayTech Ventures（领投）、Andreessen Horowitz、Tiger Global、QuantumLight（Nik Storonsky）、Monashees、Kaszek、Endeavor Catalyst、Rasmal Ventures（卡塔尔）、Further Ventures（阿布扎比）、GrowthX Capital</p>
+      <div class="tags"><span class="hot">a16z / Tiger</span><span>金融科技</span><span>主权基金</span><span>8月13日</span></div>
     </li>
 
     <li>
-      <div class="dh"><span class="name">Aureka Biotechnologies</span><span class="amount">$1亿</span><span class="stage">B 轮</span></div>
-      <div class="desc">AI 原生的蛋白质药物发现平台，总部位于上海与加州，成立三年累计融资 2 亿美元。资金用于以"lab-in-the-loop"反馈机制训练其药物发现模型。</div>
-      <div class="inv">投资方：Granite Asia（领投）</div>
-      <div class="tags"><span class="tag">中国/美国</span><span class="tag">AI制药</span><span class="tag">跨境</span></div>
+      <h3>AI 安全公司 Mindgard 完成 <span class="amt">3000 万美元</span> A 轮</h3>
+      <p>从英国兰卡斯特大学分拆而来，平台做"AI 红队"——模拟攻击 AI 模型与应用以发现漏洞并提供防护，此前曾披露 ChatGPT 等工具中的严重漏洞。总部分设伦敦与波士顿，目标客户为财富 2000 强企业。</p>
+      <p class="inv">投资方：Album VC（领投）、Karma Ventures、.406 Ventures、Atlantic Bridge、IQ Capital、Lakestar</p>
+      <div class="tags"><span>网络安全</span><span>AI 红队</span><span>英国/美国</span><span>8月13日</span></div>
     </li>
 
     <li>
-      <div class="dh"><span class="name">Yuno</span><span class="amount">$4500万</span><span class="stage">B 轮</span></div>
-      <div class="desc">哥伦比亚出身的"AI 原生"全球支付操作系统，单一 API 连接 1000+ 种支付方式，提供智能路由、反欺诈与 KYC。CEO 强调本轮资金指向"清晰的盈利路径"而非单纯烧钱扩张。</div>
-      <div class="inv">投资方：Global PayTech Ventures（领投）；a16z、Tiger Global、QuantumLight（Nik Storonsky）、Kaszek、Monashees、Endeavor Catalyst、卡塔尔 Rasmal Ventures、阿布扎比 Further Ventures</div>
-      <div class="tags"><span class="tag">拉美</span><span class="tag">金融科技</span><span class="tag">a16z</span><span class="tag">主权基金</span></div>
+      <h3>波兰 Pathway AI 获 <span class="amt">3000 万美元</span> 种子轮，估值 5 亿美元</h3>
+      <p>创始人为 OpenAI 校友，开发被称为 "Dragon Hatchling"（BDH）的后 Transformer 架构模型，试图把记忆与推理更高效地嵌入网络结构，从而降低单位算力成本。5 亿美元估值使其跻身估值最高的种子期 AI 公司之列，Databricks 前首席科学家 Jonathan Frankle 亦参与其中。</p>
+      <p class="inv">投资方：Id4 Ventures、TQ Ventures、Red Bridge Ventures、Kadmos Capital、WS Investment、Jonathan Frankle 等</p>
+      <div class="tags"><span>模型架构</span><span>高估值种子轮</span><span>波兰</span><span>8月13日</span></div>
     </li>
-
-    <li>
-      <div class="dh"><span class="name">Pathway AI</span><span class="amount">$3000万</span><span class="stage">种子轮 · 估值 $5亿</span></div>
-      <div class="desc">波兰华沙的"后 Transformer"模型公司，研发内嵌记忆与推理机制的 Dragon Hatchling（BDH）架构，主打单位算力下更强的推理能力。创始团队为 OpenAI 校友，Databricks 前首席科学家 Jonathan Frankle 参与投资——种子轮 5 亿美元估值属于全球最高之列。</div>
-      <div class="inv">投资方：Id4 Ventures、TQ Ventures、Red Bridge Ventures、Kadmos Capital、WS Investment</div>
-      <div class="tags"><span class="tag">波兰</span><span class="tag">模型架构</span><span class="tag">高估值种子轮</span><span class="tag">8月13日</span></div>
-    </li>
-
   </ol>
-</section>
 
-<footer>
-  <h5>信息来源</h5>
-  <ul>
-    <li><a href="https://news.crunchbase.com/ai/biggest-funding-rounds-databricks-river-ai-data-energy/">Crunchbase News：本周十大融资（8月14日）</a></li>
-    <li><a href="https://www.cnbc.com/2026/08/13/databricks-funding-round-190-billion-valuation.html">CNBC：Databricks 完成 50 亿美元融资</a></li>
-    <li><a href="https://www.bloomberg.com/news/articles/2026-08-13/databricks-raises-5-billion-at-a-190-billion-valuation">Bloomberg：Databricks 估值达 1900 亿美元</a></li>
-    <li><a href="https://www.databricks.com/company/newsroom/press-releases/databricks-grows-80-yoy-surpasses-7b-revenue-run-rate-scales">Databricks 官方新闻稿：收入运行率突破 70 亿美元</a></li>
-    <li><a href="https://www.forbes.com/sites/victordey/2026/08/13/databricks-hits-190-billion-valuation-as-ceo-ali-ghodsi-claims-agi-already-arrived/">Forbes：Ali Ghodsi 谈估值与 AGI</a></li>
-    <li><a href="https://techstartups.com/2026/08/13/venture-capital-startup-funding-roundup-august-13-2026-blackstone-coatue-founders-fund-sequoia-capital-thiel-capital-more/">TechStartups：8月13日创投融资汇总</a></li>
-    <li><a href="https://techcrunch.com/2026/08/11/general-catalyst-leads-1-1b-round-into-2-month-old-river-ai/">TechCrunch：General Catalyst 领投 River AI 11 亿美元</a></li>
-    <li><a href="https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m/">TechCrunch：Lovable 新一轮 4 亿美元、估值 133 亿</a></li>
-    <li><a href="https://river.ai/series-seed-series-a-funding">River AI 官方公告</a></li>
-    <li><a href="https://www.databricks.com/company/newsroom/press-releases/databricks-raising-10b-series-j-investment-62b-valuation">Databricks：J 轮 100 亿美元 / 620 亿估值</a></li>
-    <li><a href="https://www.databricks.com/company/newsroom/press-releases/databricks-raising-series-k-investment-100-billion-valuation">Databricks：K 轮超 1000 亿估值</a></li>
-    <li><a href="https://www.techtimes.com/articles/324478/20260814/databricks-raises-5b-190b-cfos-alarmed-ai-token-bills-drive-15b-demand.htm">TechTimes：本轮认购需求约 150 亿美元</a></li>
-  </ul>
-  <div class="disc">
-    <b>免责声明：</b>本页内容由 AI 依据上述公开报道自动汇总生成，覆盖 2026 年 8 月 13 日至 15 日期间披露的融资信息（部分交易于 8 月 11–12 日公布、于本周汇总中首次完整披露）。金额、估值与投资方名单均以媒体及公司公告为准，未经独立核实；未披露的估值或累计融资已明确标注。本页面仅供信息参考，不构成任何投资建议或要约。汇率与数据可能存在时滞，请以原始来源为准。
-  </div>
-</footer>
+  <footer>
+    <div class="card">
+      <h2 class="sec">信息来源</h2>
+      <ul>
+        <li><a href="https://techcrunch.com/2026/08/13/databricks-wanted-to-raise-1b-investors-wanted-15b-it-settled-on-5b-at-a-190b-valuation/">TechCrunch — Databricks wanted to raise $1B, investors wanted $15B. It settled on $5B at a $190B valuation.</a></li>
+        <li><a href="https://www.cnbc.com/2026/08/13/databricks-funding-round-190-billion-valuation.html">CNBC — Databricks wraps $5 billion funding round at $190 billion valuation</a></li>
+        <li><a href="https://www.bloomberg.com/news/articles/2026-08-13/databricks-raises-5-billion-at-a-190-billion-valuation">Bloomberg — Databricks Raises $5 Billion at a $190 Billion Valuation</a></li>
+        <li><a href="https://www.databricks.com/company/newsroom/press-releases/databricks-grows-80-yoy-surpasses-7b-revenue-run-rate-scales">Databricks 官方新闻稿 — Databricks Grows 80% YoY, Surpasses $7B Revenue Run Rate</a></li>
+        <li><a href="https://tracxn.com/d/companies/databricks/__h71WlGEvmuefCzSdZogxaGihmuCYu0rBKj3hkmJQF7M/funding-and-investors">Tracxn — Databricks 融资轮次与投资人列表</a></li>
+        <li><a href="https://techstartups.com/2026/08/13/venture-capital-startup-funding-roundup-august-13-2026-blackstone-coatue-founders-fund-sequoia-capital-thiel-capital-more/">TechStartups — Venture Capital &amp; Startup Funding Roundup, August 13, 2026</a></li>
+        <li><a href="https://techstartups.com/2026/08/14/goldman-sachs-in-talks-with-investors-on-nvidias-500-billion-ai-financing-deal-that-could-turn-compute-into-wall-streets-next-asset-class/">TechStartups — Goldman Sachs in talks with investors on Nvidia's $500 billion AI financing deal</a></li>
+        <li><a href="https://www.reuters.com/legal/transactional/goldman-talks-with-investors-nvidia-financing-deal-after-landing-prized-role-2026-08-14/">Reuters — Goldman in talks with investors on Nvidia financing deal after landing prized role</a></li>
+        <li><a href="https://fortune.com/2026/08/13/anthropic-said-in-talks-to-buy-startup-decart-for-6-billion/">Fortune — Anthropic said in talks to buy startup Decart for $6 billion</a></li>
+        <li><a href="https://www.calcalistech.com/ctechnews/article/mrrffazk1">Calcalist (Ctech) — Anthropic in talks to acquire Israeli AI startup Decart for $6 billion</a></li>
+        <li><a href="https://aicommission.org/2026/08/legal-ai-start-up-legora-seeks-funds-at-more-than-10bn-valuation/">Financial Times（经 AIC 转载）— Legal AI start-up Legora seeks funds at more than $10bn valuation</a></li>
+        <li><a href="https://news.crunchbase.com/venture/unicorn-legal-tech-ai-startup-legora-triples-valuation/">Crunchbase News — Legora Triples Valuation To $5.55B With $550M Series D Led By Accel</a></li>
+        <li><a href="https://techstartups.com/2026/08/14/alphabets-900-million-spacex-bet-explodes-to-94-billion-after-ipo-a-100x-return/">TechStartups — Alphabet's $900 million SpaceX bet explodes to $94 billion after IPO</a></li>
+        <li><a href="https://247wallst.com/investing/2026/08/14/alphabet-turned-900-million-in-spacex-into-94-billion-heres-the-lesson-for-investors/">24/7 Wall St. — Alphabet Turned $900 Million in SpaceX Into $94 Billion</a></li>
+        <li><a href="https://www.globenewswire.com/news-release/2026/08/12/3343819/0/en/yuno-raises-45-million-series-b-to-scale-the-ai-native-operating-system-of-global-payments-and-financial-services.html">GlobeNewswire — Yuno Raises $45 Million Series B</a></li>
+        <li><a href="https://www.businesswire.com/news/home/20260812503461/en/Mindgard-Raises-%2430M-Series-A-by-Turning-Attacker-Behavioral-Intelligence-into-Effective-AI-Defense">Business Wire — Mindgard Raises $30M Series A</a></li>
+        <li><a href="https://news.crunchbase.com/venture/biggest-funding-rounds-ai-energy-biotech-joulent/">Crunchbase News — The Week's 10 Biggest Funding Rounds</a></li>
+      </ul>
+      <div class="disc">
+        <b>免责声明：</b>本页内容由自动化流程根据 2026年8月16日当天公开检索到的媒体报道整理生成，覆盖 8月13日至 8月15日的公开信息，仅供信息参考，不构成任何投资建议、要约或推荐。部分交易（如 Anthropic 收购 Decart、Legora 新一轮融资）尚处于洽谈或传闻阶段，未经当事方正式确认，最终条款可能变动或交易未能达成。不同数据源对累计融资额、估值等口径存在差异，文中已尽量标注来源；金额与估值均以原始报道为准。读者据此操作，风险自担。<br>
+        生成时间：2026年8月16日 · 数据截至各来源报道发布时点。
+      </div>
+    </div>
+  </footer>
 
 </div>
 </body>
