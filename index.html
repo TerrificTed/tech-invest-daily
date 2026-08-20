@@ -3,244 +3,280 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日科技投资动态 · 2026年8月19日</title>
+<title>每日科技投资动态 · 2026年8月20日</title>
 <style>
-:root{
-  --accent:#c8401a;
-  --ink:#1a1a1a;
-  --muted:#6b6b6b;
-  --line:#e2ded8;
-  --bg:#f4f1ec;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{
-  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC",sans-serif;
-  background:var(--bg);color:var(--ink);line-height:1.75;-webkit-font-smoothing:antialiased;
-}
-.wrap{max-width:900px;margin:0 auto;padding:0 20px 60px}
+  :root{
+    --accent:#c8401a;
+    --ink:#1a1a1a;
+    --muted:#6b6b6b;
+    --line:#e3ded7;
+    --bg:#f5f2ed;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC",sans-serif;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:32px 20px 64px;}
 
-/* 页头 */
-header{border-bottom:3px double var(--ink);padding:38px 0 20px;margin-bottom:28px;text-align:center}
-header .kicker{font-size:12px;letter-spacing:.4em;color:var(--accent);font-weight:600;margin-bottom:10px}
-header h1{font-size:42px;letter-spacing:.08em;font-weight:700;line-height:1.2}
-header .meta{margin-top:14px;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px}
-header .meta b{color:var(--ink);font-weight:600}
+  /* 页头 */
+  header{
+    border-bottom:3px double var(--ink);
+    padding-bottom:18px;margin-bottom:28px;
+  }
+  .kicker{
+    font-size:12px;letter-spacing:.32em;color:var(--accent);
+    text-transform:uppercase;font-weight:700;margin-bottom:8px;
+  }
+  h1{
+    font-size:38px;margin:0 0 10px;letter-spacing:.06em;font-weight:800;
+  }
+  .meta{
+    display:flex;flex-wrap:wrap;gap:8px 20px;
+    font-size:13px;color:var(--muted);
+    border-top:1px solid var(--line);padding-top:12px;margin-top:14px;
+  }
+  .meta b{color:var(--ink);font-weight:600;}
 
-/* 通用卡片 */
-.card{background:#fff;border:1px solid var(--line);border-radius:4px;padding:24px 26px;margin-bottom:20px}
-h2.sec{font-size:15px;letter-spacing:.22em;color:var(--accent);font-weight:700;margin:34px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+  /* 通用卡片 */
+  .card{
+    background:#fff;border:1px solid var(--line);
+    border-radius:2px;padding:22px 24px;margin-bottom:20px;
+    box-shadow:0 1px 2px rgba(0,0,0,.03);
+  }
+  h2{
+    font-size:15px;letter-spacing:.24em;margin:34px 0 14px;
+    padding-left:12px;border-left:5px solid var(--accent);
+    font-weight:700;
+  }
 
-/* 概览 */
-.overview p{font-size:15.5px;color:#333;margin-bottom:12px}
-.overview p:last-child{margin-bottom:0}
-.stats{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
-.stat{flex:1 1 150px;background:#faf8f5;border:1px solid var(--line);border-radius:3px;padding:14px 16px}
-.stat .n{font-size:24px;font-weight:700;color:var(--accent);line-height:1.2}
-.stat .l{font-size:12px;color:var(--muted);margin-top:4px}
+  /* 概览 */
+  .overview p{margin:0 0 12px;font-size:15px;}
+  .overview p:last-child{margin-bottom:0;}
+  .stats{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:1px;background:var(--line);border:1px solid var(--line);margin-top:18px;
+  }
+  .stat{background:#fff;padding:14px 16px;}
+  .stat .n{font-size:22px;font-weight:800;color:var(--accent);letter-spacing:.02em;}
+  .stat .l{font-size:12px;color:var(--muted);margin-top:2px;}
 
-/* 重点卡片 */
-.hero{border:2px solid var(--accent);background:#fff;border-radius:4px;overflow:hidden;margin-bottom:8px}
-.hero-top{background:var(--accent);color:#fff;padding:10px 26px;font-size:12.5px;letter-spacing:.3em;font-weight:600}
-.hero-body{padding:26px}
-.hero-body h3{font-size:28px;font-weight:700;line-height:1.3;margin-bottom:6px}
-.hero-body .sub{color:var(--muted);font-size:13.5px;margin-bottom:20px}
-.grid{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
-.cell{flex:1 1 140px;border:1px solid var(--line);border-radius:3px;padding:12px 14px;background:#faf8f5}
-.cell .k{font-size:11.5px;color:var(--muted);letter-spacing:.05em}
-.cell .v{font-size:19px;font-weight:700;color:var(--accent);margin-top:3px;line-height:1.25}
-.cell .v.small{font-size:15px}
-.hero h4{font-size:14px;font-weight:700;margin:18px 0 7px;padding-left:9px;border-left:3px solid var(--accent)}
-.hero p{font-size:15px;color:#333}
-table.rounds{width:100%;border-collapse:collapse;margin-top:8px;font-size:13.5px}
-table.rounds th,table.rounds td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left}
-table.rounds th{color:var(--muted);font-weight:600;font-size:12.5px;background:#faf8f5}
-table.rounds td.amt{color:var(--accent);font-weight:700;white-space:nowrap}
+  /* 重点卡片 */
+  .hl{border:2px solid var(--accent);position:relative;padding-top:30px;}
+  .hl-tag{
+    position:absolute;top:-1px;left:-1px;background:var(--accent);color:#fff;
+    font-size:11px;letter-spacing:.2em;padding:5px 14px;font-weight:700;
+  }
+  .hl h3{font-size:26px;margin:6px 0 4px;font-weight:800;}
+  .hl .sub{color:var(--muted);font-size:13px;margin-bottom:16px;}
+  .grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+    gap:1px;background:var(--line);border:1px solid var(--line);margin:18px 0;
+  }
+  .cell{background:#fdfbf8;padding:13px 14px;}
+  .cell .v{font-size:19px;font-weight:800;color:var(--accent);}
+  .cell .k{font-size:11.5px;color:var(--muted);margin-top:2px;letter-spacing:.05em;}
+  .hl h4{
+    font-size:13px;letter-spacing:.14em;margin:20px 0 8px;color:var(--ink);
+    border-bottom:1px solid var(--line);padding-bottom:6px;font-weight:700;
+  }
+  .hl p{font-size:14.5px;margin:0 0 10px;}
+  .rounds{list-style:none;padding:0;margin:0;font-size:14px;}
+  .rounds li{padding:7px 0;border-bottom:1px dashed var(--line);display:flex;gap:12px;}
+  .rounds li:last-child{border-bottom:none;}
+  .rounds .d{color:var(--accent);font-weight:700;min-width:88px;font-variant-numeric:tabular-nums;}
 
-/* 新闻列表 */
-.item{background:#fff;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:3px;padding:18px 22px;margin-bottom:12px}
-.item .hd{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
-.item .rank{font-size:13px;font-weight:700;color:#fff;background:var(--ink);border-radius:50%;width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;flex:none}
-.item h3{font-size:18px;font-weight:700}
-.item .amt{font-size:19px;font-weight:700;color:var(--accent);margin-left:auto;white-space:nowrap}
-.item p{font-size:14.5px;color:#444;margin-bottom:10px}
-.item .inv{font-size:13px;color:var(--muted);margin-bottom:10px}
-.tags{display:flex;flex-wrap:wrap;gap:6px}
-.tag{font-size:11.5px;color:var(--accent);border:1px solid #e8c4b8;background:#fdf5f2;border-radius:2px;padding:2px 8px}
-.tag.d{color:var(--muted);border-color:var(--line);background:#f7f5f2}
+  /* 新闻列表 */
+  ol.news{list-style:none;counter-reset:n;padding:0;margin:0;}
+  ol.news>li{
+    counter-increment:n;background:#fff;border:1px solid var(--line);
+    padding:18px 22px 18px 62px;position:relative;margin-bottom:12px;border-radius:2px;
+  }
+  ol.news>li::before{
+    content:counter(n,decimal-leading-zero);
+    position:absolute;left:18px;top:17px;
+    font-size:17px;font-weight:800;color:var(--accent);opacity:.55;
+    font-variant-numeric:tabular-nums;
+  }
+  .n-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin-bottom:6px;}
+  .n-name{font-size:17px;font-weight:700;}
+  .amt{
+    background:#fdece6;color:var(--accent);font-weight:800;font-size:14px;
+    padding:2px 9px;border-radius:2px;letter-spacing:.02em;
+  }
+  .n-desc{font-size:14px;color:#333;margin:0 0 10px;}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;}
+  .tag{
+    font-size:11.5px;color:var(--muted);border:1px solid var(--line);
+    padding:2px 8px;border-radius:2px;background:#faf8f5;
+  }
+  .tag.inv{color:var(--accent);border-color:#f0d3c8;background:#fdf4f0;}
 
-/* 底部 */
-footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
-footer h5{font-size:12px;letter-spacing:.2em;color:var(--ink);margin-bottom:10px}
-footer ul{list-style:none;margin-bottom:18px}
-footer li{margin-bottom:5px;word-break:break-all}
-footer a{color:var(--accent);text-decoration:none}
-footer a:hover{text-decoration:underline}
-.disc{background:#faf8f5;border:1px solid var(--line);border-radius:3px;padding:14px 16px;line-height:1.7}
-@media(max-width:600px){
-  header h1{font-size:30px}
-  .hero-body h3{font-size:22px}
-  .item .amt{margin-left:0}
-}
+  /* 页脚 */
+  footer{margin-top:40px;border-top:3px double var(--ink);padding-top:20px;font-size:12.5px;color:var(--muted);}
+  footer h5{font-size:12px;letter-spacing:.2em;color:var(--ink);margin:0 0 10px;font-weight:700;}
+  footer ul{padding-left:18px;margin:0 0 18px;}
+  footer li{margin-bottom:5px;word-break:break-all;}
+  footer a{color:var(--accent);text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+  .disc{border-left:3px solid var(--line);padding-left:12px;line-height:1.7;}
+
+  @media(max-width:600px){
+    h1{font-size:27px;}
+    .hl h3{font-size:21px;}
+    ol.news>li{padding:16px 16px 16px 52px;}
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <header>
-  <div class="kicker">全球科技行业投资简报</div>
+  <div class="kicker">Daily Tech Investment Brief</div>
   <h1>每日科技投资动态</h1>
   <div class="meta">
-    <span><b>2026年8月19日</b>（星期三）</span>
-    <span>覆盖区间：8月17日 — 8月18日</span>
-    <span>来源：TechCrunch · TechStartups · Reuters · PR Newswire</span>
+    <span><b>2026年8月20日</b>（星期四）</span>
+    <span>覆盖时段：<b>8月18日—8月19日</b></span>
+    <span>信息源：TechCrunch · TechStartups · Unite.AI · Quartz</span>
   </div>
 </header>
 
-<h2 class="sec">今日概览</h2>
+<h2>今日概览</h2>
 <div class="card overview">
-  <p>过去 48 小时，资本继续以极高的集中度流向 <strong>AI 推理算力</strong> 与 <strong>物理世界的自动化</strong>。最刺眼的一笔来自芯片公司 Etched——其估值在一个月内从 103 亿美元翻倍至 <strong>210 亿美元</strong>，领投方是量化基金 Jane Street，而 Jane Street 同时也是 Etched 首套集群系统的第一个真实客户。</p>
-  <p>同期 Higgsfield 以 54 亿美元估值完成 4 亿美元 B 轮（DST Global 领投），八个月内估值翻两番；Groq 在被英伟达"抽走"芯片业务与创始人后，以 35 亿美元估值重启为推理云；SoftBank 单独出资 2 亿美元投向苏黎世的挖掘机自动驾驶公司 Gravis Robotics。</p>
-  <p>结构性信号很清楚：钱不再奖励"能做 demo 的 AI"，而是奖励占据了某个<strong>经济控制点</strong>的公司——稀缺的推理算力、企业工作流、专有交互界面、或已部署在物理世界里的机器。TechStartups 统计 8 月 17 日十笔交易共约 13.7 亿美元，其中前四家吃掉了近 90%。</p>
+  <p>过去 48 小时，全球风险投资的主线依然是 <b>AI 基础设施</b>，但资金正在从"模型层"继续向下沉：推理芯片、单位功耗算力、数据中心光互连成为最贵的标的。最具标志性的一笔是 AI 推理芯片公司 <b>Etched</b> 融资 7 亿美元、估值 210 亿美元——距其上一轮仅一个月，估值翻倍。</p>
+  <p>第二条主线是 <b>物理 AI（Physical AI）</b>：前 NVIDIA AI 研究副总裁 Sanja Fidler 创立的 Veeda AI 拿下 9,000 万美元以上种子轮（Khosla Ventures、Radical Ventures 支持），Rivian 分拆的 Also 融资 1.5 亿美元转向自动配送车，Velaura AI 则从硅片层面攻击 AI 的电力成本问题。</p>
+  <p>资金高度集中的特征依旧显著：TechStartups 统计显示，其 8 月 18 日榜单中 Etched 一家占据当日美元交易总额的约 72%，前两名合计约 84%。此外，PitchBook / NVCA 数据显示 2026 年上半年美国创投交易额约 4,127 亿美元，AI 与超大轮次占据压倒性比重。</p>
   <div class="stats">
-    <div class="stat"><div class="n">$21.7亿</div><div class="l">本简报 11 笔交易合计</div></div>
-    <div class="stat"><div class="n">~97%</div><div class="l">8/17 资金流向 AI 及机器自主</div></div>
-    <div class="stat"><div class="n">$5100亿</div><div class="l">2026 上半年全球创投总额（Crunchbase）</div></div>
-    <div class="stat"><div class="n">73%</div><div class="l">美国资金流入 10 亿美元以上超大轮</div></div>
+    <div class="stat"><div class="n">11 笔</div><div class="l">本期收录交易</div></div>
+    <div class="stat"><div class="n">约 12.3 亿</div><div class="l">美元合计披露金额</div></div>
+    <div class="stat"><div class="n">210 亿</div><div class="l">最高估值（Etched，美元）</div></div>
+    <div class="stat"><div class="n">4,127 亿</div><div class="l">2026 上半年美国创投总额（美元）</div></div>
   </div>
 </div>
 
-<h2 class="sec">今日最值得关注</h2>
-<div class="hero">
-  <div class="hero-top">重点深挖 · AI 推理芯片</div>
-  <div class="hero-body">
-    <h3>Etched：一个月估值翻倍至 210 亿美元</h3>
-    <div class="sub">加州 · AI 推理专用芯片与整机集群 · 2026年8月18日宣布 · Jane Street 领投</div>
+<h2>今日最值得关注</h2>
+<div class="card hl">
+  <div class="hl-tag">FOCUS</div>
+  <h3>Etched：一个月估值翻倍至 210 亿美元</h3>
+  <div class="sub">美国加州圣何塞 · AI 推理芯片与整机集群 · 2026年8月18日宣布</div>
 
-    <div class="grid">
-      <div class="cell"><div class="k">本轮融资额</div><div class="v">$7.00亿</div></div>
-      <div class="cell"><div class="k">投后估值</div><div class="v">$210亿</div></div>
-      <div class="cell"><div class="k">累计披露融资</div><div class="v">约 $16.2亿</div></div>
-      <div class="cell"><div class="k">在手客户订单</div><div class="v">约 $10亿</div></div>
-      <div class="cell"><div class="k">估值变化</div><div class="v small">1个月内 $103亿 → $210亿</div></div>
-      <div class="cell"><div class="k">营收</div><div class="v small">未披露</div></div>
-    </div>
-
-    <h4>被投公司在做什么</h4>
-    <p>Etched 由两位从大学辍学的创始人创立，最初的思路是把某个特定大模型"蚀刻"进芯片（公司名由此而来）。这条路径曾被广泛质疑，如今公司已经放弃了它——现在的系统可以运行任意前沿模型。Etched 交付的不是单颗芯片，而是它称为"前沿推理集群"（frontier inference cluster）的整机系统，对标英伟达的"AI 工厂"。首款处理器名为 Sohu。</p>
-    <p>技术上，联合创始人兼 COO Robert Wachen 表示公司从零设计了两个新部件，分别针对推理的两个阶段：<strong>prefill</strong>（理解提示词，算力密集）使用一颗低电压芯片，在不产生高端 AI 芯片典型散热问题的前提下塞入更多晶体管；<strong>decode</strong>（生成输出 token，内存密集）则使用一种新型内存与互连，公司称之为"集群级内存"（cluster-scale memory），让大量芯片以极低延迟共享同一内存池。宣称结果是更高速度与更低成本。</p>
-
-    <h4>历史融资情况</h4>
-    <table class="rounds">
-      <tr><th>轮次</th><th>金额</th><th>估值</th><th>主要投资方</th></tr>
-      <tr><td>A 轮</td><td class="amt">$1.20亿</td><td>—</td><td>Positive Sum、Primary Venture Partners</td></tr>
-      <tr><td>B 轮（2025年12月）</td><td class="amt">$5.00亿</td><td>$50亿</td><td>未完全披露</td></tr>
-      <tr><td>C 轮（2026年7月）</td><td class="amt">$3.00亿</td><td>$103亿</td><td>红杉领投，a16z、Jane Street、Diffusion、SK 海力士参投</td></tr>
-      <tr><td>新一轮（2026年8月18日）</td><td class="amt">$7.00亿</td><td>$210亿</td><td>Jane Street 领投</td></tr>
-    </table>
-    <p style="margin-top:10px;font-size:13.5px;color:#555">其他在册投资方包括 Kleiner Perkins、红杉资本、Andreessen Horowitz、Peter Thiel、Tiger Global、Bain Capital Ventures、Neo、Stripes、Primary、Positive Sum、Diffusion、Argo、黑石。</p>
-
-    <h4>业务进展与财务</h4>
-    <p>本轮最值得注意的地方在于<strong>领投方就是客户</strong>：Jane Street 测试并购买了 Etched 的硬件，首套出货的集群系统已安装进 Jane Street 自己的数据中心。该机构在公告博客中表示"我们测试了芯片，对早期结果感到满意；Etched 独特的推理路线提供了我们最苛刻工作负载所需的精度"。这把一次估值跃升从"叙事驱动"部分转成了"部署验证驱动"。</p>
-    <p>公司此前披露在手客户订单约 10 亿美元。<strong>Etched 未公开营收与盈利数据</strong>，因此 210 亿美元估值目前仍主要建立在订单储备、技术稀缺性和首个旗舰客户的背书之上，而非可验证的收入规模。风险同样明显：芯片研发资本消耗巨大，超大客户认证周期长，且需要在英伟达持续迭代的节奏下证明性能与成本优势可复制到多样化的真实负载。</p>
+  <div class="grid">
+    <div class="cell"><div class="v">7.0 亿</div><div class="k">本轮融资（美元）</div></div>
+    <div class="cell"><div class="v">210 亿</div><div class="k">投后估值（美元）</div></div>
+    <div class="cell"><div class="v">约 19 亿</div><div class="k">累计融资（美元）</div></div>
+    <div class="cell"><div class="v">&gt;10 亿</div><div class="k">在手客户订单（美元）</div></div>
+    <div class="cell"><div class="v">400+</div><div class="k">员工人数</div></div>
+    <div class="cell"><div class="v">+104%</div><div class="k">一个月估值涨幅</div></div>
   </div>
+
+  <h4>业务内容</h4>
+  <p>Etched 由三位哈佛辍学生创立，总部位于加州圣何塞。公司不卖单颗芯片，而是交付被其称为"前沿推理集群（frontier inference clusters）"的整机机架系统——对标 NVIDIA 的"AI 工厂"。</p>
+  <p>其技术核心是针对推理的两个阶段分别做定制：在计算密集的 <b>prefill（预填充）</b> 阶段，Etched 采用<b>低压推理（Low Voltage Inference）</b>芯片，在同等功耗封套内塞入更多晶体管而不产生高端 AI 芯片常见的散热问题；在内存密集的 <b>decode（解码）</b> 阶段，公司自研了<b>集群级内存（Cluster Scale Memory）</b>与互连，让整个集群共享一个低延迟内存池。COO Robert Wachen 强调，公司早期"把某个模型固化进芯片"的印象已不成立，现在的系统可运行任意前沿模型。</p>
+
+  <h4>历史融资</h4>
+  <ul class="rounds">
+    <li><span class="d">2025年12月</span><span>估值约 50 亿美元</span></li>
+    <li><span class="d">2026年7月</span><span>C 轮 3 亿美元，估值 103 亿美元</span></li>
+    <li><span class="d">2026年8月</span><span>本轮 7 亿美元，估值 210 亿美元（多数媒体归类为 D 轮）</span></li>
+    <li><span class="d">累计</span><span>约 19 亿美元（部分口径接近 20 亿）</span></li>
+  </ul>
+  <p style="margin-top:12px">投资方阵容：本轮由量化交易巨头 <b>Jane Street</b> 领投，Kleiner Perkins、Sequoia、Andreessen Horowitz、Tiger Global、Bain Capital Ventures、Blackstone、Neo、Primary、Stripes、Positive Sum 等参与；此前投资人还包括 Peter Thiel、Diffusion、Argo。</p>
+
+  <h4>业务与商业化进展</h4>
+  <p>本轮最关键的变化不是金额，而是<b>领投方同时成为首个客户</b>。Jane Street 在测试芯片后完成采购，Etched 上月向其交付了首个机架，目前已在 Jane Street 自有数据中心投入实际工作负载。Jane Street 在公告中表示："我们测试了这颗芯片，对早期结果感到满意——Etched 独特的推理方案能提供我们最苛刻工作负载所需的精度。"</p>
+  <p>公司披露已获得<b>超过 10 亿美元的客户合同</b>。目前尚未公开营收与盈利数据，其 210 亿美元估值仍主要建立在未来推理市场份额的假设之上。主要风险包括：制造良率与封装、内存供应、软件生态兼容性、客户集中度，以及来自 NVIDIA 和云厂商自研芯片的竞争。</p>
 </div>
 
-<h2 class="sec">按重要性排序 · 其余交易</h2>
+<h2>重要交易一览（按重要性排序）</h2>
+<ol class="news">
 
-<div class="item">
-  <div class="hd"><span class="rank">2</span><h3>Higgsfield</h3><span class="amt">$4.00亿</span></div>
-  <p>AI 视频与图像生成平台，B 轮，投后估值 54 亿美元——八个月前 A 轮估值仅 13 亿美元，翻两番。公司自称 8 月年化收入达 <strong>7 亿美元</strong>（一年前约 2000 万美元、2025 年底约 2 亿美元），覆盖 238 个国家和地区的 3000 万以上用户，并为财富 500 强中的 390 家提供视觉制作。创始人为前 Snap 高管 Alex Mashrabov，公司今年因在戛纳和纽约首映 AI 生成电影而受关注。新资金将大量用于购买算力：一分钟视频的处理量约等于 6 万个词。注：上述经营数据为公司自述。</p>
-  <div class="inv">投资方：DST Global（领投）、Tribe Capital、高盛另类投资成长股权、Smash Capital、Fifth Wall、Valor Capital、<strong>Intel Capital</strong>、Liberty Global、未来资产、NTT DOCOMO Ventures，以及老股东 Accel、Menlo Ventures</div>
-  <div class="tags"><span class="tag">生成式AI</span><span class="tag">企业视觉媒体</span><span class="tag d">B轮</span><span class="tag d">8月17日</span></div>
-</div>
+  <li>
+    <div class="n-top"><span class="n-name">Etched</span><span class="amt">$700M</span></div>
+    <p class="n-desc">AI 推理芯片与整机集群公司，估值一个月内从 103 亿美元翻倍至 210 亿美元。领投方 Jane Street 同时成为其首个付费客户并已部署机架，公司在手订单超 10 亿美元。</p>
+    <div class="tags"><span class="tag inv">Jane Street 领投</span><span class="tag inv">Sequoia</span><span class="tag inv">a16z</span><span class="tag inv">Kleiner Perkins</span><span class="tag inv">Tiger Global</span><span class="tag">半导体</span><span class="tag">估值 $21B</span><span class="tag">8月18日</span></div>
+  </li>
 
-<div class="item">
-  <div class="hd"><span class="rank">3</span><h3>Groq</h3><span class="amt">$3.50亿</span></div>
-  <p>今日结构最特殊的一笔。Groq 在英伟达以约 200 亿美元的技术授权+人才协议"抽走"其 LPU 芯片业务并招走创始人 Jonathan Ross 后，把剩余业务重启为 AI 推理云（neocloud）。本轮标称"A 轮"，估值 35 亿美元——约为交易前 69 亿美元估值的一半。6 月刚融过 6.5 亿美元，重组后累计已融 10 亿美元。计划把基础设施从当前约 54 兆瓦扩至 2027 年的 200 兆瓦以上。这笔钱既反映投资人对推理算力稀缺性的判断，也暴露了 neocloud 模式对 GPU、电力和数据中心的持续资本需求。</p>
-  <div class="inv">投资方：Disruptive（领投），<strong>英伟达</strong>计划参投</div>
-  <div class="tags"><span class="tag">AI基础设施</span><span class="tag">推理云</span><span class="tag d">重组后A轮</span><span class="tag d">8月17日</span></div>
-</div>
+  <li>
+    <div class="n-top"><span class="n-name">Also（Rivian 分拆）</span><span class="amt">$150M</span></div>
+    <p class="n-desc">D 轮由 Prysm Capital 领投，Eclipse、Greenoaks、MVP Ventures 跟投。这家 2025 年从 Rivian 分拆的微出行公司正从电助力自行车、商用货运四轮车扩展到<b>自动配送车</b>，成立不到两年累计融资 4.55 亿美元。Rivian 仍持有少数股权，创始人 RJ Scaringe 任董事；此前 DoorDash 曾战略入股并签订多年自动配送车协议。</p>
+    <div class="tags"><span class="tag inv">Prysm Capital 领投</span><span class="tag inv">Greenoaks</span><span class="tag inv">Eclipse</span><span class="tag">自动驾驶</span><span class="tag">微出行</span><span class="tag">8月19日</span></div>
+  </li>
 
-<div class="item">
-  <div class="hd"><span class="rank">4</span><h3>Wispr（Wispr Flow）</h3><span class="amt">$2.80亿</span></div>
-  <p>语音输入与语音交互公司，B 轮，估值 20 亿美元，累计融资 3.61 亿美元。九个月前的 2500 万美元轮次估值还只有 7 亿美元。Wispr 的野心不止于听写：它想把口语变成通用计算界面——写作、导航应用、记录会议乃至协调工作流。目前称已被超过 1 万家企业使用，并推出了自研语音识别模型 Canto 和会议记录产品。挑战在于赛道拥挤（Granola、Fireflies、Read AI 等）以及语音能力被操作系统原生吸收的风险。</p>
-  <div class="inv">投资方：Menlo Ventures（领投，老股东）、Notable Capital、NEA、8VC、MVP Ventures、Acrew、Forerunner、Goodwater、Peak XV</div>
-  <div class="tags"><span class="tag">语音AI</span><span class="tag">生产力工具</span><span class="tag d">B轮</span><span class="tag d">8月17日</span></div>
-</div>
+  <li>
+    <div class="n-top"><span class="n-name">Velaura AI</span><span class="amt">$110M</span></div>
+    <p class="n-desc">A 轮由 Seligman Ventures 领投，估值超 10 亿美元，Capricorn Investment Group 新进，<b>三星 Samsung Catalyst Fund</b>、StepStone、Maverick Silicon 参与。公司做低功耗芯片与软件，其 Titan Core 平台主打每瓦性能，称已与四大云厂商中的三家接触；商业模式为"技术预付费 + 按客户省电量抽成"，类似半导体 IP 授权。</p>
+    <div class="tags"><span class="tag inv">Seligman Ventures 领投</span><span class="tag inv">Samsung Catalyst Fund</span><span class="tag">半导体</span><span class="tag">能效计算</span><span class="tag">独角兽</span><span class="tag">8月18日</span></div>
+  </li>
 
-<div class="item">
-  <div class="hd"><span class="rank">5</span><h3>Gravis Robotics</h3><span class="amt">$2.00亿</span></div>
-  <p>苏黎世联邦理工（ETH）孵化的重型工程机械自动驾驶公司，A 轮，<strong>SoftBank 为唯一投资方</strong>，投后估值约 10 亿美元，累计融资至少 2.23 亿美元。公司称这是建筑机器人领域迄今最大的 A 轮。其务实之处在于"后装"：技术可加装到多个厂商的现有挖掘机与土方机械上，提供从辅助操作、远程操控到自动驾驶的渐进能力——建筑车队更新极慢，业主不会为了软件换掉数百万美元的设备。公司称可提升机器生产率最多 30%（公司自述数据）。</p>
-  <div class="inv">投资方：SoftBank Group（唯一投资方）</div>
-  <div class="tags"><span class="tag">物理AI</span><span class="tag">建筑机器人</span><span class="tag d">A轮</span><span class="tag d">8月17日</span></div>
-</div>
+  <li>
+    <div class="n-top"><span class="n-name">Navi（印度）</span><span class="amt">$100M</span></div>
+    <p class="n-desc">Flipkart 联合创始人 Sachin Bansal 创办的金融科技公司 Navi 获得 <b>Prosus</b> 1 亿美元投资，为其成立八年来首次引入外部机构资本，估值约 13 亿美元。</p>
+    <div class="tags"><span class="tag inv">Prosus</span><span class="tag">金融科技</span><span class="tag">印度</span><span class="tag">估值 $1.3B</span><span class="tag">8月19日</span></div>
+  </li>
 
-<div class="item">
-  <div class="hd"><span class="rank">6</span><h3>Velaura AI</h3><span class="amt">$1.10亿</span></div>
-  <p>硅谷 AI 基础设施公司，A 轮，估值超 10 亿美元，直接晋级独角兽。其押注是：AI 的下一个瓶颈不是算力供给，而是<strong>电力</strong>。旗舰产品 Titan Core 是一套数字芯片 IP 与设计平台，公司称能在不牺牲性能的前提下，把 AI 加速器常用数学运算的每瓦性能提升 2–4 倍，底层技术已在超过 3000 万颗 ASIC 中量产部署——这是多数年轻半导体公司缺乏的量产履历。CEO 为 Rajiv Khemani，团队来自 Apple、英伟达、Google、高通、Marvell。公司称已在与头部超大规模厂商探讨纳入其未来 XPU 路线图。</p>
-  <div class="inv">投资方：Seligman Ventures（领投）、Capricorn Investment Group、Prosperity7 Ventures；老股东 Mayfield、Maverick Silicon、MARA、Premji Invest、<strong>三星 Catalyst Fund</strong>、StepStone</div>
-  <div class="tags"><span class="tag">半导体</span><span class="tag">低功耗算力</span><span class="tag d">A轮</span><span class="tag d">8月18日</span></div>
-</div>
+  <li>
+    <div class="n-top"><span class="n-name">Veeda AI（加拿大）</span><span class="amt">$90M+</span></div>
+    <p class="n-desc">前 <b>NVIDIA</b> AI 研究副总裁、多伦多大学教授 Sanja Fidler 离职数周后创立，种子轮由 <b>Khosla Ventures</b> 与 Radical Ventures 支持，为加拿大史上最大种子轮之一。公司做"多模态基础世界模型"，为具身智能体生成可无限扩展的模拟训练环境。两家投资方此前刚共同领投前 Google 首席科学家 Jeff Dean 的 Discovery Loop。</p>
+    <div class="tags"><span class="tag inv">Khosla Ventures</span><span class="tag inv">Radical Ventures</span><span class="tag">世界模型</span><span class="tag">物理 AI</span><span class="tag">种子轮</span><span class="tag">8月19日</span></div>
+  </li>
 
-<div class="item">
-  <div class="hd"><span class="rank">7</span><h3>Smack Technologies</h3><span class="amt">$6100万</span></div>
-  <p>国防 AI 公司，B 轮，累计融资约 9300 万美元。主力产品 Omega 结合强化学习与计算机视觉，帮助规划火力并在战场条件变化时调整战术决策，可在中心通信受限的环境下运行；新资金还将用于开发可穿戴计算平台 Alpha。据路透报道，美国海军与海军陆战队推动其加速开发，公司已拿下 Joint Fires Network 与海军陆战队作战实验室的原型合同。团队从 4 月的 19 人扩张至 51 人，年底预计约 85 人。</p>
-  <div class="inv">投资方：Costanoa Ventures、First In、<strong>Point72 Ventures</strong>、Geodesic Capital</div>
-  <div class="tags"><span class="tag">国防科技</span><span class="tag">军事AI</span><span class="tag d">B轮</span><span class="tag d">8月17日</span></div>
-</div>
+  <li>
+    <div class="n-top"><span class="n-name">Abcuro</span><span class="amt">$66M</span></div>
+    <p class="n-desc">D 轮由 New Leaf Venture Partners 领投，Rock Springs Capital 新进，Bain Capital Life Sciences、RA Capital、Sanofi Ventures、Foresite、NEA 等跟投。其自身免疫抗体药 ulviprubart 此前 2/3 期试验主要终点未达统计学显著，但预设亚组呈现积极趋势；新资金用于 2026 年四季度启动的又一次注册性试验，预计 2028 年下半年读出数据。</p>
+    <div class="tags"><span class="tag inv">New Leaf 领投</span><span class="tag inv">NEA</span><span class="tag inv">Sanofi Ventures</span><span class="tag">生物科技</span><span class="tag">自身免疫</span><span class="tag">8月18日</span></div>
+  </li>
 
-<div class="item">
-  <div class="hd"><span class="rank">8</span><h3>Leal Therapeutics</h3><span class="amt">$3000万</span></div>
-  <p>A 轮第二次交割，累计披露融资至少 1.05 亿美元。这是本批次中少数与 AI 无关的交易。公司研发神经代谢疗法：主打管线 LTX-001 是口服、可透过血脑屏障的 GLS1 抑制剂，用于精神分裂症，已启动 1b/2a 期临床，预计年底出首批数据；第二条管线 LTX-002 是鞘内给药的反义寡核苷酸，靶向 SPTLC1，用于 ALS，处于 1/2 期。<strong>礼来作为新投资方入局</strong>值得关注——大药企的战略投资往往携带超出资金本身的信息量。</p>
-  <div class="inv">投资方：礼来（新入局）、OrbiMed、Newpath Partners、Euclidean Capital、SV Health 痴呆症发现基金、中外制药创投基金、Alexandria Venture Investments、PhiFund</div>
-  <div class="tags"><span class="tag">生物科技</span><span class="tag">神经疾病</span><span class="tag d">A轮扩募</span><span class="tag d">8月17日</span></div>
-</div>
+  <li>
+    <div class="n-top"><span class="n-name">Hopscotch Primary Care</span><span class="amt">$53M</span></div>
+    <p class="n-desc">D 轮由 8VC 与 Town Hall Ventures 领投，<b>John Doerr</b> 等个人投资者参与。公司在美国东南部农村地区做线下初级诊疗 + 运营软件，服务超 1.5 万名患者，称患者留存率超 90%，北卡罗来纳西部业务已实现盈利。</p>
+    <div class="tags"><span class="tag inv">8VC 领投</span><span class="tag inv">John Doerr</span><span class="tag">医疗服务</span><span class="tag">农村医疗</span><span class="tag">8月18日</span></div>
+  </li>
 
-<div class="item">
-  <div class="hd"><span class="rank">9</span><h3>Terra Industries</h3><span class="amt">$1800万</span></div>
-  <p>种子轮追加，种子轮总额封顶 5200 万美元。2024 年成立于尼日利亚，为陆、空、海基础设施防护开发自主防务与安防系统，产品包括无人机与无人地面系统，由自研 ArtemisOS 串联；同时在非洲建设产能，并宣布开设伦敦办公室。战略意义大于金额：防务创投历来集中在美、以及欧洲部分地区，Terra 在测试一个本土设计的防务主承包商能否从非洲长出来，服务那些西方系统过于昂贵、进口技术又不适配当地作战环境的市场。</p>
-  <div class="inv">投资方：8VC、Silent Ventures、Nova Global、Belief Capital、SV Angel、Norleo Space Investments</div>
-  <div class="tags"><span class="tag">国防科技</span><span class="tag">全球南方</span><span class="tag d">种子轮扩募</span><span class="tag d">8月17日</span></div>
-</div>
+  <li>
+    <div class="n-top"><span class="n-name">Oceanloop（德国）</span><span class="amt">€38.5M</span></div>
+    <p class="n-desc">陆基循环水养殖公司，融资包由 Hatch Blue 旗下 Blue Revolution Fund、Stolt Ventures 的新股权承诺与<b>欧洲投资银行 3,200 万欧元风险债</b>组成。注意：该债权额度原签于 2024 年 10 月、2026 年 7 月修订，因此不应视为当日新增股权。公司计划在基尔建 250 吨龙胆石斑鱼工厂，后续在大加那利岛建 2,000 吨设施。</p>
+    <div class="tags"><span class="tag inv">Hatch Blue</span><span class="tag inv">欧洲投资银行</span><span class="tag">水产科技</span><span class="tag">股权+风险债</span><span class="tag">8月18日</span></div>
+  </li>
 
-<div class="item">
-  <div class="hd"><span class="rank">10</span><h3>Sonic Fire Tech</h3><span class="amt">$1500万</span></div>
-  <p>克利夫兰的无水灭火公司，累计融资至少 1850 万美元。用低频次声波而非水、泡沫或化学抑制剂灭火：系统通过管道向探测到的火焰发送次声波。商业逻辑不在新奇，而在<strong>避免附带损失</strong>——喷淋和化学系统即便成功灭火，也常毁掉电子设备、内装和库存。目标场景包括商业楼宇、厨房、住宅和高价值基础设施，并在测试能否抑制锂电池火灾的电芯间蔓延（公司并未声称能直接扑灭燃烧中的锂电芯）。主要风险是消防设备的法规认证与保险准入。</p>
-  <div class="inv">投资方：The O.H.I.O. Fund（领投）、<strong>Khosla Ventures</strong></div>
-  <div class="tags"><span class="tag">工业安全</span><span class="tag">气候韧性</span><span class="tag d">未披露轮次</span><span class="tag d">8月17日</span></div>
-</div>
+  <li>
+    <div class="n-top"><span class="n-name">Relativity Networks</span><span class="amt">$22M</span></div>
+    <p class="n-desc">以 SAFE 形式融资，由 Rhapsody Venture Partners、Bell Ventures、Faster Than Glass 等参与。公司为数据中心提供新型高速光纤，同时拿下一家未具名头部超大规模云厂商<b>4,000 万美元的追加订单</b>——订单金额接近融资额的两倍，是本期性价比最高的商业化信号之一。</p>
+    <div class="tags"><span class="tag inv">Rhapsody Venture Partners</span><span class="tag">数据中心</span><span class="tag">光互连</span><span class="tag">SAFE</span><span class="tag">8月19日</span></div>
+  </li>
 
-<div class="item">
-  <div class="hd"><span class="rank">11</span><h3>Takt / Xpander（小额但方向明确）</h3><span class="amt">$925万 / $750万</span></div>
-  <p><strong>Takt</strong>（弗吉尼亚州雷斯顿）完成 925 万美元 A 轮、由 Ballast Point Partners 领投，为仓库提供统一调度人工与机器人的劳动力管理软件，称已部署于北美及海外 100 多个仓库——典型的"不造机器人、但从机器人渗透中收租"的模式。<strong>Xpander</strong>（旧金山，创始人来自 AWS 首席工程师团队）完成 750 万美元种子轮，由 Pico Venture Partners 领投、<strong>三星 Next</strong> 参投，做跨模型跨云的企业 AI Agent 控制层（身份、权限、可观测性、治理、模型路由）。后者面临的问题是：云厂商、模型厂商和数据平台都在建重叠能力，中立层必须在被吸收前变得不可替代。</p>
-  <div class="inv">投资方：Ballast Point Partners；Pico Venture Partners、Emerge Ventures、Samsung Next、SeedIL</div>
-  <div class="tags"><span class="tag">仓储自动化</span><span class="tag">企业AI Agent</span><span class="tag d">A轮/种子轮</span><span class="tag d">8月17日</span></div>
-</div>
+  <li>
+    <div class="n-top"><span class="n-name">NeoGeoInfo Technologies（印度）</span><span class="amt">$20M</span></div>
+    <p class="n-desc">A 轮由 Neev II Fund 与 Aavishkaar Capital 支持。这家古尔冈公司为政府与企业客户提供空间智能技术，覆盖自然资源管理、灾害响应、城市治理、公用事业与智慧城市项目，计划拓展至中东与美洲市场。</p>
+    <div class="tags"><span class="tag inv">Neev II Fund</span><span class="tag inv">Aavishkaar Capital</span><span class="tag">地理空间情报</span><span class="tag">印度深科技</span><span class="tag">8月18日</span></div>
+  </li>
 
-<div class="item" style="border-left-color:#999">
-  <div class="hd"><span class="rank" style="background:#999">＋</span><h3>基金动态：Reach Capital 完成 2.65 亿美元五期基金</h3><span class="amt">$2.65亿</span></div>
-  <p>8 月 18 日，教育与人力科技领域的 Reach Capital 宣布完成 2.65 亿美元的第五期基金，将投向"拓展人类潜能"方向的 AI 创业者。在 GP 募资普遍艰难、LP 资金持续向头部大基金集中的 2026 年，一支专注型早期基金完成新一期关账本身即是信号。</p>
-  <div class="tags"><span class="tag d">基金募集</span><span class="tag d">8月18日</span></div>
-</div>
+  <li>
+    <div class="n-top"><span class="n-name">Medly AI（英国）</span><span class="amt">$8M</span></div>
+    <p class="n-desc">种子轮由 Felix Capital 领投，Eka Ventures、Ada Ventures 跟投。由两位前 NHS 医生创立，做 GCSE、A-level、IB 与 SAT 考试备考的 AI 家教，通过手写识别批改练习答案——试图用学科评测能力而非通用聊天壳来建立壁垒。</p>
+    <div class="tags"><span class="tag inv">Felix Capital 领投</span><span class="tag">教育科技</span><span class="tag">AI 家教</span><span class="tag">种子轮</span><span class="tag">8月18日</span></div>
+  </li>
+
+</ol>
 
 <footer>
   <h5>信息来源</h5>
   <ul>
-    <li><a href="https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/">TechCrunch — Etched's valuation doubles to $21B in a month（2026年8月18日）</a></li>
-    <li><a href="https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/">TechCrunch — AI chip startup Etched defies skeptics, hits $10.3B valuation（2026年7月23日）</a></li>
-    <li><a href="https://www.etched.com/progress/from-zero-to-one">Etched — From Zero to One（官方公告博客）</a></li>
-    <li><a href="https://techstartups.com/2026/08/17/venture-capital-startup-funding-roundup-august-17-2026-accel-dst-global-intel-capital-menlo-ventures-mirae-asset-capital-valor-capital-more/">TechStartups — Venture Capital & Startup Funding Roundup, August 17, 2026</a></li>
-    <li><a href="https://techstartups.com/2026/08/18/velaura-ai-raises-110m-series-a-at-1b-valuation-to-tackle-ais-growing-power-problem/">TechStartups — Velaura AI raises $110M Series A at $1B+ valuation（2026年8月18日）</a></li>
-    <li><a href="https://techcrunch.com/2026/08/17/higgsfield-raises-400m-series-b-quadrupling-its-valuation-in-8-months-to-5-4b/">TechCrunch — Higgsfield raises $400M Series B at $5.4B（2026年8月17日）</a></li>
-    <li><a href="https://www.prnewswire.com/news-releases/higgsfield-raises-400-million-series-b-financing-at-5-4-billion-valuation-with-annualized-revenue-reaching-700-million-302852430.html">PR Newswire — Higgsfield $400M Series B 官方新闻稿</a></li>
-    <li><a href="https://www.reuters.com/business/media-telecom/higgsfields-valuation-soars-fourfold-54-billion-six-months-ai-content-demand-2026-08-17/">Reuters — Higgsfield's valuation soars fourfold to $5.4 billion</a></li>
-    <li><a href="https://techcrunch.com/2026/08/18/reach-capital-raises-265m-fund-v-to-back-ai-founders-building-to-expand-human-potential/">TechCrunch — Reach Capital raises $265M Fund V（2026年8月18日）</a></li>
-    <li><a href="https://techcrunch.com/2026/08/17/wispr-flow-raises-280m-at-2-billion-valuation-to-expand-ai-voice-platform/">TechStartups — Wispr Flow raises $280M at $2B valuation</a></li>
-    <li><a href="https://news.crunchbase.com/venture/na-startup-funding-ma-shattered-records-ai-q2-2026/">Crunchbase News — 2026 上半年全球与北美创投数据</a></li>
+    <li><a href="https://techstartups.com/2026/08/18/venture-capital-startup-funding-roundup-august-18-2026-andreessen-horowitz-bain-capital-ventures-jane-street-kleiner-perkins-sequoia-tiger-global-more/">TechStartups — Venture Capital &amp; Startup Funding Roundup, August 18, 2026</a></li>
+    <li><a href="https://techcrunch.com/2026/08/18/etcheds-valuation-doubles-to-21b-in-a-month/">TechCrunch — Etched's valuation doubles to $21B in a month</a></li>
+    <li><a href="https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/">TechCrunch — Rivian spinout Also raises another $150 million</a></li>
+    <li><a href="https://techcrunch.com/2026/08/19/relativity-networks-raises-22-million-to-bring-a-faster-kind-of-fiber-to-data-centers/">TechCrunch — Relativity Networks raises $22 million for faster fiber in data centers</a></li>
+    <li><a href="https://techcrunch.com/2026/08/19/sachin-bansals-fintech-navi-raises-first-outside-capital-with-100m-prosus-investment/">TechCrunch — Sachin Bansal's fintech Navi raises $100M from Prosus</a></li>
+    <li><a href="https://www.unite.ai/veeda-ai-raises-90m-seed-backed-by-khosla-and-radical-to-build-world-models-for-physical-ai/">Unite.AI — Veeda AI Raises $90M+ Seed Backed by Khosla and Radical</a></li>
+    <li><a href="https://qz.com/etched-ai-chip-startup-700-million-21-billion-valuation-081926">Quartz — Etched raises $700 million at $21 billion valuation</a></li>
+    <li><a href="https://www.etched.com/progress/from-zero-to-one">Etched 官方公告 — From Zero to One</a></li>
   </ul>
-  <div class="disc">
-    <strong>免责声明</strong>：本页内容由自动化流程于 2026 年 8 月 19 日基于当日公开报道整理生成，覆盖 8 月 17 日至 18 日公布的交易。所有金额、估值、营收与用户数据均引自上述来源，其中多项经营指标（如年化收入、用户规模、生产率提升幅度）为被投公司自行披露、未经独立审计，请谨慎对待。融资信息可能随后续披露而修正。本页仅供信息参考，不构成任何投资建议或买卖要约。
-  </div>
+
+  <h5>免责声明</h5>
+  <p class="disc">本页内容由自动化流程于 2026 年 8 月 20 日基于公开媒体报道整理生成，覆盖 8 月 18 日至 19 日的公开融资信息。所有金额、估值与投资方均取自上述来源，未经独立核实；部分交易的累计融资额、营收与盈利数据未被公司或媒体披露，页面中已注明。本页仅供信息参考，不构成任何投资建议、要约或推荐。汇率未做统一换算，欧元金额按原文保留。</p>
 </footer>
 
 </div>
