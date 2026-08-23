@@ -3,217 +3,301 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日科技投资动态 · 2026年8月22日</title>
+<title>每日科技投资动态 · 2026年8月23日</title>
 <style>
-:root{--accent:#c8401a;--ink:#1a1a1a;--muted:#6b6b6b;--line:#e3ddd5;--bg:#f7f4ef;}
-*{box-sizing:border-box;margin:0;padding:0;}
-body{background:var(--bg);color:var(--ink);font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC",sans-serif;line-height:1.75;font-size:16px;-webkit-font-smoothing:antialiased;}
-.wrap{max-width:860px;margin:0 auto;padding:32px 20px 64px;}
-header{border-bottom:3px double var(--ink);padding-bottom:18px;margin-bottom:28px;}
-.kicker{font-size:12px;letter-spacing:.28em;color:var(--accent);font-weight:700;}
-h1{font-size:38px;letter-spacing:.04em;margin:8px 0 10px;font-weight:800;}
-.meta{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 18px;}
-.card{background:#fff;border:1px solid var(--line);border-radius:4px;padding:22px 24px;margin-bottom:18px;box-shadow:0 1px 0 rgba(0,0,0,.03);}
-h2{font-size:15px;letter-spacing:.2em;color:var(--accent);font-weight:700;margin:34px 0 14px;border-left:4px solid var(--accent);padding-left:10px;}
-.overview p{margin-bottom:10px;}
-.overview p:last-child{margin-bottom:0;}
-.hl{border:2px solid var(--accent);border-radius:4px;background:#fff;padding:0;overflow:hidden;}
-.hl-top{background:var(--accent);color:#fff;padding:10px 24px;font-size:12px;letter-spacing:.24em;font-weight:700;}
-.hl-body{padding:22px 24px 24px;}
-.hl-body h3{font-size:26px;margin-bottom:4px;}
-.sub{color:var(--muted);font-size:14px;margin-bottom:18px;}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:18px 0 22px;}
-.cell{background:#fff;padding:12px 14px;}
-.cell .k{font-size:11px;color:var(--muted);letter-spacing:.1em;}
-.cell .v{font-size:19px;font-weight:800;color:var(--accent);margin-top:3px;line-height:1.3;}
-.cell .v.sm{font-size:15px;color:var(--ink);}
-h4{font-size:14px;letter-spacing:.1em;margin:18px 0 6px;padding-bottom:4px;border-bottom:1px solid var(--line);}
-.hl-body p{font-size:15px;margin-bottom:8px;}
-table{width:100%;border-collapse:collapse;font-size:14px;margin-top:6px;}
-th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top;}
-th{font-size:12px;color:var(--muted);letter-spacing:.08em;font-weight:600;}
-ol.deals{list-style:none;counter-reset:d;}
-ol.deals li{counter-increment:d;background:#fff;border:1px solid var(--line);border-radius:4px;padding:16px 18px 16px 56px;margin-bottom:12px;position:relative;}
-ol.deals li::before{content:counter(d);position:absolute;left:16px;top:15px;width:26px;height:26px;background:var(--ink);color:#fff;border-radius:50%;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;}
-.dt{font-size:17px;font-weight:700;margin-bottom:2px;}
-.amt{color:var(--accent);font-weight:800;}
-.dm{font-size:12px;color:var(--muted);margin-bottom:6px;}
-.dd{font-size:14.5px;}
-.tags{margin-top:9px;display:flex;flex-wrap:wrap;gap:6px;}
-.tag{font-size:11px;border:1px solid var(--line);background:#faf8f5;color:var(--muted);border-radius:2px;padding:2px 8px;}
-.tag.hot{border-color:var(--accent);color:var(--accent);background:#fff5f1;}
-footer{margin-top:40px;border-top:1px solid var(--line);padding-top:20px;font-size:13px;color:var(--muted);}
-footer ul{margin:8px 0 0 18px;}
-footer li{margin-bottom:4px;word-break:break-all;}
-footer a{color:var(--muted);}
-.disc{margin-top:18px;padding:12px 14px;background:#f1ece5;border-left:3px solid var(--line);font-size:12.5px;line-height:1.7;}
-@media(max-width:600px){h1{font-size:28px;}.wrap{padding:22px 14px 48px;}ol.deals li{padding-left:48px;}}
+:root{
+  --accent:#c8401a;
+  --ink:#1a1a1a;
+  --muted:#6b6b6b;
+  --line:#e2ddd6;
+  --paper:#f5f2ec;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Helvetica Neue",Arial,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:860px;margin:0 auto;padding:32px 20px 64px}
+
+/* 页头 */
+header{border-bottom:3px double var(--ink);padding-bottom:18px;margin-bottom:28px}
+.kicker{font-size:12px;letter-spacing:.28em;color:var(--accent);font-weight:700;margin-bottom:10px}
+h1{font-size:38px;font-weight:800;letter-spacing:.04em;line-height:1.2}
+.subline{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:14px;font-size:13px;color:var(--muted);align-items:center}
+.subline .date{font-weight:700;color:var(--ink)}
+.rule{height:1px;background:var(--line);margin:10px 0 0}
+
+/* 卡片通用 */
+.card{background:#fff;border:1px solid var(--line);border-radius:4px;padding:22px 24px;margin-bottom:18px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+h2{font-size:19px;font-weight:800;margin-bottom:14px;padding-left:11px;border-left:4px solid var(--accent);line-height:1.3}
+
+/* 概览 */
+.overview p{font-size:15px;color:#333;margin-bottom:10px}
+.overview p:last-child{margin-bottom:0}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:16px}
+.stat{background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:10px 12px;text-align:center}
+.stat .n{font-size:20px;font-weight:800;color:var(--accent);letter-spacing:-.02em}
+.stat .l{font-size:11px;color:var(--muted);margin-top:2px}
+
+/* 重点卡片 */
+.highlight{border:2px solid var(--accent);border-radius:4px;background:#fff;padding:0;margin-bottom:26px;overflow:hidden}
+.highlight .hbar{background:var(--accent);color:#fff;font-size:12px;letter-spacing:.22em;font-weight:700;padding:7px 24px}
+.highlight .hbody{padding:22px 24px 24px}
+.highlight h3{font-size:25px;font-weight:800;line-height:1.3;margin-bottom:6px}
+.highlight .htag{font-size:13px;color:var(--muted);margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:3px;margin:16px 0 20px}
+.cell{background:#fff;padding:12px 14px}
+.cell .k{font-size:11px;color:var(--muted);letter-spacing:.06em}
+.cell .v{font-size:17px;font-weight:800;color:var(--accent);margin-top:3px;line-height:1.35}
+.cell .v.sm{font-size:14px;color:var(--ink)}
+.hsec{margin-top:18px}
+.hsec h4{font-size:14px;font-weight:800;color:var(--accent);margin-bottom:7px;letter-spacing:.03em}
+.hsec p{font-size:14.5px;color:#333;margin-bottom:8px}
+.hsec ul{margin:0 0 6px 18px;font-size:14.5px;color:#333}
+.hsec li{margin-bottom:5px}
+
+/* 新闻列表 */
+.item{background:#fff;border:1px solid var(--line);border-radius:4px;padding:18px 20px;margin-bottom:12px;display:flex;gap:16px;align-items:flex-start}
+.rank{flex:0 0 30px;font-size:22px;font-weight:800;color:var(--line);line-height:1.1;text-align:center;padding-top:2px}
+.item .body{flex:1;min-width:0}
+.item h3{font-size:16.5px;font-weight:800;line-height:1.45;margin-bottom:5px}
+.amt{color:var(--accent);font-weight:800}
+.meta{font-size:12.5px;color:var(--muted);margin-bottom:8px}
+.item p{font-size:14px;color:#3a3a3a}
+.tags{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:11px;color:var(--accent);border:1px solid #e8c4b6;background:#fdf4f1;border-radius:2px;padding:2px 8px;letter-spacing:.04em}
+.tag.gray{color:var(--muted);border-color:var(--line);background:var(--paper)}
+
+/* 底部 */
+footer{margin-top:34px;border-top:3px double var(--ink);padding-top:20px}
+footer h2{border-left-color:var(--muted)}
+.srcs{columns:2;column-gap:26px;font-size:13px}
+.srcs a{display:block;color:#444;text-decoration:none;border-bottom:1px dotted var(--line);padding:5px 0;break-inside:avoid}
+.srcs a:hover{color:var(--accent)}
+.disc{margin-top:18px;font-size:12px;color:var(--muted);background:#fff;border:1px solid var(--line);border-left:3px solid var(--accent);padding:12px 14px;line-height:1.7}
+@media(max-width:600px){
+  h1{font-size:28px}
+  .srcs{columns:1}
+  .item{gap:10px}
+  .rank{flex-basis:22px;font-size:17px}
+  .wrap{padding:22px 14px 48px}
+}
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <header>
-  <div class="kicker">全球科技行业投资动态 · 每日简报</div>
+  <div class="kicker">全球科技行业投资日报</div>
   <h1>每日科技投资动态</h1>
-  <div class="meta">
-    <span>2026年8月22日（星期六）</span>
-    <span>覆盖区间：8月19日–8月21日</span>
-    <span>信息源：Crunchbase News · TechStartups · TechCrunch · Castelion 官方公告 · SpaceNews · Axios</span>
+  <div class="subline">
+    <span class="date">2026年8月23日 星期日</span>
+    <span>覆盖窗口：8月20日–8月22日</span>
+    <span>信息源：TechCrunch · Crunchbase News · TechStartups · Axios · FinTech Global · BusinessWire</span>
   </div>
 </header>
 
-<h2>今日概览</h2>
-<div class="card overview">
-  <p>过去 48 小时，资金明显流向"物理世界的瓶颈"：国防、卫星、核能、专用芯片、医疗器械。<strong>Castelion 以 10 亿美元 C 轮、130 亿美元估值</strong>成为本周全球最大一笔创投交易，摩根大通战略投资集团、a16z 与凯雷共同领投——传统银行资本、顶级 VC 与私募巨头同台，本身就是国防科技资产化的一个标志。</p>
-  <p>AI 的钱正在"下沉"。除 Rillet（AI 原生 ERP，晋级独角兽）外，8 月 19–21 日的大额交易更多押注算力硬件（Velaura AI 低功耗芯片，估值破 10 亿美元）、卫星与在轨算力（Muon Space）、以及工厂化核反应堆（Apollo Atomics，直接对标 AI 数据中心供电）。投资人越来越不愿为"套壳大模型"付费，而愿意为专有数据、许可上下文、制造能力和能源支付溢价。</p>
-  <p>CVC 与战略资本活跃：谷歌与 Salesforce Ventures 进入 Muon Space，Olympus（奥林巴斯）创投领投 MaxQ Medical，Aramco Ventures 投资 Twin1 AI，NVIDIA 参与 Groq 本周稍早的 3.5 亿美元融资。宏观层面，PitchBook 数据显示 2026 年至今加州公司吸金约 3660 亿美元，超过其余 49 州总和的三倍。</p>
-</div>
+<section class="card overview">
+  <h2>今日概览</h2>
+  <p>过去48小时的资金流向传递出一个清晰信号：<strong>钱在买"瓶颈"</strong>。最大的几笔交易——高超音速导弹、轨道数据中心、卫星制造、紧凑型核反应堆——都不是"又一个AI应用层"，而是算力、能源、发射运力和国防产能这些实体约束条件本身。TechStartups 在当日综述中将这一主题概括为"投资人正在为瓶颈付费"。</p>
+  <p>另一条主线是<strong>战略资本（CVC）的深度介入</strong>：NVIDIA 出资 2500 万美元进入 Starcloud，同时被曝正在洽谈以 200 亿美元估值投资 AI 数据标注公司 Mercor；Google 与 Salesforce Ventures 参投 Muon Space；Olympus、Aramco、Tokio Marine 等产业方也各自落子。相比纯财务投资人，产业资本在这些重资产、长周期赛道里既是背书也是客户。</p>
+  <p>宏观层面，PitchBook 数据显示加州企业 2026 年至今已吸走约 <strong>3660 亿美元</strong>风险资本，超过其余 49 州总和的三倍；同时 Anthropic 被曝计划 10 月以 2 万亿美元以上估值 IPO，若成行将超过 SpaceX 成为史上最大规模上市。总量繁荣与中位数公司融资困难，仍然是同一个市场的两面。</p>
+  <div class="stats">
+    <div class="stat"><div class="n">$1B</div><div class="l">单笔最大（Castelion）</div></div>
+    <div class="stat"><div class="n">$13B</div><div class="l">最高新估值</div></div>
+    <div class="stat"><div class="n">$2T</div><div class="l">Anthropic IPO 目标估值</div></div>
+    <div class="stat"><div class="n">$366B</div><div class="l">加州 2026 年至今吸金</div></div>
+  </div>
+</section>
 
-<h2>今日最值得关注</h2>
-<div class="hl">
-  <div class="hl-top">头条交易 · CASTELION</div>
-  <div class="hl-body">
-    <h3>Castelion：4 年从白纸到"列装项目"，高超音速导弹估值 130 亿美元</h3>
-    <div class="sub">加州托伦斯 · 国防科技 / 高超音速打击武器 · C 轮 · 2026年8月19日公告</div>
+<div class="highlight">
+  <div class="hbar">今日最值得关注</div>
+  <div class="hbody">
+    <h3>Starcloud 追加 2.5 亿美元 A 轮，估值 23 亿美元，NVIDIA 首次直接下注"太空数据中心"</h3>
+    <div class="htag">领投方：Manhattan West Ventures ｜ 新进：NVIDIA、Cisco Investments、Cedar Capital、Goanna Capital、Standard Capital ｜ 老股东：Benchmark、EQT、Soma、NFX、776 ｜ 公布日期：2026年8月21日</div>
 
     <div class="grid">
-      <div class="cell"><div class="k">本轮融资</div><div class="v">10 亿美元</div></div>
-      <div class="cell"><div class="k">其中股权</div><div class="v">8 亿美元</div></div>
-      <div class="cell"><div class="k">投后估值</div><div class="v">130 亿美元</div></div>
-      <div class="cell"><div class="k">累计股权融资</div><div class="v">约 13.5 亿美元</div></div>
-      <div class="cell"><div class="k">在手军方合同</div><div class="v">&gt; 5 亿美元</div></div>
-      <div class="cell"><div class="k">循环信贷额度</div><div class="v sm">2.5 亿美元（已承诺）</div></div>
-      <div class="cell"><div class="k">领投方</div><div class="v sm">摩根大通 SIG、a16z、凯雷</div></div>
-      <div class="cell"><div class="k">目标列装</div><div class="v sm">2027 年</div></div>
+      <div class="cell"><div class="k">本轮融资额</div><div class="v">2.5 亿美元</div></div>
+      <div class="cell"><div class="k">投后估值</div><div class="v">23 亿美元</div></div>
+      <div class="cell"><div class="k">累计融资</div><div class="v">4.5 亿美元</div></div>
+      <div class="cell"><div class="k">估值涨幅（5个月）</div><div class="v">+109%</div></div>
+      <div class="cell"><div class="k">NVIDIA 出资</div><div class="v sm">2500 万美元</div></div>
+      <div class="cell"><div class="k">团队规模</div><div class="v sm">约 25 人</div></div>
     </div>
 
-    <h4>业务内容</h4>
-    <p>Castelion 成立于 2022 年底，由 Bryon Hargis（CEO）等前 SpaceX 背景团队创立，主张用商业航天的方法论造导弹：自研固体火箭发动机、垂直整合、高频飞行试验迭代。核心产品 <strong>Blackbeard</strong> 是美国第一款"从设计之初就为工业化量产、商用级单价"而生的高超音速打击导弹，目标是用可负担的价格实现"弹药深度"，补足传统昂贵精确打击武器的产能缺口。公司总部在加州托伦斯，制造布局横跨新墨西哥、德州与加州，并在华盛顿特区设有办公室。</p>
+    <div class="hsec">
+      <h4>公司在做什么</h4>
+      <p>Starcloud 成立于 2024 年，总部位于西雅图近郊华盛顿州 Woodinville，做的是把 AI 推理算力搬到轨道上——用卫星搭载数据中心级 GPU，在太空完成推理任务，靠太阳能供电、靠真空散热，绕开地面数据中心的电力与土地约束。公司已向 FCC 申请运营多达 <strong>88,000 颗</strong>航天器的许可，长期目标是构建 20 吉瓦级的轨道算力网络。</p>
+      <p>本轮资金用于扩建位于 Woodinville 的 10 万平方英尺产线，并推进体量最大的轨道数据中心航天器 <strong>Starcloud-3</strong>——该型号计划搭乘 SpaceX 尚未成熟的 Starship 发射。近期重点则是 2027 年通过拼车发射两颗 8 千瓦的新一代算力卫星 Starcloud-2，客户包括美国政府机构。</p>
+    </div>
 
-    <h4>历史融资</h4>
-    <table>
-      <tr><th>轮次</th><th>时间</th><th>金额</th><th>主要投资方</th></tr>
-      <tr><td>Pre-seed / 种子</td><td>2023</td><td>未披露</td><td>Lavrock Ventures（最早期）、Cantos、First In 等</td></tr>
-      <tr><td>A 轮</td><td>2025年1月</td><td>1 亿美元<br><span style="color:#6b6b6b;font-size:12px">（7000万股权 + 3000万风险债）</span></td><td>Lightspeed 领投；a16z、Lavrock、Cantos、First In、BlueYard、Interlagos 参投；硅谷银行提供债权</td></tr>
-      <tr><td>B 轮</td><td>2025年12月</td><td>3.5 亿美元</td><td>Altimeter + Lightspeed 联合领投；a16z、General Catalyst、Lavrock、First In、Space VC、Cantos、BlueYard、Avenir、Champion Hill、Interlagos</td></tr>
-      <tr><td>C 轮</td><td>2026年8月19日</td><td>10 亿美元<br><span style="color:#6b6b6b;font-size:12px">（8亿股权 + 2.5亿循环信贷）</span></td><td>摩根大通战略投资集团、a16z、凯雷共同领投；Lightspeed、Lavrock、Altimeter、General Catalyst、Interlagos 跟投；T. Rowe Price 首次进入</td></tr>
-    </table>
-    <p style="margin-top:10px;font-size:13.5px;color:#6b6b6b;">第三方数据库（Tracxn）显示 C 轮前累计融资约 5.5 亿美元；加上本轮 8 亿美元股权，累计股权融资约 13.5 亿美元。Lightspeed 与 a16z 已连续参与每一轮。</p>
+    <div class="hsec">
+      <h4>历史融资情况</h4>
+      <ul>
+        <li><strong>种子前（2024）：约 300 万美元</strong>——靠这笔钱在 21 个月内完成首颗卫星 Starcloud-1 的设计、制造与发射。</li>
+        <li><strong>种子轮（2024 年末）：约 2100 万美元</strong>——支持首批卫星发射。投资方包括 NFX、Y Combinator、FUSE、Soma Capital、3C AGI Partners、Nebular，并获 In-Q-Tel 与 NVIDIA Inception 支持。公司出自 YC 2024 夏季批次。</li>
+        <li><strong>A 轮（2026 年 3 月）：1.7 亿美元，估值 11 亿美元</strong>——Benchmark 与 EQT Ventures 领投，Macquarie Capital、Seven Seven Six、Manhattan West、Adjacent 等跟投。据报道，这使其成为 YC 史上最快达到独角兽的公司（毕业后 17 个月）。</li>
+        <li><strong>A 轮追加（2026 年 8 月 21 日）：2.5 亿美元，估值 23 亿美元</strong>——本轮。累计融资达 4.5 亿美元。</li>
+      </ul>
+    </div>
 
-    <h4>业务进展</h4>
-    <p><strong>合同与列装：</strong>过去 18 个月已拿下超过 5 亿美元美国军方合同；Blackbeard 从白纸设计到成为"列装项目"（program of record）用时不到 4 年，计划 2027 年交付部队。美国海军已下达 Blackbeard 首个交付订单。</p>
-    <p><strong>产能建设：</strong>2026 年 1 月在新墨西哥州 Sandoval 县动工建设 <strong>Project Ranger</strong>——占地 1000 英亩，公司称为全美最大的专用高超音速导弹制造园区，前期投资超 2.2 亿美元、创造 300+ 岗位、预计带来 6.5 亿美元区域经济效益。公司此前已自掏超 2.5 亿美元基建投入，本轮后将再追加"数亿美元"扩产。</p>
-    <p><strong>产品线扩展：</strong>本轮资金将用于三件事——Blackbeard 拉满产能；加速研发一款射程更远的高超音速精确打击武器（复用 Blackbeard 核心技术与产线）；开发低成本、高产率的防御型拦截系统。此外，公司与无人艇厂商 Saronic 合作，计划 2027 年演示全球首次"自主水面艇 + 高超音速武器"发射。</p>
-    <p><strong>营收与盈利：</strong>公司未公开披露营收或盈利数据。可见度主要来自 5 亿美元以上的在手军方合同；T. Rowe Price 在声明中特别提到其"单位经济模型随规模改善"，并称手握合同、自建产能对一家未上市公司而言"相当罕见"。</p>
+    <div class="hsec">
+      <h4>业务进展与商业化</h4>
+      <p><strong>研发：</strong>Starcloud 已把 NVIDIA H100 数据中心级 GPU 送入轨道并完成在轨模型训练，据 TechCrunch 报道是目前唯一做到这一点的公司——其他"太空 GPU"多为边缘处理芯片。这些在轨数据正被反馈给 NVIDIA，用于开发其首款太空专用 GPU <strong>Vera Rubin Space-1</strong>，该芯片尚未流片，Starcloud 希望在 2028 年末将其送上轨道。创始人 Philip Johnston 称 NVIDIA 的技术尽调深度"远超任何一家 VC"。</p>
+      <p><strong>营收与盈利：</strong>公司未披露营收或盈利数据。已确认的商业化路径是 2027 年 Starcloud-2 卫星为美国政府机构执行在轨推理任务，目前仍处于纯投入的产能建设阶段。</p>
+      <p><strong>核心风险：</strong>发射运力。Johnston 直言"我们需要预订巨量发射运力"——SpaceX 的主力 Falcon 9 计划 2028 年退役，Starship 尚未验证快速复用（马斯克本周表示回收捕获尝试将再推迟数月，首次复飞或推至 2026 年底至 2027 年初），而 New Glenn、Vulcan 尚未稳定，Neutron 未上发射台。他坦言："如果 2029 年订不到任何 SpaceX 运力，对我们会是个挑战。"</p>
+    </div>
+
+    <div class="tags">
+      <span class="tag">太空算力</span><span class="tag">AI 基础设施</span><span class="tag">NVIDIA CVC</span><span class="tag gray">Y Combinator</span><span class="tag gray">A 轮追加</span>
+    </div>
   </div>
 </div>
 
-<h2>重要交易一览（按重要性排序）</h2>
-<ol class="deals">
+<section>
+  <h2 style="margin-bottom:16px">今日交易榜（按重要性排序）</h2>
 
-<li>
-  <div class="dt">Castelion — <span class="amt">10 亿美元</span> C 轮（8亿股权+2.5亿信贷）</div>
-  <div class="dm">估值 130 亿美元 · 摩根大通战略投资集团 / a16z / 凯雷 共同领投 · 8月19日</div>
-  <div class="dd">低成本可量产高超音速打击导弹 Blackbeard 的开发商，18 个月内斩获超 5 亿美元军方合同，2027 年目标列装。本周全球最大一笔创投交易，也是国防科技估值的新标杆。</div>
-  <div class="tags"><span class="tag hot">头条</span><span class="tag">国防科技</span><span class="tag">a16z</span><span class="tag">摩根大通</span><span class="tag">凯雷</span><span class="tag">硬科技制造</span></div>
-</li>
+  <div class="item">
+    <div class="rank">01</div>
+    <div class="body">
+      <h3>Castelion 完成 <span class="amt">10 亿美元</span> C 轮，估值 130 亿美元</h3>
+      <div class="meta">8月20日 ｜ JPMorgan Chase、Andreessen Horowitz、Carlyle 联合领投 ｜ 加州 Torrance</div>
+      <p>本周全球最大单笔交易。结构为 8 亿美元股权 + 2.5 亿美元循环信贷。由三位 SpaceX 前员工创办，主打低成本高超音速打击导弹，试图以比雷神、洛马更快的节奏完成设计—测试—量产闭环。老股东 Lightspeed、Altimeter、General Catalyst、Lavrock、Interlagos 跟投，T. Rowe Price 首次进入。公司已握有约 5 亿美元军方合同，Blackbeard 项目瞄准 2027 年。</p>
+      <div class="tags"><span class="tag">国防科技</span><span class="tag">高超音速</span><span class="tag gray">a16z</span><span class="tag gray">C 轮</span></div>
+    </div>
+  </div>
 
-<li>
-  <div class="dt">Muon Space — <span class="amt">2.5 亿美元</span> C 轮</div>
-  <div class="dm">估值约 15 亿美元（媒体报道，公司未确认）· Eclipse 领投，谷歌、Salesforce Ventures、Wellington、I Squared Capital、Woven Capital、Galvanize 参投 · 8月20日</div>
-  <div class="dd">加州山景城卫星星座设计、制造、发射与运营一体化公司，累计股权融资超 3.86 亿美元，已发射 11 颗卫星。新建的圣何塞工厂目标 2027 年年产能 500 颗卫星，业务横跨军民两用、气候观测、高带宽通信及未来的在轨算力。</div>
-  <div class="tags"><span class="tag">太空基础设施</span><span class="tag">谷歌 CVC</span><span class="tag">Salesforce Ventures</span><span class="tag">在轨算力</span></div>
-</li>
+  <div class="item">
+    <div class="rank">02</div>
+    <div class="body">
+      <h3>Starcloud 追加 <span class="amt">2.5 亿美元</span> A 轮，估值 23 亿美元</h3>
+      <div class="meta">8月21日 ｜ Manhattan West Ventures 领投，NVIDIA、Cisco Investments 参投 ｜ 华盛顿州 Woodinville</div>
+      <p>轨道 AI 数据中心。NVIDIA 出资 2500 万美元，是其对"太空算力"赛道罕见的直接下注。详见上方重点解读。</p>
+      <div class="tags"><span class="tag">太空算力</span><span class="tag">NVIDIA CVC</span><span class="tag gray">Benchmark / EQT</span></div>
+    </div>
+  </div>
 
-<li>
-  <div class="dt">Also（Rivian 分拆）— <span class="amt">1.5 亿美元</span> D 轮</div>
-  <div class="dm">估值 10 亿美元 · Prysm Capital 领投，Eclipse、Greenoaks、MVP Ventures 跟投 · 8月19日</div>
-  <div class="dd">从 Rivian 分拆不到两年的微出行公司，产品为助力电单车与小型四轮货运车，累计融资 4.55 亿美元。本轮重点是把 3500 美元的电单车做成切入口，向自动驾驶配送平台延伸。</div>
-  <div class="tags"><span class="tag">微出行</span><span class="tag">自动驾驶</span><span class="tag">新晋独角兽</span></div>
-</li>
+  <div class="item">
+    <div class="rank">03</div>
+    <div class="body">
+      <h3>Muon Space 获 <span class="amt">2.5 亿美元</span> C 轮，估值约 15 亿美元</h3>
+      <div class="meta">8月20日 ｜ Eclipse 领投，Google、Salesforce Ventures、Wellington、Galvanize、I Squared、Woven Capital 跟投 ｜ 加州 Mountain View</div>
+      <p>自研自产自营卫星系统，累计股权融资超 3.86 亿美元，已发射 11 颗卫星。新建的圣何塞工厂目标 2027 年年产 500 颗卫星。投资逻辑不止"更多卫星"，而是军民两用任务、高带宽通信与在轨计算节点。15 亿美元估值为媒体报道，公司未确认。</p>
+      <div class="tags"><span class="tag">卫星制造</span><span class="tag">军民两用</span><span class="tag gray">Google CVC</span><span class="tag gray">C 轮</span></div>
+    </div>
+  </div>
 
-<li>
-  <div class="dt">Velaura AI — <span class="amt">1.1 亿美元</span> A 轮</div>
-  <div class="dm">估值超 10 亿美元 · Seligman Ventures 领投 · 8月15–21日当周</div>
-  <div class="dd">硅谷 AI 算力基础设施公司，主攻超低功耗芯片与配套软件，目标是把 AI 推理的单位能耗成本压下来。A 轮即成独角兽，反映资本对"能效"这一算力硬约束的定价。</div>
-  <div class="tags"><span class="tag">半导体</span><span class="tag">AI 算力</span><span class="tag">低功耗</span><span class="tag">新晋独角兽</span></div>
-</li>
+  <div class="item">
+    <div class="rank">04</div>
+    <div class="body">
+      <h3>Anthropic 被曝瞄准 <span class="amt">2 万亿美元</span>估值 IPO，或成史上最大上市</h3>
+      <div class="meta">8月21日报道 ｜ 计划最快 8 月底递表、10 月挂牌 ｜ 募资规模传约 1000 亿美元</div>
+      <p>据多家媒体援引投资人说法，Claude 母公司 Anthropic 的 IPO 估值预期在 2 万亿美元以上，部分情形推演至 3 万亿，将超过 6 月以 1.77 万亿美元上市的 SpaceX。半数以上受访股东预计其年化营收将在年底前达到 1000 亿–1200 亿美元，相较 5 月披露的 470 亿美元年化增长超过十倍。该消息同时也在强化"AI 是否已进入泡沫区间"的争论。</p>
+      <div class="tags"><span class="tag">IPO</span><span class="tag">基础模型</span><span class="tag gray">传闻阶段</span></div>
+    </div>
+  </div>
 
-<li>
-  <div class="dt">Rillet — <span class="amt">1 亿美元</span> C 轮</div>
-  <div class="dm">估值 10 亿美元 · ICONIQ 领投，红杉、a16z、Bain Capital Ventures、Battery、Oak HC/FT、FirstMark、Creandum 等参投 · 8月19日</div>
-  <div class="dd">AI 原生 ERP / 财务自动化平台，走出隐身仅两年即晋级独角兽，客户数超 600 家，一年内完成第三轮融资，累计融资超 2 亿美元。是本批交易中少见的纯软件大额案例。</div>
-  <div class="tags"><span class="tag">企业软件</span><span class="tag">AI 原生 ERP</span><span class="tag">红杉</span><span class="tag">a16z</span><span class="tag">ICONIQ</span></div>
-</li>
+  <div class="item">
+    <div class="rank">05</div>
+    <div class="body">
+      <h3>NVIDIA 洽谈投资 Mercor，估值 <span class="amt">200 亿美元</span></h3>
+      <div class="meta">8月19日报道 ｜ 交易尚未落定</div>
+      <p>Mercor 为 AI 实验室提供高质量人工数据与专家标注服务，是模型训练链条上的关键供给方。若成交，将是 NVIDIA 在"数据层"而非算力层的一次显著加注，与其同期投资 Starcloud、Groq 一起，勾勒出其沿 AI 栈全面布局 CVC 的路径。消息处于洽谈阶段，条款未确认。</p>
+      <div class="tags"><span class="tag">AI 数据</span><span class="tag">NVIDIA CVC</span><span class="tag gray">洽谈中</span></div>
+    </div>
+  </div>
 
-<li>
-  <div class="dt">Happy Health — <span class="amt">7500 万美元</span></div>
-  <div class="dm">ARCH Venture Partners、OpenLoop 投资 · 8月15–21日当周</div>
-  <div class="dd">奥斯汀数字健康公司，开发用于睡眠呼吸暂停诊断与治疗的智能指环设备。ARCH 的参与说明生命科学顶级基金正在把可穿戴诊断当作正经的临床资产而非消费电子。</div>
-  <div class="tags"><span class="tag">数字健康</span><span class="tag">可穿戴</span><span class="tag">ARCH</span></div>
-</li>
+  <div class="item">
+    <div class="rank">06</div>
+    <div class="body">
+      <h3>Ingenico 获 <span class="amt">1.5 亿欧元</span>（约 1.75 亿美元）投资，PIMCO 领投</h3>
+      <div class="meta">本周 ｜ 法国 ｜ 支付受理技术</div>
+      <p>本周金融科技领域最大一笔已披露股权交易。这笔资金将用于重塑资本结构、加速产品开发并强化客户服务。全球支付基础设施在 AI 代理支付兴起的背景下重新获得资本关注——同期还有为 AI 代理支付构建底层设施的 Natural 获得 Upper90 至多 1 亿美元授信额度。</p>
+      <div class="tags"><span class="tag">支付基础设施</span><span class="tag gray">PIMCO</span><span class="tag gray">欧洲</span></div>
+    </div>
+  </div>
 
-<li>
-  <div class="dt">Frontieras North America — <span class="amt">4500 万美元+</span></div>
-  <div class="dm">Regulation A+ 扩容发行，逾 1.5 万名股东认购，无单一机构领投 · 8月20日公告，发行8月27日截止</div>
-  <div class="dd">工业碳转化平台，用 FASForm 固体碳分馏工艺把煤与碳氢化合物转化为燃料、氢、工业碳制品与农业产品，项目落地西弗吉尼亚州 Mason 县。值得注意的不是金额，而是路径：重资产硬科技正越来越多地绕开传统 VC 股权。</div>
-  <div class="tags"><span class="tag">能源科技</span><span class="tag">工业脱碳</span><span class="tag">Reg A+ 融资</span></div>
-</li>
+  <div class="item">
+    <div class="rank">07</div>
+    <div class="body">
+      <h3>Frontieras North America 通过 Reg A+ 募得 <span class="amt">4500 万美元以上</span></h3>
+      <div class="meta">8月20日公布 ｜ 逾 15,000 名股东认购 ｜ 发行定于 8月27日截止</div>
+      <p>工业碳转化平台 FASForm，将煤炭等碳氢化合物转化为燃料、氢气、工业碳制品与农业产品，项目落地西弗吉尼亚州 Mason County。这不是传统机构轮——没有顶级 VC 的尽调背书——但它提出了一个对重资产科技创业者越来越现实的问题：工厂、能源系统和实体基础设施，是否必须靠风险股权来融资。</p>
+      <div class="tags"><span class="tag">工业脱碳</span><span class="tag gray">Reg A+</span><span class="tag gray">非传统融资</span></div>
+    </div>
+  </div>
 
-<li>
-  <div class="dt">MaxQ Medical — <span class="amt">3150 万美元</span> A 轮</div>
-  <div class="dm">Atlantic Blue Ventures、S3 Ventures、Olympus Innovation Ventures 领投，Hillside Capital 跟投 · 8月20日</div>
-  <div class="dd">加州森尼韦尔医疗器械公司，开发经尿道单次手术即可完成前列腺"影像+治疗"的一体化平台，首发适应症为良性前列腺增生，后续拓展至局灶性前列腺癌。奥林巴斯创投的战略入局是关键信号。</div>
-  <div class="tags"><span class="tag">医疗器械</span><span class="tag">泌尿外科</span><span class="tag">奥林巴斯 CVC</span></div>
-</li>
+  <div class="item">
+    <div class="rank">08</div>
+    <div class="body">
+      <h3>印度财富科技 Centricity 融资约 <span class="amt">3300 万美元</span>，估值约 2.16 亿美元</h3>
+      <div class="meta">本周 ｜ SMBC Asia Rising Fund 领投，Lightspeed India、Burman Family Office 跟投 ｜ 印度</div>
+      <p>结构为约 2700 万美元股权 + 600 万美元风险债。面向金融与投资专业人士的财富管理平台，资金用于强化技术基础设施、扩张 B2B2C 分销业务，以及做大私人财富与非居民印度人（NRI）客户服务。在全球财富科技投资 Q2 环比下滑 62% 的背景下，这笔交易的区域信号意义大于金额。</p>
+      <div class="tags"><span class="tag">财富科技</span><span class="tag gray">Lightspeed</span><span class="tag gray">印度</span></div>
+    </div>
+  </div>
 
-<li>
-  <div class="dt">Apollo Atomics — <span class="amt">3100 万美元</span> 种子轮（超额认购）</div>
-  <div class="dm">FCVC 领投，Y Combinator、Telesoft Partners、Robinhood Ventures、Pelion、Alumni Ventures、Nucleation Capital、Duke Capital Partners 参投 · 8月20日</div>
-  <div class="dd">MIT 分拆的紧凑型压水堆公司，核心不是堆型创新而是"制造架构"——重新设计核蒸汽系统以缩小体积，实现工厂化生产与运输，直接瞄准 AI 数据中心的供电缺口。资金用于 A-1 示范项目与监管审批。</div>
-  <div class="tags"><span class="tag">核能</span><span class="tag">AI 数据中心供电</span><span class="tag">MIT 分拆</span><span class="tag">YC</span></div>
-</li>
+  <div class="item">
+    <div class="rank">09</div>
+    <div class="body">
+      <h3>MaxQ Medical 完成 <span class="amt">3150 万美元</span> A 轮</h3>
+      <div class="meta">8月20日 ｜ Atlantic Blue Ventures、S3 Ventures、Olympus Innovation Ventures 领投，Hillside Capital 跟投 ｜ 加州 Sunnyvale</div>
+      <p>研发经尿道单次手术即可完成前列腺成像与治疗的一体化平台，首个适应症为良性前列腺增生（BPH），路线图延伸至前列腺癌的局灶治疗与诊断。Olympus 产业资本的入局是关键信号——医疗器械投资人往往看重懂监管路径、医生采纳与医院采购的产业伙伴。这笔钱足以让公司走出原型风险，进入昂贵的临床开发阶段。</p>
+      <div class="tags"><span class="tag">医疗器械</span><span class="tag">泌尿外科</span><span class="tag gray">Olympus CVC</span></div>
+    </div>
+  </div>
 
-<li>
-  <div class="dt">Astromech — <span class="amt">2000 万美元</span></div>
-  <div class="dm">报道估值约 38 亿美元 · Bob Nelsen 领投，Peak6、NeoGenesis Capital、Builders VC、CA Investments 参投 · 8月20日</div>
-  <div class="dd">从 Colossal Biosciences 分拆的德州公司，用 AI 建模基因信息、生物性状与演化之间的关系，应用面覆盖医药、农业、保育。累计融资仅 6000 万美元却报出 38 亿美元估值——本批交易中估值倍数最激进的一笔，也是风险最高的一笔。</div>
-  <div class="tags"><span class="tag">AI + 生物</span><span class="tag">高估值</span><span class="tag">Bob Nelsen</span></div>
-</li>
+  <div class="item">
+    <div class="rank">10</div>
+    <div class="body">
+      <h3>MIT 孵化的 Apollo Atomics 获 <span class="amt">3100 万美元</span>超额认购种子轮</h3>
+      <div class="meta">8月20日 ｜ FCVC 领投，Y Combinator、Telesoft、Alumni Ventures、Robinhood Ventures、Pelion 等跟投 ｜ 马萨诸塞州剑桥</div>
+      <p>做紧凑型压水堆，但真正的主张在制造架构——重新设计核蒸汽系统以缩小占地，使反应堆能在工厂批量制造、便于运输，压缩历来漫长昂贵的部署周期。资金投向 A-1 示范项目、测试、量产开发与监管工作。AI 数据中心、工业电气化与电网拥堵，正把"电力可得性"变成战略性技术约束，这也是核能初创能在更早阶段拿到风投规模资金的原因。</p>
+      <div class="tags"><span class="tag">核能</span><span class="tag">AI 数据中心供电</span><span class="tag gray">Y Combinator</span><span class="tag gray">种子轮</span></div>
+    </div>
+  </div>
 
-<li>
-  <div class="dt">Twin1 AI — <span class="amt">2000 万美元</span> 种子轮</div>
-  <div class="dm">Bessemer Venture Partners、Tribeca Venture Partners、Aramco Ventures 共同领投 · 8月20日</div>
-  <div class="dd">走出隐身的企业 AI 公司（加州圣马特奥 + 伦敦），为职场人构建"数字分身"，吸收经授权的邮件、会议、文档与组织知识，并用权限治理控制信息边界。已披露客户包括年利达、Orrick、Dechert、Customers Bank、Aegis Energy。产品定位是"许可上下文即壁垒"，而非又一个大模型套壳。</div>
-  <div class="tags"><span class="tag">企业 AI</span><span class="tag">AI Agent</span><span class="tag">Bessemer</span><span class="tag">Aramco CVC</span></div>
-</li>
-
-</ol>
+  <div class="item">
+    <div class="rank">11</div>
+    <div class="body">
+      <h3>Twin1 AI 带 <span class="amt">2000 万美元</span>种子轮走出隐身期</h3>
+      <div class="meta">8月20日 ｜ Bessemer Venture Partners、Tribeca Venture Partners、Aramco Ventures</div>
+      <p>为每位职场人构建"AI 数字孪生"，核心在于把授权的企业内部知识转化为可复用的 AI 资产。这类交易反映出 AI 投资论的迁移：投资人越来越要求模型之外还有专有语境、科研数据、工作流所有权或实体资产，而不是又一个通用模型的轻薄外壳。同日另有 Astromech 以约 38 亿美元的报道估值追加 2000 万美元，方向是生物变化的预测模型。</p>
+      <div class="tags"><span class="tag">企业 AI</span><span class="tag gray">Bessemer</span><span class="tag gray">种子轮</span></div>
+    </div>
+  </div>
+</section>
 
 <footer>
-  <strong>信息来源（均为本次实际检索并核对的页面）：</strong>
-  <ul>
-    <li><a href="https://news.crunchbase.com/venture/biggest-funding-rounds-defense-tech-ai-infrastructure-castelion/">Crunchbase News：The Week's 10 Biggest Funding Rounds: Defense Tech, AI Tools And Infrastructure Lead The Way（2026年8月21日）</a></li>
-    <li><a href="https://techstartups.com/2026/08/20/venture-capital-startup-funding-roundup-august-20-2026-aramco-ventures-bessemer-venture-partners-google-tribeca-venture-partners-y-combinator-more/">TechStartups：Venture Capital &amp; Startup Funding Roundup, August 20, 2026</a></li>
-    <li><a href="https://www.castelion.com/news/series-c/">Castelion 官方公告：Castelion Raises $1B Series C to Scale Production of Low-Cost Hypersonic Weapons（2026年8月19日）</a></li>
-    <li><a href="https://www.castelion.com/news/series-b/">Castelion 官方公告：Closes $350 Million Series B（2025年12月5日）</a></li>
-    <li><a href="https://www.castelion.com/news/project_ranger_groundbreaking/">Castelion 官方公告：Project Ranger 动工（2026年1月21日）</a></li>
-    <li><a href="https://www.prnewswire.com/news-releases/castelion-raises-1-billion-series-c-to-scale-production-of-low-cost-hypersonic-weapons-302855711.html">PR Newswire：Castelion Raises $1 Billion Series C</a></li>
-    <li><a href="https://www.axios.com/2026/08/20/hypersonic-missile-castelion">Axios：Startup missile maker Castelion valued at $13 billion</a></li>
-    <li><a href="https://spacenews.com/hypersonic-missile-startup-castelion-raises-1-billion/">SpaceNews：Hypersonic missile startup Castelion raises $1 billion</a></li>
-    <li><a href="https://www.govconwire.com/articles/hypersonic-weapon-developer-castelion-financing">GovConWire：Castelion Raises $100M（A 轮，2025年1月）</a></li>
-    <li><a href="https://tracxn.com/d/companies/castelion/__amR4p12Brd44rjCpwJvqZuW3gysvs54YkX0jGx4tVUQ/funding-and-investors">Tracxn：Castelion 融资历史与投资方</a></li>
-    <li><a href="https://techcrunch.com/2026/08/19/rivian-spinout-also-raises-another-150-million/">TechCrunch：Rivian spinout Also raises another $150M（2026年8月19日）</a></li>
-    <li><a href="https://techcrunch.com/2026/08/19/rillet-raises-100m-series-c-at-1b-valuation-2-years-after-emerging-from-stealth/">TechCrunch：Rillet raises $100M Series C at $1B valuation</a></li>
-    <li><a href="https://techcrunch.com/2026/08/17/groq-raises-350m-to-fuel-its-pivot-from-ai-chips-to-neocloud/">TechCrunch：Groq raises $350M（NVIDIA 参投，2026年8月17日）</a></li>
-    <li><a href="https://techstartups.com/2026/08/20/satellite-startup-muon-space-raises-250-million-at-1-5-billion-valuation-to-scale-space-infrastructure/">TechStartups：Muon Space raises $250M at $1.5B valuation</a></li>
-    <li><a href="https://techstartups.com/2026/08/20/mit-spinoff-apollo-atomics-raises-31m-to-build-factory-made-nuclear-reactors-for-ai-data-centers/">TechStartups：MIT spinoff Apollo Atomics raises $31M</a></li>
-  </ul>
-  <div class="disc">
-    <strong>免责声明：</strong>本页内容由 AI 依据上述公开报道自动汇总生成，仅供信息参考，不构成任何投资建议、要约或推荐。融资金额、估值与经营数据多为公司自行披露或媒体报道口径，未经独立审计，部分估值（如 Muon Space 的 15 亿美元、Astromech 的 38 亿美元）为媒体报道且未获公司确认。Crunchbase 周榜统计区间为 8 月 15–21 日，个别交易的公告时间可能早于本页覆盖的 24–48 小时窗口，已在条目中标注日期。读者在做出任何决策前应自行核实原始信息源。
+  <h2>信息来源</h2>
+  <div class="srcs">
+    <a href="https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/" target="_blank">TechCrunch｜Starcloud raises $250 million for orbital data centers as launch options dry up（8月21日）</a>
+    <a href="https://www.businesswire.com/news/home/20260821884035/en/Starcloud-Raises-$250-Million-at-$2.3-Billion-Valuation-to-Scale-AI-with-Orbital-Data-Centers" target="_blank">BusinessWire｜Starcloud Raises $250 Million at $2.3 Billion Valuation</a>
+    <a href="https://www.businesswire.com/news/home/20260330024111/en/CORRECTING-and-REPLACING-Starcloud-Raises-$170M-Series-A-at-$1.1bn-Valuation-Led-by-Benchmark-and-EQT-Ventures" target="_blank">BusinessWire｜Starcloud Raises $170M Series A at $1.1bn Valuation（3月30日）</a>
+    <a href="https://techfundingnews.com/starcloud-170m-series-a-benchmark-eqt-nvidia-h100-space/" target="_blank">Tech Funding News｜Starcloud, the company putting NVIDIA H100s in orbit, becomes unicorn</a>
+    <a href="https://www.satellitetoday.com/finance/2026/08/21/starcloud-adds-250m-to-series-a-at-a-2-3b-valuation/" target="_blank">Via Satellite｜Starcloud Adds $250M to Series A at a $2.3B Valuation</a>
+    <a href="https://news.crunchbase.com/venture/biggest-funding-rounds-defense-tech-ai-infrastructure-castelion/" target="_blank">Crunchbase News｜The Week's 10 Biggest Funding Rounds: Defense Tech, AI Tools And Infrastructure（8月21日）</a>
+    <a href="https://www.castelion.com/news/series-c/" target="_blank">Castelion｜Raises $1B Series C to Scale Production of Low-Cost Hypersonic Weapons</a>
+    <a href="https://www.axios.com/2026/08/20/hypersonic-missile-castelion" target="_blank">Axios｜Startup missile maker Castelion valued at $13 billion</a>
+    <a href="https://spacenews.com/hypersonic-missile-startup-castelion-raises-1-billion/" target="_blank">SpaceNews｜Hypersonic missile startup Castelion raises $1 billion</a>
+    <a href="https://techstartups.com/2026/08/20/venture-capital-startup-funding-roundup-august-20-2026-aramco-ventures-bessemer-venture-partners-google-tribeca-venture-partners-y-combinator-more/" target="_blank">TechStartups｜Venture Capital &amp; Startup Funding Roundup, August 20, 2026</a>
+    <a href="https://techstartups.com/2026/08/20/satellite-startup-muon-space-raises-250-million-at-1-5-billion-valuation-to-scale-space-infrastructure/" target="_blank">TechStartups｜Muon Space raises $250 million at $1.5 billion valuation</a>
+    <a href="https://techstartups.com/2026/08/20/mit-spinoff-apollo-atomics-raises-31m-to-build-factory-made-nuclear-reactors-for-ai-data-centers/" target="_blank">TechStartups｜MIT spinoff Apollo Atomics raises $31M</a>
+    <a href="https://techstartups.com/2026/08/21/anthropic-eyes-2-trillion-valuation-in-ipo-that-could-top-spacex-as-biggest-ever/" target="_blank">TechStartups｜Anthropic eyes $2 trillion valuation in IPO（8月21日）</a>
+    <a href="https://finance.yahoo.com/technology/ai/articles/anthropic-investors-target-2-trillion-132255261.html" target="_blank">Yahoo Finance｜Anthropic investors target $2 trillion IPO valuation in October</a>
+    <a href="https://fortune.com/2026/08/13/anthropic-ipo-2-trillion-october-largest-ever-spacex/" target="_blank">Fortune｜Anthropic reportedly plans a $2 trillion IPO in October</a>
+    <a href="https://techstartups.com/2026/08/19/nvidia-in-talks-to-invest-in-ai-data-startup-mercor-at-20-billion-valuation/" target="_blank">TechStartups｜Nvidia in talks to invest in AI data startup Mercor at $20 billion valuation</a>
+    <a href="https://fintech.global/2026/08/21/payments-and-ai-drive-361m-in-fintech-funding-this-week/" target="_blank">FinTech Global｜Payments and AI drive $361m in FinTech funding this week（8月21日）</a>
+    <a href="https://dealroom.co/news/146123-frontieras-raises-more-than-45m-through-expanded-reg-a-offering/" target="_blank">Dealroom｜Frontieras raises more than $45M through expanded Reg A offering</a>
+    <a href="https://ibsintelligence.com/ibsi-news/centricity-wealthtech-raises-33m-to-boost-wealth-operations/" target="_blank">IBS Intelligence｜Centricity WealthTech raises $33m</a>
+    <a href="https://techstartups.com/2026/08/20/twin1-ai-emerges-from-stealth-with-20m-in-funding-to-give-every-professional-an-ai-powered-digital-twin/" target="_blank">TechStartups｜Twin1 AI emerges from stealth with $20M</a>
   </div>
-  <p style="margin-top:14px;font-size:12px;">生成时间：2026年8月22日 · 每日更新</p>
+  <div class="disc">
+    <strong>免责声明：</strong>本页内容由自动化流程于 2026 年 8 月 23 日基于当日公开报道整理生成，覆盖 8 月 20 日至 22 日公布的融资事件，不构成任何投资建议。部分估值、融资额与交易细节来自媒体报道而非公司正式披露（如 Muon Space 的 15 亿美元估值、NVIDIA 对 Mercor 的投资、Anthropic 的 IPO 计划），可能存在偏差或后续变化。汇率换算为近似值。请以各公司官方公告及原始报道为准。
+  </div>
 </footer>
 
 </div>
