@@ -3,304 +3,146 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日科技投资动态 · 2026年8月25日</title>
+<title>每日科技投资动态 · 2026年8月26日</title>
 <style>
-  :root{
-    --accent:#c8401a;
-    --ink:#1a1a1a;
-    --muted:#6b6b6b;
-    --line:#e2ded8;
-    --bg:#f5f2ed;
-  }
-  *{box-sizing:border-box;}
-  body{
-    margin:0;padding:0;background:var(--bg);color:var(--ink);
-    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    line-height:1.75;-webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:840px;margin:0 auto;padding:28px 20px 60px;}
-
-  /* 页头 */
-  header.masthead{
-    border-bottom:3px double var(--ink);
-    padding-bottom:16px;margin-bottom:24px;text-align:center;
-  }
-  .kicker{
-    font-size:12px;letter-spacing:.32em;color:var(--accent);
-    font-weight:700;margin-bottom:8px;
-  }
-  h1.title{
-    font-size:40px;line-height:1.2;margin:0 0 10px;font-weight:800;letter-spacing:.04em;
-  }
-  .dateline{
-    font-size:13px;color:var(--muted);
-    display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:center;align-items:center;
-    border-top:1px solid var(--line);padding-top:10px;margin-top:12px;
-  }
-  .dateline b{color:var(--ink);font-weight:600;}
-
-  /* 卡片通用 */
-  .card{
-    background:#fff;border:1px solid var(--line);border-radius:4px;
-    padding:22px 24px;margin-bottom:18px;
-    box-shadow:0 1px 2px rgba(0,0,0,.04);
-  }
-  h2.sec{
-    font-size:15px;letter-spacing:.2em;font-weight:700;color:var(--accent);
-    margin:34px 0 14px;padding-bottom:6px;border-bottom:2px solid var(--accent);
-  }
-  h2.sec:first-of-type{margin-top:12px;}
-
-  /* 概览 */
-  .overview p{margin:0 0 12px;font-size:15.5px;}
-  .overview p:last-child{margin-bottom:0;}
-  .stats{
-    display:flex;flex-wrap:wrap;gap:12px;margin-top:18px;
-    border-top:1px dashed var(--line);padding-top:16px;
-  }
-  .stat{flex:1 1 150px;text-align:center;}
-  .stat .n{font-size:24px;font-weight:800;color:var(--accent);display:block;line-height:1.3;}
-  .stat .l{font-size:12px;color:var(--muted);}
-
-  /* 重点卡片 */
-  .highlight{
-    border:2px solid var(--accent);border-radius:4px;background:#fff;
-    padding:0;overflow:hidden;margin-bottom:18px;
-  }
-  .highlight .hd{
-    background:var(--accent);color:#fff;padding:8px 24px;
-    font-size:12px;letter-spacing:.28em;font-weight:700;
-  }
-  .highlight .bd{padding:22px 24px 24px;}
-  .highlight h3{
-    font-size:26px;margin:0 0 6px;font-weight:800;line-height:1.35;
-  }
-  .highlight .sub{color:var(--muted);font-size:13.5px;margin-bottom:18px;}
-  .grid{
-    display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-    gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:20px;
-  }
-  .cell{background:#fff;padding:12px 14px;}
-  .cell .k{font-size:11.5px;color:var(--muted);letter-spacing:.06em;}
-  .cell .v{font-size:19px;font-weight:800;color:var(--accent);line-height:1.4;}
-  .cell .v small{font-size:12px;font-weight:600;color:var(--ink);}
-  .highlight h4{
-    font-size:14px;margin:20px 0 8px;font-weight:700;
-    padding-left:10px;border-left:3px solid var(--accent);
-  }
-  .highlight p{margin:0 0 10px;font-size:14.5px;}
-  .rounds{width:100%;border-collapse:collapse;font-size:13.5px;margin:6px 0 4px;}
-  .rounds th,.rounds td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top;}
-  .rounds th{font-size:12px;color:var(--muted);font-weight:600;background:#faf8f5;}
-  .rounds td.amt{font-weight:700;color:var(--accent);white-space:nowrap;}
-
-  /* 新闻列表 */
-  ol.deals{list-style:none;counter-reset:d;margin:0;padding:0;}
-  ol.deals li{
-    counter-increment:d;background:#fff;border:1px solid var(--line);
-    border-radius:4px;padding:16px 20px 16px 58px;margin-bottom:12px;position:relative;
-  }
-  ol.deals li::before{
-    content:counter(d);position:absolute;left:18px;top:16px;
-    font-size:20px;font-weight:800;color:var(--accent);opacity:.55;
-  }
-  .deal-h{font-size:17px;font-weight:700;margin-bottom:4px;line-height:1.45;}
-  .amount{
-    color:var(--accent);font-weight:800;
-    background:linear-gradient(transparent 62%, rgba(200,64,26,.16) 62%);
-    padding:0 2px;
-  }
-  .deal-b{font-size:14px;color:#333;margin:6px 0 10px;}
-  .tags{display:flex;flex-wrap:wrap;gap:6px;}
-  .tag{
-    font-size:11.5px;color:var(--muted);border:1px solid var(--line);
-    border-radius:2px;padding:2px 8px;background:#faf8f5;
-  }
-  .tag.d{color:var(--accent);border-color:rgba(200,64,26,.35);background:rgba(200,64,26,.05);}
-
-  /* 页脚 */
-  footer{margin-top:40px;border-top:3px double var(--ink);padding-top:18px;font-size:13px;color:var(--muted);}
-  footer h3{font-size:13px;letter-spacing:.16em;color:var(--ink);margin:0 0 10px;}
-  footer ul{margin:0 0 18px;padding-left:20px;}
-  footer li{margin-bottom:5px;word-break:break-all;}
-  footer a{color:var(--accent);text-decoration:none;}
-  footer a:hover{text-decoration:underline;}
-  .disclaimer{font-size:12px;line-height:1.7;border-top:1px solid var(--line);padding-top:14px;color:#8a8a8a;}
-
-  @media (max-width:600px){
-    h1.title{font-size:29px;}
-    .highlight h3{font-size:21px;}
-    .wrap{padding:20px 14px 44px;}
-    .card,.highlight .bd{padding:18px 16px;}
-    ol.deals li{padding:14px 16px 14px 48px;}
-  }
+  :root { --accent: #c8401a; --ink: #1a1a1a; --gray: #666; --line: #e5e0d8; --bg: #f7f5f0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif; background: var(--bg); color: var(--ink); line-height: 1.75; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 20px 60px; }
+  header { border-bottom: 3px double var(--ink); padding: 36px 0 20px; text-align: center; }
+  header h1 { font-size: 34px; letter-spacing: 2px; font-weight: 700; }
+  header .date { color: var(--accent); font-weight: 600; margin-top: 8px; font-size: 15px; }
+  header .src { color: var(--gray); font-size: 13px; margin-top: 4px; }
+  h2.sec { font-size: 20px; margin: 36px 0 14px; padding-left: 12px; border-left: 5px solid var(--accent); }
+  .overview { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 20px 24px; font-size: 15px; }
+  .overview b { color: var(--accent); }
+  .hl-card { background: #fff; border: 2px solid var(--accent); border-radius: 10px; padding: 26px 28px; margin-top: 14px; }
+  .hl-badge { display: inline-block; background: var(--accent); color: #fff; font-size: 12px; padding: 3px 12px; border-radius: 20px; letter-spacing: 2px; margin-bottom: 12px; }
+  .hl-card h3 { font-size: 22px; margin-bottom: 6px; }
+  .hl-card .sub { color: var(--gray); font-size: 14px; margin-bottom: 16px; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin: 18px 0; }
+  .stat { background: #faf6f2; border: 1px solid var(--line); border-radius: 8px; padding: 12px; text-align: center; }
+  .stat .v { color: var(--accent); font-size: 20px; font-weight: 700; }
+  .stat .k { color: var(--gray); font-size: 12px; margin-top: 2px; }
+  .hl-card h4 { font-size: 15px; color: var(--accent); margin: 16px 0 6px; }
+  .hl-card p { font-size: 15px; margin-bottom: 8px; }
+  .news { list-style: none; }
+  .news li { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 18px 22px; margin-bottom: 12px; }
+  .news .head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px; }
+  .news .rank { color: var(--accent); font-weight: 700; font-size: 15px; }
+  .news .name { font-weight: 700; font-size: 17px; }
+  .news .amt { color: var(--accent); font-weight: 700; font-size: 16px; }
+  .news p { font-size: 14px; color: #333; margin-top: 6px; }
+  .tags { margin-top: 8px; }
+  .tag { display: inline-block; font-size: 12px; color: var(--accent); border: 1px solid var(--accent); border-radius: 20px; padding: 1px 10px; margin-right: 6px; margin-top: 4px; }
+  footer { margin-top: 44px; border-top: 1px solid var(--line); padding-top: 20px; font-size: 13px; color: var(--gray); }
+  footer a { color: var(--accent); text-decoration: none; word-break: break-all; }
+  footer ul { list-style: none; margin: 8px 0 14px; }
+  footer li { margin-bottom: 4px; }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <header class="masthead">
-    <div class="kicker">全球科技行业投资简报</div>
-    <h1 class="title">每日科技投资动态</h1>
-    <div class="dateline">
-      <span><b>2026年8月25日</b>（星期二）</span>
-      <span>覆盖区间：8月21日 – 8月24日</span>
-      <span>信息源：TechCrunch · VC News Daily · VCBacked · GeekWire · EU-Startups · BetaKit</span>
-    </div>
-  </header>
+<header>
+  <h1>每日科技投资动态</h1>
+  <div class="date">2026年8月26日 · 星期三</div>
+  <div class="src">信息来源：TechCrunch · TechStartups · SCMP · CnEVPost · The Robot Report · PR Newswire 等</div>
+</header>
 
-  <h2 class="sec">今 日 概 览</h2>
-  <div class="card overview">
-    <p>过去数个交易日，全球科技创投的资金流向高度集中在<strong>「AI 基础设施」</strong>与<strong>「硬科技制造」</strong>两条主线上。最具标志性的一笔是 Starcloud 完成 <strong>2.5 亿美元 A 轮扩展融资</strong>，投后估值 23 亿美元——NVIDIA 首次以战略投资方身份进场，把「太空数据中心」从概念推向了产业验证阶段。</p>
-    <p>另一条重磅消息来自二级市场：开源 AI 平台 <strong>Hugging Face 被曝正在接洽约 130 亿美元的收购要约</strong>，较其 2023 年 45 亿美元估值上涨近 2 倍。这与 Stripe 70 亿美元收购 OpenRouter 一脉相承，显示 AI 基础设施层正在进入并购整合期。</p>
-    <p>软件侧，AI 原生 ERP 公司 Rillet 在<strong>未主动融资的情况下 48 小时内敲定 1 亿美元 C 轮</strong>、跻身独角兽，由 Iconiq 领投、红杉与 a16z 跟投，是「AI 原生应用蚕食传统 SaaS 巨头」叙事最新的一个注脚。国防科技（Castelion 10 亿美元）与电动车（ALSO 1.5 亿美元）同样保持高热度。</p>
-    <div class="stats">
-      <div class="stat"><span class="n">~16亿</span><span class="l">本期披露融资总额（美元）</span></div>
-      <div class="stat"><span class="n">10+</span><span class="l">重点交易数</span></div>
-      <div class="stat"><span class="n">130亿</span><span class="l">最大潜在并购金额（美元）</span></div>
-      <div class="stat"><span class="n">AI基建</span><span class="l">最热赛道</span></div>
-    </div>
+<h2 class="sec">今日概览</h2>
+<div class="overview">
+  过去24–48小时，全球科技创投资金继续向<b>具身智能与实体AI基础设施</b>高度集中。小鹏汽车机器人子公司以超<b>9亿美元</b>的首轮外部融资（投后估值超63亿美元）成为中国具身智能史上最大单轮私募融资；自动驾驶卡车公司Gatik获<b>2亿美元</b>；Stability AI引入环球音乐、索尼音乐、华纳音乐、EA等产业资本。此外，AI数据中心光互连、工业碳捕获、分布式能源、低空经济等"实体AI下游基础设施"赛道持续获得中小额精准投资。据Crunchbase统计，2026年上半年美加初创融资约3920亿美元创历史新高，实体AI公司上半年融资额已超2022–2024三年总和（419亿美元）。
+</div>
+
+<h2 class="sec">今日最值得关注</h2>
+<div class="hl-card">
+  <span class="hl-badge">深度聚焦</span>
+  <h3>小鹏机器人（Dogotix）：超9亿美元首轮融资，挑战特斯拉Optimus</h3>
+  <div class="sub">人形机器人 · 具身智能 · 中国广州 · IDG资本领投，腾讯、阿里巴巴战略参投</div>
+  <div class="stats">
+    <div class="stat"><div class="v">$9亿+</div><div class="k">本轮融资额</div></div>
+    <div class="stat"><div class="v">$63亿+</div><div class="k">投后估值</div></div>
+    <div class="stat"><div class="v">首轮</div><div class="k">外部融资（此前无）</div></div>
+    <div class="stat"><div class="v">~82%</div><div class="k">小鹏持股（保持并表）</div></div>
+    <div class="stat"><div class="v">1,000台/月</div><div class="k">2026年底IRON产能目标</div></div>
+    <div class="stat"><div class="v">2027年</div><div class="k">商业化交付启动</div></div>
   </div>
+  <h4>公司业务</h4>
+  <p>Dogotix是小鹏汽车分拆的机器人业务实体，核心产品为IRON人形机器人——全身76个自由度、单手21个自由度，主打灵巧操作与拟人步态，同时研发物理AI大模型、执行器、传感与控制系统。此轮为中国具身智能行业迄今最大单轮私募融资。</p>
+  <h4>融资结构与历史</h4>
+  <p>这是该机器人业务的首次外部融资：约6亿美元来自外部投资方（IDG资本领投，高榕资本、腾讯、阿里巴巴参投），小鹏汽车出资约2亿美元，高管团队出资约1亿美元。此前业务完全由小鹏内部输血，无独立融资历史。分拆后小鹏仍持股约82%并保持财务并表——公开母公司为长周期项目引入战略资本、又不独自承担全部资金压力的典型结构。</p>
+  <h4>业务进展与商业化</h4>
+  <p>目前处于商业化前夜：目标2026年底实现月产约1,000台IRON，2027年起在中国及海外启动商业销售，尚无独立营收与盈利数据，估值反映的是战略卡位而非成熟单位经济。华尔街分析师认为此次融资是小鹏市值重估的催化剂。资金将投向机器人硬件、物理AI模型、训练数据、制造产能与国际化扩张。</p>
+</div>
 
-  <h2 class="sec">今 日 最 值 得 关 注</h2>
-  <div class="highlight">
-    <div class="hd">重 点 深 度 · S T A R C L O U D</div>
-    <div class="bd">
-      <h3>Starcloud：NVIDIA 亲自下场，把数据中心送上天</h3>
-      <div class="sub">2026年8月21日 · 美国华盛顿州 Redmond · A 轮扩展（Series A Extension）· 由 Manhattan West 领投</div>
+<h2 class="sec">今日交易列表（按重要性排序）</h2>
+<ul class="news">
+  <li>
+    <div class="head"><span class="rank">01</span><span class="name">小鹏机器人 / Dogotix</span><span class="amt">超9亿美元 · 首轮外部融资</span></div>
+    <p>IDG资本领投，高榕资本、腾讯、阿里巴巴参投。投后估值超63亿美元，中国具身智能最大单轮融资，详见上方深度聚焦。</p>
+    <div class="tags"><span class="tag">人形机器人</span><span class="tag">腾讯/阿里CVC</span><span class="tag">IDG领投</span></div>
+  </li>
+  <li>
+    <div class="head"><span class="rank">02</span><span class="name">Gatik</span><span class="amt">2亿美元</span></div>
+    <p>自动驾驶箱式卡车公司，卡塔尔投资局（QIA）与Koch Disruptive Technologies领投，Millennium、ARK Invest等参投。两个月前刚与百事可乐签署多年商业协议，2019年至今累计融资约5亿美元。</p>
+    <div class="tags"><span class="tag">自动驾驶</span><span class="tag">主权基金</span><span class="tag">物流</span></div>
+  </li>
+  <li>
+    <div class="head"><span class="rank">03</span><span class="name">Stability AI</span><span class="amt">7,600万美元 · B轮</span></div>
+    <p>Stable Diffusion开发商获环球音乐、索尼音乐、华纳音乐、EA等产业资本及AMD Ventures投资，累计融资达2.32亿美元。三大唱片公司集体入股生成式AI图像公司，版权和解与合作信号强烈。</p>
+    <div class="tags"><span class="tag">生成式AI</span><span class="tag">产业资本</span><span class="tag">AMD CVC</span></div>
+  </li>
+  <li>
+    <div class="head"><span class="rank">04</span><span class="name">Quintessent</span><span class="amt">4,000万美元 · A轮</span></div>
+    <p>圣塔芭芭拉硅光子公司，超额认购，光网络巨头Ciena参投。量子点DWDM梳状激光器直击AI数据中心节点间光互连瓶颈，累计融资至少5,150万美元，首款产品已开始客户送样。</p>
+    <div class="tags"><span class="tag">AI基础设施</span><span class="tag">硅光子</span></div>
+  </li>
+  <li>
+    <div class="head"><span class="rank">05</span><span class="name">PayRewards（Pay.com.au）</span><span class="amt">2,800万美元 · E轮</span></div>
+    <p>澳大利亚最大企业积分支付平台借本轮进军美国市场，累计融资7,000万美元。以积分奖励为获客抓手切入美国中小企业B2B支付。</p>
+    <div class="tags"><span class="tag">金融科技</span><span class="tag">B2B支付</span></div>
+  </li>
+  <li>
+    <div class="head"><span class="rank">06</span><span class="name">Standard Metrics</span><span class="amt">2,000万美元 · B轮</span></div>
+    <p>8VC领投，Salesforce Ventures、Spark Capital等参投。为VC/PE提供投后组合报告与估值分析软件，现覆盖150家机构、超1万家被投企业、管理资产超4,000亿美元，A轮以来业务增长约20倍（公司口径）。</p>
+    <div class="tags"><span class="tag">私募市场软件</span><span class="tag">Salesforce CVC</span></div>
+  </li>
+  <li>
+    <div class="head"><span class="rank">07</span><span class="name">Mantel Capture</span><span class="amt">1,800万美元 · A轮扩展</span></div>
+    <p>剑桥（马萨诸塞）熔融硼酸盐碳捕获公司，Constellation Technology Ventures、Azimut参投，累计融资约5,000万美元，资金用于工业现场的商业化部署。</p>
+    <div class="tags"><span class="tag">气候科技</span><span class="tag">碳捕获</span></div>
+  </li>
+  <li>
+    <div class="head"><span class="rank">08</span><span class="name">起安科技（Qi'an Technology）</span><span class="amt">1亿元人民币（约1,490万美元）· C轮</span></div>
+    <p>鄂州临空产业发展基金投资，聚焦无人机与中国低空经济技术栈。区域产业基金入局，体现"VC+产业政策资本"的中国式实体AI融资结构。</p>
+    <div class="tags"><span class="tag">低空经济</span><span class="tag">产业基金</span></div>
+  </li>
+  <li>
+    <div class="head"><span class="rank">09</span><span class="name">Light Links</span><span class="amt">600万美元 · Pre-seed</span></div>
+    <p>Outlander领投，多家国防/军民两用基金参投。Wi-OW红外光无线通信系统替代无线电，面向工厂与国防场景，最高25Gbps、射频静默。</p>
+    <div class="tags"><span class="tag">国防科技</span><span class="tag">光通信</span></div>
+  </li>
+  <li>
+    <div class="head"><span class="rank">10</span><span class="name">Boldr</span><span class="amt">500万美元 · Pre-A轮</span></div>
+    <p>伦敦公司，Unconventional Ventures领投，Techstars等参投。通过HVAC承包商渠道把家庭暖通设备接入电网灵活性市场，构建分布式虚拟电厂。</p>
+    <div class="tags"><span class="tag">分布式能源</span><span class="tag">气候科技</span></div>
+  </li>
+</ul>
 
-      <div class="grid">
-        <div class="cell"><div class="k">本轮融资额</div><div class="v">2.5亿<small> 美元</small></div></div>
-        <div class="cell"><div class="k">投后估值</div><div class="v">23亿<small> 美元</small></div></div>
-        <div class="cell"><div class="k">累计融资</div><div class="v">4.5亿<small> 美元</small></div></div>
-        <div class="cell"><div class="k">NVIDIA 出资</div><div class="v">约2500万<small> 美元</small></div></div>
-        <div class="cell"><div class="k">成立时间</div><div class="v">2024<small> 年</small></div></div>
-        <div class="cell"><div class="k">团队规模</div><div class="v">25<small> 人</small></div></div>
-      </div>
-
-      <h4>业务内容：用轨道解决 AI 的能源瓶颈</h4>
-      <p>Starcloud 在近地轨道部署搭载数据中心级 GPU 的卫星，为客户提供「在轨 AI 推理」服务。其核心逻辑是：太空中太阳能供给充沛、真空环境便于辐射散热，可以绕开地面数据中心愈发严峻的电力与冷却约束。公司已向 FCC 申请运营多达 <strong>88,000 颗</strong>航天器的许可。</p>
-
-      <h4>历史融资情况</h4>
-      <table class="rounds">
-        <thead><tr><th>轮次</th><th>时间</th><th>金额</th><th>估值 / 主要投资方</th></tr></thead>
-        <tbody>
-          <tr><td>Pre-seed</td><td>2024年</td><td class="amt">300万美元</td><td>Y Combinator 等</td></tr>
-          <tr><td>A 轮</td><td>2026年3月</td><td class="amt">1.70亿美元</td><td>11亿美元估值；Benchmark、EQT Ventures 领投，NFX、Nebular、YC、Adjacent、776、Manhattan West 等跟投</td></tr>
-          <tr><td>A 轮扩展</td><td>2026年8月</td><td class="amt">2.50亿美元</td><td>23亿美元投后；Manhattan West 领投，新进 NVIDIA、Cisco Investments、Cedar Capital、Goanna Capital、Standard Capital；老股东 Benchmark、EQT、Soma、NFX、776 跟投</td></tr>
-          <tr><td><strong>累计</strong></td><td>—</td><td class="amt">4.50亿美元</td><td>估值 5 个月内翻倍（11亿 → 23亿美元）</td></tr>
-        </tbody>
-      </table>
-
-      <h4>业务与研发进展</h4>
-      <p><strong>已完成：</strong>首颗卫星 Starcloud-1 于 2025 年 11 月由 SpaceX 发射，重约 60 公斤，是首个在近地轨道运行 NVIDIA H100 数据中心级 GPU 的航天器，在轨算力较此前入轨 GPU 高出约 100 倍，并首次在太空完成 AI 模型训练。</p>
-      <p><strong>进行中：</strong>两颗新一代 8kW 算力卫星（Starcloud-2）计划于 2027 年以拼车方式发射，将为包括美国政府机构在内的客户执行在轨推理任务；更大的 Starcloud-3 计划搭乘 SpaceX Starship。公司正在华盛顿州 Woodinville 建设 <strong>10 万平方英尺</strong>产线，紧邻 SpaceX 与 Amazon 的卫星制造基地。</p>
-      <p><strong>与 NVIDIA 的协同：</strong>NVIDIA 正基于 Starcloud-1 的在轨数据开发首款专为太空设计的 GPU「Vera Rubin Space-1」，Starcloud 预计最早 2028 年底将其送入轨道。创始人 Philip Johnston 称，NVIDIA 在本轮投资前做的技术尽调「比任何一家 VC 都深入」。</p>
-      <p><strong>营收与盈利：</strong>公司尚处于产品验证与产能建设期，公开报道<strong>未披露营收或盈利数据</strong>，商业化收入预计随 2027 年 Starcloud-2 上天后才开始形成规模。</p>
-
-      <h4>主要风险</h4>
-      <p>最大变量在于发射运力：SpaceX 计划 2028 年停用 Falcon 9，而 Starship 尚未完成快速复用验证；Blue Origin New Glenn、ULA Vulcan 尚未常态化飞行，Rocket Lab Neutron 未首飞。Johnston 直言：「如果 2029 年订不到 SpaceX 的运力，对我们会很有挑战。」本轮资金相当一部分正是为提前锁定发射席位而备。</p>
-    </div>
-  </div>
-
-  <h2 class="sec">重 要 交 易 一 览（按重要性排序）</h2>
-  <ol class="deals">
-
-    <li>
-      <div class="deal-h">Starcloud 完成 <span class="amount">2.5 亿美元</span> A 轮扩展，估值 23 亿美元</div>
-      <div class="deal-b">太空数据中心公司，Manhattan West 领投，NVIDIA 与 Cisco Investments 首次进入股东名单，累计融资 4.5 亿美元。见上方深度解读。</div>
-      <div class="tags"><span class="tag d">8月21日</span><span class="tag">AI基础设施</span><span class="tag">太空科技</span><span class="tag">NVIDIA CVC</span><span class="tag">Benchmark / EQT</span></div>
-    </li>
-
-    <li>
-      <div class="deal-h">Hugging Face 被曝接洽 <span class="amount">约 130 亿美元</span> 收购要约</div>
-      <div class="deal-b">据 Business Insider 报道并经 TechCrunch 跟进，这家开源 AI 模型平台已在与银行接触以评估报价，但尚未达成交易。公司 2023 年最后一轮由 Salesforce Ventures 领投、Alphabet 与 IBM Ventures 等参投，投后估值 45 亿美元；今年早些时候曾拒绝 NVIDIA 一笔 5 亿美元、对应 70 亿美元估值的投资，理由是不希望单一强势股东影响决策。CEO Clem Delangue 称公司「接近盈利」。</div>
-      <div class="tags"><span class="tag d">8月24日</span><span class="tag">并购传闻</span><span class="tag">开源AI</span><span class="tag">AI基础设施整合</span></div>
-    </li>
-
-    <li>
-      <div class="deal-h">Castelion 完成 <span class="amount">10 亿美元</span> C 轮融资</div>
-      <div class="deal-b">总部位于加州 Torrance 的国防科技公司，主攻低成本高超音速打击武器与常规威慑能力重建。据报道由 Carlyle、摩根大通与 a16z 参与领投，是本期金额最大的一级市场融资。</div>
-      <div class="tags"><span class="tag d">8月20日</span><span class="tag">国防科技</span><span class="tag">高超音速</span><span class="tag">a16z</span><span class="tag">Carlyle / JPMorgan</span></div>
-    </li>
-
-    <li>
-      <div class="deal-h">ALSO 完成 <span class="amount">1.5 亿美元</span> D 轮融资</div>
-      <div class="deal-b">帕洛阿尔托的小型电动车公司，本轮资金用于加速产品量产与市场扩张，是本期消费硬件/出行赛道金额最高的一笔。</div>
-      <div class="tags"><span class="tag d">8月20日</span><span class="tag">电动出行</span><span class="tag">硬件制造</span><span class="tag">D轮</span></div>
-    </li>
-
-    <li>
-      <div class="deal-h">Rillet 完成 <span class="amount">1 亿美元</span> C 轮，估值 10 亿美元晋身独角兽</div>
-      <div class="deal-b">AI 原生 ERP / 财务平台。Iconiq 领投（GP Seth Pierrepont 进入董事会），红杉、a16z 跟投，累计融资 2 亿美元。据 TechCrunch，创始人 Nicolas Kopp 在董事会上披露「季度内 ARR 翻倍」后，48 小时内在未主动启动融资的情况下敲定本轮。公司现有约 <strong>600 家客户</strong>，其中 50% 来自 Intuit、30% 来自 NetSuite/Sage Intacct、20% 来自 Oracle、SAP、Workday 与微软产品线；今年 4 月与安永（EY）达成 AI 财务转型联盟。</div>
-      <div class="tags"><span class="tag d">8月21日</span><span class="tag">AI原生SaaS</span><span class="tag">ERP</span><span class="tag">红杉 / a16z / Iconiq</span><span class="tag">新晋独角兽</span></div>
-    </li>
-
-    <li>
-      <div class="deal-h">Helcim 融资 <span class="amount">5,300 万美元</span></div>
-      <div class="deal-b">加拿大支付服务商，在本国支付行业格局重整之际完成新一轮融资，用于扩大中小商户支付业务。</div>
-      <div class="tags"><span class="tag d">8月21日</span><span class="tag">金融科技</span><span class="tag">支付</span><span class="tag">加拿大</span></div>
-    </li>
-
-    <li>
-      <div class="deal-h">Network Bio 携 <span class="amount">5,000 万美元</span> 融资正式成立</div>
-      <div class="deal-b">帕洛阿尔托生物技术公司，以 5,000 万美元启动资金正式亮相，是本期生命科学领域最大的一笔新公司融资。</div>
-      <div class="tags"><span class="tag d">8月20日</span><span class="tag">生物科技</span><span class="tag">新公司成立</span></div>
-    </li>
-
-    <li>
-      <div class="deal-h">MaxQ Medical 完成 <span class="amount">3,150 万美元</span> A 轮</div>
-      <div class="deal-b">加州 Sunnyvale 医疗科技公司，开发用于前列腺诊疗的一体化经尿道成像与治疗系统。</div>
-      <div class="tags"><span class="tag d">8月20日</span><span class="tag">医疗器械</span><span class="tag">A轮</span></div>
-    </li>
-
-    <li>
-      <div class="deal-h">Queen One 获 <span class="amount">2,500 万美元</span> 新融资</div>
-      <div class="deal-b">布鲁克林电商技术公司，推出行业首个「完全由 AI 治理」的商务 CRM 系统。</div>
-      <div class="tags"><span class="tag d">8月20日</span><span class="tag">AI应用</span><span class="tag">电商 / CRM</span></div>
-    </li>
-
-    <li>
-      <div class="deal-h">Twin1 AI 携 <span class="amount">2,000 万美元</span> 种子轮走出隐身状态</div>
-      <div class="deal-b">位于加州圣马特奥，宣布结束隐身期并同步完成 2,000 万美元种子融资——本期规模最大的种子轮之一。</div>
-      <div class="tags"><span class="tag d">8月21日</span><span class="tag">AI</span><span class="tag">种子轮</span><span class="tag">隐身期结束</span></div>
-    </li>
-
-    <li>
-      <div class="deal-h">欧洲早期交易群：Redfaire <span class="amount">1,300 万欧元</span>、Oshen 427 万欧元、Eyedentity 130 万欧元、HexSeed 70 万欧元+</div>
-      <div class="deal-b">爱尔兰 Limerick 的 Redfaire 获 BGF 投资 1,300 万欧元扩张 ERP 与云服务；英国 Plymouth 的 Oshen 融资 427 万欧元，部署充当「海洋耳目」的机器人集群；斯德哥尔摩的 Eyedentity 获 130 万欧元，用 AI 早期识别致命眼部肿瘤；英国 HexSeed 融资逾 70 万欧元，以金刚石涂层技术为 AI 数据中心散热。</div>
-      <div class="tags"><span class="tag d">8月21–23日</span><span class="tag">欧洲</span><span class="tag">早期融资</span><span class="tag">深科技 / 医疗AI</span></div>
-    </li>
-
-  </ol>
-
-  <footer>
-    <h3>信 息 来 源</h3>
-    <ul>
-      <li>TechCrunch — <a href="https://techcrunch.com/2026/08/21/starcloud-raises-200-million-for-orbital-data-centers-as-launch-options-dry-up/">Starcloud raises $250 million for orbital data centers as launch options dry up</a>（2026-08-21）</li>
-      <li>TechCrunch — <a href="https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b/">Hugging Face reportedly in talks to be acquired for $13B</a>（2026-08-24）</li>
-      <li>TechCrunch — <a href="https://techcrunch.com/2026/08/21/how-ai-accounting-startup-rillet-raised-100m-and-became-a-unicorn-in-48-hours/">How AI accounting startup Rillet raised $100M and became a unicorn in 48 hours</a>（2026-08-21）</li>
-      <li>VC News Daily — <a href="https://vcnewsdaily.com/starcloud/venture-capital-funding/cqjxhxmqnt">Starcloud Announces $250M Series A Extension</a></li>
-      <li>VC News Daily — <a href="https://vcnewsdaily.com/castelion/venture-capital-funding/bptdldxlwr">Castelion Receives $1B Series C Round</a></li>
-      <li>VC News Daily — <a href="https://vcnewsdaily.com/also/venture-capital-funding/mkzlrghwyw">ALSO Announces $150 Million Series D Financing</a></li>
-      <li>VC News Daily — <a href="https://vcnewsdaily.com/network-bio/venture-capital-funding/ttjgncfxwx">Network Bio Launches with $50 Million Financing</a></li>
-      <li>VC News Daily — <a href="https://vcnewsdaily.com/maxq-medical/venture-capital-funding/tfdylrfskl">MaxQ Medical Raises $31.5M Series A</a></li>
-      <li>VC News Daily — <a href="https://vcnewsdaily.com/queen-one/venture-capital-funding/znycxvpgbg">Queen One Raises $25 Million</a></li>
-      <li>VC News Daily — <a href="https://vcnewsdaily.com/twin1-ai/venture-capital-funding/ccxvztldtk">Twin1 AI Emerges With $20M Seed Round</a></li>
-      <li>VCBacked — <a href="https://www.vcbacked.co/daily/2026-08-24">VC Funding Digest, Monday, August 24, 2026</a></li>
-      <li>GeekWire — <a href="https://www.geekwire.com/2026/starcloud-250m-data-center-satellite-network-nvidia/">Starcloud raises $250M to support the creation of data center satellite network in league with Nvidia</a></li>
-      <li>SpaceNews — <a href="https://spacenews.com/nvidia-joins-starclouds-250-million-orbital-data-center-funding-round/">Nvidia joins Starcloud's $250 million orbital data center funding round</a></li>
-      <li>Business Wire — <a href="https://www.businesswire.com/news/home/20260330024111/en/Starcloud-Raises-%24170M-Series-A-at-%241.1bn-Valuation-Led-by-Benchmark-and-EQT-Ventures">Starcloud Raises $170M Series A at $1.1bn Valuation Led by Benchmark and EQT Ventures</a>（2026-03-30）</li>
-      <li>BetaKit — <a href="https://betakit.com/helcim-raises-53-million-amid-shakeup-in-canadian-payments/">Helcim raises $53 million amid shakeup in Canadian payments</a></li>
-      <li>EU-Startups — <a href="https://www.eu-startups.com/2026/08/limerick-based-redfaire-lands-e13-million-from-bgf-to-scale-its-erp-and-cloud-services-business/">Redfaire lands €13 million from BGF</a></li>
-      <li>EU-Startups — <a href="https://www.eu-startups.com/2026/08/plymouth-based-oshen-raises-e4-27-million-to-scale-robot-swarms-that-act-as-the-oceans-eyes-and-ears/">Oshen raises €4.27 million to scale ocean robot swarms</a></li>
-      <li>EU-Startups — <a href="https://www.eu-startups.com/2026/08/stockholm-based-eyedentity-secures-e1-3-million-to-detect-deadly-eye-cancer-earlier-with-ai/">Eyedentity secures €1.3 million to detect eye cancer earlier with AI</a></li>
-      <li>EU-Startups — <a href="https://www.eu-startups.com/2026/08/uk-based-hexseed-raises-over-e700k-to-cool-ai-data-centres-with-its-with-diamond-coating-technology/">HexSeed raises over €700k to cool AI data centres</a></li>
-    </ul>
-    <div class="disclaimer">
-      <strong>免责声明：</strong>本页面由自动化流程于 2026年8月25日 基于公开媒体报道整理生成，仅供信息参考，不构成任何投资建议、要约或招揽。融资金额、估值与投资方信息以各交易主体的正式公告为准；部分交易（如 Hugging Face 收购洽谈）目前仅为媒体报道，尚未获当事方确认，存在不确定性。受各信息源发布节奏影响，本期覆盖区间以 2026年8月21日至8月24日 已公开披露的交易为主。读者在做出任何决策前应自行核实原始信息来源。
-    </div>
-  </footer>
+<footer>
+  <b>信息来源（本期实际引用）：</b>
+  <ul>
+    <li><a href="https://techstartups.com/2026/08/24/venture-capital-startup-funding-roundup-august-24-2026-climate-tech-fund-prosegur-salesforce-ventures-spark-capital-techstars-more/">TechStartups · Venture Capital &amp; Startup Funding Roundup (Aug 24, 2026)</a></li>
+    <li><a href="https://techcrunch.com/2026/08/25/self-driving-truck-startup-gatik-raises-200m-following-pepsico-deal/">TechCrunch · Gatik raises $200M following PepsiCo deal</a></li>
+    <li><a href="https://techcrunch.com/2026/08/25/stability-ai-maker-of-image-generator-stable-diffusion-raises-76-million-in-fresh-funding/">TechCrunch · Stability AI raises $76 million</a></li>
+    <li><a href="https://www.scmp.com/business/china-evs/article/3365096/ev-maker-xpeng-set-challenge-tesla-embodied-ai-after-robotics-unit-raises-us900m">SCMP · XPeng robotics unit raises US$900M</a></li>
+    <li><a href="https://cnevpost.com/2026/08/24/xpeng-carves-out-robotics-business/">CnEVPost · Xpeng carves out robotics business at $6.3B valuation</a></li>
+    <li><a href="https://www.therobotreport.com/xpeng-motors-humanoid-robot-unit-dogotix-raises-900m/">The Robot Report · XPeng humanoid robot unit Dogotix raises $900M</a></li>
+    <li><a href="https://www.prnewswire.com/news-releases/paycomau-australias-largest-business-rewards-platform-raises-us28m-to-launch-in-the-us-as-payrewards-302857628.html">PR Newswire · Pay.com.au raises US$28M to launch PayRewards in the US</a></li>
+  </ul>
+  <b>免责声明：</b>本页面内容基于2026年8月26日公开新闻报道自动汇总，仅供信息参考，不构成任何投资建议。部分数据（如营收、增长倍数）为公司自报口径，融资金额与估值以官方公告为准。
+</footer>
 
 </div>
 </body>
