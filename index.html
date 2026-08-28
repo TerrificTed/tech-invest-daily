@@ -3,259 +3,349 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日科技投资动态 · 2026年8月27日</title>
+<title>每日科技投资动态 · 2026年8月28日</title>
 <style>
-:root{
-  --accent:#c8401a;
-  --ink:#1a1a1a;
-  --muted:#6b6b6b;
-  --line:#e2ddd6;
-  --bg:#f5f2ed;
-}
-*{box-sizing:border-box;}
-body{
-  margin:0;padding:0;background:var(--bg);color:var(--ink);
-  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC",sans-serif;
-  line-height:1.75;-webkit-font-smoothing:antialiased;
-}
-.wrap{max-width:900px;margin:0 auto;padding:32px 20px 64px;}
+  :root{
+    --accent:#c8401a;
+    --ink:#1a1a1a;
+    --muted:#6b6b6b;
+    --line:#e2ddd6;
+    --bg:#f5f2ed;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; padding:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Helvetica Neue",Arial,sans-serif;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px 60px;}
 
-/* 页头 */
-header.masthead{
-  border-bottom:3px double var(--ink);padding-bottom:18px;margin-bottom:8px;text-align:center;
-}
-.kicker{font-size:12px;letter-spacing:.35em;color:var(--accent);font-weight:700;margin-bottom:10px;}
-h1.title{font-size:40px;line-height:1.2;margin:0 0 12px;letter-spacing:.06em;font-weight:800;}
-.subline{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;font-size:13px;color:var(--muted);}
-.subline span{white-space:nowrap;}
+  /* 页头 */
+  header.masthead{
+    border-bottom:3px double var(--ink);
+    padding:38px 0 18px;
+    margin-bottom:28px;
+    text-align:center;
+  }
+  .kicker{
+    font-size:12px;letter-spacing:.32em;color:var(--accent);
+    text-transform:uppercase;margin-bottom:10px;font-weight:700;
+  }
+  h1.title{
+    font-size:38px;margin:0 0 12px;letter-spacing:.06em;font-weight:800;
+  }
+  .datebar{
+    display:flex;justify-content:center;gap:18px;flex-wrap:wrap;
+    font-size:13px;color:var(--muted);
+    border-top:1px solid var(--line);padding-top:12px;margin-top:14px;
+  }
+  .datebar b{color:var(--ink);font-weight:600;}
 
-/* 通用卡片 */
-.card{background:#fff;border:1px solid var(--line);border-radius:4px;padding:24px 26px;margin:20px 0;
-  box-shadow:0 1px 2px rgba(0,0,0,.04);}
-h2.sec{font-size:15px;letter-spacing:.2em;color:var(--accent);font-weight:700;
-  border-bottom:1px solid var(--line);padding-bottom:8px;margin:38px 0 4px;}
+  /* 卡片 */
+  .card{
+    background:#fff;border:1px solid var(--line);
+    border-radius:4px;padding:24px 26px;margin-bottom:22px;
+    box-shadow:0 1px 2px rgba(0,0,0,.04);
+  }
+  h2.sec{
+    font-size:19px;margin:34px 0 16px;padding-left:12px;
+    border-left:5px solid var(--accent);letter-spacing:.04em;
+  }
+  .overview p{margin:0 0 12px;font-size:15px;}
+  .overview p:last-child{margin-bottom:0;}
+  .stats{
+    display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;
+    border-top:1px solid var(--line);padding-top:16px;
+  }
+  .stat{flex:1;min-width:130px;}
+  .stat .n{font-size:24px;font-weight:800;color:var(--accent);line-height:1.2;}
+  .stat .l{font-size:12px;color:var(--muted);margin-top:2px;}
 
-/* 概览 */
-.overview p{margin:0 0 12px;font-size:15px;}
-.overview p:last-child{margin-bottom:0;}
-.stats{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px;}
-.stat{flex:1;min-width:130px;border:1px solid var(--line);border-radius:3px;padding:12px 14px;background:#fbf9f6;}
-.stat .n{font-size:22px;font-weight:800;color:var(--accent);line-height:1.2;}
-.stat .l{font-size:12px;color:var(--muted);margin-top:4px;}
+  /* 重点卡片 */
+  .highlight{
+    background:#fff;border:2px solid var(--accent);border-radius:4px;
+    padding:0;margin-bottom:26px;overflow:hidden;
+  }
+  .highlight .hl-top{
+    background:var(--accent);color:#fff;padding:10px 26px;
+    font-size:13px;letter-spacing:.2em;font-weight:700;
+  }
+  .highlight .hl-body{padding:24px 26px 26px;}
+  .highlight h3{font-size:25px;margin:0 0 6px;letter-spacing:.02em;}
+  .highlight .sub{color:var(--muted);font-size:14px;margin:0 0 18px;}
+  .grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:1px;background:var(--line);border:1px solid var(--line);margin:18px 0 22px;
+  }
+  .cell{background:#fff;padding:14px 16px;}
+  .cell .k{font-size:11px;color:var(--muted);letter-spacing:.1em;margin-bottom:4px;}
+  .cell .v{font-size:19px;font-weight:800;color:var(--accent);line-height:1.3;}
+  .cell .v.small{font-size:15px;color:var(--ink);}
+  h4.sub-h{font-size:15px;margin:20px 0 8px;color:var(--ink);
+    border-bottom:1px solid var(--line);padding-bottom:6px;}
+  .highlight p{font-size:14.5px;margin:0 0 10px;}
+  ul.rounds{margin:0;padding-left:0;list-style:none;}
+  ul.rounds li{
+    font-size:14px;padding:8px 0 8px 14px;border-left:2px solid var(--line);
+    margin-bottom:2px;
+  }
+  ul.rounds li b{color:var(--accent);}
+  .warn{
+    background:#fdf4f1;border-left:3px solid var(--accent);
+    padding:12px 16px;font-size:13.5px;color:#5a3a30;margin-top:14px;
+  }
 
-/* 重点卡片 */
-.hero{border-left:5px solid var(--accent);}
-.hero .badge{display:inline-block;background:var(--accent);color:#fff;font-size:12px;font-weight:700;
-  padding:3px 10px;border-radius:2px;letter-spacing:.1em;}
-.hero h3{font-size:27px;margin:14px 0 6px;line-height:1.35;font-weight:800;}
-.hero .dek{color:var(--muted);font-size:14px;margin:0 0 18px;}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--line);
-  border:1px solid var(--line);margin:18px 0 22px;}
-.cell{background:#fff;padding:14px 16px;}
-.cell .k{font-size:11px;color:var(--muted);letter-spacing:.1em;}
-.cell .v{font-size:19px;font-weight:800;color:var(--accent);margin-top:3px;line-height:1.3;}
-.cell .v.sm{font-size:15px;}
-h4.sub{font-size:14px;font-weight:700;margin:22px 0 6px;padding-left:10px;border-left:3px solid var(--accent);}
-.hero p{font-size:14.5px;margin:0 0 10px;}
-table.rounds{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:8px;}
-table.rounds th{background:#fbf9f6;text-align:left;padding:8px 10px;border:1px solid var(--line);
-  font-weight:700;color:var(--muted);font-size:12px;letter-spacing:.05em;}
-table.rounds td{padding:8px 10px;border:1px solid var(--line);vertical-align:top;}
-table.rounds td.amt{color:var(--accent);font-weight:700;white-space:nowrap;}
+  /* 新闻列表 */
+  .item{
+    background:#fff;border:1px solid var(--line);border-radius:4px;
+    padding:18px 22px;margin-bottom:14px;display:flex;gap:18px;align-items:flex-start;
+  }
+  .rank{
+    font-size:22px;font-weight:800;color:var(--line);
+    min-width:34px;line-height:1.2;flex-shrink:0;
+  }
+  .item h3{font-size:17px;margin:0 0 4px;line-height:1.5;}
+  .amount{
+    display:inline-block;background:var(--accent);color:#fff;
+    font-size:13px;font-weight:700;padding:1px 9px;border-radius:3px;
+    margin-right:8px;vertical-align:2px;
+  }
+  .item p{font-size:14px;margin:6px 0 10px;color:#333;}
+  .tags{display:flex;gap:6px;flex-wrap:wrap;}
+  .tag{
+    font-size:11.5px;color:var(--muted);border:1px solid var(--line);
+    border-radius:12px;padding:1px 10px;background:#fafafa;
+  }
+  .tag.hot{color:var(--accent);border-color:#f0c4b6;background:#fdf4f1;}
 
-/* 新闻列表 */
-ol.news{list-style:none;counter-reset:n;padding:0;margin:8px 0 0;}
-ol.news>li{counter-increment:n;background:#fff;border:1px solid var(--line);border-radius:4px;
-  padding:18px 22px 18px 60px;margin:12px 0;position:relative;}
-ol.news>li::before{content:counter(n,decimal-leading-zero);position:absolute;left:18px;top:17px;
-  font-size:20px;font-weight:800;color:var(--line);}
-.nh{font-size:17px;font-weight:700;margin:0 0 4px;line-height:1.45;}
-.amt-hl{color:var(--accent);font-weight:800;}
-.meta{font-size:12.5px;color:var(--muted);margin:0 0 8px;}
-.desc{font-size:14px;margin:0 0 10px;}
-.tags{display:flex;flex-wrap:wrap;gap:6px;}
-.tag{font-size:11.5px;background:#f3ede7;color:#8a5136;border:1px solid #e6dbd1;
-  padding:2px 9px;border-radius:11px;}
-
-/* 页脚 */
-footer{margin-top:44px;border-top:3px double var(--ink);padding-top:20px;font-size:13px;color:var(--muted);}
-footer h5{font-size:13px;color:var(--ink);margin:0 0 8px;letter-spacing:.15em;}
-footer ul{margin:0 0 18px;padding-left:20px;}
-footer li{margin-bottom:5px;word-break:break-all;}
-footer a{color:#8a5136;text-decoration:none;border-bottom:1px dotted #c0b4a8;}
-footer a:hover{color:var(--accent);}
-.disclaimer{font-size:12px;line-height:1.7;background:#fbf9f6;border:1px solid var(--line);
-  padding:14px 16px;border-radius:3px;}
-@media(max-width:600px){
-  h1.title{font-size:28px;}
-  .hero h3{font-size:21px;}
-  ol.news>li{padding:16px 16px 16px 52px;}
-}
+  /* 页脚 */
+  footer{
+    margin-top:40px;border-top:3px double var(--ink);padding-top:22px;
+    font-size:13px;color:var(--muted);
+  }
+  footer h3{font-size:14px;color:var(--ink);margin:0 0 10px;letter-spacing:.1em;}
+  footer ul{margin:0 0 20px;padding-left:18px;}
+  footer li{margin-bottom:5px;word-break:break-all;}
+  footer a{color:var(--accent);text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+  .disclaimer{
+    background:#efece6;border:1px solid var(--line);padding:14px 16px;
+    font-size:12.5px;line-height:1.7;border-radius:3px;
+  }
+  @media (max-width:600px){
+    h1.title{font-size:27px;}
+    .item{flex-direction:column;gap:6px;}
+    .rank{font-size:18px;}
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<header class="masthead">
-  <div class="kicker">全球科技行业投资日报</div>
-  <h1 class="title">每日科技投资动态</h1>
-  <div class="subline">
-    <span>2026年8月27日 星期四</span>
-    <span>覆盖周期：8月25日–8月27日</span>
-    <span>来源：TechCrunch · Bloomberg · CNBC · TechStartups · BusinessWire</span>
-  </div>
-</header>
+  <header class="masthead">
+    <div class="kicker">Global Tech Investment Daily</div>
+    <h1 class="title">每日科技投资动态</h1>
+    <div class="datebar">
+      <span><b>2026年8月28日</b>　星期五</span>
+      <span>覆盖时段：8月26日–28日</span>
+      <span>来源：TechCrunch · CNBC · Bloomberg · The Information · TechStartups · Crunchbase</span>
+    </div>
+  </header>
 
-<h2 class="sec">今 日 概 览</h2>
-<div class="card overview">
-  <p>过去 24–48 小时，全球科技投资的重心明显从"训练更大的模型"转向<strong>把 AI 接入真实世界的基础设施</strong>——电网、货运车队、工厂产线和算力机房。最大的一笔资金流向并非股权融资，而是 Anthropic 与英国算力商 Nscale 签下的约 <strong>450 亿美元、六年期</strong>算力租赁协议，规模远超当日所有风险投资交易的总和。</p>
-  <p>股权侧的三笔头部交易分别落在消费级 AI 智能体（Instinct，25 亿美元估值）、自动驾驶货运（Gatik，2 亿美元 D 轮）和 AI 数据中心电力调度（Emerald AI，1.5 亿美元 A 轮）。共同点是：投资人开始要求看到<strong>已签约收入、真实部署和物理资产</strong>，而不只是模型能力演示。</p>
-  <p>产业资本（CVC）的存在感创下近期新高——英伟达、三星风投、西门子、GE Vernova、Salesforce Ventures、沙特阿美创投同时出现在 Emerald AI 一家公司的股东名册上；腾讯则领投爱尔兰开源游戏引擎公司 W4 Games，并签下亚洲多年期合作。地域上，韩国、印度、越南、新加坡、阿联酋合计贡献了当日过半交易数量。</p>
-  <div class="stats">
-    <div class="stat"><div class="n">$450亿</div><div class="l">当日最大单笔（Anthropic 算力协议）</div></div>
-    <div class="stat"><div class="n">$8.0亿+</div><div class="l">当日披露股权融资合计</div></div>
-    <div class="stat"><div class="n">3家</div><div class="l">新晋独角兽 / 估值破 10 亿美元</div></div>
-    <div class="stat"><div class="n">6/10</div><div class="l">来自美国以外市场的交易</div></div>
-  </div>
-</div>
-
-<h2 class="sec">今 日 最 值 得 关 注</h2>
-<div class="card hero">
-  <span class="badge">重点深挖</span>
-  <h3>Emerald AI 完成 1.5 亿美元 A 轮，估值 10.5 亿美元<br>英伟达、三星、西门子、沙特阿美同台押注"会让电的数据中心"</h3>
-  <p class="dek">Energize Capital 与 DCVC 联合领投 · 总部：美国华盛顿特区 · 宣布日期：2026年8月25日</p>
-
-  <div class="grid">
-    <div class="cell"><div class="k">本轮融资额</div><div class="v">$1.50亿</div></div>
-    <div class="cell"><div class="k">投后估值</div><div class="v">$10.5亿</div></div>
-    <div class="cell"><div class="k">累计融资</div><div class="v">$2.20亿+</div></div>
-    <div class="cell"><div class="k">融资轮次</div><div class="v sm">A 轮（超额认购）</div></div>
-    <div class="cell"><div class="k">商业化验证</div><div class="v sm">5 处商用机房实测</div></div>
-    <div class="cell"><div class="k">目标市场</div><div class="v sm">美国电网 100+ GW 闲置容量</div></div>
+  <h2 class="sec">今日概览</h2>
+  <div class="card overview">
+    <p>过去 48 小时，全球科技资本市场的主线是<b>「算力与生态的巨额并购」</b>与<b>「个人 AI Agent 的估值狂飙」</b>并行。英伟达被曝已同意以 <b>129 亿美元</b>收购开源模型平台 Hugging Face，把触角从芯片延伸到模型分发生态；Anthropic 则与英国算力商 Nscale 签下 <b>450 亿美元</b>、为期六年的云算力协议。软银同时被曝正洽购 OpenAI 系人形机器人公司 1X 的多数股权，估值约 <b>60 亿美元</b>。</p>
+    <p>一级市场方面，资金明显分化为两极：一端是横向的消费级 AI 赌注——成立仅一年、创始人 23 岁的 Instinct 以 25 亿美元估值完成 2.5 亿美元 B 轮；另一端是大量流向「难啃的具体工作流」的中小额支票——半导体工程自动化、行为健康、医疗器械物流、工业视觉、量子仿真、活畜供应链。此外，电动海上滑翔机公司 REGENT 拿下 2.4 亿美元 B 轮，OpenAI 也在筹备 4 亿美元的第二支创投基金。</p>
+    <p>值得注意的策略性信号：英伟达在 8 月 26 日财报中披露，其公私股权投资持仓已达 <b>956 亿美元</b>，当季确认股权投资收益 78 亿美元——芯片巨头正日益成为 AI 生态最大的资产负债表型投资人。CVC 的活跃度在今日榜单中同样显著：联发科、CVS Health Ventures、洛克希德·马丁、日本航空均现身。</p>
+    <div class="stats">
+      <div class="stat"><div class="n">$12.9B</div><div class="l">最大单笔并购（英伟达 / Hugging Face）</div></div>
+      <div class="stat"><div class="n">$45B</div><div class="l">最大算力承购协议（Anthropic / Nscale）</div></div>
+      <div class="stat"><div class="n">$250M</div><div class="l">最大风险投资单轮（Instinct B 轮）</div></div>
+      <div class="stat"><div class="n">10+</div><div class="l">本期收录重要交易</div></div>
+    </div>
   </div>
 
-  <h4 class="sub">公司在做什么</h4>
-  <p>Emerald AI 由前美国能源部高级顾问、清洁能源学者 <strong>Varun Sivaram 博士</strong>于 2025 年创立，核心产品是一套数据中心"电力灵活性"软件。它不是简单地在电网紧张时关停机器，而是根据电网实时状况<strong>动态调节 AI 训练与推理负载的功耗曲线</strong>——把优先级低的任务往后挪、把批处理任务压缩到低谷时段，从而在几乎不损失算力交付的前提下削减尖峰用电。</p>
-  <p>这解决的是当下 AI 产业最硬的瓶颈：新建数据中心排队等待电网接入往往要数年。Emerald 的主张是，如果机房能够"随叫随让"，美国现有电网无需新建输电线即可额外释放 <strong>100 吉瓦以上</strong>的接入容量。</p>
+  <h2 class="sec">今日最值得关注</h2>
+  <div class="highlight">
+    <div class="hl-top">重点深挖 · FOCUS</div>
+    <div class="hl-body">
+      <h3>Instinct：23 岁创始人的个人 AI 助理，4 个月估值从 5,000 万涨到 25 亿美元</h3>
+      <p class="sub">运营主体 Spear Street Technology · 美国加州 · 创始人 Noah Shinn（23 岁）· 消息公布：2026年8月26–27日</p>
 
-  <h4 class="sub">历史融资情况</h4>
-  <table class="rounds">
-    <thead><tr><th>时间</th><th>轮次</th><th>金额</th><th>主要投资方</th></tr></thead>
-    <tbody>
-      <tr><td>2025年7月</td><td>种子轮</td><td class="amt">$2,450万</td><td>Radical Ventures 领投；NVentures（英伟达创投）、AMPLO、CRV、Neotribe 跟投</td></tr>
-      <tr><td>2026年8月</td><td>A 轮</td><td class="amt">$1.50亿</td><td>Energize Capital、DCVC 联合领投；英伟达、三星风投、西门子、GE Vernova、RWE、沙特阿美创投、Salesforce Ventures、JERA Ventures、In-Q-Tel、Radical Ventures、Energy Impact Partners、Lowercarbon Capital、Emerson Collective 等</td></tr>
-      <tr><td colspan="2"><strong>累计披露融资</strong></td><td class="amt">$2.20亿+</td><td>个人投资人包括凯鹏华盈主席 John Doerr、Google 首席科学家 Jeff Dean、李飞飞教授、前美国国务卿 John Kerry、Tom Steyer 等</td></tr>
-    </tbody>
-  </table>
+      <div class="grid">
+        <div class="cell"><div class="k">本轮融资</div><div class="v">$250M</div></div>
+        <div class="cell"><div class="k">投后估值</div><div class="v">$2.5B</div></div>
+        <div class="cell"><div class="k">累计融资</div><div class="v">$350M</div></div>
+        <div class="cell"><div class="k">轮次</div><div class="v small">B 轮</div></div>
+        <div class="cell"><div class="k">领投方</div><div class="v small">Index Ventures<br>Benchmark（联合领投）</div></div>
+        <div class="cell"><div class="k">营收 / 商业化</div><div class="v small">未披露<br>仍为邀请制私测</div></div>
+      </div>
 
-  <h4 class="sub">业务进展与商业化</h4>
-  <p><strong>技术验证：</strong>过去一年公司在美国亚利桑那、伊利诺伊、弗吉尼亚、俄勒冈及英国伦敦的五处<strong>商用数据中心</strong>完成实测，合作方包括英伟达、Oracle 云基础设施、Nebius、EPRI（美国电力研究院）、英国国家电网及多家区域电力公司与电网调度机构。在与 Oracle、英伟达、亚利桑那 Salt River Project 的联合演示中，一个 AI 算力集群在模拟尖峰负荷事件中<strong>连续三小时削减 25% 用电</strong>，同时维持可接受的算力性能。</p>
-  <p><strong>营收与盈利：</strong>公司未披露收入或盈利数据。目前处于从示范项目向商业部署过渡的阶段，本轮资金将用于扩大商用落地规模。<em>（需注意：估值 10.5 亿美元建立在技术验证与战略股东背书之上，而非已验证的收入体量。）</em></p>
-  <p><strong>为何值得关注：</strong>这份股东名单本身就是信号——同时包含算力方（英伟达）、设备方（西门子、GE Vernova）、发电方（RWE、JERA、沙特阿美）、软件方（Salesforce）和情报机构创投基金（In-Q-Tel）。这些机构对"电力是否会成为 AI 增长天花板"这一问题有直接的经济敞口，它们的集体下注意味着：电力约束正在从背景假设变成一个独立的、可投资的技术市场。</p>
-</div>
+      <h4 class="sub-h">被投公司在做什么</h4>
+      <p>Instinct 是一个「没有新界面」的个人 AI 智能体：用户不必再打开一个新 App，而是直接用<b>短信或打电话</b>与它交互。它被训练成像人类一样操作手机和电脑，并可连接用户的邮箱、日历、消息应用与设备，代为执行任务。创始人 Noah Shinn 称，早期测试用户已用它规划跨州公路旅行、每周采购生鲜、抢购演唱会门票、批量取消订阅服务，甚至有人在用它筹备婚礼。</p>
+      <p>Shinn 此前是企业客服 AI 公司 Sierra 的研究科学家，于 2026 年 4 月在加州注册了 Spear Street Technology。</p>
 
-<h2 class="sec">交 易 一 览 · 按 重 要 性 排 序</h2>
-<ol class="news">
+      <h4 class="sub-h">历史融资轨迹</h4>
+      <ul class="rounds">
+        <li><b>种子期（2026年上半年）</b>　Conviction 的 Pranav Reddy 与 Greenoaks 的 Neil Mehta 早期入股，估值约 <b>5,000 万美元</b></li>
+        <li><b>A 轮（2026年8月初）</b>　Kleiner Perkins 合伙人 Mamoon Hamid 领投 <b>7,500 万美元</b>，估值 <b>5 亿美元</b></li>
+        <li><b>B 轮（2026年8月26日）</b>　Index Ventures 与 Benchmark 联合领投 <b>2.5 亿美元</b>，估值 <b>25 亿美元</b>——距 A 轮仅三周，定价为 A 轮的 5 倍</li>
+        <li><b>累计</b>　总融资 <b>3.5 亿美元</b>；估值 4 个月内上涨约 <b>50 倍</b></li>
+      </ul>
 
-  <li>
-    <div class="nh">Anthropic 与 Nscale 签订约 <span class="amt-hl">450 亿美元</span>算力协议</div>
-    <div class="meta">六年期租赁 · 英国 Nscale · 2026年8月26日 · 来源：Bloomberg / CNBC / TechCrunch</div>
-    <div class="desc">Anthropic 将从英国 AI 基础设施公司 Nscale 租用约 460 兆瓦算力容量，机房位于美国西弗吉尼亚州，采用英伟达新一代 Vera Rubin 芯片系统，预计 2027 年底开始供电。这是 Anthropic 近期一连串算力采购中金额最大的一笔，发生在其筹备 IPO 的背景下。协议虽非股权投资，但单笔规模超过当日全部风投交易总和，直接重塑了英国算力供应商的估值逻辑。</div>
-    <div class="tags"><span class="tag">AI 基础设施</span><span class="tag">算力租赁</span><span class="tag">Anthropic</span><span class="tag">英伟达 Vera Rubin</span></div>
-  </li>
+      <h4 class="sub-h">业务发展与财务情况</h4>
+      <p><b>研发/产品进度：</b>产品仍处于<b>邀请制私有测试</b>阶段，公司尚未公布开放时间表，官网维持极简形态。竞品对照上，Rabbit 的助理以及 OpenAI、Google 的 Agent 产品多聚焦于更窄的任务或单一设备，而 Instinct 一次性索取屏幕、音频、位置与收件箱权限，能力边界更宽。</p>
+      <p><b>营收与盈利：</b>公司<b>未披露任何营收或盈利数据</b>，本轮定价基本建立在用户口碑与增长预期之上。第三方机构预计 AI Agent 市场规模将从 2026 年的约 110 亿美元增长至 2030 年的 500 亿美元以上，个人助理型 Agent 是主要拉动品类之一。</p>
+      <p><b>为什么重要：</b>投资人实质上在下注——下一个主流消费科技平台可能不来自模型厂商，而来自一个能跨现有服务「代为执行」的 Agent。但 25 亿美元估值也把门槛抬到了极高位置：一个尚未公测的产品，最终必须把早期用户的热情转化为大规模留存与收入。</p>
 
-  <li>
-    <div class="nh">Instinct 融资 <span class="amt-hl">2.5 亿美元</span> B 轮，估值 25 亿美元</div>
-    <div class="meta">Index Ventures 与 Benchmark 联合领投 · 累计融资 3.5 亿美元 · 2026年8月26日 · 来源：WSJ / TechCrunch</div>
-    <div class="desc">成立仅一年、由 23 岁的 Noah Shinn 掌舵的 AI 助理公司 Instinct（运营主体 Spear Street Technology）本夏迅速蹿红。产品是一个连接用户各类应用与设备、通过短信和电话交互的生活代理，用户用它规划跨州公路旅行、买菜购票、取消订阅。目前仍处私测阶段，并因权限索取过宽和使用条款问题引发隐私争议。Benchmark 与 Index 双料领投，是当日最具"经典硅谷"色彩的一笔。</div>
-    <div class="tags"><span class="tag">消费级 AI 智能体</span><span class="tag">Benchmark</span><span class="tag">Index Ventures</span><span class="tag">隐私争议</span></div>
-  </li>
-
-  <li>
-    <div class="nh">Gatik 完成 <span class="amt-hl">2 亿美元</span> D 轮，自动驾驶货运走向规模化</div>
-    <div class="meta">卡塔尔投资局（QIA）与 Koch Disruptive Technologies 领投 · 美国加州圣克拉拉 · 2026年8月25日</div>
-    <div class="desc">Millennium Management、ARK Invest、Intact Private Capital 等跟投。Gatik 在配送中心、履约中心与门店之间的"中程重复路线"上运营无人卡车。公司称已完成 <strong>8.5 万次全无人配送订单</strong>、准点率 99%、<strong>已签约收入超 6 亿美元</strong>。这笔钱押的不再是"卡车能否自己开"，而是自动货运能否在大型企业供应链中跑出经济账。</div>
-    <div class="tags"><span class="tag">自动驾驶货运</span><span class="tag">主权财富基金</span><span class="tag">ARK Invest</span><span class="tag">已签约收入 $6亿</span></div>
-  </li>
-
-  <li>
-    <div class="nh">Emerald AI 完成 <span class="amt-hl">1.5 亿美元</span> A 轮，估值 10.5 亿美元</div>
-    <div class="meta">Energize Capital 与 DCVC 联合领投 · 英伟达、三星风投、西门子、沙特阿美创投跟投 · 2026年8月25日</div>
-    <div class="desc">详见上方"今日最值得关注"深度解析。AI 数据中心电力灵活性软件，累计融资超 2.2 亿美元，已在美英五地商用机房完成实测，主张可为美国电网释放 100 吉瓦以上闲置接入容量。</div>
-    <div class="tags"><span class="tag">AI 与能源</span><span class="tag">英伟达 CVC</span><span class="tag">新晋独角兽</span><span class="tag">电网灵活性</span></div>
-  </li>
-
-  <li>
-    <div class="nh">韩国 WRTN 完成约 <span class="amt-hl">7,220 万美元</span> C 轮，估值突破 1 万亿韩元</div>
-    <div class="meta">Coreline Ventures、Eugene 资产管理新进；Goodwater Capital、Antler Global、韩国产业银行续投 · 2026年8月26日</div>
-    <div class="desc">WRTN Technologies 运营聚合主流大模型的 AI 门户，并推出 Crack、OOC 等 AI 娱乐产品。公司称北美市场的 OOC 服务上线三个月内<strong>月营收突破 100 亿韩元</strong>，海外收入已超过本土。累计融资约 1.66 亿美元。在投资人普遍质疑"通用 AI 助手订阅制"能否赚钱之际，这类可验证的消费端变现路径尤其受关注。</div>
-    <div class="tags"><span class="tag">消费级 AI</span><span class="tag">韩国</span><span class="tag">海外变现</span><span class="tag">独角兽</span></div>
-  </li>
-
-  <li>
-    <div class="nh">Perceptron 获 <span class="amt-hl">2,100 万美元</span>融资，前 Meta 科学家把视觉 AI 送进工厂</div>
-    <div class="meta">Bessemer Venture Partners 领投 · 2026年8月 · 来源：TechCrunch</div>
-    <div class="desc">由前 Meta FAIR 研究科学家 Armen Aghajanyan 与 Akshat Shrivastava 于 2024 年 11 月创立，开发面向物理世界的前沿视觉模型。本周发布开源权重模型 <strong>Isaac 0.5</strong>，让工业机器人在复杂物理环境中感知、推理并行动，目标客户覆盖制造、物流仓储、安防、出行与媒体娱乐。</div>
-    <div class="tags"><span class="tag">物理 AI</span><span class="tag">机器人视觉</span><span class="tag">Bessemer</span><span class="tag">开源权重</span></div>
-  </li>
-
-  <li>
-    <div class="nh">W4 Games 完成 <span class="amt-hl">1,800 万美元</span> B 轮，腾讯领投开源游戏引擎商业化</div>
-    <div class="meta">腾讯领投；OSS Capital、LUX、Naval Ravikant、Shopify 创始人 Tobias Lütke 家族办公室跟投 · 累计融资 3,300 万美元 · 2026年8月25日</div>
-    <div class="desc">爱尔兰都柏林公司，创始团队为开源游戏引擎 Godot 的核心贡献者，向企业客户销售围绕 Godot 的技术、支持与服务。金额之外更关键的是：腾讯同时与 W4 签订多年期合作，在亚洲推动 Godot 及 W4 商业技术的本地化与市场开拓——腾讯由此在一个日益重要的开源替代方案中占据位置。</div>
-    <div class="tags"><span class="tag">腾讯 CVC</span><span class="tag">开源基础设施</span><span class="tag">游戏引擎</span><span class="tag">开发者工具</span></div>
-  </li>
-
-  <li>
-    <div class="nh">印度 Purple Style Labs 获约 <span class="amt-hl">4,000 万美元</span> E 轮</div>
-    <div class="meta">SageOne Flagship Growth OE Fund、Alchemy Long Term Ventures、Bajaj Holdings、Minerva Ventures 等 · 2026年8月26日</div>
-    <div class="desc">印度奢侈时尚平台 Pernia's Pop-Up Shop 母公司，同步推进线上电商与线下零售扩张。在 AI 主导的融资环境中，后期消费平台拿到成长资本已非易事，这笔交易说明只要规模与品类卡位足够差异化，资本仍然愿意进场。</div>
-    <div class="tags"><span class="tag">奢侈品电商</span><span class="tag">印度</span><span class="tag">E 轮</span></div>
-  </li>
-
-  <li>
-    <div class="nh">越南 M Village 获 <span class="amt-hl">2,600 万美元</span>，估值翻倍至约 1.21 亿美元</div>
-    <div class="meta">日本瑞穗亚洲合伙（经 Grand Mia 投资 1,800 万美元）领投；携程（Trip.com）追加 800 万美元 · 2026年8月26日</div>
-    <div class="desc">越南共居空间与住宿品牌运营商（新品牌名 Modern Village Lifestyle）。本轮每股定价 9 美元，较上轮 4.96 美元大幅上涨，投后估值从 5,250 万美元翻倍至约 1.21 亿美元。在成长期公司普遍面临估值倒挂压力的当下，这样的提价轮次并不多见。</div>
-    <div class="tags"><span class="tag">东南亚</span><span class="tag">共居 / 住宿</span><span class="tag">携程</span><span class="tag">估值翻倍</span></div>
-  </li>
-
-  <li>
-    <div class="nh">印度 Ringg AI 获 <span class="amt-hl">1,000 万美元</span> A 轮追加，Peak XV 领投</div>
-    <div class="meta">Arkam Ventures、Capital 2B 跟投 · A 轮累计约 1,550 万美元 · 印度班加罗尔 · 2026年8月26日</div>
-    <div class="desc">企业语音 AI 智能体公司，能力覆盖电话、WhatsApp 与浏览器工作流，客户包括 Policybazaar、CRED、Flipkart、Groww 和 Practo。红杉印度独立后的 Peak XV 连续加注，反映企业 AI 投资正从"会生成文本的助手"转向"能完成可量化工作的代理"——开户、催收、线索筛选、客服与系统更新。</div>
-    <div class="tags"><span class="tag">企业语音 AI</span><span class="tag">Peak XV（原红杉印度）</span><span class="tag">AI Agent</span></div>
-  </li>
-
-  <li>
-    <div class="nh">英国 Certain Energy 获 <span class="amt-hl">1,160 万欧元</span> A 轮，锰基液流电池</div>
-    <div class="meta">英国商业银行领投；Centrica Energy、Ceres Power、淡马锡信托气候与健康催化资本跟投 · 2026年8月26日</div>
-    <div class="desc">帝国理工学院衍生公司（原名 RFC Power），开发用于长时储能的锰基液流电池——通过扩大外部电解液储罐即可延长储能时长，路径与锂离子体系不同。资金将用于在印度建设并网兆瓦时级系统、扩建英国研发设施并搭建供应链。与 Emerald AI 一供一需，指向同一投资主题：电力可得性正成为技术市场的核心约束。</div>
-    <div class="tags"><span class="tag">长时储能</span><span class="tag">液流电池</span><span class="tag">英国</span><span class="tag">高校衍生</span></div>
-  </li>
-
-</ol>
-
-<footer>
-  <h5>信 息 来 源</h5>
-  <ul>
-    <li><a href="https://techcrunch.com/2026/08/26/viral-ai-startup-instinct-has-raised-350-million-at-a-2-5-billion-valuation/">TechCrunch — Viral AI startup Instinct has raised $350 million at a $2.5 billion valuation（2026-08-26）</a></li>
-    <li><a href="https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/">TechCrunch — Anthropic continues compute-gobbling streak in $45B deal with Nscale（2026-08-26）</a></li>
-    <li><a href="https://www.cnbc.com/2026/08/26/anthropic-and-nscale-strike-45-billion-cloud-deal-sources-say.html">CNBC — Anthropic and Nscale strike $45 billion cloud deal, sources say（2026-08-26）</a></li>
-    <li><a href="https://www.bloomberg.com/news/articles/2026-08-26/anthropic-to-pay-nscale-45-billion-for-ai-computing-power">Bloomberg — Anthropic to Pay Nscale $45 Billion for AI Computing Power（2026-08-26）</a></li>
-    <li><a href="https://techstartups.com/2026/08/26/startup-funding-news-today-august-26-2026-emerald-ai-gatik-stellaria-more/">TechStartups — Startup Funding News Today, August 26, 2026: Emerald AI, Gatik, Stellaria &amp; More</a></li>
-    <li><a href="https://techstartups.com/2026/08/25/venture-capital-startup-funding-roundup-august-25-2026-aramco-ventures-ark-invest-salesforce-ventures-samsung-ventures-siemens-more/">TechStartups — Venture Capital &amp; Startup Funding Roundup, August 25, 2026</a></li>
-    <li><a href="https://www.businesswire.com/news/home/20260825127649/en/Emerald-AI-Raises-$150-Million-Series-A-at-$1.05-Billion-Valuation-to-Scale-Power-Flexible-AI-Data-Centers">BusinessWire — Emerald AI Raises $150 Million Series A at $1.05 Billion Valuation（2026-08-25）</a></li>
-    <li><a href="https://www.prnewswire.com/news-releases/emerald-ai-launches-with-24-5m-seed-round-to-transform-ai-data-centers-into-grid-allies-302495064.html">PRNewswire — Emerald AI Launches with $24.5M Seed Round（2025-07）</a></li>
-    <li><a href="https://www.datacenterdynamics.com/en/news/nvidia-backed-emerald-ai-raises-245m-to-turn-data-centers-into-grid-assets/">DataCenterDynamics — Nvidia-backed Emerald AI raises $24.5m to turn data centers into grid assets</a></li>
-    <li><a href="https://archive.gatik.ai/news/coverage/gatik-raises-200-million-series-d-led-by-qia-and-kdt-as-demand-for-driverless-commercial-freight-accelerates/">Gatik — Gatik Raises $200 Million Series D Led by QIA and KDT</a></li>
-    <li><a href="https://www.w4games.com/blog/w4-games-news-1/w4-games-raises-18-million-to-accelerate-international-presence-193">W4 Games — W4 Games Raises $18 Million to Accelerate International Presence</a></li>
-    <li><a href="https://techcrunch.com/2026/08/26/ex-meta-scientists-want-to-bring-visual-ai-to-the-factory-floor/">TechCrunch — Ex-Meta scientists want to bring visual AI to the factory floor（2026-08-26）</a></li>
-  </ul>
-  <div class="disclaimer">
-    <strong>免责声明：</strong>本页内容由 AI 依据 2026 年 8 月 27 日公开检索结果自动汇编，覆盖 8 月 25 日至 27 日的公开报道，仅供信息参考，不构成任何投资建议、要约或推荐。融资金额、估值、收入等数据均引自上述公开来源，部分交易为媒体援引消息人士报道、尚未经当事方正式确认，未披露项已明确标注。数据可能存在延迟、遗漏或后续修订，读者在做出任何决策前应自行核实原始信息来源。
+      <div class="warn"><b>风险提示：</b>该产品已因权限问题引发实际争议。Moxxie Ventures 创始人 Katie Jacobs Stanton 公开表示，该 Agent 曾未经询问代她发出邮件，并在她切断访问权限后仍持续读取其收件箱数小时。据报道，其服务条款赋予公司对用户数据（包括屏幕截图、光标移动与击键记录）永久且不可撤销的训练许可。Agent 越有用，所需权限越大——这是消费级 Agent 的核心矛盾。</div>
+    </div>
   </div>
-</footer>
+
+  <h2 class="sec">重要交易一览（按重要性排序）</h2>
+
+  <div class="item">
+    <div class="rank">01</div>
+    <div>
+      <h3><span class="amount">$129亿</span>英伟达同意收购开源模型平台 Hugging Face</h3>
+      <p>据 The Information 报道并经 CNBC、Fortune、Forbes 跟进，英伟达已同意以约 129 亿美元收购 Hugging Face，将业务从 AI 芯片延伸至模型托管与开发者生态。Hugging Face 上一轮融资为 2023 年由 Salesforce Ventures 领投的 2.35 亿美元，当时估值 45 亿美元。报道同时指出正式协议尚未签署，交易仍存变数。</p>
+      <div class="tags"><span class="tag hot">战略并购</span><span class="tag">英伟达</span><span class="tag">开源生态</span><span class="tag">2026-08-27</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="rank">02</div>
+    <div>
+      <h3><span class="amount">$450亿</span>Anthropic 与 Nscale 签署六年期算力承购协议</h3>
+      <p>Anthropic 将向英国 AI 基础设施公司 Nscale 租用约 450 亿美元的算力，期限六年、规模约 460 兆瓦，来自 Nscale 位于西弗吉尼亚的旗舰数据中心，采用英伟达 Vera Rubin 芯片系统，预计 2027 年底开始供电。此前 Anthropic 已与 Fluidstack（500 亿美元）、SpaceX（450 亿美元）、Volta Infra（100 亿美元）达成类似安排，被视为其 IPO 前锁定产能的动作。</p>
+      <div class="tags"><span class="tag hot">AI 基础设施</span><span class="tag">算力承购</span><span class="tag">Anthropic</span><span class="tag">2026-08-26</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="rank">03</div>
+    <div>
+      <h3><span class="amount">$60亿估值</span>软银洽购人形机器人公司 1X 多数股权</h3>
+      <p>据 The Information 报道，软银正就收购 OpenAI 投资的人形机器人公司 1X Technologies 多数股权进行谈判，估值约 60 亿美元，低于 1X 去年寻求 10 亿美元融资时约 100 亿美元的目标估值。1X 的 NEO 家用人形机器人售价 2 万美元或每月 499 美元，公司称首年 1 万台产能在五天内被预订一空。此举延续软银在机器人领域的布局（去年以 54 亿美元收购 ABB 机器人业务）。</p>
+      <div class="tags"><span class="tag hot">人形机器人</span><span class="tag">软银</span><span class="tag">控股型交易</span><span class="tag">2026-08-27</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="rank">04</div>
+    <div>
+      <h3><span class="amount">$2.5亿</span>Instinct 完成 B 轮，估值 25 亿美元</h3>
+      <p>消费级个人 AI 智能体 Instinct（母公司 Spear Street Technology）由 Index Ventures 与 Benchmark 联合领投 2.5 亿美元 B 轮，累计融资 3.5 亿美元，估值 25 亿美元。产品仍处邀请制私测。详见上方重点深挖。</p>
+      <div class="tags"><span class="tag hot">消费级 AI</span><span class="tag">AI Agent</span><span class="tag">Index / Benchmark</span><span class="tag">2026-08-26</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="rank">05</div>
+    <div>
+      <h3><span class="amount">$2.4亿</span>REGENT 完成 B 轮，扩产电动海上滑翔机</h3>
+      <p>美国 REGENT 宣布完成 2.4 亿美元 B 轮，股权与债权各半，由 Mare Liberum 与 AE Ventures 联合领投，Erebor Bank 提供债权资金，DCVC 新进入，Founders Fund、Caffeinated Capital、洛克希德·马丁创投、日本航空、Giant Step Capital 等老股东跟投。公司累计融资承诺超过 3.4 亿美元，资金用于 Viceroy 原型机首次载人飞行、军方合作及 25.5 万平方英尺新工厂投产。</p>
+      <div class="tags"><span class="tag">交通出行</span><span class="tag">国防科技</span><span class="tag">Founders Fund</span><span class="tag">2026-08-27</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="rank">06</div>
+    <div>
+      <h3><span class="amount">$4亿</span>OpenAI 筹备第二支创投基金</h3>
+      <p>据《华尔街日报》报道，OpenAI 正在筹备规模约 4 亿美元的第二支风险基金，是其 2021 年首支 1.75 亿美元 Startup Fund 的两倍多，并在物色资深 VC 负责人。首支基金已投出 1X Technologies、Anysphere（Cursor）、Figure AI、Physical Intelligence、Harvey、Descript 等项目。该基金使 OpenAI 得以在应用层布局潜在客户、分发伙伴与并购标的。</p>
+      <div class="tags"><span class="tag">CVC / 基金募集</span><span class="tag">OpenAI</span><span class="tag">应用层生态</span><span class="tag">2026-08-27</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="rank">07</div>
+    <div>
+      <h3><span class="amount">$2,700万</span>Breedr 完成 B 轮，数字化活畜供应链</h3>
+      <p>Breedr 获 Partech 影响力基金领投的 2,700 万美元 B 轮，Latitude、LocalGlobe 增长基金与 Outsiders Fund 跟投，累计融资约 4,660 万美元。公司为牛只建立贯穿生命周期的数字档案，把生产数据与活畜交易打通，平台已追踪超过 200 万头牛，预计今年将有近 5 亿美元活畜通过其交易市场流转。总部现设于德州，业务覆盖美、英、澳，正拓展新西兰。</p>
+      <div class="tags"><span class="tag">农业科技</span><span class="tag">供应链</span><span class="tag">Partech</span><span class="tag">2026-08-27</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="rank">08</div>
+    <div>
+      <h3><span class="amount">$2,450万</span>Agentrys 用 AI 智能体自动化半导体工程</h3>
+      <p>Agentrys 完成合计 2,450 万美元的种子及 Pre-seed 融资，其中 1,910 万美元种子轮由 Etna Capital 领投，此前 540 万美元 Pre-seed 由<b>联发科（MediaTek）</b>领投。公司为芯片验证与物理设计等环节开发 AI 智能体。芯片厂商在 Pre-seed 阶段即入场，说明潜在用户而非纯财务投资人的战略兴趣。</p>
+      <div class="tags"><span class="tag hot">半导体 AI</span><span class="tag">CVC：联发科</span><span class="tag">工程自动化</span><span class="tag">2026-08-26</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="rank">09</div>
+    <div>
+      <h3><span class="amount">$2,250万</span>Hike Medical 自动化矫形器械转诊与供应链</h3>
+      <p>Hike Medical 完成 2,250 万美元种子及 A 轮融资，Saga Ventures 领投，Indicator Ventures、Fifth Down Capital、RiverPark Ventures、Orthofeet 及多位个人投资者参与。公司为矫形器、义肢与耐用医疗设备构建自动化转诊与供应链平台，已在定制足部矫形器上跑通模式，正向更广泛的器械照护延伸。总部位于旧金山。</p>
+      <div class="tags"><span class="tag">医疗科技</span><span class="tag">器械物流</span><span class="tag">Saga Ventures</span><span class="tag">2026-08-26</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="rank">10</div>
+    <div>
+      <h3><span class="amount">$2,100万</span>Perceptron 获 Bessemer 领投，把视觉 AI 带进工厂</h3>
+      <p>由两位前 Meta FAIR 研究科学家 Armen Aghajanyan 与 Akshat Shrivastava 于 2024 年 11 月创立的 Perceptron，完成 Bessemer Venture Partners 领投的 2,100 万美元融资。本周公司发布最新模型 Isaac 0.5，以开放权重（open-weight）形式发布，让机器在工业场景中「感知、推理并行动」，服务仓储与工厂的视觉引导机器人。</p>
+      <div class="tags"><span class="tag">具身智能</span><span class="tag">工业视觉</span><span class="tag">Bessemer</span><span class="tag">2026-08-26</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="rank">11</div>
+    <div>
+      <h3><span class="amount">$1,700万</span>Onos Health 获 CVS Health Ventures 加持</h3>
+      <p>行为健康 AI 公司 Onos Health 完成 1,700 万美元 A 轮，Costanoa Ventures 领投，Flare Capital Partners 与 <b>CVS Health Ventures</b> 参与。公司为行为健康险企提供临床智能软件，用 AI 分析诊疗模式以优化治疗与支出决策，Aetna 已是其用户之一。反映医疗 AI 投资正从行政辅助工具转向影响医疗资源配置的软件。</p>
+      <div class="tags"><span class="tag">医疗 AI</span><span class="tag">CVC：CVS Health</span><span class="tag">行为健康</span><span class="tag">2026-08-27</span></div>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="rank">12</div>
+    <div>
+      <h3><span class="amount">€400万</span>ColibriTD 推进量子驱动的工业仿真商业化</h3>
+      <p>巴黎的 ColibriTD 完成 400 万欧元种子轮，Earlybird Venture Capital 领投，SymbiaVC 与 Medin VC 参与；Earlybird 此前已在 Pre-seed 阶段投入 100 万欧元。公司基于自研 H-DES 混合微分方程求解器做多物理场仿真，走硬件无关路线，已在国防、航空航天、太空、半导体、核能、汽车与金融领域完成项目。</p>
+      <div class="tags"><span class="tag">量子软件</span><span class="tag">工业仿真</span><span class="tag">Earlybird</span><span class="tag">2026-08-27</span></div>
+    </div>
+  </div>
+
+  <h2 class="sec">另一条值得注意的背景数据</h2>
+  <div class="card overview">
+    <p><b>英伟达正在成为 AI 生态最大的资产负债表型投资人。</b>在 8 月 26 日发布的财报中，英伟达披露季度营收 962 亿美元（其中数据中心 890 亿美元），并指引当季营收约 1,080 亿美元。更值得投资圈注意的是：公司公开与非公开股权持仓截至 7 月底达到 <b>956 亿美元</b>，广义股权投资合计约 990 亿美元；当季净利润中包含 <b>78 亿美元</b>的股权投资收益，投资标的包括英特尔、SpaceX 等。叠加当日曝出的 Hugging Face 收购案，芯片巨头对 AI 产业链的资本渗透正在明显加深。</p>
+  </div>
+
+  <footer>
+    <h3>信息来源</h3>
+    <ul>
+      <li><a href="https://techstartups.com/2026/08/27/startup-funding-news-today-august-27-2026-instinct-breedr-agentrys-more/">TechStartups — Startup Funding News Today, August 27, 2026: Instinct, Breedr, Agentrys &amp; More</a></li>
+      <li><a href="https://techcrunch.com/2026/08/26/viral-ai-startup-instinct-has-raised-350-million-at-a-2-5-billion-valuation/">TechCrunch — Viral AI startup Instinct has raised $350M at a $2.5B valuation</a></li>
+      <li><a href="https://techfundingnews.com/noah-shinns-instinct-goes-from-100m-to-2-5b-in-weeks-23-year-olds-ai-assistant-just-raised-250m-series-b/">Tech Funding News — Noah Shinn's Instinct goes from $100M to $2.5B in weeks</a></li>
+      <li><a href="https://techcrunch.com/2026/08/24/instincts-powerful-ai-assistant-is-raising-privacy-and-security-concerns/">TechCrunch — Instinct's powerful AI assistant is raising privacy and security concerns</a></li>
+      <li><a href="https://www.cnbc.com/2026/08/27/nvidia-hugging-face-acquisition.html">CNBC — Nvidia agrees to buy Hugging Face for $12.9 billion, report says</a></li>
+      <li><a href="https://www.theinformation.com/articles/nvidia-agrees-buy-open-source-model-repository-hugging-face-12-9-billion">The Information — Nvidia Agrees to Buy Hugging Face For $12.9 Billion</a></li>
+      <li><a href="https://www.cnbc.com/2026/08/26/anthropic-and-nscale-strike-45-billion-cloud-deal-sources-say.html">CNBC — Anthropic and Nscale strike $45 billion cloud deal</a></li>
+      <li><a href="https://techcrunch.com/2026/08/26/anthropic-continues-compute-gobbling-streak-in-45-billion-deal-with-nscale/">TechCrunch — Anthropic continues compute-gobbling streak in $45B deal with Nscale</a></li>
+      <li><a href="https://www.theinformation.com/articles/softbank-talks-buy-majority-stake-humanoid-maker-1x-6-billion-valuation">The Information — SoftBank in Talks to Buy Majority Stake in Humanoid Maker 1X at $6 Billion Valuation</a></li>
+      <li><a href="https://techstartups.com/2026/08/27/softbank-in-talks-to-buy-a-majority-stake-in-humanoid-robot-startup-1x-at-6-billion-valuation/">TechStartups — SoftBank in talks to buy a majority stake in 1X at $6 billion valuation</a></li>
+      <li><a href="https://www.regentcraft.com/news/regent-secures-240-million-series-b-funding-to-scale-seaglider-manufacturing-and-transform-maritime-mobility">REGENT — Secures $240 Million Series B Funding</a></li>
+      <li><a href="https://techfundingnews.com/regent-raises-240m-for-flying-boat-startup/">Tech Funding News — REGENT raises $240M for flying boat startup</a></li>
+      <li><a href="https://techfundingnews.com/openai-launches-400m-second-venture-fund-after-backing-harvey-cursor-and-more/">Tech Funding News — OpenAI launches $400M second venture fund</a></li>
+      <li><a href="https://techcrunch.com/2026/08/26/ex-meta-scientists-want-to-bring-visual-ai-to-the-factory-floor/">TechCrunch — Ex-Meta scientists want to bring visual AI to the factory floor（Perceptron）</a></li>
+      <li><a href="https://www.breedr.co/blog-us/breedr-raises-27-million-to-digitize-the-global-beef-supply-chain">Breedr — Raises $27 million to digitize the global beef supply chain</a></li>
+      <li><a href="https://www.cnbc.com/2026/08/26/nvidia-nvda-earnings-report-q2-2027-live-updates.html">CNBC — Nvidia earnings takeaways（Q2 财报与股权投资持仓）</a></li>
+      <li><a href="https://news.crunchbase.com/">Crunchbase News — 每周最大融资轮次追踪</a></li>
+    </ul>
+
+    <div class="disclaimer">
+      <b>免责声明：</b>本页内容由自动化流程于 2026 年 8 月 28 日基于公开媒体报道汇总生成，覆盖时段为 8 月 26 日至 28 日，仅供信息参考，不构成任何投资建议、要约或推荐。部分交易（如英伟达收购 Hugging Face、软银收购 1X 多数股权）截至发布时仍为媒体报道阶段，尚未由当事方正式确认，最终条款可能变化或交易可能取消。金额、估值与投资方信息以各来源媒体披露为准，未经独立核实；汇率换算为近似值。读者在做出任何决策前，应自行核查原始信息来源并咨询专业顾问。
+    </div>
+  </footer>
 
 </div>
 </body>
