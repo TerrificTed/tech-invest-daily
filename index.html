@@ -3,298 +3,337 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日科技投资动态 · 2026年8月29日</title>
+<title>每日科技投资动态 · 2026年8月30日</title>
 <style>
   :root{
     --accent:#c8401a;
     --ink:#1a1a1a;
     --muted:#6b6b6b;
-    --line:#e3ddd4;
-    --paper:#f4f1ea;
+    --line:#e2ded8;
+    --bg:#f4f1ec;
   }
   *{box-sizing:border-box;}
   body{
-    margin:0;
-    background:var(--paper);
+    margin:0; padding:0 16px 60px;
+    background:var(--bg);
     color:var(--ink);
     font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans SC",sans-serif;
     line-height:1.75;
     -webkit-font-smoothing:antialiased;
   }
-  .wrap{max-width:880px;margin:0 auto;padding:0 20px 64px;}
+  .wrap{max-width:860px;margin:0 auto;}
 
   /* 页头 */
-  header.masthead{
+  header{
     border-bottom:3px double var(--ink);
-    padding:40px 0 18px;
+    padding:36px 0 18px;
     margin-bottom:28px;
+    text-align:center;
   }
-  .kicker{
-    font-size:12px;letter-spacing:.32em;color:var(--accent);
-    text-transform:uppercase;margin-bottom:10px;font-weight:700;
+  header h1{
+    margin:0;
+    font-size:40px;
+    letter-spacing:6px;
+    font-weight:800;
   }
-  h1.title{
-    font-size:40px;line-height:1.2;margin:0 0 14px;
-    font-weight:800;letter-spacing:.02em;
+  header .sub{
+    margin-top:10px;
+    font-size:13px;
+    color:var(--muted);
+    letter-spacing:1px;
   }
-  .meta{
-    display:flex;flex-wrap:wrap;gap:8px 20px;
-    font-size:13px;color:var(--muted);
-    border-top:1px solid var(--line);padding-top:12px;
+  header .date{
+    display:inline-block;
+    margin-top:14px;
+    padding:4px 14px;
+    border:1px solid var(--accent);
+    color:var(--accent);
+    font-size:13px;
+    letter-spacing:2px;
   }
-  .meta b{color:var(--ink);font-weight:600;}
 
-  h2.sec{
-    font-size:15px;letter-spacing:.2em;font-weight:700;
-    color:var(--accent);margin:38px 0 14px;
-    padding-bottom:8px;border-bottom:1px solid var(--line);
+  h2.section{
+    font-size:19px;
+    margin:38px 0 16px;
+    padding-left:11px;
+    border-left:5px solid var(--accent);
+    letter-spacing:1px;
   }
 
   .card{
-    background:#fff;border:1px solid var(--line);
-    border-radius:3px;padding:22px 24px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:3px;
+    padding:22px 24px;
+    margin-bottom:16px;
     box-shadow:0 1px 2px rgba(0,0,0,.04);
   }
 
-  /* 今日概览 */
-  .overview{font-size:15.5px;}
-  .overview p{margin:0 0 12px;}
+  /* 概览 */
+  .overview p{margin:0 0 12px;font-size:15px;}
   .overview p:last-child{margin-bottom:0;}
-  .stats{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
-    background:var(--line);border:1px solid var(--line);
-    margin-top:18px;
-  }
-  .stats div{background:#fff;padding:14px 12px;text-align:center;}
-  .stats .n{font-size:22px;font-weight:800;color:var(--accent);display:block;line-height:1.3;}
-  .stats .l{font-size:11.5px;color:var(--muted);}
+  .overview strong{color:var(--accent);}
 
   /* 重点卡片 */
-  .feature{
-    background:#fff;border:2px solid var(--accent);
-    border-radius:3px;padding:0;overflow:hidden;
+  .feature{border-top:4px solid var(--accent);}
+  .flag{
+    display:inline-block;
+    background:var(--accent);
+    color:#fff;
+    font-size:12px;
+    padding:3px 10px;
+    letter-spacing:2px;
+    margin-bottom:12px;
   }
-  .feature .fh{
-    background:var(--accent);color:#fff;padding:8px 24px;
-    font-size:12px;letter-spacing:.24em;font-weight:700;
+  .feature h3{
+    margin:0 0 6px;
+    font-size:26px;
+    letter-spacing:1px;
   }
-  .feature .fb{padding:24px;}
-  .feature h3{font-size:26px;margin:0 0 6px;font-weight:800;}
-  .feature .sub{color:var(--muted);font-size:13.5px;margin:0 0 18px;}
+  .feature .tagline{
+    color:var(--muted);
+    font-size:14px;
+    margin:0 0 20px;
+  }
   .grid{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
-    background:var(--line);border:1px solid var(--line);margin-bottom:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:1px;
+    background:var(--line);
+    border:1px solid var(--line);
+    margin-bottom:22px;
   }
-  .grid div{background:#faf8f5;padding:14px 10px;text-align:center;}
-  .grid .n{font-size:19px;font-weight:800;color:var(--accent);display:block;line-height:1.35;}
-  .grid .l{font-size:11.5px;color:var(--muted);margin-top:2px;}
+  .cell{background:#fff;padding:14px 12px;text-align:center;}
+  .cell .k{font-size:11px;color:var(--muted);letter-spacing:1px;}
+  .cell .v{font-size:21px;font-weight:700;color:var(--accent);margin-top:5px;line-height:1.3;}
+  .cell .v small{font-size:12px;font-weight:400;color:var(--muted);display:block;margin-top:2px;}
+
   .feature h4{
-    font-size:14px;margin:20px 0 8px;font-weight:700;
-    padding-left:9px;border-left:3px solid var(--accent);
+    font-size:15px;
+    margin:22px 0 8px;
+    padding-bottom:5px;
+    border-bottom:1px dashed var(--line);
   }
   .feature p{margin:0 0 10px;font-size:14.5px;}
   .feature ul{margin:0 0 10px;padding-left:20px;font-size:14.5px;}
-  .feature li{margin-bottom:5px;}
+  .feature li{margin-bottom:6px;}
 
   /* 新闻列表 */
   ol.deals{list-style:none;counter-reset:d;margin:0;padding:0;}
   ol.deals li{
     counter-increment:d;
-    background:#fff;border:1px solid var(--line);
-    border-radius:3px;padding:18px 22px 16px 60px;
-    position:relative;margin-bottom:12px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:3px;
+    padding:18px 22px 16px 58px;
+    margin-bottom:12px;
+    position:relative;
   }
   ol.deals li::before{
     content:counter(d);
-    position:absolute;left:20px;top:17px;
-    font-size:20px;font-weight:800;color:var(--line);
+    position:absolute;left:18px;top:17px;
+    font-size:20px;font-weight:800;color:var(--accent);
+    opacity:.55;
   }
-  ol.deals h3{font-size:17px;margin:0 0 6px;font-weight:700;}
-  .amt{
-    color:var(--accent);font-weight:800;
-    background:#fdf0eb;padding:1px 7px;border-radius:2px;
-    font-size:15px;white-space:nowrap;
+  .deal-head{
+    display:flex;flex-wrap:wrap;align-items:baseline;
+    gap:10px;margin-bottom:6px;
   }
-  ol.deals p{margin:0 0 10px;font-size:14.5px;color:#333;}
-  .tags{display:flex;flex-wrap:wrap;gap:6px;}
-  .tag{
+  .deal-head .name{font-size:17px;font-weight:700;}
+  .amount{
+    background:#fdeee9;color:var(--accent);
+    font-weight:700;font-size:15px;
+    padding:1px 9px;border-radius:2px;
+  }
+  .deal p{margin:0 0 8px;font-size:14.5px;color:#333;}
+  .tags span{
+    display:inline-block;
     font-size:11.5px;color:var(--muted);
-    border:1px solid var(--line);border-radius:2px;
-    padding:2px 8px;background:#faf8f5;
+    border:1px solid var(--line);
+    padding:2px 8px;margin-right:6px;margin-top:4px;
+    border-radius:2px;
   }
-  .tag.hot{color:var(--accent);border-color:#f0c8ba;background:#fdf0eb;}
 
   /* 页脚 */
-  footer{margin-top:44px;padding-top:20px;border-top:3px double var(--ink);font-size:13px;color:var(--muted);}
-  footer h4{font-size:13px;color:var(--ink);margin:0 0 10px;letter-spacing:.1em;}
-  footer ul{margin:0 0 18px;padding-left:18px;}
+  footer{
+    margin-top:44px;
+    padding-top:20px;
+    border-top:3px double var(--ink);
+    font-size:13px;
+    color:var(--muted);
+  }
+  footer h5{font-size:14px;color:var(--ink);margin:0 0 8px;}
+  footer ul{padding-left:20px;margin:0 0 18px;}
   footer li{margin-bottom:5px;word-break:break-all;}
   footer a{color:var(--accent);text-decoration:none;}
   footer a:hover{text-decoration:underline;}
-  .disclaimer{font-size:12px;line-height:1.7;background:#fff;border:1px solid var(--line);padding:14px 16px;border-radius:3px;}
-
-  @media (max-width:640px){
-    h1.title{font-size:28px;}
-    .stats,.grid{grid-template-columns:repeat(2,1fr);}
+  .disclaimer{
+    background:#fff;border:1px solid var(--line);
+    padding:14px 16px;font-size:12.5px;line-height:1.7;
+  }
+  @media(max-width:600px){
+    header h1{font-size:28px;letter-spacing:3px;}
     .feature h3{font-size:21px;}
-    ol.deals li{padding:16px 16px 14px 48px;}
-    ol.deals li::before{left:14px;}
+    ol.deals li{padding-left:50px;}
   }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<header class="masthead">
-  <div class="kicker">Daily Tech Investment Brief</div>
-  <h1 class="title">每日科技投资动态</h1>
-  <div class="meta">
-    <span><b>2026年8月29日</b>（星期六）</span>
-    <span>覆盖周期：8月26日—28日</span>
-    <span>来源：TechCrunch · CNBC · WSJ · SCMP · Crunchbase News · TechStartups · Tech Funding News</span>
-  </div>
+<header>
+  <h1>每日科技投资动态</h1>
+  <div class="sub">全球科技行业投融资要闻 · 覆盖过去 24–48 小时</div>
+  <div class="date">2026 年 8 月 30 日（星期日）</div>
+  <div class="sub" style="margin-top:10px;">信息来源：TechStartups、Crunchbase News、《华尔街日报》、南华早报、CNBC</div>
 </header>
 
-<h2 class="sec">今 日 概 览</h2>
+<h2 class="section">今日概览</h2>
 <div class="card overview">
-  <p>过去 48 小时全球科技投资的主线是<strong>「巨额资本向头部集中」</strong>：中国 AI 明星 DeepSeek 逼近 74 亿美元 Pre-IPO 融资，英伟达传出以 129 亿美元收购 Hugging Face，软银则在洽谈以 60 亿美元估值控股人形机器人公司 1X。三笔交易分别指向<strong>基础模型、AI 开发者生态、具身智能</strong>三条主赛道，且主导方全部是产业资本而非传统 VC。</p>
-  <p>纯 VC 侧的节奏依旧集中在 AI 应用与「硬部署」领域：23 岁创始人的 AI 助手 Instinct 由 Index 与 Benchmark 联合领投 2.5 亿美元、估值 25 亿美元；前 DeepMind 研究员创立的 Generalist 由 8VC 领投 2 亿美元、估值 30 亿美元；Founders Fund 加持的电动海上滑翔机公司 REGENT 拿下 2.4 亿美元 B 轮。</p>
-  <p>另一个值得注意的信号是 <strong>OpenAI 推出第二支 4 亿美元创投基金</strong>——模型公司正从被投方转为出资方，AI 生态的资本结构进一步闭环。相较之下，中小额交易明显向生物医药、基础设施软件、实验室数据等「有壁垒、难复制」的方向倾斜，泛化 SaaS 类项目几乎缺席。</p>
-  <div class="stats">
-    <div><span class="n">约$217亿</span><span class="l">披露交易总额（含并购）</span></div>
-    <div><span class="n">11</span><span class="l">重点交易数</span></div>
-    <div><span class="n">$740亿</span><span class="l">单笔最高估值 · DeepSeek</span></div>
-    <div><span class="n">3</span><span class="l">产业资本主导（英伟达/软银/OpenAI）</span></div>
-  </div>
+  <p>过去 48 小时全球创投市场的最大变量来自中国：<strong>DeepSeek（深度求索）</strong>接近完成约 <strong>50 亿元人民币（约 74 亿美元）</strong>的新一轮融资，投前估值约 <strong>740 亿美元</strong>，为其冲刺上交所科创板 IPO 铺路。这笔交易的体量超过本周美国前十大融资的总和。</p>
+  <p>美国市场则呈现"megadeal 变少、单笔变小"的特征。据 Crunchbase 统计，8 月 22–28 日当周美国最大一轮为 AI 助手公司 <strong>Instinct 的 2.5 亿美元 B 轮</strong>，其余头部交易集中在 2 亿美元量级——与前几周动辄十亿美元级的节奏相比明显降温。</p>
+  <p>资金流向上，"<strong>难以复制的硬问题</strong>"重新成为主线：物理 AI 与机器人基础模型（Generalist AI）、自动驾驶货运（Gatik）、数据中心电力调度（Emerald AI）、地下管网数据（CivilGrid）、临床三期生物药（AusperBio）均获大额加注，纯软件叙事的溢价在收窄。</p>
+  <p>顶级机构方面，<strong>Index Ventures、Benchmark、General Catalyst、Lux Capital、Spark Capital、高盛成长股权、8VC、DCVC</strong> 均有出手；卡塔尔投资局（QIA）、科氏颠覆性技术（Koch Disruptive）等主权与产业资本继续在重资产赛道扮演领投角色。</p>
 </div>
 
-<h2 class="sec">今 日 最 值 得 关 注</h2>
-<div class="feature">
-  <div class="fh">FOCUS · 深度解读</div>
-  <div class="fb">
-    <h3>DeepSeek 逼近 74 亿美元融资，投前估值 740 亿美元，剑指 2027 年科创板 IPO</h3>
-    <p class="sub">杭州 · 通用人工智能基础模型 · 消息源：华尔街日报、南华早报、CNBC（8月28日）</p>
+<h2 class="section">今日最值得关注</h2>
+<div class="card feature">
+  <div class="flag">重点深挖</div>
+  <h3>DeepSeek 深度求索</h3>
+  <p class="tagline">中国杭州 · 通用大模型 · 拟 74 亿美元融资，投前估值 740 亿美元，剑指 2027 年科创板上市</p>
 
-    <div class="grid">
-      <div><span class="n">约$74亿</span><span class="l">本轮拟融资额（约500亿元）</span></div>
-      <div><span class="n">$740亿</span><span class="l">投前估值（约5000亿元）</span></div>
-      <div><span class="n">约$810亿</span><span class="l">推算投后估值</span></div>
-      <div><span class="n">2027年</span><span class="l">目标上市时点（科创板）</span></div>
-    </div>
-
-    <h4>公司业务</h4>
-    <p>DeepSeek（深度求索）由量化私募幻方量化（High-Flyer Quant）创始人梁文锋于 2023 年创立，专注通用大语言模型的研发与开源。2025 年初其 V3 与 R1 模型以远低于美国头部实验室的训练成本达到接近前沿的推理能力，直接冲击了「前沿 AI 必然烧钱」的行业共识，并一度登顶美区 App Store。公司商业模式以 API 调用与开源模型生态为主，长期以极低单价定价（V4-Flash 约 $0.14/百万 token 级别），显著低于 OpenAI 同级产品。</p>
-
-    <h4>历史融资情况</h4>
-    <ul>
-      <li><strong>2023—2025 年：自有资金阶段。</strong>公司长期由梁文锋旗下幻方量化直接输血，未引入外部风险投资，这在全球头部 AI 实验室中极为罕见。</li>
-      <li><strong>2026 年 7 月：首轮外部融资。</strong>据财新报道，该轮完成后估值约 520 亿美元。投资方包括腾讯、宁德时代（CATL）、网易、京东，以及 Monolith、拾象科技（Shixiang Capital）等；据多家媒体报道，梁文锋本人亦以个人资金参与出资，资金通过定制有限合伙架构进入。</li>
-      <li><strong>2026 年 8 月（本轮）：Pre-IPO 轮。</strong>拟募资约 500 亿元人民币。老股东 Monolith、拾象科技、宁德时代继续跟投；新进洽谈方包括 CPE 源峰、君联资本、半导体方向的 Stony Creek Capital，以及兆易创新关联基金与合肥市国资平台。交易预计 8 月底前交割，公司与投资方尚未公开确认。</li>
-      <li><strong>累计融资（推算）：</strong>7 月轮次同样以约 500 亿元人民币规模被报道，若本轮足额完成，DeepSeek 两轮外部融资累计约 <strong>148 亿美元</strong>（约 1000 亿元人民币），估值在约 14 个月内从「无外部估值」跃升至约 810 亿美元投后。该累计数字为依据媒体报道的推算值，非官方披露。</li>
-    </ul>
-
-    <h4>业务发展与财务情况</h4>
-    <ul>
-      <li><strong>算力扩张是本轮募资的主因。</strong>据报道，公司计划新增约 1 GW 计算能力用于训练更大规模模型，同时在稀缺 AI 人才市场展开争夺——这使一家以「高效率」著称的公司同样变成重资产的基础设施运营方。</li>
-      <li><strong>定价策略转向。</strong>DeepSeek 已上调 API 价格，阿里、腾讯、百度、智谱 AI 今年也有类似动作，中国 AI 市场正从补贴式低价竞争转向寻找可持续单位经济模型。</li>
-      <li><strong>盈利数据仍不透明。</strong>公司此前曾披露理论「成本利润率」可达 545%（按 R1 满负荷计价推算的理论收入对比 GPU 租赁成本），但从未公布经审计的实际营收与利润，目前无可靠的 2026 年收入数据。</li>
-      <li><strong>生态卡位。</strong>幻方系关联方已拿到长鑫存储（CXMT）、宇树科技等热门科技 IPO 的 Pre-IPO 配售；DeepSeek 本身以战略投资人身份持有宇树科技 2.31% 股份并承诺 36 个月锁定期，将业务半径延伸至 AI、半导体与机器人三个国家战略方向。</li>
-    </ul>
-
-    <h4>为什么值得关注</h4>
-    <p>这笔交易同时具备三重意义：其一，它是中国 AI 公司迄今最大规模的单轮私募融资之一，投资方结构（产业巨头＋国资平台＋半导体基金）显示国家级资源正在向单一平台集中；其二，DeepSeek 从「量化基金的副产品」变为准上市公司，是中国大模型商业化路径的关键样本；其三，若 2027 年科创板挂牌成功，将为全球投资者提供第一个可公开定价的中国前沿大模型标的。<strong>风险在于：本轮融资与 IPO 计划均来自未具名消息源，公司尚未确认，且缺乏公开财务数据支撑当前估值。</strong></p>
+  <div class="grid">
+    <div class="cell"><div class="k">本轮融资额</div><div class="v">$74亿<small>约 500 亿元人民币</small></div></div>
+    <div class="cell"><div class="k">投前估值</div><div class="v">$740亿<small>投后约 810 亿美元</small></div></div>
+    <div class="cell"><div class="k">上一轮估值</div><div class="v">$520亿<small>2026 年 7 月</small></div></div>
+    <div class="cell"><div class="k">年化收入</div><div class="v">≈$5亿<small>第三方估算，未经公司确认</small></div></div>
+    <div class="cell"><div class="k">规划算力</div><div class="v">1 GW<small>乌兰察布数据中心</small></div></div>
+    <div class="cell"><div class="k">IPO 时间表</div><div class="v">2027<small>科创板，最早 2026 年底递表</small></div></div>
   </div>
+
+  <h4>业务内容</h4>
+  <p>DeepSeek 由量化私募幻方量化（High-Flyer Quant）创始人梁文锋于 2023 年创立，以"用更少算力做出对标美国前沿实验室的模型"著称，2025 年初凭 R1 推理模型引发全球关注并一度冲击美股科技板块。公司现以 API 与开放权重模型为核心商业化路径，2026 年 3 月推出旗舰 V4 系列；据第三方定价与用量统计，V4 输入价格约 0.30 美元/百万 token、输出约 0.50 美元/百万 token，缓存命中可再降约 90%。</p>
+
+  <h4>历史融资情况</h4>
+  <ul>
+    <li><strong>创立至 2025 年：</strong>几乎完全由梁文锋旗下幻方量化输血，未走传统 VC 路线，这是其早期最独特之处。</li>
+    <li><strong>2026 年 4 月：</strong>市场传出估值约 <strong>100 亿美元</strong>。</li>
+    <li><strong>2026 年 7 月（首轮外部融资）：</strong>据财新、南华早报报道，公司完成约 <strong>50 亿元人民币</strong>级别融资，估值约 <strong>520 亿美元</strong>；投资方包括腾讯（约 100 亿元人民币）、宁德时代 CATL（约 50 亿元人民币）、Monolith 磐霖、网易、京东，梁文锋本人亦大额跟投。</li>
+    <li><strong>2026 年 8 月（本轮，即将交割）：</strong>拟募 <strong>约 50 亿元人民币 / 74 亿美元</strong>。老股东 Monolith、拾象（Shixiang Capital）、宁德时代继续参与；新进洽谈方包括 <strong>CPE 源峰、君联资本（Legend Capital）、半导体私募 Stony Creek Capital</strong>，以及兆易创新（GigaDevice）关联基金与合肥市国资平台。公司与投资方均未公开确认。</li>
+  </ul>
+
+  <h4>业务发展与财务情况</h4>
+  <ul>
+    <li><strong>研发进度：</strong>V4 系列已量产商用，Pro 版本参数规模与超长上下文为其主要卖点；公司同时在推进新一代模型训练。</li>
+    <li><strong>算力扩张：</strong>据报道正新增约 <strong>1 GW</strong> 计算容量（内蒙古乌兰察布项目），这也是本轮融资的核心用途——"高效模型"公司正在变成"重资本基础设施运营商"。</li>
+    <li><strong>收入与盈利：</strong>公司未披露财务数据。第三方机构估算其年化收入接近 <strong>5 亿美元</strong>、云端 API 毛利率 70–80%，但该数字未获公司证实，应谨慎看待。值得注意的是，DeepSeek 已随阿里、腾讯、百度、智谱一同<strong>上调 API 价格</strong>，反映中国大模型市场正从补贴战转向寻找可持续单位经济。</li>
+    <li><strong>战略布局：</strong>DeepSeek 以战略投资者身份认购宇树科技（Unitree Robotics）<strong>2.31%</strong> 股份并接受 36 个月锁定期；幻方系还拿到长鑫存储（CXMT）等热门科技 IPO 的基石额度，将其利益与 AI、半导体、机器人三条国家战略产业链绑定。</li>
+  </ul>
+  <p style="color:var(--muted);font-size:13px;margin-top:16px;">⚠️ 本轮融资尚未由 DeepSeek 或投资方正式公告，以上数据来自《华尔街日报》、南华早报、CNBC 等媒体的消息人士报道。不同来源对估值口径（投前/投后、人民币/美元）存在差异。</p>
 </div>
 
-<h2 class="sec">重 要 交 易 榜 · 按 重 要 性 排 序</h2>
+<h2 class="section">今日交易速览（按重要性排序）</h2>
 <ol class="deals">
 
-  <li>
-    <h3>英伟达传以 <span class="amt">129 亿美元</span> 收购 Hugging Face</h3>
-    <p>据 The Information、CNBC 等报道，英伟达已同意收购开源 AI 模型托管平台 Hugging Face，作价约 129 亿美元；但双方尚未签署最终协议，交易仍可能生变。该价格远高于 Hugging Face 2023 年 2.35 亿美元融资时的 45 亿美元估值，也远高于英伟达去年提出、被拒绝的 5 亿美元投资（对应 70 亿美元估值）。若成交，英伟达将把触角从 AI 芯片延伸至模型与开发者生态，并获得一个消化云端过剩算力的天然出口。</p>
-    <div class="tags"><span class="tag hot">并购</span><span class="tag">NVIDIA</span><span class="tag">AI 开发者生态</span><span class="tag">8月27日</span></div>
+  <li class="deal">
+    <div class="deal-head"><span class="name">DeepSeek 深度求索</span><span class="amount">约 74 亿美元</span></div>
+    <p>中国大模型公司接近完成 Pre-IPO 轮，投前估值约 740 亿美元。腾讯、宁德时代、Monolith 等老股东跟进，CPE、君联资本等新方在谈，目标 2027 年科创板挂牌。这是本周期全球单笔最大科技融资。</p>
+    <div class="tags"><span>大模型</span><span>中国</span><span>Pre-IPO</span><span>腾讯 / CATL</span></div>
   </li>
 
-  <li>
-    <h3>软银洽谈控股人形机器人公司 1X，估值 <span class="amt">60 亿美元</span></h3>
-    <p>据 The Information 报道，软银正在洽谈收购 OpenAI 投资的挪威人形机器人公司 1X Technologies 的多数股权，对应估值约 60 亿美元。该价格低于 1X 去年秋天寻求的 100 亿美元（当时计划募资 10 亿美元，实际未及一半），但远高于其 2025 年 1 月 8.2 亿美元的估值。1X 去年 10 月开放家用机器人 Neo 的 2 万美元预订，首周收到逾 1 万份订单，但至今尚未交付。交易条款仍可能变化。</p>
-    <div class="tags"><span class="tag hot">软银</span><span class="tag">具身智能</span><span class="tag">OpenAI 被投</span><span class="tag">8月27—28日</span></div>
+  <li class="deal">
+    <div class="deal-head"><span class="name">Instinct</span><span class="amount">2.5 亿美元 · B 轮</span></div>
+    <p>旧金山 AI 助手初创公司，产品尚在内测阶段即获 <strong>25 亿美元</strong>估值。<strong>Index Ventures 与 Benchmark</strong> 领投，创始人为 Noah Shinn。当周美国最大一笔融资，显示顶级基金对"消费级 AI 助手"仍愿给出高溢价。</p>
+    <div class="tags"><span>AI 助手</span><span>美国</span><span>Index / Benchmark</span><span>估值 $2.5B</span></div>
   </li>
 
-  <li>
-    <h3>AI 助手 Instinct 完成 <span class="amt">2.5 亿美元</span> B 轮，估值 25 亿美元</h3>
-    <p>由 23 岁创始人 Noah Shinn 创立的 AI 助手公司 Instinct 完成 2.5 亿美元 B 轮，由 Index Ventures 与 Benchmark 联合领投，累计融资 3.5 亿美元，估值 25 亿美元。此前该公司估值仅约 1 亿美元，数周内跃升 25 倍，是本轮周期中估值攀升最陡的 AI 应用层案例之一。</p>
-    <div class="tags"><span class="tag hot">Index Ventures</span><span class="tag hot">Benchmark</span><span class="tag">AI 应用</span><span class="tag">8月27日</span></div>
+  <li class="deal">
+    <div class="deal-head"><span class="name">Owner.com</span><span class="amount">2.4 亿美元</span></div>
+    <p>为本地餐饮等小微商户提供 AI 建站、在线与电话点单、App 及客服自动化工具。<strong>高盛成长股权（Goldman Sachs Growth Equity）</strong>领投，估值 23 亿美元。成立 8 年，是"AI 落地到线下小生意"最典型的规模化样本。</p>
+    <div class="tags"><span>垂直 SaaS</span><span>小微商户 AI</span><span>高盛</span><span>估值 $2.3B</span></div>
   </li>
 
-  <li>
-    <h3>电动海上滑翔机公司 REGENT 完成 <span class="amt">2.4 亿美元</span> B 轮</h3>
-    <p>REGENT Craft 宣布完成 2.4 亿美元 B 轮，股权与债权各半，由 Mare Liberum 与 AE Ventures 联合领投，债权部分由 Palmer Luckey 联合创立的 Erebor Bank 提供。老股东 Founders Fund、Caffeinated Capital、洛克希德·马丁风投、日本航空、Giant Step Capital 及 DCVC 参与。累计融资达 3.4 亿美元。公司即将迎来 Viceroy 原型机首次载人飞行，并启用 25.5 万平方英尺的滑翔机制造工厂。</p>
-    <div class="tags"><span class="tag hot">Founders Fund</span><span class="tag">洛克希德·马丁风投</span><span class="tag">国防/交通</span><span class="tag">8月27日</span></div>
+  <li class="deal">
+    <div class="deal-head"><span class="name">Generalist AI</span><span class="amount">2 亿美元 · B 轮追加</span></div>
+    <p>研发可驱动多种机器人形态的 AI 基础模型（物理 AI）。本轮为 6 月 4 亿美元 B 轮的追加，据报道由 <strong>8VC</strong> 领投。三个月内累计融资达 6 亿美元，是当前机器人基础模型赛道融资最密集的公司之一。</p>
+    <div class="tags"><span>物理 AI</span><span>机器人基础模型</span><span>8VC</span></div>
   </li>
 
-  <li>
-    <h3>机器人基础模型公司 Generalist 融资近 <span class="amt">2 亿美元</span>，估值 30 亿美元</h3>
-    <p>由前 Google DeepMind 研究员 Pete Florence、Andy Zeng 与前波士顿动力工程师 Andrew Barry 于 2024 年创立的 Generalist，获 8VC 领投的近 2 亿美元融资，估值升至 30 亿美元。这是其 6 月由 Radical Ventures 领投的 4 亿美元 B 轮（当时估值 20 亿美元）的延伸，使该轮总额达 6 亿美元。既有投资方包括英伟达 NVentures、Union Square Ventures、Bezos Expeditions、Spark Capital、Norwest 及李飞飞。公司研发可驱动不同机器人本体的通用基础模型。</p>
-    <div class="tags"><span class="tag hot">8VC</span><span class="tag hot">NVIDIA NVentures</span><span class="tag">机器人基础模型</span><span class="tag">8月26日</span></div>
+  <li class="deal">
+    <div class="deal-head"><span class="name">Gatik</span><span class="amount">2 亿美元 · D 轮</span></div>
+    <p>加州无人驾驶货运公司，专注零售商中短途 B2B 配送。<strong>卡塔尔投资局（QIA）与科氏颠覆性技术（Koch Disruptive Technologies）</strong>联合领投。主权基金 + 产业集团的组合，指向自动驾驶货运进入规模化部署与资本密集阶段。</p>
+    <div class="tags"><span>自动驾驶货运</span><span>QIA 主权基金</span><span>Koch</span></div>
   </li>
 
-  <li>
-    <h3>身份验证公司 Socure 获 <span class="amt">1.56 亿美元</span> 战略增长投资，估值 52 亿美元</h3>
-    <p>Socure 宣布获得 1.56 亿美元战略增长投资，由 Summit Partners 领投，高盛另类投资、富国银行、Docusign 等参与，含员工老股要约收购部分，估值 52 亿美元（2021 年 E 轮为 45 亿美元）。同时收购奥斯汀的 Agentic AI 反欺诈调查平台 Fravity（金额未披露），用于自动化金融犯罪调查这一高人力成本环节。</p>
-    <div class="tags"><span class="tag">Summit Partners</span><span class="tag">高盛另类投资</span><span class="tag">身份验证/反欺诈</span><span class="tag">8月27日</span></div>
+  <li class="deal">
+    <div class="deal-head"><span class="name">Socure</span><span class="amount">1.56 亿美元</span></div>
+    <p>身份验证与反欺诈公司获战略成长融资，<strong>Summit Partners</strong> 领投，估值 <strong>52 亿美元</strong>；同时宣布收购 agentic AI 反欺诈调查公司 <strong>Fravity</strong>。融资与并购同步落地，是本轮身份安全赛道整合的信号。</p>
+    <div class="tags"><span>身份验证</span><span>反欺诈</span><span>并购</span><span>估值 $5.2B</span></div>
   </li>
 
-  <li>
-    <h3>乙肝疗法公司 AusperBio 完成 <span class="amt">1.2 亿美元</span> C 轮</h3>
-    <p>中美双总部的 AusperBio Therapeutics 完成 1.2 亿美元 C 轮，由一家未披露的战略投资方领投，RA Capital 作为新投资人加入，翰康资本、夏尔巴投资、InnoPinnacle、启明创投、元生创投、鼎晖投资等老股东跟投。自 2024 年以来累计融资 3.6 亿美元。资金主要用于推进核心乙肝疗法 AHB-137 的 III 期注册临床及商业化准备，并开发 siRNA 疗法 AHB-171。这是当日金额最大的一级市场生物医药交易。</p>
-    <div class="tags"><span class="tag hot">启明创投</span><span class="tag">RA Capital</span><span class="tag">鼎晖投资</span><span class="tag">生物医药</span><span class="tag">8月27日</span></div>
+  <li class="deal">
+    <div class="deal-head"><span class="name">Emerald AI</span><span class="amount">1.5 亿美元 · A 轮</span></div>
+    <p>华盛顿特区公司，软件平台负责在 AI 计算负载与可用电力资源之间做动态调度。<strong>Energize Capital 与 DCVC</strong> 领投，估值 10.5 亿美元，A 轮即跻身独角兽。踩中"AI 算力受制于电网"这一 2026 年最硬的瓶颈。</p>
+    <div class="tags"><span>数据中心能源</span><span>DCVC</span><span>A 轮独角兽</span></div>
   </li>
 
-  <li>
-    <h3>OpenAI 设立第二支 <span class="amt">4 亿美元</span> 创投基金</h3>
-    <p>OpenAI 宣布推出第二支规模 4 亿美元的风险投资基金。其第一支基金曾投资 Harvey、Cursor 等 AI 应用层公司。模型层公司从「被投方」转为「出资方」，正在改变 AI 生态的资本结构——头部模型公司通过资本纽带绑定应用层生态，与英伟达此前大量入股 AI 初创公司的做法形成呼应。</p>
-    <div class="tags"><span class="tag hot">OpenAI</span><span class="tag">CVC/基金设立</span><span class="tag">8月27日</span></div>
+  <li class="deal">
+    <div class="deal-head"><span class="name">AusperBio Therapeutics</span><span class="amount">1.2 亿美元 · C 轮</span></div>
+    <p>中美双地运营的乙肝创新药公司，由一家未披露的战略投资方领投，<strong>RA Capital</strong> 新进，启明创投、CDH 鼎晖、汉康资本、夏尔巴投资等老股东跟投。<strong>2024 年至今累计融资 3.6 亿美元</strong>。资金主要用于核心管线 AHB-137 的三期注册临床与商业化准备。</p>
+    <div class="tags"><span>生物医药</span><span>乙肝</span><span>启明 / 鼎晖</span><span>累计 $360M</span></div>
   </li>
 
-  <li>
-    <h3>用工风险监控平台 Yardstik 完成 <span class="amt">3000 万美元</span> B 轮</h3>
-    <p>明尼阿波利斯的 Yardstik 完成 3000 万美元 B 轮，由 Harbert Growth Partners 领投，Rally Ventures、MissionOG、Crosslink Capital、Grotech Ventures、Great North Ventures 跟投，累计融资 6500 万美元。公司称营收同比增长 149%，正把背景调查从「入职一次性动作」扩展为对执照、保险、资质失效的持续监控。这是当日少数披露明确营收增速的交易。</p>
-    <div class="tags"><span class="tag">Crosslink Capital</span><span class="tag">HR 科技/反欺诈</span><span class="tag">营收+149%</span><span class="tag">8月27日</span></div>
+  <li class="deal">
+    <div class="deal-head"><span class="name">Regent Craft</span><span class="amount">1.2 亿股权 + 1.2 亿债权</span></div>
+    <p>罗德岛"海上滑翔机"（高速翼载船舶）研发商完成 1.2 亿美元 B 轮，<strong>Mare Liberum 与 AE Industrial Partners</strong> 领投；另获 <strong>Erebor Bank</strong> 1.2 亿美元债权融资。硬件重资产项目正越来越多采用"股权+债权"组合。</p>
+    <div class="tags"><span>海上交通</span><span>国防相关</span><span>股+债</span></div>
   </li>
 
-  <li>
-    <h3>地下基础设施数据平台 CivilGrid 完成 <span class="amt">2600 万美元</span> A 轮</h3>
-    <p>旧金山的 CivilGrid 完成 2600 万美元 A 轮，由 Spark Capital 领投，Energy Impact Partners、Afore Capital、A*、Ford Street Ventures、SNR Ventures 参与。创始人 Josh Mackanic 曾任职 PG&amp;E，公司把管线、地下设施、环境、监管与土地信息整合进统一的施工前规划系统，客户为公用事业与工程公司。同期，General Catalyst 与 Lux Capital 领投的实验室数据平台 Transfyr 也以 2500 万美元种子轮亮相，创始团队来自 Ginkgo Bioworks 与 ARPA-H。</p>
-    <div class="tags"><span class="tag hot">Spark Capital</span><span class="tag">Energy Impact Partners</span><span class="tag">基础设施软件</span><span class="tag">8月27日</span></div>
+  <li class="deal">
+    <div class="deal-head"><span class="name">Stability AI</span><span class="amount">7,600 万美元 · B 轮</span></div>
+    <p>洛杉矶生成式 AI 公司面向音乐、游戏与影视专业创作者，B 轮获多家 VC 与战略方支持，此前报道显示环球音乐、索尼音乐、华纳音乐等唱片巨头位列投资方。曾经的开源明星正转向版权方结盟的商业模式。</p>
+    <div class="tags"><span>生成式 AI</span><span>内容创作</span><span>唱片巨头战投</span></div>
+  </li>
+
+  <li class="deal">
+    <div class="deal-head"><span class="name">Yardstik</span><span class="amount">3,000 万美元 · B 轮</span></div>
+    <p>明尼阿波利斯"劳动力信任平台"，把背景调查从入职一次性动作延伸为对证照、保险、欺诈信号的持续监控。<strong>Harbert Growth Partners</strong> 领投，累计融资 6,500 万美元，公司称收入同比增长 <strong>149%</strong>。</p>
+    <div class="tags"><span>HR 科技</span><span>反欺诈</span><span>收入 +149%</span></div>
+  </li>
+
+  <li class="deal">
+    <div class="deal-head"><span class="name">CivilGrid</span><span class="amount">2,600 万美元 · A 轮</span></div>
+    <p>旧金山公司，把地下管线、地权、环境与审批信息整合成施工前的统一规划数据层。<strong>Spark Capital</strong> 领投，<strong>Energy Impact Partners</strong> 等跟投。创始人 Josh Mackanic 出身 PG&amp;E，战略投资方带来的电力与工程渠道是关键。</p>
+    <div class="tags"><span>基础设施软件</span><span>Spark Capital</span><span>能源产业资本</span></div>
+  </li>
+
+  <li class="deal">
+    <div class="deal-head"><span class="name">Transfyr</span><span class="amount">2,500 万美元 · 种子轮</span></div>
+    <p>马萨诸塞州公司以 2,500 万美元种子轮出场，用传感器与多模态 AI 记录实验室里"从未写进论文"的操作细节，为科研复现与实验室机器人提供训练数据。<strong>General Catalyst</strong> 领投，<strong>Lux Capital</strong>、Breakout Ventures、SV Angel 等跟投；创始人为 Ginkgo Bioworks 前 AI 高管 Anna Marie Wagner 与 ARPA-H 首任主任 Renee Wegrzyn。</p>
+    <div class="tags"><span>科研 AI</span><span>General Catalyst</span><span>Lux Capital</span><span>豪华创始团队</span></div>
   </li>
 
 </ol>
 
 <footer>
-  <h4>信 息 来 源</h4>
+  <h5>信息来源</h5>
   <ul>
-    <li>TechStartups — <a href="https://techstartups.com/2026/08/28/deepseek-nears-7-4-billion-funding-round-at-74-billion-valuation-ahead-of-2027-ipo/">DeepSeek nears $7.4 billion funding round at $74 billion valuation ahead of 2027 IPO</a>（2026/8/28）</li>
-    <li>TechStartups — <a href="https://techstartups.com/2026/08/28/startup-funding-news-today-august-28-2026-ausperbio-civilgrid-transfyr-yardstik-more/">Startup Funding News Today, August 28, 2026: AusperBio, CivilGrid, Transfyr, Yardstik &amp; More</a></li>
-    <li>South China Morning Post — <a href="https://www.scmp.com/tech/big-tech/article/3365280/deepseek-nears-pre-ipo-funding-round-2027-market-debut-takes-shape-sources">DeepSeek nears pre-IPO funding round as 2027 market debut takes shape</a></li>
-    <li>The Wall Street Journal — <a href="https://www.wsj.com/tech/ai/ai-startup-deepseek-poised-to-reach-74-billion-valuation-1e093592">AI Startup DeepSeek Poised to Reach $74 Billion Valuation</a></li>
-    <li>CNBC — <a href="https://www.cnbc.com/2026/08/28/deepseek-founder-liang-wenfeng-high-flyer-china-tech-ipos-funding.html">DeepSeek founder Liang Wenfeng, High-Flyer and China tech IPOs</a></li>
-    <li>Caixin Global — <a href="https://www.caixinglobal.com/2026-07-17/deepseek-reaches-52-billion-valuation-in-round-backed-by-tencent-catl-102465358.html">DeepSeek Reaches $52 Billion Valuation in Round Backed by Tencent, CATL</a></li>
-    <li>CNBC — <a href="https://www.cnbc.com/2026/08/27/nvidia-hugging-face-acquisition.html">Nvidia agrees to buy Hugging Face for $12.9 billion, report says</a></li>
-    <li>TechCrunch — <a href="https://techcrunch.com/2026/08/26/nvidia-closes-in-on-hugging-face-acquisition/">Nvidia closes in on Hugging Face acquisition</a></li>
-    <li>TechStartups — <a href="https://techstartups.com/2026/08/27/softbank-in-talks-to-buy-a-majority-stake-in-humanoid-robot-startup-1x-at-6-billion-valuation/">SoftBank in talks to buy a majority stake in humanoid robot startup 1X at $6 billion valuation</a></li>
-    <li>TechCrunch — <a href="https://techcrunch.com/2026/08/26/viral-ai-startup-instinct-has-raised-350-million-at-a-2-5-billion-valuation/">Viral AI startup Instinct has raised $350M at a $2.5B valuation</a></li>
-    <li>TechCrunch — <a href="https://techcrunch.com/2026/08/25/robotics-startup-generalist-reaches-3b-valuation-sources-say/">Robotics startup Generalist reaches $3B valuation, sources say</a></li>
-    <li>REGENT — <a href="https://www.regentcraft.com/news/regent-secures-240-million-series-b-funding-to-scale-seaglider-manufacturing-and-transform-maritime-mobility">REGENT secures $240 million Series B funding</a></li>
-    <li>Crunchbase News — <a href="https://news.crunchbase.com/venture/socure-raises-acquires-agentic-ai-startup-fravity/">Socure Secures $156M at $5.2B Valuation, Acquires AI Fraud Investigation Startup Fravity</a></li>
-    <li>Tech Funding News — <a href="https://techfundingnews.com/openai-launches-400m-second-venture-fund-after-backing-harvey-cursor-and-more/">OpenAI launches $400M second venture fund</a></li>
-    <li>Tech Funding News — <a href="https://techfundingnews.com/">每日融资动态首页</a></li>
+    <li><a href="https://techstartups.com/2026/08/28/deepseek-nears-7-4-billion-funding-round-at-74-billion-valuation-ahead-of-2027-ipo/" target="_blank">TechStartups：DeepSeek nears $7.4 billion funding round at $74 billion valuation ahead of 2027 IPO（2026-08-28）</a></li>
+    <li><a href="https://news.crunchbase.com/venture/biggest-funding-rounds-ai-tools-assistants-instinct/" target="_blank">Crunchbase News：The Week's 10 Biggest Funding Rounds - AI Tools And Assistants Lead Sparser Lineup Of Megadeals（2026-08-28）</a></li>
+    <li><a href="https://techstartups.com/2026/08/28/startup-funding-news-today-august-28-2026-ausperbio-civilgrid-transfyr-yardstik-more/" target="_blank">TechStartups：Startup Funding News Today, August 28, 2026 - AusperBio, CivilGrid, Transfyr, Yardstik &amp; More</a></li>
+    <li><a href="https://news.crunchbase.com/venture/socure-raises-acquires-agentic-ai-startup-fravity/" target="_blank">Crunchbase News：Socure Secures $156M at $5.2B Valuation, Acquires AI Fraud Investigation Startup Fravity（2026-08-27）</a></li>
+    <li><a href="https://www.scmp.com/tech/big-tech/article/3365280/deepseek-nears-pre-ipo-funding-round-2027-market-debut-takes-shape-sources" target="_blank">South China Morning Post：DeepSeek nears pre-IPO funding round as 2027 market debut takes shape</a></li>
+    <li><a href="https://www.wsj.com/tech/ai/ai-startup-deepseek-poised-to-reach-74-billion-valuation-1e093592" target="_blank">The Wall Street Journal：AI Startup DeepSeek Poised to Reach $74 Billion Valuation</a></li>
+    <li><a href="https://www.cnbc.com/2026/08/28/deepseek-founder-liang-wenfeng-high-flyer-china-tech-ipos-funding.html" target="_blank">CNBC：DeepSeek founder Liang Wenfeng, High-Flyer and China tech IPOs（2026-08-28）</a></li>
+    <li><a href="https://www.caixinglobal.com/2026-07-17/deepseek-reaches-52-billion-valuation-in-round-backed-by-tencent-catl-102465358.html" target="_blank">Caixin Global：DeepSeek Reaches $52 Billion Valuation in Round Backed by Tencent, CATL（2026-07-17）</a></li>
+    <li><a href="https://www.prnewswire.com/news-releases/yardstik-raises-30m-in-series-b-to-tackle-the-post-hire-blind-spots-and-workforce-fraud-302859749.html" target="_blank">PR Newswire：Yardstik Raises $30M in Series B</a></li>
+    <li><a href="https://techstartups.com/2026/08/26/transfyr-launches-with-25m-in-funding-to-bring-physical-ai-to-scientific-labs/" target="_blank">TechStartups：Transfyr launches with $25M in funding to bring physical AI to scientific labs</a></li>
   </ul>
 
   <div class="disclaimer">
-    <strong>免责声明：</strong>本页内容由 AI 依据上述公开媒体报道自动整理生成，仅供信息参考，不构成任何投资建议、要约或推荐。多笔交易（含 DeepSeek 融资、英伟达收购 Hugging Face、软银入股 1X）来源于未具名消息人士的媒体报道，当事方尚未公开确认，最终条款与结果可能发生变化甚至不成立。汇率换算为约数，金额与估值以各公司及监管机构正式披露为准。读者在做出任何决策前应自行核实原始信息来源。
+    <strong>免责声明：</strong>本页内容由公开媒体报道自动汇编整理，仅供信息参考，不构成任何投资建议、要约或推荐。部分交易（尤其是 DeepSeek 本轮融资）尚未获得公司或投资方正式确认，金额、估值与投资方名单以最终官方公告为准；不同媒体对估值口径与汇率换算存在差异。第三方估算的收入、毛利等数据未经公司证实。读者在做出任何投资决策前应自行核实信息并咨询持牌专业人士。
+    <br><br>生成时间：2026 年 8 月 30 日 · 覆盖窗口：2026 年 8 月 27 日 – 8 月 30 日
   </div>
-  <p style="margin-top:16px;font-size:12px;">生成时间：2026年8月29日 · 每日科技投资动态</p>
 </footer>
 
 </div>
