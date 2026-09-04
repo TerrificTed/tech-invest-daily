@@ -3,195 +3,188 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日科技投资动态 · 2026年9月3日</title>
+<title>每日科技投资动态 · 2026年9月4日</title>
 <style>
-  :root { --accent:#c8401a; --ink:#1a1a1a; --muted:#6b6b6b; --line:#e4e0d8; --bg:#f6f4ef; --card:#ffffff; }
+  :root { --accent:#c8401a; --ink:#1a1a1a; --muted:#6b6b6b; --line:#e6e2dc; --bg:#f6f4f0; --card:#fff; }
   * { box-sizing:border-box; }
-  body { margin:0; background:var(--bg); color:var(--ink); font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC","Helvetica Neue",Arial,sans-serif; line-height:1.65; }
-  .wrap { max-width:960px; margin:0 auto; padding:32px 20px 56px; }
-  header { border-top:4px solid var(--accent); border-bottom:1px solid var(--ink); padding:22px 0 16px; margin-bottom:28px; }
-  .kicker { font-size:12px; letter-spacing:.2em; color:var(--accent); text-transform:uppercase; font-weight:600; }
-  h1 { margin:6px 0 4px; font-size:36px; letter-spacing:.02em; font-weight:700; }
-  .meta { color:var(--muted); font-size:14px; display:flex; flex-wrap:wrap; gap:8px 20px; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Noto Sans SC",sans-serif; line-height:1.7; }
+  .wrap { max-width:960px; margin:0 auto; padding:32px 20px 60px; }
+  header { border-top:4px solid var(--accent); border-bottom:1px solid var(--ink); padding:20px 0 16px; margin-bottom:28px; }
+  header .kicker { font-size:13px; letter-spacing:.2em; color:var(--accent); font-weight:600; }
+  header h1 { margin:6px 0 4px; font-size:34px; letter-spacing:.02em; }
+  header .meta { color:var(--muted); font-size:14px; display:flex; flex-wrap:wrap; gap:18px; }
   h2 { font-size:20px; margin:36px 0 14px; padding-left:12px; border-left:4px solid var(--accent); }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:6px; padding:20px 24px; box-shadow:0 1px 2px rgba(0,0,0,.04); }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:20px 24px; box-shadow:0 1px 2px rgba(0,0,0,.04); }
   .overview p { margin:0 0 10px; }
-  .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin:18px 0; }
-  .stat { background:#fbf7f2; border:1px solid var(--line); border-radius:6px; padding:12px 14px; }
+  .hl { border:2px solid var(--accent); }
+  .hl .tag-top { display:inline-block; background:var(--accent); color:#fff; font-size:12px; padding:2px 10px; border-radius:3px; letter-spacing:.1em; }
+  .hl h3 { margin:12px 0 6px; font-size:24px; }
+  .hl .sub { color:var(--muted); font-size:14px; margin-bottom:14px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin:14px 0 18px; }
+  .stat { background:var(--bg); border:1px solid var(--line); border-radius:6px; padding:12px 14px; }
   .stat .v { font-size:22px; font-weight:700; color:var(--accent); line-height:1.2; }
-  .stat .l { font-size:12px; color:var(--muted); margin-top:4px; }
-  .hl { border-left:6px solid var(--accent); }
-  .hl h3 { margin:0 0 6px; font-size:24px; }
-  .hl .sub { color:var(--muted); font-size:14px; margin-bottom:10px; }
-  .hl h4 { font-size:15px; margin:18px 0 6px; color:var(--accent); }
-  .hl p { margin:0 0 8px; }
-  table { width:100%; border-collapse:collapse; font-size:14px; margin:8px 0; }
-  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
-  th { background:#fbf7f2; font-weight:600; }
-  ol.deals { list-style:none; padding:0; margin:0; counter-reset:deal; }
-  ol.deals li { background:var(--card); border:1px solid var(--line); border-radius:6px; padding:16px 20px 16px 64px; margin-bottom:12px; position:relative; }
-  ol.deals li::before { counter-increment:deal; content:counter(deal); position:absolute; left:18px; top:16px; width:32px; height:32px; border-radius:50%; background:var(--accent); color:#fff; font-weight:700; display:flex; align-items:center; justify-content:center; font-size:15px; }
-  .deal-head { display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 14px; }
-  .deal-head .name { font-size:18px; font-weight:700; }
-  .amt { color:var(--accent); font-weight:700; font-size:18px; }
-  .deal p { margin:8px 0 6px; font-size:15px; }
-  .tags span { display:inline-block; font-size:12px; background:#f1ede6; color:#555; border-radius:3px; padding:2px 8px; margin:4px 6px 0 0; }
-  .tags span.vc { background:#fbe6df; color:var(--accent); }
-  footer { margin-top:44px; padding-top:18px; border-top:1px solid var(--ink); font-size:13px; color:var(--muted); }
-  footer ul { padding-left:18px; margin:8px 0 14px; }
-  footer li { margin-bottom:4px; }
-  a { color:var(--accent); text-decoration:none; }
-  a:hover { text-decoration:underline; }
-  .disc { background:#fbf7f2; border:1px dashed var(--line); padding:10px 14px; border-radius:6px; }
-  @media (max-width:600px){ h1{font-size:28px;} ol.deals li{padding-left:56px;} }
+  .stat .k { font-size:12px; color:var(--muted); margin-top:4px; }
+  .hl h4 { margin:16px 0 6px; font-size:15px; color:var(--accent); }
+  .hl p { margin:0 0 8px; font-size:15px; }
+  ol.news { list-style:none; padding:0; margin:0; counter-reset:n; }
+  ol.news li { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:16px 20px 16px 58px; margin-bottom:12px; position:relative; }
+  ol.news li::before { counter-increment:n; content:counter(n); position:absolute; left:18px; top:16px; width:28px; height:28px; border-radius:50%; background:var(--ink); color:#fff; font-weight:700; font-size:14px; display:flex; align-items:center; justify-content:center; }
+  ol.news li:nth-child(-n+3)::before { background:var(--accent); }
+  .title { font-weight:700; font-size:17px; margin:0 0 4px; }
+  .amt { color:var(--accent); font-weight:700; }
+  .desc { font-size:14px; margin:4px 0 8px; color:#333; }
+  .tags span { display:inline-block; font-size:12px; border:1px solid var(--line); background:var(--bg); border-radius:3px; padding:1px 8px; margin:2px 6px 0 0; color:var(--muted); }
+  .src a { color:var(--muted); font-size:12px; }
+  footer { margin-top:40px; border-top:1px solid var(--ink); padding-top:16px; font-size:13px; color:var(--muted); }
+  footer ul { padding-left:18px; margin:8px 0 16px; }
+  footer a { color:var(--accent); text-decoration:none; word-break:break-all; }
+  a { color:var(--accent); }
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <header>
-  <div class="kicker">Daily Tech Investment Brief</div>
+  <div class="kicker">DAILY TECH INVESTMENT BRIEF</div>
   <h1>每日科技投资动态</h1>
   <div class="meta">
-    <span>📅 2026年9月3日 · 星期四</span>
-    <span>覆盖时段：过去24–48小时</span>
-    <span>信息源：TechCrunch · TechStartups · CTech (Calcalist) · PR Newswire · Forbes</span>
+    <span>📅 2026年9月4日（周五）</span>
+    <span>覆盖窗口：过去24–48小时</span>
+    <span>信息源：TechStartups、CNBC、Financial Times、The Wall Street Journal、Reuters、NVIDIA 官方</span>
   </div>
 </header>
 
 <h2>今日概览</h2>
 <div class="card overview">
-  <p>过去两天全球科技创投的主线是<strong>企业级AI基础层与AI安全</strong>。以色列-荷兰企业AI操作系统公司 <strong>Wonderful</strong> 以 <strong>50亿美元</strong>估值完成5.5亿美元C轮，估值半年内翻了2.5倍；中国3D生成AI公司 <strong>Tripo AI（VAST）</strong> 完成约30亿元人民币B/B+轮；YC史上最快独角兽 <strong>AfterQuery</strong> 据报道以32亿美元估值融资（5个月前仅3亿美元）。</p>
-  <p>头部VC动向：<strong>红杉</strong>两天内出现在两笔AI安全/可观测性交易中（AIR、Empirik）；<strong>a16z</strong>领投拉美汇款平台Félix的C轮股权部分，同时其成长基金扩至85亿美元；<strong>Insight Partners</strong>领投Wonderful与Gridsight；<strong>Salesforce Ventures</strong>首次入股Wonderful；<strong>中金、鼎晖、CMC</strong>等参与Tripo AI。并购方面，Palo Alto Networks据报道以5亿美元收购Thrive支持的AI安全公司Console。</p>
-  <p>结构性趋势：多笔交易采用「股权+信贷」混合结构（Félix、PeopleX、Enhance），有稳定交易流的公司正用债务替代部分稀释性融资；交易地域高度分散，覆盖美国、中国、以色列、荷兰、德国、日本、澳大利亚、阿联酋、西班牙、巴基斯坦、加拿大、马来西亚。</p>
-  <div class="stats">
-    <div class="stat"><div class="v">$5B</div><div class="l">Wonderful 投后估值（6个月前 $2B）</div></div>
-    <div class="stat"><div class="v">¥30亿</div><div class="l">Tripo AI B/B+轮（约$4.46亿）</div></div>
-    <div class="stat"><div class="v">$3.2B</div><div class="l">AfterQuery 估值（YC最快独角兽）</div></div>
-    <div class="stat"><div class="v">$8.5B</div><div class="l">a16z 成长基金最新规模</div></div>
-  </div>
+  <p><strong>巨头并购与战略投资主导头条。</strong>NVIDIA 宣布以 <span class="amt">129.3 亿美元</span> 收购开源模型平台 Hugging Face，创其史上最大并购；同日 NVIDIA 还以 <span class="amt">35 亿美元</span> 可转债投资联发科，把 NVLink Fusion 架构推向定制芯片与终端设备。</p>
+  <p><strong>AI 应用层估值继续飙升。</strong>企业 AI 公司 Wonderful 以 <span class="amt">50 亿美元</span> 估值完成 5.5 亿美元 C 轮（Insight Partners 领投，Salesforce 新进），成立仅 20 个月估值较去年 11 月的 7 亿美元翻了 7 倍；中国月之暗面（Moonshot AI）已秘密递交港股 IPO 申请，估值约 500 亿美元。</p>
+  <p><strong>中早期资金偏好"AI + 垂直工作流"。</strong>9 月 3 日 TechStartups 汇总的交易中，土耳其 HubX（Point72 领投，12 亿美元估值）、以色列 Guardio（11 亿美元估值）成为新独角兽；Base10、Gradient Ventures（Google）、YC、Sequoia Scout、a16z Speedrun 等活跃于保险科技、数据工程、AI 安全等领域。除两笔大额交易外，多数轮次在 500 万至 2500 万美元之间，资本正向少数高确定性标的集中。</p>
 </div>
 
 <h2>今日最值得关注</h2>
 <div class="card hl">
-  <h3>Wonderful — 5.5亿美元C轮，估值50亿美元</h3>
-  <div class="sub">企业AI操作系统 · 阿姆斯特丹/特拉维夫 · 领投：Insight Partners · 新投资方：Salesforce Ventures · 跟投：Index Ventures、IVP、Bessemer、Vine Ventures、9Yards</div>
-  <div class="stats">
-    <div class="stat"><div class="v">$550M</div><div class="l">本轮融资额（C轮）</div></div>
-    <div class="stat"><div class="v">$5B</div><div class="l">投后估值</div></div>
-    <div class="stat"><div class="v">>$800M</div><div class="l">累计融资（成立约20个月）</div></div>
-    <div class="stat"><div class="v">650人</div><div class="l">员工数（3月时300人）</div></div>
-    <div class="stat"><div class="v">35+</div><div class="l">已进入市场数</div></div>
-    <div class="stat"><div class="v">>$100M</div><div class="l">2026年底ARR目标（据报道）</div></div>
+  <span class="tag-top">HIGHLIGHT</span>
+  <h3>NVIDIA 129.3 亿美元收购 Hugging Face：从卖芯片到掌控 AI 开发者分发入口</h3>
+  <div class="sub">交易类型：战略并购 · 买方：NVIDIA · 公告日期：2026年9月2–3日 · 需通过监管审查后交割</div>
+
+  <div class="grid">
+    <div class="stat"><div class="v">$129.3亿</div><div class="k">总交易对价</div></div>
+    <div class="stat"><div class="v">$119亿</div><div class="k">支付给股东现金</div></div>
+    <div class="stat"><div class="v">≤$10亿</div><div class="k">员工股权留任激励</div></div>
+    <div class="stat"><div class="v">$3.96亿</div><div class="k">历史累计融资</div></div>
+    <div class="stat"><div class="v">$45亿</div><div class="k">上一轮估值（2023）</div></div>
+    <div class="stat"><div class="v">$1.5亿</div><div class="k">ARR（2026年8月）</div></div>
   </div>
 
-  <h4>业务内容</h4>
-  <p>Wonderful 于2025年初由 Bar Winkler（CEO，曾创办 Approve.com 并于2021年卖给 Tipalti）与 Roey Lalazar（CTO，曾创办AI本地化平台 Kaps）创立。公司起步于面向<strong>非英语市场</strong>的客服AI智能体平台，按语言、文化习惯和监管环境为每个市场定制，并向电信、金融、医疗、制造等行业客户派驻<strong>前置部署工程师（FDE）</strong>驻场集成。过去几个月产品已升级为「Wonderful AI OS」：一个模型无关、可与企业既有技术栈兼容的统一层，用于编排智能体、工作流、AI原生应用、集成与治理，目标是自动化端到端业务流程。</p>
+  <h4>公司业务</h4>
+  <p>Hugging Face 由 Clément Delangue、Julien Chaumond、Thomas Wolf 于 2016 年创立，是全球最大的开源 AI 模型托管与协作平台，目前托管超过 300 万个模型、约 50 万个数据集、100 万+ 应用，社区用户超 1800 万，企业客户约 20 万家。其核心资产是 Transformers 等开源库及开发者对其"硬件中立"的信任——开发者可自由选择模型、框架、云及推理服务商。</p>
 
   <h4>历史融资</h4>
-  <table>
-    <tr><th>轮次</th><th>时间</th><th>金额</th><th>估值</th><th>领投/主要投资方</th></tr>
-    <tr><td>种子轮</td><td>2025年</td><td>$34M</td><td>—</td><td>Index Ventures、Bessemer、Vine Ventures 等</td></tr>
-    <tr><td>A轮</td><td>2025年11月</td><td>$100M</td><td>—</td><td>Index Ventures 等（种子轮后仅4个月）</td></tr>
-    <tr><td>B轮</td><td>2026年3月</td><td>$150M</td><td>$2B</td><td>Insight Partners 领投；Index、IVP、Bessemer、Vine 跟投</td></tr>
-    <tr><td><strong>C轮</strong></td><td><strong>2026年9月</strong></td><td><strong>$550M</strong></td><td><strong>$5B</strong></td><td><strong>Insight Partners 领投；Salesforce 首次入股</strong></td></tr>
-  </table>
-  <p>B轮前累计融资2.86亿美元，本轮后累计超过8亿美元。C轮规模是B轮的3.7倍，估值6个月内由20亿升至50亿美元。</p>
+  <p>公司上市前共完成 8 轮、累计约 3.95–3.96 亿美元一级市场融资。最近一轮为 2023 年 8 月的 2.35 亿美元 D 轮，由 Salesforce Ventures 领投，NVIDIA、Google、Amazon、IBM、Intel、AMD、Qualcomm、Sound Ventures 跟投，投后估值 45 亿美元。本次收购价约为该估值的 2.9 倍，早期投资方及 D 轮参与的多家巨头均将获得可观回报。</p>
 
-  <h4>业务发展与经营情况</h4>
-  <p><strong>扩张速度：</strong>3月B轮时覆盖30国、300名员工；至今覆盖35+市场、约650名员工（一半在以色列），并计划未来一年将以色列研发与实施中心规模扩大三倍。<strong>收入：</strong>公司未披露财务数据，多家媒体报道其预计2026年底ARR超过1亿美元，按此计算50亿美元估值约为50倍前瞻ARR。<strong>盈利：</strong>未披露，资金用途为加速产品研发、扩充FDE团队以满足需求。</p>
-  <p><strong>为何值得关注：</strong>这是本周期内全球最大的企业AI应用层融资之一，也是「FDE驻场+平台」模式（Palantir式打法）在AI智能体赛道被资本高度认可的信号。Insight 联合创始人 Jeff Horing 称其在做「让企业跨部门规模化AI的操作系统」。风险在于估值倍数极高、从客服智能体向通用AI OS的转型仍需验证，且面临云厂商与开源编排框架的潜在竞争。</p>
+  <h4>业务发展与财务</h4>
+  <p>收入增长是本次溢价的核心支撑：据 Sacra 数据，Hugging Face 年度经常性收入（ARR）于 2025 年底约 8100 万美元，2026 年 6 月突破 1 亿美元，8 月达到 1.5 亿美元，两个月增长 50%。收入来源包括企业版 Hub、推理端点与付费算力服务。据 CNBC 报道，是 Hugging Face 方面在数周前主动接洽黄仁勋促成交易；此前 TechCrunch 8 月 26 日已报道双方接近达成协议。</p>
+
+  <h4>战略意义与风险</h4>
+  <p>该交易超过 2020 年 69 亿美元收购 Mellanox，成为 NVIDIA 史上最大并购。随着超大规模云厂商加速自研芯片，NVIDIA 借此向上切入模型发现、微调、评估与部署的开发者层，无论哪家模型胜出都能保持触点。黄仁勋承诺 Hugging Face 将保持开放、"不强制使用 NVIDIA 算力"，但同时拥有 AI 算力基础设施与最重要模型市场的组合，预计会引来监管关注；能否维持社区信任是交易成败关键。</p>
 </div>
 
 <h2>今日交易榜（按重要性排序）</h2>
-<ol class="deals">
-
-  <li class="deal">
-    <div class="deal-head"><span class="name">Wonderful</span><span class="amt">$550M C轮 · 估值$5B</span></div>
-    <p>企业AI操作系统。Insight Partners 领投，Salesforce Ventures 首次入股，Index、IVP、Bessemer、Vine、9Yards 跟投。估值6个月内由20亿升至50亿美元，累计融资超8亿美元。</p>
-    <div class="tags"><span class="vc">Insight Partners</span><span class="vc">Salesforce Ventures</span><span>企业AI</span><span>AI智能体</span><span>以色列/荷兰</span></div>
+<ol class="news">
+  <li>
+    <div class="title">NVIDIA 收购 Hugging Face — <span class="amt">129.3 亿美元</span></div>
+    <div class="desc">NVIDIA 史上最大并购，获得托管 300 万+ 模型的开源 AI 分发平台；含 119 亿美元股东对价与最高 10 亿美元员工留任激励，需监管审批。</div>
+    <div class="tags"><span>并购</span><span>AI 基础设施</span><span>NVIDIA</span><span>开源</span></div>
+    <div class="src"><a href="https://techstartups.com/2026/09/03/nvidia-buys-hugging-face-for-12-93-billion-in-its-biggest-acquisition-ever/" target="_blank">TechStartups</a> · <a href="https://www.cnbc.com/2026/09/03/nvidia-agrees-to-buy-hugging-face-for-almost-13-billion-ai-expansion.html" target="_blank">CNBC</a> · <a href="https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/" target="_blank">NVIDIA Blog</a></div>
   </li>
-
-  <li class="deal">
-    <div class="deal-head"><span class="name">Tripo AI（VAST）</span><span class="amt">约¥30亿 B轮+B+轮（≈$446M）</span></div>
-    <p>3D生成AI基础模型平台。MPCi 领投；完美世界、蓝色光标、中科创达、三七互娱等产业方，中金、鼎晖、CMC资本、洪泰、中平资本等财务投资方参与；达晨、春华、4399、INCE 等老股东加注。资金用于基础模型、算力与商业化。不到6个月内完成。</p>
-    <div class="tags"><span class="vc">中金</span><span class="vc">鼎晖</span><span class="vc">CMC资本</span><span>3D生成AI</span><span>中国</span></div>
+  <li>
+    <div class="title">Wonderful（企业 AI 操作系统）C 轮 — <span class="amt">5.5 亿美元，估值 50 亿美元</span></div>
+    <div class="desc">Insight Partners 领投 1.5 亿美元，Salesforce 为唯一新投资方，Index、IVP、Bessemer、Vine、9Yards 跟投。以色列/阿姆斯特丹团队成立 20 个月，ARR 一年内从约 100 万美元升至 7000 万美元，员工 650 人拟扩至 1000 人；估值较 2025 年 11 月的 7 亿美元增长 7 倍以上。</div>
+    <div class="tags"><span>C 轮</span><span>企业 AI</span><span>Insight Partners</span><span>Salesforce</span></div>
+    <div class="src"><a href="https://techstartups.com/2026/09/02/wonderful-raises-550m-at-5-billion-valuation-just-20-months-after-launch/" target="_blank">TechStartups / WSJ</a></div>
   </li>
-
-  <li class="deal">
-    <div class="deal-head"><span class="name">AfterQuery</span><span class="amt">估值$3.2B（金额未披露）</span></div>
-    <p>AI模型训练/专家数据公司，据Forbes报道完成新一轮融资，估值较4月A轮（$30M @ $300M）增长10倍以上，成为YC史上从创立到独角兽最快的公司（创始人22、23岁，YC W25）。4月已披露ARR达1亿美元，客户包括 NVIDIA、Legora、Motif。</p>
-    <div class="tags"><span class="vc">Y Combinator</span><span>AI训练数据</span><span>ARR $100M</span><span>旧金山</span></div>
+  <li>
+    <div class="title">NVIDIA 战略投资联发科（MediaTek） — <span class="amt">35 亿美元可转债</span></div>
+    <div class="desc">联发科将采用 NVIDIA NVLink Fusion 技术开发定制 AI 加速器，合作覆盖云基础设施、本地 AI 系统与汽车计算；NVIDIA 借此让非 NVIDIA 定制芯片也依赖其互连生态。</div>
+    <div class="tags"><span>CVC / 战略投资</span><span>半导体</span><span>NVIDIA</span></div>
+    <div class="src"><a href="https://techstartups.com/2026/09/03/top-tech-news-today-september-3-2026-google-hugging-face-meta-moonshot-ai-nvidia-more/" target="_blank">TechStartups</a></div>
   </li>
-
-  <li class="deal">
-    <div class="deal-head"><span class="name">Félix Pago</span><span class="amt">$200M（$87M股权 + $113M信贷）</span></div>
-    <p>基于WhatsApp的拉美汇款平台，底层使用USDC稳定币结算。a16z 领投C轮股权，QED 参与；General Catalyst 客户价值基金提供1.13亿美元信贷额度。已处理超80亿美元汇款、600万用户、11个拉美市场，下一步进入借贷与储蓄。</p>
-    <div class="tags"><span class="vc">a16z</span><span class="vc">General Catalyst</span><span class="vc">QED</span><span>金融科技</span><span>稳定币</span><span>迈阿密</span></div>
+  <li>
+    <div class="title">月之暗面 Moonshot AI 秘密递交港股 IPO — <span class="amt">拟募资约 30 亿美元，估值约 500 亿美元</span></div>
+    <div class="desc">Kimi 模型开发商，2023 年由杨植麟创立，股东含阿里巴巴、腾讯、HSG（红杉中国）。若成功将成为中国最大 AI 上市案例之一，为中国大模型公司提供公开市场估值基准。</div>
+    <div class="tags"><span>IPO</span><span>大模型</span><span>腾讯</span><span>阿里</span><span>中国</span></div>
+    <div class="src"><a href="https://techstartups.com/2026/09/03/chinese-ai-startup-moonshot-files-for-3-billion-hong-kong-ipo-at-50-billion-valuation/" target="_blank">TechStartups / WSJ</a></div>
   </li>
-
-  <li class="deal">
-    <div class="deal-head"><span class="name">AIR</span><span class="amt">$50M 两轮种子</span></div>
-    <p>AI智能体供应链安全：发现企业内运行的智能体，持续审查其使用的Skills、插件、MCP服务器并拦截风险行为。红杉领投首轮$10M，Greenoaks 领投第二轮$40M，两轮相隔数周；Wiz、Clay、Cognition 创始人等天使参与。20+客户，约1/4为大型企业。</p>
-    <div class="tags"><span class="vc">红杉资本</span><span class="vc">Greenoaks</span><span>AI安全</span><span>MCP/智能体</span><span>以色列</span></div>
+  <li>
+    <div class="title">Félix Pago（拉美汇款金融科技）C 轮 + 信贷 — <span class="amt">2 亿美元</span></div>
+    <div class="desc">a16z 领投 8700 万美元股权（QED 参与），General Catalyst 客户价值基金提供 1.13 亿美元债权。迈阿密公司已处理超 80 亿美元交易，累计融资近 3 亿美元。</div>
+    <div class="tags"><span>C 轮</span><span>金融科技</span><span>a16z</span><span>General Catalyst</span></div>
+    <div class="src"><a href="https://techstartups.com/2026/09/02/venture-capital-general-catalyst-qed-investors-y-combinator-more/" target="_blank">TechStartups</a></div>
   </li>
-
-  <li class="deal">
-    <div class="deal-head"><span class="name">HyImpulse Technologies</span><span class="amt">€50M+ A轮延展</span></div>
-    <p>德国混合推进火箭公司，主打欧洲主权发射能力。JOIN Capital 与 Ace Capital Partners 联合领投，德国航空航天中心（DLR）、Bayern Kapital 等参与。订单簿超€3.5亿，累计股权+公共资金超€1.25亿，年底前在苏格兰进行SR75第二次发射。</p>
-    <div class="tags"><span>航天/发射</span><span>国防科技</span><span>德国</span></div>
+  <li>
+    <div class="title">HubX（土耳其消费 AI 应用工厂）A 轮 — <span class="amt">7500 万美元，估值 12 亿美元</span></div>
+    <div class="desc">Point72 Private Investments 领投，为公司首次外部融资。2022 年起以收购+AI 改造消费应用为模式，覆盖生成式 AI、教育、健身，日活 370 万；土耳其消费科技史上最大轮次之一。</div>
+    <div class="tags"><span>A 轮</span><span>消费 AI</span><span>Point72</span><span>新独角兽</span></div>
+    <div class="src"><a href="https://techstartups.com/2026/09/03/venture-capital-startup-funding-roundup-september-3-2026-base10-partners-gradient-ventures-point72-y-combinator-more/" target="_blank">TechStartups</a></div>
   </li>
-
-  <li class="deal">
-    <div class="deal-head"><span class="name">PeopleX</span><span class="amt">¥54.5亿日元 A轮（股权+债务）</span></div>
-    <p>东京HR与销售AI平台，发布自研HR语言模型与「MotherAI OS Athena」。en Japan、Angel Bridge、WiL、One Capital 等投资，累计融资78.2亿日元。3000+企业客户，ARR已超10亿日元，目标2031年营收1000亿日元并IPO。</p>
-    <div class="tags"><span class="vc">WiL</span><span>企业AI</span><span>HR科技</span><span>日本</span></div>
+  <li>
+    <div class="title">Elucid（AI 心血管影像诊断）D 轮 — <span class="amt">5500 万美元</span></div>
+    <div class="desc">波士顿公司，累计融资约 1.85 亿美元；一家未具名大型医疗器械公司作为战略投资方加入，IAG Capital、Elevage 参与。产品基于冠脉 CT 深度学习实现无创斑块识别与 FFR-CT 分析，对标 HeartFlow。</div>
+    <div class="tags"><span>D 轮</span><span>医疗 AI</span><span>战略投资</span></div>
+    <div class="src"><a href="https://techstartups.com/2026/09/03/venture-capital-startup-funding-roundup-september-3-2026-base10-partners-gradient-ventures-point72-y-combinator-more/" target="_blank">TechStartups</a></div>
   </li>
-
-  <li class="deal">
-    <div class="deal-head"><span class="name">Lasso Security</span><span class="amt">$30M A轮</span></div>
-    <p>AI模型/智能体安全，新推出可在CPU而非GPU上运行的护栏引擎LEAP，单次判断低于5毫秒。ClearSky 领投，Entrée Capital、Singtel Innov8 等参与，累计融资超$37M。客户包括BMW、Fiverr、美国国土安全部。</p>
-    <div class="tags"><span class="vc">Singtel Innov8</span><span>AI安全</span><span>网络安全</span><span>特拉维夫/纽约</span></div>
+  <li>
+    <div class="title">Guardio（消费级网络安全）成长轮 — <span class="amt">4000 万美元，投后估值约 11 亿美元</span></div>
+    <div class="desc">特拉维夫公司，现有投资人、创始人及战略天使参与，其中包括 Wiz 联合创始人 Assaf Rappaport。用户超 100 万，AI 实时拦截钓鱼与恶意链接，计划从浏览器扩展拓展至系统级防护与 VPN。</div>
+    <div class="tags"><span>成长轮</span><span>网络安全</span><span>知名投资人</span><span>新独角兽</span></div>
+    <div class="src"><a href="https://techstartups.com/2026/09/03/venture-capital-startup-funding-roundup-september-3-2026-base10-partners-gradient-ventures-point72-y-combinator-more/" target="_blank">TechStartups</a></div>
   </li>
-
-  <li class="deal">
-    <div class="deal-head"><span class="name">Gridsight</span><span class="amt">$26M B轮（A$36M）</span></div>
-    <p>悉尼电网软件公司，为配电网提供AI分析与低压网络可视化。Insight Partners 领投——同一周内Insight在AI基础层与能源软件两端出手。</p>
-    <div class="tags"><span class="vc">Insight Partners</span><span>能源软件</span><span>澳大利亚</span></div>
+  <li>
+    <div class="title">Lasso Security（AI 安全）A 轮 — <span class="amt">3000 万美元</span></div>
+    <div class="desc">特拉维夫/纽约公司，ClearSky、Entrée、iAngels、Singtel Innov8 等参与，为企业 LLM 与 AI 智能体提供安全防护，呼应 AI 安全赛道持续升温。</div>
+    <div class="tags"><span>A 轮</span><span>AI 安全</span><span>Singtel Innov8</span></div>
+    <div class="src"><a href="https://techstartups.com/2026/09/02/venture-capital-general-catalyst-qed-investors-y-combinator-more/" target="_blank">TechStartups</a></div>
   </li>
-
-  <li class="deal">
-    <div class="deal-head"><span class="name">Empirik</span><span class="amt">$21M</span></div>
-    <p>红杉孵化的AI可靠性公司，通过预测性分析在故障发生前预警。红杉本周第二笔AI安全/可观测性布局。</p>
-    <div class="tags"><span class="vc">红杉资本</span><span>AI可观测性</span><span>DevOps</span></div>
+  <li>
+    <div class="title">Resect AI（企业 AI 幻觉治理）种子/A 轮 — <span class="amt">2500 万美元</span></div>
+    <div class="desc">西雅图隐身公司首次亮相，由未披露的私募投资方领投。构建模型无关的"AI 问责层"，监测并修正 LLM 幻觉输出，面向医疗、金融、国防等受监管行业。</div>
+    <div class="tags"><span>种子/A 轮</span><span>企业 AI</span><span>AI 合规</span></div>
+    <div class="src"><a href="https://techstartups.com/2026/09/03/venture-capital-startup-funding-roundup-september-3-2026-base10-partners-gradient-ventures-point72-y-combinator-more/" target="_blank">TechStartups</a></div>
   </li>
-
-  <li class="deal">
-    <div class="deal-head"><span class="name">Metal</span><span class="amt">$4.5M 种子轮</span></div>
-    <p>前Airlift创始人Usman Gul创办，为创业公司融资流程打造AI操作系统。a16z Speedrun 与 Y Combinator 联合领投，Pioneer Fund、Rebel Fund 等参与。称1000+创始人通过平台在FY2026募得5.42亿美元，连续六季度环比增长30–80%。</p>
-    <div class="tags"><span class="vc">a16z Speedrun</span><span class="vc">Y Combinator</span><span>私募资本软件</span><span>巴基斯坦</span></div>
+  <li>
+    <div class="title">Axle AI（保险科技）A 轮 — <span class="amt">1750 万美元</span></div>
+    <div class="desc">Base10 Partners 领投，Gradient Ventures（Google AI 基金）、Y Combinator、Stage 2 Capital 及 Plaid 创始人跟投，累计融资约 2000 万美元。AI 原生保险后台基础设施，客户含 Rocket Mortgage、Avis，称已帮助追回 2.2 亿美元损失收入。</div>
+    <div class="tags"><span>A 轮</span><span>保险科技</span><span>Base10</span><span>Google Gradient</span><span>YC</span></div>
+    <div class="src"><a href="https://techstartups.com/2026/09/03/venture-capital-startup-funding-roundup-september-3-2026-base10-partners-gradient-ventures-point72-y-combinator-more/" target="_blank">TechStartups</a></div>
   </li>
-
+  <li>
+    <div class="title">Zeit AI（自主数据工程智能体）种子轮 — <span class="amt">500 万欧元</span></div>
+    <div class="desc">慕尼黑公司，前 Palantir 员工创立，Y Combinator、Sequoia Capital Scout Fund、Oxford Seed Fund、Hasso Plattner Ventures 参与，天使含德国前财长 Christian Lindner 与 Helsing CTO。产品 ZeitMind 连接 600+ 企业系统自动清洗建模，已有约 30 家企业客户。</div>
+    <div class="tags"><span>种子轮</span><span>企业 AI</span><span>红杉 Scout</span><span>YC</span></div>
+    <div class="src"><a href="https://techstartups.com/2026/09/03/startup-funding-news-today-september-3-2026-backbone-plenti-rightcharge-outlier-space-zeit-ai-more/" target="_blank">TechStartups</a></div>
+  </li>
 </ol>
+
+<div class="card" style="margin-top:16px;font-size:14px;">
+  <strong>其他值得留意：</strong>德国 Uplift Ventures 设立 1 亿欧元深科技首期基金（欧美 AI 与硬科技）；Tether 领投哥伦比亚金融科技 Plenti 300 万美元种子轮（年交易量 31 亿美元）；新西兰 Outlier Space（前 Rocket Lab 副总裁创立）获 GD1 领投 1050 万新西兰元种子前轮，探索太空在轨制造；巴基斯坦 Metal 获 a16z Speedrun、YC 450 万美元种子轮。
+</div>
 
 <footer>
   <strong>信息来源</strong>
   <ul>
-    <li><a href="https://techcrunch.com/2026/09/02/wonderful-more-than-doubles-its-valuation-to-5b-in-under-6-months/" target="_blank">TechCrunch：Wonderful more than doubles its valuation to $5B in under 6 months（2026-09-02）</a></li>
-    <li><a href="https://techcrunch.com/2026/03/12/wonderful-raises-150m-series-b-at-2b-valuation/" target="_blank">TechCrunch：Wonderful raises $150M Series B at $2B valuation（2026-03-12）</a></li>
-    <li><a href="https://www.calcalistech.com/ctechnews/article/i3481b92n" target="_blank">CTech / Calcalist：Wonderful raises $550 million at $5 billion valuation（2026-09-02）</a></li>
-    <li><a href="https://dealroom.co/news/148397-wonderful-raises-550m-series-c-at-5b-valuation-for-enterprise-ai-os/" target="_blank">Dealroom：Wonderful raises $550M Series C at $5B valuation（ARR预期）</a></li>
+    <li><a href="https://techstartups.com/2026/09/03/nvidia-buys-hugging-face-for-12-93-billion-in-its-biggest-acquisition-ever/" target="_blank">TechStartups：Nvidia buys Hugging Face for $12.93 billion in its biggest acquisition ever（2026-09-03）</a></li>
+    <li><a href="https://www.cnbc.com/2026/09/03/nvidia-agrees-to-buy-hugging-face-for-almost-13-billion-ai-expansion.html" target="_blank">CNBC：Hugging Face approached Nvidia's Huang weeks ahead of $12.9B acquisition（2026-09-03）</a></li>
+    <li><a href="https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/" target="_blank">NVIDIA Blog：NVIDIA to Acquire Hugging Face</a></li>
+    <li><a href="https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000078/nvda-20260902.htm" target="_blank">SEC：NVIDIA Form 8-K（2026-09-02）</a></li>
+    <li><a href="https://sacra.com/c/hugging-face/" target="_blank">Sacra：Hugging Face revenue, valuation & funding</a></li>
+    <li><a href="https://techstartups.com/2026/09/03/top-tech-news-today-september-3-2026-google-hugging-face-meta-moonshot-ai-nvidia-more/" target="_blank">TechStartups：Top Tech News Today, September 3, 2026</a></li>
+    <li><a href="https://techstartups.com/2026/09/03/venture-capital-startup-funding-roundup-september-3-2026-base10-partners-gradient-ventures-point72-y-combinator-more/" target="_blank">TechStartups：Venture Capital & Startup Funding Roundup, September 3, 2026</a></li>
+    <li><a href="https://techstartups.com/2026/09/03/startup-funding-news-today-september-3-2026-backbone-plenti-rightcharge-outlier-space-zeit-ai-more/" target="_blank">TechStartups：Startup Funding News Today, September 3, 2026</a></li>
+    <li><a href="https://techstartups.com/2026/09/02/wonderful-raises-550m-at-5-billion-valuation-just-20-months-after-launch/" target="_blank">TechStartups：Wonderful raises $550M at $5 billion valuation（2026-09-02）</a></li>
     <li><a href="https://techstartups.com/2026/09/02/venture-capital-general-catalyst-qed-investors-y-combinator-more/" target="_blank">TechStartups：Venture Capital & Startup Funding Roundup, September 2, 2026</a></li>
-    <li><a href="https://techstartups.com/2026/09/02/startup-funding-news-today-september-2-2026-felix-hyimpulse-lasso-peoplex-more/" target="_blank">TechStartups：Startup Funding News Today, September 2, 2026</a></li>
-    <li><a href="https://techstartups.com/2026/09/01/venture-capital-general-catalyst-sequoia-capital-more/" target="_blank">TechStartups：Venture Capital & Startup Funding Roundup, September 1, 2026</a></li>
-    <li><a href="https://techcrunch.com/2026/09/01/air-raises-50m-to-help-companies-vet-the-skills-and-add-ons-ai-agents-use/" target="_blank">TechCrunch：AIR raises $50M to help companies vet the skills and add-ons AI agents use（2026-09-01）</a></li>
-    <li><a href="https://techcrunch.com/2026/09/01/afterquery-reportedly-becomes-y-combinators-fastest-ever-unicorn-now-valued-at-3-2b/" target="_blank">TechCrunch：AfterQuery reportedly becomes Y Combinator's fastest-ever unicorn, now valued at $3.2B（2026-09-01）</a></li>
-    <li><a href="https://techcrunch.com/2026/09/01/sequoia-incubated-empirik-launches-with-21m-to-predict-outages-before-they-happen/" target="_blank">TechCrunch：Sequoia-incubated Empirik launches with $21M（2026-09-01）</a></li>
-    <li><a href="https://techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say/" target="_blank">TechCrunch：Palo Alto Networks paid $500M for Thrive-backed Console（2026-09-02）</a></li>
-    <li><a href="https://techcrunch.com/2026/08/31/a16z-brings-growth-fund-to-8-5b-days-after-launching-new-1-1b-fund/" target="_blank">TechCrunch：a16z brings growth fund to $8.5B（2026-08-31）</a></li>
-    <li><a href="https://www.prnewswire.com/news-releases/tripo-ai-raises-3-billion-yuan-in-series-b-and-series-b-funding-302866057.html" target="_blank">PR Newswire：Tripo AI Raises 3 Billion Yuan in Series B and Series B+ Funding</a></li>
   </ul>
-  <div class="disc"><strong>免责声明：</strong>本页内容根据上述公开媒体报道于2026年9月3日自动汇总整理，仅供信息参考，不构成任何投资建议。融资金额、估值及经营数据均来自公司披露或媒体报道，未经独立审计；带「据报道」字样的数据为未经公司确认的第三方信息。</div>
+  <p><strong>免责声明：</strong>本页面内容由 AI 根据上述公开报道自动整理，仅供信息参考，不构成任何投资建议。融资金额、估值、收入等数据以各公司或媒体公开披露为准，可能存在滞后或误差；部分交易（如 Hugging Face 收购）尚待监管审批。投资有风险，决策需谨慎。</p>
+  <p>生成时间：2026年9月4日</p>
 </footer>
 
 </div>
