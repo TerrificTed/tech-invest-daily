@@ -2,239 +2,185 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日科技投资动态 · 2026年9月8日</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日科技投资动态 · 2026年9月9日</title>
 <style>
-  :root { --accent:#c8401a; --ink:#1a1a1a; --muted:#6b6b6b; --line:#e6e2dc; --bg:#f6f4f0; --card:#ffffff; }
+  :root { --accent:#c8401a; --ink:#1a1a1a; --muted:#6b6b6b; --line:#e6e2dc; --bg:#f6f4f0; --card:#fff; }
   * { box-sizing:border-box; }
-  body { margin:0; background:var(--bg); color:var(--ink); font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Noto Sans CJK SC",sans-serif; line-height:1.65; }
-  .wrap { max-width:960px; margin:0 auto; padding:32px 20px 56px; }
-  header { border-top:4px solid var(--accent); border-bottom:1px solid var(--ink); padding:22px 0 16px; margin-bottom:28px; }
-  header h1 { margin:0; font-size:34px; letter-spacing:2px; font-weight:700; }
-  header .meta { margin-top:8px; font-size:14px; color:var(--muted); display:flex; flex-wrap:wrap; gap:6px 18px; }
-  header .meta b { color:var(--accent); font-weight:600; }
-  h2 { font-size:18px; margin:32px 0 14px; padding-left:10px; border-left:4px solid var(--accent); letter-spacing:1px; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:6px; padding:20px 22px; }
-  .overview p { margin:0 0 10px; font-size:15px; }
-  .overview p:last-child { margin:0; }
-  .hl { border:2px solid var(--accent); position:relative; }
-  .hl .badge { position:absolute; top:-13px; left:18px; background:var(--accent); color:#fff; font-size:12px; letter-spacing:2px; padding:3px 12px; border-radius:3px; }
-  .hl h3 { margin:6px 0 4px; font-size:24px; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Noto Sans SC",sans-serif; line-height:1.65; }
+  .wrap { max-width:960px; margin:0 auto; padding:32px 20px 48px; }
+  header { border-top:4px solid var(--accent); border-bottom:1px solid var(--ink); padding:20px 0 16px; margin-bottom:24px; }
+  header .kicker { color:var(--accent); font-size:13px; letter-spacing:.2em; font-weight:600; }
+  header h1 { margin:6px 0 4px; font-size:34px; letter-spacing:.02em; }
+  header .meta { color:var(--muted); font-size:14px; }
+  header .meta b { color:var(--ink); }
+  h2 { font-size:18px; margin:32px 0 12px; padding-left:10px; border-left:4px solid var(--accent); }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:20px 22px; }
+  .overview p { margin:0 0 10px; }
+  .overview .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:14px; }
+  .stat { background:var(--bg); border-radius:6px; padding:10px 12px; }
+  .stat .n { font-size:22px; font-weight:700; color:var(--accent); }
+  .stat .l { font-size:12px; color:var(--muted); }
+  .hl { border:2px solid var(--accent); }
+  .hl .badge { display:inline-block; background:var(--accent); color:#fff; font-size:12px; padding:2px 10px; border-radius:3px; font-weight:600; }
+  .hl h3 { font-size:24px; margin:10px 0 4px; }
   .hl .sub { color:var(--muted); font-size:14px; margin-bottom:14px; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin:14px 0 18px; }
-  .stat { background:#fbf7f3; border:1px solid #f0e4dc; border-radius:5px; padding:12px 12px 10px; }
-  .stat .k { font-size:12px; color:var(--muted); letter-spacing:1px; }
-  .stat .v { font-size:20px; font-weight:700; color:var(--accent); margin-top:2px; line-height:1.25; }
-  .stat .n { font-size:11px; color:var(--muted); margin-top:3px; }
+  .grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:14px 0 18px; }
+  .kpi { background:var(--bg); border-radius:6px; padding:10px 12px; }
+  .kpi .n { font-size:20px; font-weight:700; color:var(--accent); }
+  .kpi .l { font-size:12px; color:var(--muted); }
   .hl h4 { font-size:15px; margin:16px 0 6px; color:var(--accent); }
-  .hl p { margin:0 0 8px; font-size:14.5px; }
-  .hl table { width:100%; border-collapse:collapse; font-size:13.5px; margin:6px 0 4px; }
-  .hl th, .hl td { text-align:left; padding:7px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
-  .hl th { color:var(--muted); font-weight:500; font-size:12.5px; }
+  .hl p { margin:0 0 8px; font-size:15px; }
+  table { width:100%; border-collapse:collapse; font-size:14px; margin:6px 0 4px; }
+  th,td { text-align:left; padding:7px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { background:var(--bg); font-weight:600; }
   .list { display:flex; flex-direction:column; gap:12px; }
-  .item { display:grid; grid-template-columns:44px 1fr; gap:14px; }
-  .item .no { font-size:26px; font-weight:700; color:var(--accent); line-height:1; padding-top:4px; font-family:Georgia,"Times New Roman",serif; }
+  .item { display:flex; gap:16px; }
+  .item .rank { flex:0 0 34px; font-size:26px; font-weight:800; color:var(--accent); line-height:1; padding-top:2px; }
+  .item .body { flex:1; }
   .item h3 { margin:0 0 4px; font-size:17px; }
   .item .amt { color:var(--accent); font-weight:700; }
   .item p { margin:0 0 8px; font-size:14px; color:#333; }
-  .tags span { display:inline-block; font-size:11.5px; color:#555; background:#f1ede8; border-radius:3px; padding:2px 8px; margin:0 6px 4px 0; }
-  .tags span.vc { background:#fbe9e2; color:var(--accent); }
-  footer { margin-top:40px; border-top:1px solid var(--ink); padding-top:16px; font-size:13px; color:var(--muted); }
+  .tags span { display:inline-block; font-size:12px; background:var(--bg); border:1px solid var(--line); border-radius:3px; padding:1px 8px; margin-right:6px; color:var(--muted); }
+  footer { margin-top:36px; border-top:1px solid var(--ink); padding-top:16px; font-size:13px; color:var(--muted); }
   footer ul { padding-left:18px; margin:8px 0 14px; }
-  footer li { margin-bottom:4px; }
   footer a { color:var(--accent); text-decoration:none; }
   footer a:hover { text-decoration:underline; }
-  .disc { font-size:12px; color:#888; border-top:1px dashed var(--line); padding-top:10px; }
-  @media (max-width:600px){ header h1{font-size:26px;} .item{grid-template-columns:34px 1fr;} .item .no{font-size:20px;} }
+  @media (max-width:640px){ .grid,.overview .stats{grid-template-columns:repeat(2,1fr);} header h1{font-size:26px;} }
 </style>
 </head>
 <body>
 <div class="wrap">
 
 <header>
+  <div class="kicker">TECH INVEST DAILY</div>
   <h1>每日科技投资动态</h1>
-  <div class="meta">
-    <span><b>2026年9月8日</b> 星期二</span>
-    <span>覆盖窗口：过去24–48小时</span>
-    <span>信息源：TechStartups · Tech Funding News · Bloomberg · TechCrunch · Business Standard · TNW · YourStory · 界面新闻 · StartupHub.ai</span>
-  </div>
+  <div class="meta"><b>2026年9月9日（星期三）</b> · 覆盖过去24–48小时 · 信息源：TechCrunch、Bloomberg、Reuters、TechStartups、Axios、CNBC、公司公告</div>
 </header>
 
 <h2>今日概览</h2>
 <div class="card overview">
-  <p>美国劳动节假期（9月7日）让本周开局的美国一级市场交易明显偏少，全球焦点转向<strong>亚洲与欧洲</strong>：印度太空科技公司 <strong>Pixxel</strong> 完成由淡马锡与 Seraphim 联合领投的 <strong>1亿美元 C 轮</strong>，创印度太空科技单笔融资纪录；印度女性健康品牌 Nua 获 Peak XV（原红杉印度）领投 5,000 万美元；中国太空 AI 算力公司深空矩阵完成鼎晖 VGC、麟阁创投联合领投的亿元级天使轮。</p>
-  <p>大额交易仍在酝酿中：伦敦 AI 云服务商 <strong>Nscale</strong> 正寻求最高 <strong>35亿美元</strong> pre-IPO 融资（其中约 20 亿美元来自 NVIDIA）；机器人数据公司 <strong>XDOF</strong> 出关仅三个月，就在与 8VC 洽谈 <strong>12亿美元估值</strong>的 B 轮。欧洲 LP 端也有动作：Claret Capital 完成 5.75 亿欧元成长债基金，Molten Ventures 成长基金首关 1.75 亿英镑。</p>
-  <p>主题信号：主权基础设施（卫星遥感、可持续航空燃料、本地部署语音 AI）、物理世界 AI 数据、以及垂直行业 AI（公共采购、垃圾焚烧电厂）继续获得资本青睐；AI 算力"循环投资"（NVIDIA 同时是供应商与投资方）的争议持续。</p>
+  <p>过去两天的一级市场被两笔"主权级"巨额融资主导：法国大模型公司 <b>Mistral AI</b> 完成 <b>30亿欧元</b> D轮（三星领投，投后估值超210亿欧元，欧洲科技公司史上最大股权融资），美国可完全复用火箭公司 <b>Stoke Space</b> 完成 <b>10亿美元</b> E轮首关（估值约100亿美元）。两笔交易合计约占当日披露融资额的九成以上。</p>
+  <p>主题上，资本正向"掌控稀缺物理产能或受监管工作流"的公司集中：航天（Stoke、The Exploration Company、Poseidon）、能源（Bluecore 海上核电）、生物医药（BrainChild 儿童脑瘤 CAR-T）以及嵌入医疗/金融/合规流程的垂直 AI（Forus、Split Pay、Blee）。知名机构方面，a16z、General Catalyst、Lightspeed、NVIDIA、Salesforce Ventures 跟投 Mistral；Y Combinator、Point72 参与 Stoke；Thrive Capital、General Catalyst、Accel 跟投 Forus；Khosla Ventures 领投 Split Pay，Max Levchin 参投。</p>
+  <div class="stats">
+    <div class="stat"><div class="n">≈$55亿</div><div class="l">十大交易披露总额（美元等值）</div></div>
+    <div class="stat"><div class="n">€30亿</div><div class="l">最大单笔：Mistral AI D轮</div></div>
+    <div class="stat"><div class="n">2</div><div class="l">十亿美元级交易（Mistral、Stoke）</div></div>
+    <div class="stat"><div class="n">6</div><div class="l">涉及国家：法/美/德/肯尼亚等</div></div>
+  </div>
 </div>
 
 <h2>今日最值得关注</h2>
 <div class="card hl">
-  <span class="badge">重点交易</span>
-  <h3>Pixxel 完成 1 亿美元 C 轮融资，淡马锡与 Seraphim 联合领投</h3>
-  <div class="sub">印度班加罗尔 / 美国洛杉矶 · 高光谱地球观测 · 印度太空科技史上最大单笔融资</div>
+  <span class="badge">重点深挖</span>
+  <h3>Mistral AI 完成30亿欧元D轮，三星领投，估值突破210亿欧元</h3>
+  <div class="sub">巴黎 · 基础模型 / AI 基础设施 · 2026年9月8日公布 · 欧洲科技公司史上最大股权融资</div>
 
   <div class="grid">
-    <div class="stat"><div class="k">本轮融资额</div><div class="v">$1.0亿</div><div class="n">C 轮 · 2026年9月7日</div></div>
-    <div class="stat"><div class="k">累计融资</div><div class="v">$1.95亿</div><div class="n">A轮$2,500万 · B轮$6,000万 · C轮$1亿</div></div>
-    <div class="stat"><div class="k">估值</div><div class="v">未披露</div><div class="n">媒体估计 $3.5–5 亿（Mint / Moneycontrol）</div></div>
-    <div class="stat"><div class="k">FY25 营收</div><div class="v">₹39.3 Cr</div><div class="n">约 $470 万，同比 +28%；净亏损 ₹30.8 Cr</div></div>
-    <div class="stat"><div class="k">在轨卫星</div><div class="v">6 颗</div><div class="n">Firefly 星座 · 5米分辨率 · 150+ 谱段</div></div>
-    <div class="stat"><div class="k">Seraphim 本轮出资</div><div class="v">$2,500万</div><div class="n">伦敦上市太空基金的大额单笔配置</div></div>
+    <div class="kpi"><div class="n">€30亿</div><div class="l">本轮融资额（约35亿美元）</div></div>
+    <div class="kpi"><div class="n">€210亿+</div><div class="l">投后估值（一年前为€117亿）</div></div>
+    <div class="kpi"><div class="n">≈€57亿</div><div class="l">累计股权融资（另有$8.3亿债务）</div></div>
+    <div class="kpi"><div class="n">$10亿</div><div class="l">2026年底 ARR 目标（2025年 $4亿+）</div></div>
   </div>
 
-  <h4>业务内容</h4>
-  <p>Pixxel 成立于 2019 年，创始人兼 CEO 为 Awais Ahmed。公司以<strong>高光谱成像卫星</strong>起家：普通光学卫星只捕捉 3–4 个波段，而高光谱传感器可将反射光拆分为数百个窄波段，让每个像素成为"化学签名"，可用于识别作物病害、甲烷泄漏、矿物成分与水质。目前公司已扩展为三层业务：Firefly/Honeybee 卫星星座（传感层）、Aurora 地球智能软件平台（分析层）、以及面向政府与商业客户的卫星设计制造与主权太空系统。客户包括 NASA（CSDA 商业数据合同）、美国国家侦察局 NRO（2023 年授予五年期高光谱数据合同）、印度空军，并获印度国防部多项 iDEX 挑战赛项目。</p>
+  <h4>公司业务</h4>
+  <p>Mistral AI 成立于2023年，是欧洲最具代表性的前沿大模型实验室，以开放权重模型起家，定位为"主权 AI"提供商：帮助政府和受监管企业在自己可控的基础设施上部署前沿模型。公司目前在20个国家运营，服务超过125家大型企业客户；8月推出可让客户选择推理所在地区的工具，并开始托管第三方开放权重模型（含中国模型）。公司与微软的战略合作于2026年7月大幅扩展，ASML 为其主要战略伙伴与投资方。</p>
+
+  <h4>本轮投资方与资金用途</h4>
+  <p>三星电子领投，欧盟支持的 Scaleup Europe Fund（EQT 管理）与老股东 PSG Equity 联合领投；新进投资方包括 Advent、贝莱德管理的基金和卢森堡大公国；a16z、NVIDIA、ASML、General Catalyst、Lightspeed、Salesforce Ventures 等老股东跟投。资金将用于前沿模型研究、算力与基础设施扩张（目标2030年前在欧洲建成1GW算力）、产品开发和国际化。法国总统马克龙公开表示此轮体现了法韩共建"AI第三条道路"的目标。</p>
 
   <h4>历史融资</h4>
   <table>
-    <tr><th>轮次</th><th>时间</th><th>金额</th><th>主要投资方</th></tr>
-    <tr><td>A 轮</td><td>2022年3月</td><td>$2,500万</td><td>Radical Ventures 领投；Lightspeed、Jordan Noone 等</td></tr>
-    <tr><td>B 轮</td><td>2024年6月</td><td>$3,600万</td><td>Google 领投；Radical、Lightspeed、Glade Brook 等</td></tr>
-    <tr><td>B 轮追加</td><td>2024年12月</td><td>$2,400万</td><td>M&amp;G Catalyst、Glade Brook；B 轮合计 $6,000万</td></tr>
-    <tr><td><strong>C 轮</strong></td><td><strong>2026年9月</strong></td><td><strong>$1亿</strong></td><td>淡马锡、Seraphim 联合领投；新投资方 360 ONE Asset、韩国 IMM Investment；老股东 Radical Ventures、growX Ventures 跟投</td></tr>
+    <tr><th>时间</th><th>轮次</th><th>金额</th><th>估值</th><th>领投/主要投资方</th></tr>
+    <tr><td>2023年12月</td><td>A轮</td><td>约€3.85亿（$4.15亿）</td><td>约€20亿</td><td>a16z 领投，General Catalyst 首次入股</td></tr>
+    <tr><td>2024年6月</td><td>B轮</td><td>€6亿</td><td>€58亿</td><td>General Catalyst 领投，Bpifrance 等</td></tr>
+    <tr><td>2025年9月</td><td>C轮</td><td>€17亿</td><td>€117亿</td><td>ASML 领投（出资€13亿），DST、a16z、NVIDIA、Index、Lightspeed 跟投</td></tr>
+    <tr><td>2026年3月</td><td>债务融资</td><td>$8.3亿</td><td>—</td><td>用于数据中心建设及采购13,800颗 NVIDIA 芯片（Reuters）</td></tr>
+    <tr><td>2026年9月</td><td>D轮</td><td>€30亿</td><td>€210亿+</td><td>三星领投，Scaleup Europe Fund、PSG Equity 联合领投</td></tr>
   </table>
-  <p style="font-size:13px;color:var(--muted)">注：早期投资方 Google 未出现在本轮参与名单中。累计 $1.95 亿含早期种子轮资金。</p>
 
   <h4>业务进展与财务</h4>
-  <p><strong>研发与部署：</strong>过去两年发射 6 颗 Firefly 卫星（首批 3 颗于 2025 年 1 月搭载 SpaceX Transporter-12 升空），公司称其为在轨分辨率最高的商业高光谱星座；下一代 Honeybee 星座（新增约 100 个短波红外波段）首星预计 2027 年发射，后续将补充高分辨率光学与合成孔径雷达（SAR）卫星。公司还公布了轨道数据中心验证星计划，并牵头 Dhruva Space、PierSight、SatSure 组成的联合体，中标印度航天监管机构 IN-SPACe 首个公私合营的 12 星国家地球观测星座。</p>
-  <p><strong>营收与盈利：</strong>FY24 营业收入 ₹28.7 Cr（同比 +87%），FY25 增至 ₹39.3 Cr（约 470 万美元），净亏损从 ₹20.4 Cr 扩大至 ₹30.8 Cr，仍处于重资产投入期。收入模式为数据即服务加分析订阅，覆盖农业、矿业、油气、环境监测、国防与政府地球观测项目。</p>
-  <p><strong>本轮资金用途：</strong>四大方向——Honeybee 星座与高分辨率光学传感能力；Aurora 智能软件平台；面向各国政府的主权地球观测系统；以及名为 Gigapixxel 的高速卫星制造工厂。</p>
-  <p><strong>为何值得关注：</strong>这是一笔典型的"主权基础设施"交易——新加坡国家投资者淡马锡领投，客户名单同时包含美国情报机构与印度国家项目。随着更多星座入轨、影像本身趋于商品化，Pixxel 押注的是"传感器 + 数据处理 + 智能应用"的全栈价值捕获；但在 Honeybee 上天之前，其向政府销售的星座仍只是 6 颗卫星加一个软件平台，营收规模与 1.95 亿美元的累计融资相比仍小，执行风险不容忽视。</p>
+  <p><b>营收：</b>2025年年化收入运行率超过4亿美元（较前一年增长约20倍，60%来自欧洲）；CFO Johan Bergqvist 向 Reuters 表示公司有望在2026年底达到10亿美元 ARR。<b>盈利：</b>公司未披露净亏损、毛利率或现金消耗；考虑到自建算力的重资产投入，短期内预计仍处于亏损状态。<b>研发与产品：</b>坚持"前沿研究是基础设施、产品与主权能力的基石"的定位，同时向区域化推理、模型托管和 AI 服务商方向延伸，业内对其是否正转型为推理服务商存在争议。</p>
+  <p><b>看点：</b>估值一年翻近一倍，但相对 OpenAI、Anthropic 仍有数量级差距；本轮更多是地缘政治与"非美国供应商"需求驱动的增长，1GW 算力目标能否兑现、$10亿 ARR 能否如期实现是后续关键观察指标。</p>
 </div>
 
-<h2>今日交易列表（按重要性排序）</h2>
-<div class="list">
+<h2>今日交易榜（按重要性排序）</h2>
+<div class="card list">
 
-  <div class="card item">
-    <div class="no">1</div>
-    <div>
-      <h3>Pixxel — <span class="amt">1 亿美元 C 轮</span>，淡马锡、Seraphim 联合领投</h3>
-      <p>印度高光谱地球观测公司，累计融资 1.95 亿美元，创印度太空科技单轮纪录。新投资方 360 ONE Asset、IMM Investment，老股东 Radical Ventures、growX 跟投。详见上方重点卡片。</p>
-      <div class="tags"><span class="vc">淡马锡</span><span class="vc">Seraphim</span><span>太空科技</span><span>印度</span><span>C轮</span></div>
-    </div>
-  </div>
+  <div class="item"><div class="rank">1</div><div class="body">
+    <h3>Mistral AI — <span class="amt">€30亿 D轮，估值€210亿+</span></h3>
+    <p>三星电子领投，Scaleup Europe Fund/EQT 与 PSG Equity 联合领投，a16z、NVIDIA、General Catalyst、Lightspeed、Salesforce Ventures、ASML、贝莱德、Advent 参投。欧洲科技公司史上最大股权融资，资金用于算力扩张与国际化。详见上方深挖。</p>
+    <div class="tags"><span>AI 大模型</span><span>主权 AI</span><span>法国</span><span>a16z / NVIDIA / GC 跟投</span></div>
+  </div></div>
 
-  <div class="card item">
-    <div class="no">2</div>
-    <div>
-      <h3>Nscale — 寻求最高 <span class="amt">35 亿美元</span> pre-IPO 融资，NVIDIA 拟出资约 20 亿美元</h3>
-      <p>据彭博社报道，伦敦 AI 云服务商 Nscale 计划出售最高 15 亿美元可转换票据（Third Point 领投，高盛担任顾问），并另向 NVIDIA 寻求约 20 亿美元融资，为赴美上市做准备。公司合同储备约 1,030 亿美元（一个月前为 510 亿美元），其中含与 Anthropic 的 6 年 450 亿美元算力协议；2025 年实际营收约 3,300 万美元。今年 3 月 C 轮估值 146 亿美元；NVIDIA 同时是其供应商与投资方，"循环融资"再受关注。</p>
-      <div class="tags"><span class="vc">NVIDIA</span><span class="vc">Third Point</span><span>AI 基础设施</span><span>Pre-IPO</span><span>英国</span></div>
-    </div>
-  </div>
+  <div class="item"><div class="rank">2</div><div class="body">
+    <h3>Stoke Space — <span class="amt">$10亿 E轮首关，估值约$100亿</span></h3>
+    <p>Point72 Ventures 与 Spark Capital 联合领投，Y Combinator、Glade Brook、Woven Capital（丰田）、US Innovative Technology 等参投，累计融资达23亿美元。公司开发两级均可完全复用的 Nova 火箭，首次轨道飞行推迟至2027年初；同时公布运力15吨的 Nova Block 2（目标2029年首飞）。上一轮 D轮于2025年10月至2026年2月扩至8.6亿美元。</p>
+    <div class="tags"><span>航天 / 可复用火箭</span><span>美国</span><span>YC / Point72</span></div>
+  </div></div>
 
-  <div class="card item">
-    <div class="no">3</div>
-    <div>
-      <h3>XDOF — 洽谈 <span class="amt">12 亿美元估值</span> B 轮，8VC 拟领投</h3>
-      <p>圣马特奥机器人训练数据公司，6 月刚出关并完成 7,000 万美元 A 轮（Thrive Capital、a16z、Lux、Spark Capital、WndrCo），累计融资约 7,800 万美元。据 TechCrunch，年化收入接近 5,000 万美元，约 20 家客户含多家前沿 AI 实验室。业务为遥操作 + 穿戴传感器采集物理世界训练数据，被投资人称为"机器人领域的 Scale AI"。</p>
-      <div class="tags"><span class="vc">8VC</span><span class="vc">a16z</span><span class="vc">Thrive Capital</span><span>具身智能数据</span><span>美国</span></div>
-    </div>
-  </div>
+  <div class="item"><div class="rank">3</div><div class="body">
+    <h3>The Exploration Company — <span class="amt">$4.5亿 C轮</span></h3>
+    <p>Bessemer、Atomico 与 Scaleup Europe Fund 联合领投，Balderton、Plural、Cherry、Red River West 参投，累计融资约6.8亿美元。德国慕尼黑公司研发 Nyx 可复用货运飞船和 Storm 推进系统，对标 SpaceX Dragon，已累积超20亿美元合同与承诺。</p>
+    <div class="tags"><span>航天 / 货运飞船</span><span>德国</span><span>Bessemer / Atomico</span></div>
+  </div></div>
 
-  <div class="card item">
-    <div class="no">4</div>
-    <div>
-      <h3>Nua — <span class="amt">5,000 万美元 C 轮</span>，Peak XV 与 Filter Capital 领投</h3>
-      <p>印度女性健康与个护品牌，Mirabilis Investment Trust、Footpath Ventures 参投，本轮包含新股与老股转让。资金用于品牌建设、渠道扩张与研发。Peak XV（原红杉印度）本周在印度消费赛道再度出手。</p>
-      <div class="tags"><span class="vc">Peak XV（原红杉印度）</span><span>消费健康</span><span>印度</span><span>C轮</span></div>
-    </div>
-  </div>
+  <div class="item"><div class="rank">4</div><div class="body">
+    <h3>Forus（原 Tandem）— <span class="amt">$1.5亿 C轮，估值$30亿</span></h3>
+    <p>Bain Capital Ventures 领投，Thrive Capital、General Catalyst、Accel、Redpoint 跟投，累计融资超3亿美元。用 AI 代理自动化处方到用药之间的保险审批、财务援助与供药协调，已服务15大药企中的9家，估值四个月内约翻三倍。</p>
+    <div class="tags"><span>医疗 AI</span><span>美国</span><span>Thrive / GC / Accel</span></div>
+  </div></div>
 
-  <div class="card item">
-    <div class="no">5</div>
-    <div>
-      <h3>深空矩阵 — <span class="amt">亿元级天使轮</span>，鼎晖 VGC、麟阁创投联合领投</h3>
-      <p>9 月 8 日宣布。北京太空 AI 算力公司，多家一线机构跟投；资金用于太空 AI 算力核心技术研发、"星环计划"系统工程验证及产业链生态建设。技术路线为"量超融合、星座集群、算力聚合"，对应海外 Pixxel 轨道数据中心、太空算力等热点方向。</p>
-      <div class="tags"><span class="vc">鼎晖VGC</span><span class="vc">麟阁创投</span><span>太空算力</span><span>中国</span><span>天使轮</span></div>
-    </div>
-  </div>
+  <div class="item"><div class="rank">5</div><div class="body">
+    <h3>Split Pay — <span class="amt">$1.25亿（A+B轮合并披露）</span></h3>
+    <p>Khosla Ventures 领投两轮，Thrive Capital 与 PayPal 联合创始人 Max Levchin 参投，累计约1.4亿美元。产品代付房租/房贷并允许用户延期支付一半账单最多30天，核心是面向40岁以下人群的 AI 信用模型；CEO 为前 Block/Cash App 高管。</p>
+    <div class="tags"><span>消费金融 / AI 风控</span><span>美国</span><span>Khosla / Thrive</span></div>
+  </div></div>
 
-  <div class="card item">
-    <div class="no">6</div>
-    <div>
-      <h3>Claret Capital — <span class="amt">5.75 亿欧元</span> 第四期成长债基金最终关闭</h3>
-      <p>成为欧洲最大的独立成长债基金管理人，面向欧洲科技与生命科学公司提供非稀释性融资。反映欧洲市场对股权之外融资工具的需求增长。</p>
-      <div class="tags"><span>LP/基金募集</span><span>成长债</span><span>欧洲</span></div>
-    </div>
-  </div>
+  <div class="item"><div class="rank">6</div><div class="body">
+    <h3>BrainChild Bio — <span class="amt">$1.16亿 A轮</span></h3>
+    <p>推进 BCB-276 CAR-T 疗法进入针对儿童弥漫性内生型脑桥胶质瘤（DIPG）的关键性临床阶段。DIPG 为罕见致死性儿童脑瘤，美国每年约300例。生物医药领域罕见的超大额 A轮，直接用于临床执行。</p>
+    <div class="tags"><span>生物医药 / CAR-T</span><span>美国</span></div>
+  </div></div>
 
-  <div class="card item">
-    <div class="no">7</div>
-    <div>
-      <h3>Molten Ventures — 3.5 亿英镑成长基金首关 <span class="amt">1.75 亿英镑</span></h3>
-      <p>由英国商业银行（British Business Bank）锚定出资，用于支持英国及欧洲成长期科技公司。伦敦上市 VC 在成长期资金缺口上的补位动作。</p>
-      <div class="tags"><span class="vc">British Business Bank</span><span>LP/基金募集</span><span>英国</span></div>
-    </div>
-  </div>
+  <div class="item"><div class="rank">7</div><div class="body">
+    <h3>Poseidon Aerospace — <span class="amt">$6,000万 A轮（超额认购）</span></h3>
+    <p>TQ Ventures 领投，JAWS、G Squared、韩华资产管理、Draper Associates 参投，累计约7,100万美元。研发无人固定翼货运飞机 Egret（传统燃油动力，去除飞行员），计划2026年底完成全尺寸首飞，面向区域货运与国防后勤，采取自营运营模式。</p>
+    <div class="tags"><span>自主航空 / 国防物流</span><span>美国</span></div>
+  </div></div>
 
-  <div class="card item">
-    <div class="no">8</div>
-    <div>
-      <h3>Jet Zero — <span class="amt">3,000 万澳元</span>，澳航、空客、POSCO International 参投</h3>
-      <p>澳大利亚可持续航空燃料（SAF）公司，累计融资超 8,000 万澳元。正在昆士兰汤斯维尔推进 Project Ulysses 炼厂，设计年产 1.13 亿升 SAF 与可再生柴油，已获开发批准并完成前端工程设计，尚未作出最终投资决定。投资方即潜在采购与供应链伙伴。</p>
-      <div class="tags"><span class="vc">Qantas</span><span class="vc">Airbus</span><span class="vc">POSCO</span><span>气候科技</span><span>澳大利亚</span></div>
-    </div>
-  </div>
+  <div class="item"><div class="rank">8</div><div class="body">
+    <h3>Bluecore Energy — <span class="amt">$5,000万 种子轮</span></h3>
+    <p>Silverton Partners 领投种子轮，Slauson & Co. 领投此前1,000万美元 Pre-seed，演员 Kevin Hart、刘思慕参投。研发驳船搭载的小型海上核反应堆，通过海底电缆向港口供电，首个目标为长滩港，数据中心开发商亦表达兴趣。</p>
+    <div class="tags"><span>核能 / 能源基础设施</span><span>美国</span></div>
+  </div></div>
 
-  <div class="card item">
-    <div class="no">9</div>
-    <div>
-      <h3>Cato — <span class="amt">600 万欧元种子轮</span>，Keen Venture Partners 领投</h3>
-      <p>米兰 AI 公共采购软件公司，累计融资 760 万欧元，Vento、Heartfelt、Moonstone 等老股东跟投。帮助企业发现政府招标、分析资格要求、准备投标文件；目标市场为意大利约 3,097 亿欧元的公共采购规模。</p>
-      <div class="tags"><span class="vc">Keen Venture Partners</span><span>垂直AI</span><span>意大利</span><span>种子轮</span></div>
-    </div>
-  </div>
+  <div class="item"><div class="rank">9</div><div class="body">
+    <h3>ARC Ride — <span class="amt">$3,330万（股权+债务）</span></h3>
+    <p>Norrsken22 与 Novastar Ventures 联合领投，IFC、英国 BII、法国 Proparco 等开发金融机构参投，武藏精密跟投。内罗毕公司运营电动摩托车与换电网络（电池即服务），是非洲实体基础设施采用"风险股权+开发金融+债务"混合融资的典型案例。</p>
+    <div class="tags"><span>电动出行 / 换电</span><span>肯尼亚</span></div>
+  </div></div>
 
-  <div class="card item">
-    <div class="no">10</div>
-    <div>
-      <h3>Jaipur Robotics — <span class="amt">430 万欧元种子轮</span>，EquityPitcher、HTGF 领投</h3>
-      <p>瑞士工业 AI 公司（2024 年成立），为垃圾焚烧发电、水泥与生物质电厂提供计算机视觉系统：识别危险物、估算热值、辅助吊车操作。公司称模型基于 5,000 万+ 标注图像，年处理 500 万吨垃圾，危险物识别准确率 99%，部分客户非计划停机减少 80% 以上（公司自报数据）。下一步目标是吊车自主控制。</p>
-      <div class="tags"><span class="vc">High-Tech Gründerfonds</span><span>工业AI</span><span>瑞士</span><span>种子轮</span></div>
-    </div>
-  </div>
-
-  <div class="card item">
-    <div class="no">11</div>
-    <div>
-      <h3>Navana.ai — <span class="amt">40 亿卢比（约 420 万美元）A 轮</span>，Ronnie Screwvala 领投</h3>
-      <p>班加罗尔"主权语音 AI"公司，Antler India、Sharad Sanghi、Sandeep Singhal、Paula Mariwala 参投。面向银行保险等受监管行业提供印度多语言语音代理、呼叫中心与自动评估平台，支持本地部署以满足数据驻留要求。</p>
-      <div class="tags"><span class="vc">Antler India</span><span>语音AI</span><span>印度</span><span>A轮</span></div>
-    </div>
-  </div>
-
-  <div class="card item">
-    <div class="no">12</div>
-    <div>
-      <h3>Veridue — <span class="amt">400 万美元 pre-seed</span>，Episode 1 领投</h3>
-      <p>9 月 8 日公布。前麦肯锡交易顾问创立的英国 AI 公司，目标是把可再生能源资产并购中长达 10 周的尽调流程自动化。</p>
-      <div class="tags"><span class="vc">Episode 1</span><span>能源AI</span><span>英国</span><span>Pre-seed</span></div>
-    </div>
-  </div>
+  <div class="item"><div class="rank">10</div><div class="body">
+    <h3>Blee — <span class="amt">$2,000万 A轮</span></h3>
+    <p>Fin Capital 与 SMBC Fin Atlas Beyond Fund 联合领投，Y Combinator、加拿大国家银行等参投，累计2,700万美元。为法务、合规与品牌团队提供 AI 生成营销内容的合规审核与审计追踪，客户包括 SoFi 与 Expedia。</p>
+    <div class="tags"><span>企业 AI / 合规科技</span><span>美国</span><span>YC</span></div>
+  </div></div>
 
 </div>
 
 <footer>
-  <strong>信息来源</strong>
+  <b>信息来源</b>
   <ul>
-    <li><a href="https://techstartups.com/2026/09/07/startup-funding-news-today-september-7-2026-pixxel-jet-zero-navana-ai-more/" target="_blank">TechStartups — Startup Funding News Today, September 7, 2026（Pixxel、Jet Zero、Navana.ai、Cato、Jaipur Robotics）</a></li>
-    <li><a href="https://www.business-standard.com/companies/news/pixxel-series-c-funding-temasek-seraphim-space-tech-126090700126_1.html" target="_blank">Business Standard — Pixxel raises $100 mn in Series C</a></li>
-    <li><a href="https://thenextweb.com/news/pixxel-100m-series-c-temasek-seraphim" target="_blank">TNW — Google-backed Pixxel raises $100M in India's largest space tech round</a></li>
-    <li><a href="https://www.businesswire.com/news/home/20241209543757/en/Pixxel-Raises-%2424M-in-Additional-Funding-Taking-its-Total-Series-B-Raise-to-%2460M" target="_blank">Business Wire — Pixxel Series B 追加 $24M（B轮合计 $60M）</a></li>
-    <li><a href="https://www.businesswire.com/news/home/20220328005027/en/Pixxel-Announces-$25M-Investment-Led-By-Radical-Ventures-To-Advance-The-Worlds-Most-Detailed-Imaging-Satellites-for-Earth-Health-Monitoring" target="_blank">Business Wire — Pixxel $25M A 轮（Radical Ventures 领投）</a></li>
-    <li><a href="https://inc42.com/company/pixxel/financials/" target="_blank">Inc42 — Pixxel Financials（FY24/FY25 营收与亏损）</a></li>
-    <li><a href="https://techfundingnews.com/nscale-seeks-up-to-3-5b-in-pre-ipo-financing-as-ai-infrastructure-race-intensifies/" target="_blank">Tech Funding News — Nscale seeks up to $3.5B in pre-IPO financing（引述 Bloomberg 9月4日报道）</a></li>
-    <li><a href="https://techfundingnews.com/xdof-in-talks-for-new-funding-at-1-2b-valuation-months-after-70m-series-a/" target="_blank">Tech Funding News — XDOF in talks for new funding at $1.2B valuation（引述 TechCrunch）</a></li>
-    <li><a href="https://yourstory.com/2026/09/startup-news-and-updates-daily-roundup-september-7-2026" target="_blank">YourStory — Daily roundup, September 7, 2026（Nua、Navana.ai）</a></li>
-    <li><a href="https://www.jiemian.com/article/15067085.html" target="_blank">界面新闻 — 深空矩阵完成亿元级新一轮融资，鼎晖VGC、麟阁创投联合领投</a></li>
-    <li><a href="https://techfundingnews.com/claret-capital-raises-e575m-to-back-european-tech-and-life-sciences-beyond-equity-dilution/" target="_blank">Tech Funding News — Claret Capital raises €575M</a></li>
-    <li><a href="https://techfundingnews.com/molten-ventures-growth-fund-175m-first-close-british-business-bank/" target="_blank">Tech Funding News — Molten Ventures Growth Fund £175M first close</a></li>
-    <li><a href="https://techfundingnews.com/veridue-raises-4m-pre-seed-episode-1-renewable-energy-ai/" target="_blank">Tech Funding News — Veridue raises $4M pre-seed（9月8日）</a></li>
-    <li><a href="https://techfundingnews.com/cato-raises-6m-seed-keen-venture-partners-public-tenders-ai/" target="_blank">Tech Funding News — Cato raises €6M led by Keen Venture Partners</a></li>
-    <li><a href="https://www.startuphub.ai/ai-news/funding-round/2026/ai-funding-roundup-9-2b-across-46-rounds-aug-31-to-sep-6" target="_blank">StartupHub.ai — AI Funding Roundup, Aug 31–Sep 6（周度背景数据）</a></li>
+    <li><a href="https://techcrunch.com/2026/09/08/mistral-raises-e3b-as-sovereign-ai-becomes-big-business/">TechCrunch：Mistral raises €3B as sovereign AI becomes big business</a></li>
+    <li><a href="https://www.bloomberg.com/news/articles/2026-09-08/mistral-ai-raises-at-21-billion-valuation-in-samsung-led-round">Bloomberg：Mistral AI Raises at €21 Billion Valuation in Samsung-Led Round</a></li>
+    <li><a href="https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/">Mistral AI 官方公告</a> · <a href="https://www.cnbc.com/2025/09/09/ai-firm-mistral-valued-at-14-billion-as-asml-takes-major-stake.html">CNBC：Mistral C轮（ASML 领投）</a> · <a href="https://techcrunch.com/2023/12/11/mistral-ai-a-paris-based-openai-rival-closed-its-415-million-funding-round">TechCrunch：Mistral A轮</a> · <a href="https://sacra.com/c/mistral/">Sacra：Mistral 营收与估值</a></li>
+    <li><a href="https://techstartups.com/2026/09/08/startup-funding-news-today-september-8-2026-mistral-ai-stoke-space-arc-ride-more/">TechStartups：Startup Funding News Today, September 8, 2026</a></li>
+    <li><a href="https://techstartups.com/2026/09/08/venture-capital-startup-funding-roundup-september-8-2026-accel-atomico-bessemer-venture-partners-general-catalyst-thrive-capital-y-combinator-more/">TechStartups：Venture Capital & Startup Funding Roundup, September 8, 2026</a></li>
+    <li><a href="https://techcrunch.com/2026/09/08/stoke-space-raises-another-billion-to-rival-spacex-at-re-flying-rockets/">TechCrunch：Stoke Space raises another billion</a> · <a href="https://payloadspace.com/stoke-space-raises-1b-initial-series-e-round/">Payload：Stoke Space Series E</a> · <a href="https://hoodline.com/2026/09/kent-rocket-startup-stoke-space-hits-10-billion-value-after-1-billion-raise/">Hoodline：Stoke 估值约$100亿</a></li>
+    <li><a href="https://www.alleywatch.com/2026/09/the-alleywatch-startup-daily-funding-report-9-8-2026/">AlleyWatch Daily Funding Report 9/8/2026</a> · <a href="https://forus.com/stories/forus-series-c">Forus 官方公告</a></li>
   </ul>
-  <div class="disc">免责声明：本页内容由 AI 根据上述公开报道自动汇总生成，仅供信息参考，不构成任何投资建议。融资金额、估值与财务数据以公司公告及原始报道为准；标注"洽谈中/据报道"的交易尚未最终确认。汇率换算为近似值。生成时间：2026年9月8日。</div>
+  <b>免责声明：</b>本页面内容由 AI 根据上述公开报道自动汇总生成，仅供信息参考，不构成任何投资建议。融资金额、估值等数据以各公司及媒体披露为准，汇率换算为约数；部分交易的投资方信息在截稿时未被独立确认。
 </footer>
 
 </div>
