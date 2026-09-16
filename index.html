@@ -3,215 +3,311 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日科技投资动态 · 2026年9月13日</title>
+<title>每日科技投资动态 · 2026年9月16日</title>
 <style>
-  :root{--accent:#c8401a;--ink:#1a1a1a;--muted:#6b6b6b;--line:#e6e2dc;--bg:#f6f3ee;--card:#fff;}
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Noto Sans SC",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;font-size:15px}
-  .wrap{max-width:960px;margin:0 auto;padding:32px 20px 60px}
-  header{border-top:4px solid var(--ink);border-bottom:1px solid var(--ink);padding:22px 0 16px;margin-bottom:28px}
-  header .kicker{font-size:12px;letter-spacing:.2em;color:var(--accent);font-weight:600;text-transform:uppercase}
-  header h1{font-size:34px;font-weight:700;letter-spacing:.02em;margin:6px 0 8px}
-  header .meta{display:flex;flex-wrap:wrap;gap:8px 24px;font-size:13px;color:var(--muted)}
-  header .meta b{color:var(--ink);font-weight:600}
-  h2{font-size:18px;font-weight:700;margin:0 0 14px;padding-left:12px;border-left:4px solid var(--accent)}
-  section{margin-bottom:36px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:20px 22px}
-  .overview p{margin-bottom:10px}
-  .overview .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:14px}
-  .stat{border-top:2px solid var(--accent);padding-top:8px}
-  .stat .n{font-size:24px;font-weight:700;color:var(--accent);line-height:1.2}
-  .stat .l{font-size:12px;color:var(--muted)}
-  .hl{border:2px solid var(--accent);position:relative}
-  .hl .badge{position:absolute;top:-13px;left:18px;background:var(--accent);color:#fff;font-size:12px;font-weight:600;padding:3px 12px;border-radius:3px;letter-spacing:.1em}
-  .hl h3{font-size:24px;margin:8px 0 4px}
-  .hl .sub{color:var(--muted);font-size:14px;margin-bottom:14px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0 18px}
-  .cell{background:#fbf7f2;border:1px solid var(--line);border-radius:4px;padding:10px 12px}
-  .cell .v{font-size:20px;font-weight:700;color:var(--accent);line-height:1.2}
-  .cell .k{font-size:12px;color:var(--muted);margin-top:2px}
-  .hl h4{font-size:15px;margin:16px 0 6px;color:var(--accent)}
-  .hl p{margin-bottom:8px}
-  table{width:100%;border-collapse:collapse;font-size:14px;margin:8px 0 6px}
-  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
-  th{background:#fbf7f2;font-weight:600;font-size:13px}
-  .list{display:flex;flex-direction:column;gap:12px}
-  .item{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:16px 20px;display:grid;grid-template-columns:44px 1fr;gap:14px}
-  .item .rank{font-size:26px;font-weight:700;color:var(--accent);line-height:1;padding-top:4px}
-  .item h3{font-size:17px;margin-bottom:4px}
-  .item .amt{color:var(--accent);font-weight:700}
-  .item p{font-size:14px;color:#333;margin:4px 0 8px}
-  .tags span{display:inline-block;font-size:12px;background:#f1ece5;color:#555;padding:2px 9px;border-radius:12px;margin:0 6px 4px 0}
-  .tags span.hot{background:var(--accent);color:#fff}
-  footer{border-top:1px solid var(--ink);padding-top:18px;font-size:13px;color:var(--muted)}
-  footer h2{font-size:15px}
-  footer ul{list-style:none;columns:1;margin-bottom:14px}
-  footer li{margin-bottom:5px}
-  footer a{color:var(--accent);text-decoration:none;word-break:break-all}
-  footer a:hover{text-decoration:underline}
-  .disc{background:#fbf7f2;border:1px solid var(--line);padding:12px 14px;border-radius:4px;font-size:12px}
-  @media(max-width:600px){header h1{font-size:26px}.item{grid-template-columns:32px 1fr}.item .rank{font-size:20px}}
+  :root{
+    --accent:#c8401a;
+    --ink:#1a1a1a;
+    --muted:#6b6b6b;
+    --line:#e2ddd6;
+    --paper:#f4f1ec;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans CN",sans-serif;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:860px;margin:0 auto;padding:0 20px 64px;}
+
+  /* ---------- 页头 ---------- */
+  header.masthead{
+    border-bottom:3px double var(--ink);
+    padding:40px 0 18px;
+    margin-bottom:28px;
+    text-align:center;
+  }
+  .kicker{
+    font-size:12px;letter-spacing:.32em;color:var(--accent);
+    text-transform:uppercase;margin-bottom:10px;font-weight:700;
+  }
+  h1.title{
+    font-size:40px;margin:0 0 12px;letter-spacing:.06em;font-weight:800;
+  }
+  .dateline{
+    display:flex;justify-content:center;gap:10px;flex-wrap:wrap;
+    font-size:13px;color:var(--muted);border-top:1px solid var(--line);
+    padding-top:12px;margin-top:14px;
+  }
+  .dateline span{white-space:nowrap;}
+  .dateline span+span::before{content:"·";margin-right:10px;color:var(--line);}
+
+  /* ---------- 通用 ---------- */
+  h2.sec{
+    font-size:19px;margin:38px 0 16px;padding-bottom:8px;
+    border-bottom:2px solid var(--ink);letter-spacing:.04em;
+    display:flex;align-items:center;gap:10px;
+  }
+  h2.sec::before{
+    content:"";width:8px;height:18px;background:var(--accent);display:inline-block;
+  }
+  .card{
+    background:#fff;border:1px solid var(--line);
+    padding:22px 24px;margin-bottom:14px;
+    box-shadow:0 1px 0 rgba(0,0,0,.04);
+  }
+
+  /* ---------- 概览 ---------- */
+  .overview p{margin:0 0 12px;font-size:15.5px;}
+  .overview p:last-child{margin-bottom:0;}
+  .stats{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+    background:var(--line);border:1px solid var(--line);margin:18px 0 0;
+  }
+  .stat{background:#fff;padding:14px 10px;text-align:center;}
+  .stat b{display:block;font-size:21px;color:var(--accent);line-height:1.3;}
+  .stat small{color:var(--muted);font-size:12px;}
+
+  /* ---------- 重点卡片 ---------- */
+  .spotlight{
+    background:#fff;border:2px solid var(--accent);padding:0;margin-bottom:10px;
+  }
+  .spot-head{
+    background:var(--accent);color:#fff;padding:12px 24px;
+    font-size:13px;letter-spacing:.2em;font-weight:700;
+  }
+  .spot-body{padding:24px;}
+  .spot-body h3{margin:0 0 4px;font-size:26px;}
+  .spot-sub{color:var(--muted);font-size:13.5px;margin-bottom:18px;}
+  .grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+    background:var(--line);border:1px solid var(--line);margin-bottom:20px;
+  }
+  .cell{background:#fdfcfa;padding:14px 10px;text-align:center;}
+  .cell b{display:block;font-size:19px;color:var(--accent);}
+  .cell small{display:block;color:var(--muted);font-size:11.5px;margin-top:3px;}
+  .spot-body h4{
+    font-size:14px;margin:20px 0 8px;color:var(--accent);
+    border-left:3px solid var(--accent);padding-left:9px;
+  }
+  .spot-body p{margin:0 0 10px;font-size:15px;}
+  .spot-body ul{margin:0 0 10px;padding-left:20px;font-size:15px;}
+  .spot-body li{margin-bottom:5px;}
+
+  /* ---------- 新闻列表 ---------- */
+  .item{
+    background:#fff;border:1px solid var(--line);border-left:4px solid var(--line);
+    padding:18px 22px;margin-bottom:12px;
+  }
+  .item:hover{border-left-color:var(--accent);}
+  .item-top{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px;}
+  .rank{
+    font-size:13px;font-weight:800;color:#fff;background:var(--ink);
+    width:24px;height:24px;line-height:24px;text-align:center;flex:none;
+    border-radius:2px;
+  }
+  .item h3{margin:0;font-size:18px;flex:1;min-width:180px;}
+  .amt{
+    font-size:17px;font-weight:800;color:var(--accent);white-space:nowrap;
+  }
+  .meta{font-size:12.5px;color:var(--muted);margin-bottom:8px;}
+  .item p{margin:0 0 10px;font-size:14.8px;}
+  .tags{display:flex;gap:6px;flex-wrap:wrap;}
+  .tag{
+    font-size:11.5px;padding:2px 9px;border:1px solid var(--line);
+    background:var(--paper);color:var(--muted);border-radius:2px;
+  }
+  .tag.hot{border-color:var(--accent);color:var(--accent);background:#fdf3ef;}
+
+  /* ---------- 页脚 ---------- */
+  footer{
+    margin-top:44px;padding-top:20px;border-top:3px double var(--ink);
+    font-size:13px;color:var(--muted);
+  }
+  footer h3{font-size:14px;color:var(--ink);margin:0 0 10px;}
+  footer ul{padding-left:18px;margin:0 0 18px;}
+  footer li{margin-bottom:5px;word-break:break-all;}
+  footer a{color:var(--accent);text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
+  .disclaimer{
+    background:#fff;border:1px solid var(--line);padding:14px 16px;
+    font-size:12.5px;line-height:1.7;
+  }
+
+  @media(max-width:640px){
+    h1.title{font-size:28px;}
+    .grid,.stats{grid-template-columns:repeat(2,1fr);}
+    .wrap{padding:0 14px 48px;}
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<header>
-  <div class="kicker">Daily Tech Investment Brief</div>
-  <h1>每日科技投资动态</h1>
-  <div class="meta">
-    <span><b>日期：</b>2026年9月13日（周日）</span>
-    <span><b>覆盖窗口：</b>9月10日–12日（周末新增交易稀少，含本周重点回顾）</span>
-    <span><b>信息源：</b>Crunchbase News · TechStartups · TechCrunch · WSJ/Reuters · Business Wire · Implicator</span>
+<header class="masthead">
+  <div class="kicker">Global Tech Investment Daily</div>
+  <h1 class="title">每日科技投资动态</h1>
+  <div class="dateline">
+    <span>2026年9月16日 星期三</span>
+    <span>覆盖窗口：9月15日–16日</span>
+    <span>来源：TechStartups · Reuters · 投资界 · 36氪 · SCMP</span>
   </div>
 </header>
 
-<section class="overview">
-  <h2>今日概览</h2>
-  <div class="card">
-    <p>本周是美国创投市场罕见的"巨额周"：Crunchbase 统计 9月5日–11日有四家公司单轮融资达到或超过 10 亿美元——Boring Co.（30亿）、Cognition（20亿）、Motive（13亿）与 Stoke Space（10亿）。资金明显向"触及物理世界约束"的赛道集中：隧道基建、国防制造、AI 推理芯片、光互连与太空发射。</p>
-    <p>过去48小时（周五–周六）新增交易以亚洲早期项目为主：深圳超维动力（Kinetix AI）天使+轮超5亿元人民币、韩国 AIDIN Robotics 获 HD现代与三星风投 160亿韩元战略投资。另一则重磅是《华尔街日报》周四晚报道五角大楼正洽谈向 AI 云厂商 Fluidstack 提供约 50 亿美元贷款，将成为其战略资本办公室史上最大单笔贷款。</p>
-    <p>头部机构动向：a16z 与红杉本周同时出现在 Boring Co.、Cognition/Harvey 的股东名单；General Catalyst 独家提供 Motive 13亿美元增长融资；Alphabet 旗下 CapitalG 联合领投 Celero，GV 领投 Encoded Therapeutics；三星风投、HD现代、思科投资、Naver 等产业资本活跃于机器人与芯片。</p>
-    <div class="stats">
-      <div class="stat"><div class="n">≈$100亿+</div><div class="l">本周美国 Top 10 交易合计</div></div>
-      <div class="stat"><div class="n">4 笔</div><div class="l">单轮 ≥10 亿美元</div></div>
-      <div class="stat"><div class="n">$48B</div><div class="l">Cognition 最新估值（4个月翻倍）</div></div>
-      <div class="stat"><div class="n">$50亿</div><div class="l">五角大楼拟向 Fluidstack 贷款</div></div>
-    </div>
+<h2 class="sec">今日概览</h2>
+<div class="card overview">
+  <p>过去 24–48 小时，全球创投资金继续向「AI 的物理层与约束层」倾斜。投资人不再只为模型本身付费，而是为模型跑得起来、用得进去所依赖的东西付费——推理芯片、光互连、内存、制造数据、真实驾驶数据、科研 IP 与企业工作流。</p>
+  <p>今日最大单笔来自中国：字节跳动分拆的 AI 制药公司 <strong>Anew Labs</strong> 完成 2.9 亿美元首轮外部融资，估值 15 亿美元，红杉中国（HSG）、IDG 资本、高瓴领投，创下今年 AI 制药最大融资。美国方面，<strong>Factory</strong> 以 50 亿美元估值募资 2 亿美元，黑石、Khosla、红杉同时在列；<strong>Profound</strong> 由红杉与凯鹏华盈（Kleiner Perkins）联合领投 1.8 亿美元。欧洲则由三星领投的荷兰 AI 芯片公司 <strong>EUCLYD</strong> 拿下逾 2 亿欧元 A 轮。</p>
+  <p>结构性特征有三：一是种子轮金额异常之大（TypeSafe AI 4000 万美元、Noetive 4100 万美元、Apex Intelligence 近 4 亿元人民币天使轮）；二是 CVC 与产业资本深度介入（三星、Salesforce Ventures、丰田系 Woven Capital、汇丰、中信金石）；三是中国项目在硬科技与 AI4S 上密集出手，上海国投、深创投等国资平台频繁领投。</p>
+  <div class="stats">
+    <div class="stat"><b>$2.9亿</b><small>今日最大单笔（Anew Labs）</small></div>
+    <div class="stat"><b>$50亿</b><small>今日最高估值（Factory）</small></div>
+    <div class="stat"><b>10+</b><small>亿元级以上交易</small></div>
+    <div class="stat"><b>6 / 10</b><small>AI 直接相关占比</small></div>
   </div>
-</section>
+</div>
 
-<section>
-  <h2>今日最值得关注</h2>
-  <div class="card hl">
-    <div class="badge">深度聚焦</div>
-    <h3>Positron AI：8.75亿美元 C 轮，估值 50 亿美元，押注"不用 HBM"的推理芯片挑战英伟达</h3>
-    <div class="sub">美国内华达州里诺 · AI 推理芯片 · 9月10日宣布 · 领投：NEA、Jim Clark（Netscape 创始人）、Atreides、Valor、Andra Capital、SemiAnalysis Capital</div>
+<h2 class="sec">今日最值得关注</h2>
+<div class="spotlight">
+  <div class="spot-head">SPOTLIGHT · 重点深挖</div>
+  <div class="spot-body">
+    <h3>Anew Labs（安诺实验室）</h3>
+    <div class="spot-sub">字节跳动 AI 制药业务分拆独立 · 首轮外部融资 2.9 亿美元 · 估值 15 亿美元 · 上海</div>
+
     <div class="grid">
-      <div class="cell"><div class="v">$8.75亿</div><div class="k">本轮融资额（C + C-1 两期）</div></div>
-      <div class="cell"><div class="v">$50亿</div><div class="k">投后估值（2月为 $10亿，7个月近5倍）</div></div>
-      <div class="cell"><div class="v">≈$12亿</div><div class="k">累计融资（Crunchbase）</div></div>
-      <div class="cell"><div class="v">50+ 机架</div><div class="k">Atlas 系统正部署于 Oracle 云</div></div>
-      <div class="cell"><div class="v">未披露</div><div class="k">营收 / 盈利情况</div></div>
+      <div class="cell"><b>$2.9亿</b><small>本轮融资额</small></div>
+      <div class="cell"><b>$15亿</b><small>投后估值</small></div>
+      <div class="cell"><b>$2.9亿</b><small>累计对外披露融资</small></div>
+      <div class="cell"><b>56%</b><small>字节跳动融资后持股</small></div>
     </div>
 
-    <h4>业务内容</h4>
-    <p>Positron 专注于 AI 推理（inference）专用硬件，目标是在"每美元产出 token 数"和能效上对标英伟达 GPU。第一代系统 <b>Atlas</b> 基于 Altera Agilex 7 FPGA（配 HBM + DDR5），已有 Cloudflare、Parasail、Jump Trading、i3d.net 等客户；下一代自研芯片 <b>Asimov</b> 采用台积电 N3P 工艺，最大特点是用商用 LPDDR5X 内存替代供应紧张的 HBM，单芯片内存 288GB–2304GB，功耗约 400W；四或八颗 Asimov 组成 <b>Titan</b> 推理系统。</p>
+    <h4>公司做什么</h4>
+    <p>Anew Labs 脱胎于字节跳动 2021 年组建的内部 AI for Science（AI4S）团队，2026 年 6 月启动分拆与独立融资，约 50 名核心人员连同技术栈与早期管线一并划转至新公司。总部位于上海，并在旧金山、新加坡设点。</p>
+    <p>它不是「卖 AI 工具给药企」的路线，而是用自研 AI 方法自己做药。团队 2025 年发布生物分子结构预测模型 <strong>Protenix</strong> 与 <strong>Seedfold</strong>，2026 年迭代至 v1/v2，并开发了蛋白结合体设计工具 <strong>PXDesign</strong>；今年 3 月又推出与清华大学合作、基于逾 500 万个生物分子复合物训练的生成式框架 <strong>AnewOmni</strong>。围绕动态结构预测、全原子分子生成、自由能计算、合成可行性与虚拟细胞，公司陆续发表了 AnewSampling、AnewFEP、AnewSynth、scNext 等工作。</p>
 
-    <h4>历史融资</h4>
-    <table>
-      <tr><th>时间</th><th>轮次</th><th>金额</th><th>估值</th><th>主要投资方</th></tr>
-      <tr><td>2025年7月</td><td>A 轮（超额认购）</td><td>$5,160万</td><td>—</td><td>Valor Equity、Atreides、DFJ Growth 领投；Flume、Resilience Reserve、1517 Fund 等跟投（当时累计逾 $7,500万）</td></tr>
-      <tr><td>2026年2月</td><td>B 轮</td><td>$2.3亿</td><td>>$10亿</td><td>ARENA Private Wealth、Jump Trading、Unless 联合领投；卡塔尔投资局（QIA）、Arm、Helena 战略入股</td></tr>
-      <tr><td>2026年9月10日</td><td>C 轮</td><td>$3.75亿</td><td>$35亿（投前）</td><td>NEA、Andra Capital、Atreides、Valor、SemiAnalysis Capital 联合领投</td></tr>
-      <tr><td>2026年9月10日</td><td>C-1 轮</td><td>最高 $5亿</td><td>$50亿（投后）</td><td>NEA、Jim Clark 领投；QIA 回归；思科投资、Hudson River Trading、Naver Ventures 战略入股</td></tr>
-    </table>
+    <h4>融资历程</h4>
+    <ul>
+      <li><strong>2021 年－2026 年 6 月</strong>：作为字节跳动内部部门运营，由字节全额投入，无外部融资，负责人刘凯（VC 背景）。</li>
+      <li><strong>2026 年 6 月</strong>：字节跳动启动 AI 制药业务分拆，开始独立融资。</li>
+      <li><strong>2026 年 9 月 16 日</strong>：完成 2.9 亿美元首轮外部融资，投后估值 15 亿美元。HSG（原红杉中国）、IDG 资本、高瓴投资领投，五源资本（5Y Capital）联合领投；高榕创投、云锋基金系 Primavera Venture Partners、博裕资本、上海未来产业基金参与，SBP Group 作为战略投资方进入。</li>
+      <li><strong>累计对外披露融资</strong>：2.9 亿美元（此前均为字节内部投入，金额未披露）。</li>
+    </ul>
 
-    <h4>业务发展与研发进度</h4>
-    <p><b>研发：</b>本轮资金将全额覆盖 Asimov 流片（计划 2026 年底）、一座 2MW 以上的工程数据中心与仿真平台，以及 Titan 量产爬坡（含 LPDDR5X 供应锁定）。值得注意的是，量产时间已从 2 月披露的"2027 年初"推迟至"2027 年下半年"。</p>
-    <p><b>商业化：</b>截至 9月10日，超过 50 个 Atlas 机架正部署于 Oracle Cloud Infrastructure，Parasail 用其提供推理服务，Jump Trading、i3d.net 为生产客户。公司未披露营收与盈利数据。</p>
-    <p><b>风险提示：</b>据 Implicator 报道，Positron 宣称的 Titan 对比英伟达 GB300 NVL72"每美元 26 倍 token"来自周期精确仿真而非实体芯片，且 GPU 对比数据来自 SemiAnalysis——其创始人 Dylan Patel 的基金恰是本轮联合领投方并将进入董事会。The Register 曾测算英伟达 Rubin 的 HBM 峰值带宽约 22TB/s，即便只发挥 30%，仍是 Asimov（约 3TB/s）的 2.4 倍。</p>
-    <p><b>为何值得关注：</b>这是本周除巨型基建轮外最具"技术路线赌注"意味的交易——在 HBM 长期短缺背景下，用低成本内存换取容量和能效，正面挑战英伟达的推理市场；投资方阵容（NEA、Valor、Atreides、QIA、Arm、思科、Naver）横跨顶级 VC、主权基金与产业资本。董事会新增 NEA 的 Forest Baskett、Atreides 的 Gavin Baker、Jim Clark Office 的 Thomas Jermoluk 与 Dylan Patel。</p>
+    <h4>业务进展与财务状况</h4>
+    <ul>
+      <li><strong>管线阶段</strong>：目前共 <strong>4 条药物管线</strong>，早期管线方向包括 IL-17（AA/AF/FF）与 IL-4R。<strong>尚无候选药物进入临床试验</strong>，公司处于临床前阶段。</li>
+      <li><strong>研发里程碑</strong>：2026 年 4 月，生物学负责人 Chris Li 在波士顿美国免疫学家协会（AAI）年会上首次披露 IL-17 小分子项目，据称实现全球首次用小分子同时阻断 IL-17 家族三种二聚体（AA/AF/FF）——这一靶点长期被制药业视为「不可成药」。</li>
+      <li><strong>营收与盈利</strong>：公开信息中<strong>未披露任何营收或盈利数据</strong>。作为临床前 AI 制药公司，其估值主要反映科研团队、模型能力与 IP，而非现金流。</li>
+      <li><strong>治理结构</strong>：分拆后字节跳动保留 56% 股权，但公司拥有独立股东结构与按药物研发周期设计的治理机制，而非消费互联网公司的节奏。</li>
+    </ul>
+
+    <h4>为什么值得关注</h4>
+    <p>15 亿美元估值为「临床前 AI 制药公司」定出了一个新的市场标尺——在尚无一款药进入临床的情况下，首轮就拿到 2.9 亿美元，是相当激进的一笔押注。它同时也是互联网大厂 AI4S 团队产业化的一次样本：技术、人、资产整体出表，接受外部资本定价。风险同样明确：AI 生成的分子最终仍要通过毒理、临床与监管的检验，计算上的优雅不能消除生物学上的失败。</p>
+    <p style="color:var(--muted);font-size:13px;margin-top:14px;">注：本轮融资由路透社援引两位知情人士报道，字节跳动与投资方未公开宣布，双方未回应置评请求。</p>
   </div>
-</section>
+</div>
 
-<section>
-  <h2>本期交易榜（按重要性排序）</h2>
-  <div class="list">
+<h2 class="sec">今日交易榜（按重要性排序）</h2>
 
-    <div class="item"><div class="rank">1</div><div>
-      <h3>The Boring Company — <span class="amt">30 亿美元</span> D 轮，估值 230 亿美元</h3>
-      <p>马斯克旗下隧道公司，由阿联酋方面领投，a16z、红杉、Valor Equity、Baron Capital 参与。公司已运营拉斯维加斯 Vegas Loop 地下交通网络，累计融资近 39 亿美元。9月10日宣布。</p>
-      <div class="tags"><span class="hot">a16z</span><span class="hot">红杉</span><span>基建/交通</span><span>主权资本</span></div>
-    </div></div>
+<div class="item">
+  <div class="item-top"><span class="rank">1</span><h3>Anew Labs — 字节跳动分拆 AI 制药</h3><span class="amt">$2.9亿</span></div>
+  <div class="meta">首轮外部融资 · 估值 $15 亿 · 上海 · 2026-09-16 · 领投：HSG（红杉中国）、IDG 资本、高瓴；联合领投：五源资本</div>
+  <p>字节跳动将其 AI4S 药物发现业务整体分拆独立，融资后仍持股 56%。公司拥有 Protenix / PXDesign / AnewOmni 等自研模型与 4 条临床前管线，尚无药物进入临床。今年迄今全球 AI 制药最大单笔融资。</p>
+  <div class="tags"><span class="tag hot">AI 制药</span><span class="tag">大厂分拆</span><span class="tag">红杉/高瓴/IDG</span><span class="tag">中国</span></div>
+</div>
 
-    <div class="item"><div class="rank">2</div><div>
-      <h3>Cognition（Devin）— <span class="amt">20 亿美元</span> E 轮，估值 480 亿美元</h3>
-      <p>AI 软件工程智能体 Devin 开发商，Accel 与 a16z 领投，Founders Fund、General Catalyst、Avenir 跟投。运行率收入从 5 月的 4.92 亿美元升至近 9 亿美元，估值 4 个月内近乎翻倍（5月 D 轮投前 250 亿）。客户含花旗、高盛、奔驰、戴尔及美国陆军/海军。累计融资近 39 亿美元。9月8日宣布。</p>
-      <div class="tags"><span class="hot">a16z</span><span class="hot">Founders Fund</span><span>Accel</span><span>AI 编程智能体</span></div>
-    </div></div>
+<div class="item">
+  <div class="item-top"><span class="rank">2</span><h3>Factory — 企业级 AI 编程智能体</h3><span class="amt">$2亿</span></div>
+  <div class="meta">成长轮 · 估值 $50 亿（4 月为 $15 亿）· 累计融资 &gt;$4 亿 · 旧金山 · 2026-09-15 · 投资方：黑石、Khosla Ventures、红杉资本、Insight Partners、NEA、Clearlake 等，天使包括 Brad Gerstner、Marc Benioff</div>
+  <p>构建让 AI 编程智能体在企业治理框架下完成规划、编写、测试与维护软件的系统，支持云端、本地及气隙（air-gapped）部署。估值五个月内翻逾三倍，是本轮名单中估值最高的一笔。</p>
+  <div class="tags"><span class="tag hot">AI 编程智能体</span><span class="tag">企业软件</span><span class="tag">红杉/Khosla/黑石</span><span class="tag">美国</span></div>
+</div>
 
-    <div class="item"><div class="rank">3</div><div>
-      <h3>Motive（原 KeepTruckin）— <span class="amt">13 亿美元</span> 增长融资，撤回 IPO 申请</h3>
-      <p>General Catalyst 旗下 Customer Value Fund 独家提供，车队管理与实体运营 AI 平台。ARR 突破 6 亿美元、同比增速加快至 30%，10 万美元以上大客户 ARR 同比增长近 60%。公司同时撤回此前提交的 S-1，转向私募资本继续投入 AI。上一次披露估值为 2022 年 28.5 亿美元（Insight、Kleiner Perkins 领投）。9月10日宣布。</p>
-      <div class="tags"><span class="hot">General Catalyst</span><span>车队管理</span><span>撤回 IPO</span></div>
-    </div></div>
+<div class="item">
+  <div class="item-top"><span class="rank">3</span><h3>EUCLYD — 挑战英伟达的欧洲 AI 推理芯片</h3><span class="amt">€2亿+</span></div>
+  <div class="meta">A 轮 · 埃因霍温（荷兰）· 2026-09-15 · 联合领投：三星、Somerset Capital Partners、EQT 管理的 Scaleup Europe Fund、Innovation Industries；EIFO、imec.xpand、BOM、Quadri 参与</div>
+  <p>不做更大的模型，而是攻击模型运行的成本——算力、内存带宽、电力与数据中心占地。路线图包括可编程 ASIC 平台 craftwerk 及 craftwerk station 系统。前 ASML 总裁兼 CEO Peter Wennink 出任董事长，为一家 A 轮公司带来罕见的半导体运营分量。</p>
+  <div class="tags"><span class="tag hot">AI 芯片</span><span class="tag">推理经济学</span><span class="tag">三星 CVC</span><span class="tag">欧洲</span></div>
+</div>
 
-    <div class="item"><div class="rank">4</div><div>
-      <h3>Positron AI — <span class="amt">8.75 亿美元</span> C/C-1 轮，估值 50 亿美元</h3>
-      <p>见上方"深度聚焦"。NEA、Jim Clark 领投，QIA、思科投资、Naver Ventures 等参投；不依赖 HBM 的推理芯片 Asimov 计划 2026 年底流片。9月10日宣布。</p>
-      <div class="tags"><span class="hot">NEA</span><span>AI 芯片</span><span>QIA</span><span>思科投资</span></div>
-    </div></div>
+<div class="item">
+  <div class="item-top"><span class="rank">4</span><h3>Profound — 品牌在 AI 答案引擎中的可见度</h3><span class="amt">$1.8亿</span></div>
+  <div class="meta">D 轮 · 估值 $18 亿 · 累计融资 &gt;$3.35 亿 · 纽约 · 2026-09-15 · 联合领投：红杉资本、凯鹏华盈（Kleiner Perkins）；Lightspeed、Khosla Ventures、Saga Ventures 等参与</div>
+  <p>帮助品牌了解并优化自己在 ChatGPT、Gemini、Perplexity 等 AI 答案引擎中的呈现方式，并以智能体跨付费与自然 AI 搜索创建、更新和协调营销内容。距上一轮 9600 万美元 C 轮不足七个月。</p>
+  <div class="tags"><span class="tag hot">AI 搜索营销</span><span class="tag">红杉/KP 联合领投</span><span class="tag">美国</span></div>
+</div>
 
-    <div class="item"><div class="rank">5</div><div>
-      <h3>Mach Industries — <span class="amt">6 亿美元</span> C 轮追加，估值 37 亿美元</h3>
-      <p>2022 年成立的国防制造商（无人机、远程武器、推进系统），红杉与 Ribbit Capital 参投。此次为 6 月 3 亿美元首期后的追加，C 轮合计约 9 亿美元，估值由约 18 亿升至 37 亿美元；累计融资近 11 亿美元。9月10日宣布。</p>
-      <div class="tags"><span class="hot">红杉</span><span>国防科技</span><span>Ribbit</span></div>
-    </div></div>
+<div class="item">
+  <div class="item-top"><span class="rank">5</span><h3>CADDi — 全球制造业的 AI 数据层</h3><span class="amt">¥177亿日元</span></div>
+  <div class="meta">D 轮 · 估值 ¥1820 亿日元 · 累计股权融资 ¥363.1 亿日元 · 东京 · 2026-09-16 · 新投资方：Moore Strategic Ventures、Coreline Ventures、Recruit HR Tech Fund、丰田系 Woven Capital、Salesforce Ventures；Atomico、Globis 等跟投</div>
+  <p>从零部件采购平台转型为制造业 AI 与数据平台，用 AI 结构化图纸、规格、采购历史与生产记录，让工程、采购、生产人员与 AI 智能体共享同一上下文。公司称软件已部署于 22 个国家，被日经 225 中过半离散制造企业使用。</p>
+  <div class="tags"><span class="tag hot">制造业 AI</span><span class="tag">Salesforce/丰田 CVC</span><span class="tag">日本</span></div>
+</div>
 
-    <div class="item"><div class="rank">6</div><div>
-      <h3>Harvey — <span class="amt">5.5 亿美元</span> H 轮，估值 155 亿美元</h3>
-      <p>法律 AI 公司，Diffusion 与 Lightspeed 联合领投，a16z、红杉参与。距 3 月 2 亿美元融资（估值 110 亿）仅半年，估值再增 40%；客户覆盖美国前 100 大律所中的 80% 及财富 10 强中的一半，累计融资逾 15.5 亿美元。9月9日宣布。</p>
-      <div class="tags"><span class="hot">Lightspeed</span><span class="hot">a16z</span><span>法律 AI</span></div>
-    </div></div>
+<div class="item">
+  <div class="item-top"><span class="rank">6</span><h3>哈啰 Robotaxi（上海钥匙智能）— L4 自动驾驶</h3><span class="amt">约$1亿</span></div>
+  <div class="meta">轮次未披露 · 投后估值近 $30 亿 · 上海 · 2026-09-16 · 领投：上海国投先导基金；闵金投资、创世伙伴资本参与</div>
+  <p>2025 年 6 月由哈啰、蚂蚁集团、宁德时代相关主体共同组建，阿里巴巴其后战略投资。本轮资金将投向万卡级 GPU 算力平台、端到端自动驾驶模型与数据供应链。首款自研车型 HR1 已于今夏进入量产交付。</p>
+  <div class="tags"><span class="tag hot">Robotaxi</span><span class="tag">蚂蚁/宁德/阿里生态</span><span class="tag">国资领投</span><span class="tag">中国</span></div>
+</div>
 
-    <div class="item"><div class="rank">7</div><div>
-      <h3>Fab2（原 Atomic Semi）— <span class="amt">5 亿美元</span> A 轮，估值 37 亿美元</h3>
-      <p>传奇芯片设计师 Jim Keller 与 Sam Zeloof 创立，目标是"量产小型晶圆厂"，Fundomo 领投，Paradigm、Duquesne 家族办公室、Maverick Silicon、StepStone、Naval Ravikant 等参投。首轮披露融资即达 5 亿美元，公司 7 月更名并迁往得州。9月9日宣布。</p>
-      <div class="tags"><span>半导体制造</span><span>Paradigm</span><span>首轮即独角兽</span></div>
-    </div></div>
+<div class="item">
+  <div class="item-top"><span class="rank">7</span><h3>Delos Data — GPU 间数据搬运的专用硅</h3><span class="amt">$1亿+</span></div>
+  <div class="meta">轮次未披露 · 帕洛阿尔托 · 2026-09-15 · 投资方：Matrix、Playground Global、Socratic Partners、Capricorn Technology Impact Fund、Matter Venture Partners、IAG 等</div>
+  <p>由数据中心芯片老兵创立，打造名为「Nonstop AI」的软件、系统与接口硅，解决 GPU、CPU、加速器、内存与存储之间的数据搬运效率问题。是本轮「为 AI 瓶颈而非 AI 本身买单」逻辑最直接的体现之一。</p>
+  <div class="tags"><span class="tag">AI 网络</span><span class="tag">数据中心基础设施</span><span class="tag">美国</span></div>
+</div>
 
-    <div class="item"><div class="rank">8</div><div>
-      <h3>五角大楼拟向 Fluidstack 提供 <span class="amt">50 亿美元</span> 贷款（洽谈中）</h3>
-      <p>WSJ 9月11日报道，美国国防部战略资本办公室（OSC）正洽谈向 AI 云厂商 Fluidstack 贷款约 50 亿美元，用于强化美国数据中心零部件供应链与制造能力，而非直接建设数据中心。若落地将是 OSC 史上最大单笔贷款；谈判尚未签署，条款可能变化。</p>
-      <div class="tags"><span class="hot">政府资本</span><span>AI 基础设施</span><span>债务融资</span></div>
-    </div></div>
+<div class="item">
+  <div class="item-top"><span class="rank">8</span><h3>箭元科技 Space Epoch — 可回收液氧甲烷火箭</h3><span class="amt">B轮累计&gt;23亿元</span></div>
+  <div class="meta">B++ 轮（本轮金额未披露）· 北京 · 2026-09-16 · B 系列投资方：IDG 资本、混沌投资、杭州资本、松源创投、和达投资、凌岚资本、华富资本、毅达资本等</div>
+  <p>研制不锈钢液氧甲烷可重复使用运载火箭「元行者一号」。资金用于首次入轨任务、一子级回收验证、商业交付能力与塔捕获工程。公司称火箭将于 2026 年底具备首飞条件，2027 年提供商业发射服务——均为公司目标而非已完成里程碑。近六个月 B 系列融资合计超 23 亿元人民币。</p>
+  <div class="tags"><span class="tag">商业航天</span><span class="tag">可回收火箭</span><span class="tag">IDG 资本</span><span class="tag">中国</span></div>
+</div>
 
-    <div class="item"><div class="rank">9</div><div>
-      <h3>Celero Communications — <span class="amt">2.75 亿美元</span> C 轮，估值超 30 亿美元</h3>
-      <p>2024 年成立的相干光 DSP 芯片公司，Atreides、Valor 与 Alphabet 旗下 CapitalG 联合领投，Sutter Hill、Maverick Silicon 跟投。刚完成业界首颗 2nm 相干 DSP 硅片验证，累计融资 4.15 亿美元；Atreides 的 Gavin Baker 进入董事会。9月8日宣布。</p>
-      <div class="tags"><span class="hot">CapitalG（谷歌）</span><span>光互连</span><span>AI 网络</span></div>
-    </div></div>
+<div class="item">
+  <div class="item-top"><span class="rank">9</span><h3>Apex Intelligence — 让 AI 去研究 AI</h3><span class="amt">近4亿元</span></div>
+  <div class="meta">天使轮 + 天使+轮 · 中国 · 2026-09-16 · 天使轮联合领投：IDG 资本、星连资本、晶泰科技（XtalPi）；天使+轮联合领投：中关村科学城基金、深创投、上海未来产业基金</div>
+  <p>成立于 2026 年 6 月，创始人陈永超为清华大学人工智能研究院 27 岁助理教授，方向是递归自我改进（RSI）——让 AI 参与改进 AI 本身所需的研究。公司称其研究系统可从选题、方法设计、代码生成、实验一直做到论文写作。成立不到三个月即募得近 4 亿元，是今日最纯粹的一笔信念型押注。</p>
+  <div class="tags"><span class="tag hot">AI for Science</span><span class="tag">递归自我改进</span><span class="tag">超大天使轮</span><span class="tag">中国</span></div>
+</div>
 
-    <div class="item"><div class="rank">10</div><div>
-      <h3>Encoded Therapeutics — <span class="amt">2.75 亿美元</span> F 轮，GV 领投</h3>
-      <p>临床阶段精准基因药物公司，谷歌风投（GV）领投，Arch Venture、Janus Henderson、Venrock 参与。主打针对 Dravet 综合征（罕见遗传性癫痫）的疗法，累计融资 5.14 亿美元。本周宣布。</p>
-      <div class="tags"><span class="hot">GV（谷歌）</span><span>生物科技</span><span>基因治疗</span></div>
-    </div></div>
+<div class="item">
+  <div class="item-top"><span class="rank">10</span><h3>Noetive — 工厂与物流的工业世界模型</h3><span class="amt">$4100万</span></div>
+  <div class="meta">种子轮 · 美国 · 2026-09-16 · 领投：Eclipse；Craft Ventures、Westly Group，以及 Meta CTO Andrew Bosworth、Airbnb CTO Ahmed Al-Dahle 等个人投资者参与</div>
+  <p>由前 Meta 生成式 AI 高管 Amir Frenkel 与前 Netlify 产品高管 Dan Barak 创立，构建理解工厂、物流场站与建筑工地空间与运营行为的工业世界模型，并研发通用传感吊舱采集实时物理数据。早期客户 Steuben Foods 向《华尔街日报》表示其软件可使现有产线产能提升 10%–15%（客户估算，未经独立验证）。</p>
+  <div class="tags"><span class="tag">工业 AI</span><span class="tag">世界模型</span><span class="tag">巨型种子轮</span><span class="tag">美国</span></div>
+</div>
 
-    <div class="item"><div class="rank">11</div><div>
-      <h3>超维动力 Kinetix AI — <span class="amt">超 5 亿元人民币</span> 天使+系列轮</h3>
-      <p>深圳具身智能公司，2025 年 7 月成立，覆盖人形机器人、灵巧手、具身模型与第一人称训练数据全栈；祥峰投资（Vertex）、方广资本、万世资本等参投。过去 48 小时内最大的新披露交易。9月11日宣布。</p>
-      <div class="tags"><span>具身智能</span><span>中国</span><span>祥峰投资</span></div>
-    </div></div>
-
-    <div class="item"><div class="rank">12</div><div>
-      <h3>AIDIN Robotics — <span class="amt">160 亿韩元</span> 战略融资（HD现代机器人、三星风投）</h3>
-      <p>韩国力矩/触觉传感器公司，源自成均馆大学机器人实验室。HD现代单独出资 130 亿韩元入股，计划将其传感技术整合进重工业人形机器人五指手，并率先用于造船厂打磨抛光自动化——典型的"具身智能卖铲人"投资。9月11日宣布。</p>
-      <div class="tags"><span class="hot">三星风投</span><span>HD现代</span><span>机器人传感器</span></div>
-    </div></div>
-
-  </div>
-</section>
+<div class="card" style="margin-top:18px;">
+  <strong style="font-size:14px;">同期其他值得留意的交易：</strong>
+  <p style="margin:8px 0 0;font-size:14.5px;color:var(--muted);">
+    TypeSafe AI（旧金山，$4000 万种子轮，DCVC 领投，前 OpenAI 研究员创立，首个模型 Jev 面向机器而非对话）；Polaris Electro-Optics（$5000 万 B 轮，Walden Catalyst 领投，电光调制器）；富勒科技 Fuller Technology（上海，3.5 亿元 B 轮，深创投领投，经纬中国参与，供应链软件）；晶精科技 Jinjing / Goldenscope（北京，3 亿元 B 轮，电子束光刻与电镜设备）；AIUC（$4000 万 A 轮，Ribbit Capital 领投，AI 智能体认证与保险）；TeRAM（$3700 万种子轮，3D SRAM）；Evvy（$4000 万 B 轮，女性健康精准诊断）。
+  </p>
+</div>
 
 <footer>
-  <h2>信息来源</h2>
+  <h3>信息来源</h3>
   <ul>
-    <li><a href="https://news.crunchbase.com/venture/biggest-funding-rounds-boring-co-cognition-massive-week/">Crunchbase News：The Week's 10 Biggest Funding Rounds（2026-09-11）</a></li>
-    <li><a href="https://techstartups.com/2026/09/11/startup-funding-news-today-september-11-2026-kinetix-ai-aidin-robotics-enigmata-more/">TechStartups：Startup Funding News Today, September 11, 2026</a></li>
-    <li><a href="https://techstartups.com/2026/09/10/venture-capital-startup-funding-roundup-september-10-2026-andreessen-horowitz-insight-partners-bessemer-venture-partners-sequoia-capital-more/">TechStartups：Venture Capital &amp; Startup Funding Roundup, September 10, 2026</a></li>
-    <li><a href="https://www.prnewswire.com/news-releases/positron-ai-raises-875-million-at-a-5-billion-valuation-to-bring-its-next-generation-inference-silicon-to-market-302874601.html">PR Newswire：Positron AI Raises $875 Million at a $5 Billion Valuation</a></li>
-    <li><a href="https://www.implicator.ai/positron-raises-875-million-at-5-billion-before-its-asimov-chip-tapes-out/">Implicator：Positron Raises $875M at $5B Before Its Asimov Chip Tapes Out</a></li>
-    <li><a href="https://www.businesswire.com/news/home/20260204250472/en/Positron-AI-Raises-$230-Million-Series-B-at-Over-$1-Billion-Valuation-to-Scale-Energy-Efficient-AI-Inference">Business Wire：Positron AI Raises $230M Series B（2026-02）</a></li>
-    <li><a href="https://www.businesswire.com/news/home/20250728912387/en/Positron-AI-Secures-$51.6-Million-in-Oversubscribed-Series-A-to-Accelerate-Inference-Optimized-Hardware">Business Wire：Positron AI Secures $51.6M Series A（2025-07）</a></li>
-    <li><a href="https://www.freightwaves.com/news/motive-1-3-billion-growth-financing">FreightWaves：Motive raises $1.3 billion from General Catalyst</a></li>
-    <li><a href="https://techcrunch.com/2026/09/09/harvey-hits-15-5b-valuation-months-after-reaching-11b/">TechCrunch：Harvey hits $15.5B valuation</a></li>
-    <li><a href="https://www.unite.ai/cognition-raises-over-2b-series-e-at-48b-valuation-to-scale-devin-agents/">Unite.AI：Cognition Raises Over $2B Series E at $48B Valuation</a></li>
-    <li><a href="https://dealroom.co/news/149546-formerly-atomicsemi-fab2-raises-500m-series-a-at-a-3-7b-valuation-to-mas/">Dealroom：Fab2 raises $500M Series A at $3.7B valuation</a></li>
-    <li><a href="https://www.morningstar.com/news/business-wire/20260908708759/celero-communications-raises-275-million-series-c-following-validation-of-industrys-first-2nm-coherent-dsp-silicon">Business Wire：Celero Communications Raises $275 Million Series C</a></li>
-    <li><a href="https://techstartups.com/2026/09/11/pentagon-in-talks-to-lend-5-billion-to-ai-cloud-startup-fluidstack-to-shore-up-us-data-center-supply-chain/">TechStartups / WSJ：Pentagon in talks to lend $5 billion to Fluidstack</a></li>
+    <li><a href="https://techstartups.com/2026/09/16/startup-funding-news-today-september-16-2026-anew-labs-caddi-space-epoch-typesafe-ai-more/">TechStartups — Startup Funding News Today, September 16, 2026: Anew Labs, CADDi, Space Epoch, TypeSafe AI &amp; More</a></li>
+    <li><a href="https://techstartups.com/2026/09/15/startup-funding-news-today-september-15-2026-euclyd-yincheng-intelligence-nutshell-therapeutics-yoom-more/">TechStartups — Startup Funding News Today, September 15, 2026: EUCLYD, Yincheng Intelligence, Nutshell Therapeutics, Yoom &amp; More</a></li>
+    <li><a href="https://techstartups.com/2026/09/15/venture-capital-startup-funding-roundup-september-15-2026-alumni-ventures-lightscape-partners-kleiner-perkins-khosla-ventures-sequoia-capital-more/">TechStartups — Venture Capital &amp; Startup Funding Roundup, September 15, 2026: Alumni Ventures, Kleiner Perkins, Khosla Ventures, Sequoia Capital &amp; More</a></li>
+    <li><a href="https://1027wbow.com/2026/09/16/bytedance-completes-290-million-fundraising-for-ai-drug-unit-after-its-spin-off-sources-say/">Reuters — ByteDance completes $290 million fundraising for AI drug unit after its spin-off, sources say</a></li>
+    <li><a href="https://news.pedaily.cn/202609/569128.shtml">投资界 — 首发｜Anew Labs 首轮融资 2.9 亿美元，今年 AI 制药最大融资诞生</a></li>
+    <li><a href="https://36kr.com/p/3846956646124036">36氪 — 独家｜字节 AI 制药开启拆分融资，AI4S 进入产业化阶段</a></li>
+    <li><a href="https://www.scmp.com/tech/article/3352032/bytedances-drug-unit-presents-ai-designed-therapies-global-conferences">South China Morning Post — ByteDance's drug unit presents AI-designed therapies at global conferences</a></li>
+    <li><a href="https://thenextweb.com/news/bytedance-anew-labs-290m-ai-drug-discovery">The Next Web — ByteDance's AI drug unit Anew Labs raises $290M at $1.5B valuation</a></li>
+    <li><a href="https://techstartups.com/2026/09/15/samsung-backs-dutch-ai-chip-startup-euclyd-in-231m-funding-round-to-challenge-nvidia/">TechStartups — Samsung backs Dutch AI chip startup EUCLYD in $231M funding round to challenge Nvidia</a></li>
   </ul>
-  <div class="disc">免责声明：本页内容基于上述公开媒体报道于 2026年9月13日 自动汇总生成，仅供信息参考，不构成任何投资建议。融资金额、估值等数据以各公司及媒体披露为准，部分数据（如营收、累计融资）来自第三方数据库或公司自述，未经独立审计；若有出入请以原始来源为准。</div>
+
+  <div class="disclaimer">
+    <strong>免责声明：</strong>本页面内容由 AI 依据公开报道自动整理生成，覆盖 2026 年 9 月 15 日至 16 日的公开融资信息，仅供信息参考，不构成任何投资建议、要约或推荐。文中融资金额、估值、营收、产能、性能等数据多为公司自述或媒体援引知情人士消息，部分交易（如 Anew Labs）未获当事方正式公告，未经独立审计或核实，可能存在偏差、延迟或后续更正。汇率换算与中文公司名称为便于阅读的近似处理。读者在据此作出任何决策前，应自行核实原始来源。
+    <br><br>
+    生成时间：2026 年 9 月 16 日
+  </div>
 </footer>
 
 </div>
