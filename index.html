@@ -3,312 +3,495 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日科技投资动态 · 2026年9月16日</title>
+<title>每日科技投资动态 · 2026年9月20日</title>
 <style>
-  :root{
-    --accent:#c8401a;
-    --ink:#1a1a1a;
-    --muted:#6b6b6b;
-    --line:#e2ddd6;
-    --paper:#f4f1ec;
+  :root {
+    --accent: #c8401a;
+    --accent-light: #fdeee9;
+    --ink: #1a1a1a;
+    --sub: #6b6b6b;
+    --line: #e6e2dd;
+    --bg: #f3efe9;
+    --card: #ffffff;
   }
-  *{box-sizing:border-box;}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Source Han Sans CN",sans-serif;
-    line-height:1.75;
-    -webkit-font-smoothing:antialiased;
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
   }
-  .wrap{max-width:860px;margin:0 auto;padding:0 20px 64px;}
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px 60px; }
 
-  /* ---------- 页头 ---------- */
-  header.masthead{
-    border-bottom:3px double var(--ink);
-    padding:40px 0 18px;
-    margin-bottom:28px;
-    text-align:center;
+  header.masthead {
+    border-bottom: 4px solid var(--ink);
+    padding: 32px 0 16px;
+    margin-bottom: 28px;
   }
-  .kicker{
-    font-size:12px;letter-spacing:.32em;color:var(--accent);
-    text-transform:uppercase;margin-bottom:10px;font-weight:700;
+  header.masthead .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 8px;
   }
-  h1.title{
-    font-size:40px;margin:0 0 12px;letter-spacing:.06em;font-weight:800;
+  header.masthead h1 {
+    font-size: 36px;
+    margin: 0 0 10px;
+    letter-spacing: 1px;
   }
-  .dateline{
-    display:flex;justify-content:center;gap:10px;flex-wrap:wrap;
-    font-size:13px;color:var(--muted);border-top:1px solid var(--line);
-    padding-top:12px;margin-top:14px;
+  header.masthead .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 13px;
+    color: var(--sub);
+    border-top: 1px solid var(--line);
+    padding-top: 10px;
   }
-  .dateline span{white-space:nowrap;}
-  .dateline span+span::before{content:"·";margin-right:10px;color:var(--line);}
+  header.masthead .meta span strong { color: var(--ink); }
 
-  /* ---------- 通用 ---------- */
-  h2.sec{
-    font-size:19px;margin:38px 0 16px;padding-bottom:8px;
-    border-bottom:2px solid var(--ink);letter-spacing:.04em;
-    display:flex;align-items:center;gap:10px;
+  section { margin-bottom: 36px; }
+  h2.section-title {
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 700;
+    margin: 0 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
-  h2.sec::before{
-    content:"";width:8px;height:18px;background:var(--accent);display:inline-block;
-  }
-  .card{
-    background:#fff;border:1px solid var(--line);
-    padding:22px 24px;margin-bottom:14px;
-    box-shadow:0 1px 0 rgba(0,0,0,.04);
-  }
-
-  /* ---------- 概览 ---------- */
-  .overview p{margin:0 0 12px;font-size:15.5px;}
-  .overview p:last-child{margin-bottom:0;}
-  .stats{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
-    background:var(--line);border:1px solid var(--line);margin:18px 0 0;
-  }
-  .stat{background:#fff;padding:14px 10px;text-align:center;}
-  .stat b{display:block;font-size:21px;color:var(--accent);line-height:1.3;}
-  .stat small{color:var(--muted);font-size:12px;}
-
-  /* ---------- 重点卡片 ---------- */
-  .spotlight{
-    background:#fff;border:2px solid var(--accent);padding:0;margin-bottom:10px;
-  }
-  .spot-head{
-    background:var(--accent);color:#fff;padding:12px 24px;
-    font-size:13px;letter-spacing:.2em;font-weight:700;
-  }
-  .spot-body{padding:24px;}
-  .spot-body h3{margin:0 0 4px;font-size:26px;}
-  .spot-sub{color:var(--muted);font-size:13.5px;margin-bottom:18px;}
-  .grid{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
-    background:var(--line);border:1px solid var(--line);margin-bottom:20px;
-  }
-  .cell{background:#fdfcfa;padding:14px 10px;text-align:center;}
-  .cell b{display:block;font-size:19px;color:var(--accent);}
-  .cell small{display:block;color:var(--muted);font-size:11.5px;margin-top:3px;}
-  .spot-body h4{
-    font-size:14px;margin:20px 0 8px;color:var(--accent);
-    border-left:3px solid var(--accent);padding-left:9px;
-  }
-  .spot-body p{margin:0 0 10px;font-size:15px;}
-  .spot-body ul{margin:0 0 10px;padding-left:20px;font-size:15px;}
-  .spot-body li{margin-bottom:5px;}
-
-  /* ---------- 新闻列表 ---------- */
-  .item{
-    background:#fff;border:1px solid var(--line);border-left:4px solid var(--line);
-    padding:18px 22px;margin-bottom:12px;
-  }
-  .item:hover{border-left-color:var(--accent);}
-  .item-top{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px;}
-  .rank{
-    font-size:13px;font-weight:800;color:#fff;background:var(--ink);
-    width:24px;height:24px;line-height:24px;text-align:center;flex:none;
-    border-radius:2px;
-  }
-  .item h3{margin:0;font-size:18px;flex:1;min-width:180px;}
-  .amt{
-    font-size:17px;font-weight:800;color:var(--accent);white-space:nowrap;
-  }
-  .meta{font-size:12.5px;color:var(--muted);margin-bottom:8px;}
-  .item p{margin:0 0 10px;font-size:14.8px;}
-  .tags{display:flex;gap:6px;flex-wrap:wrap;}
-  .tag{
-    font-size:11.5px;padding:2px 9px;border:1px solid var(--line);
-    background:var(--paper);color:var(--muted);border-radius:2px;
-  }
-  .tag.hot{border-color:var(--accent);color:var(--accent);background:#fdf3ef;}
-
-  /* ---------- 页脚 ---------- */
-  footer{
-    margin-top:44px;padding-top:20px;border-top:3px double var(--ink);
-    font-size:13px;color:var(--muted);
-  }
-  footer h3{font-size:14px;color:var(--ink);margin:0 0 10px;}
-  footer ul{padding-left:18px;margin:0 0 18px;}
-  footer li{margin-bottom:5px;word-break:break-all;}
-  footer a{color:var(--accent);text-decoration:none;}
-  footer a:hover{text-decoration:underline;}
-  .disclaimer{
-    background:#fff;border:1px solid var(--line);padding:14px 16px;
-    font-size:12.5px;line-height:1.7;
+  h2.section-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
   }
 
-  @media(max-width:640px){
-    h1.title{font-size:28px;}
-    .grid,.stats{grid-template-columns:repeat(2,1fr);}
-    .wrap{padding:0 14px 48px;}
+  .overview-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    padding: 20px 24px;
+    font-size: 15px;
+    color: #333;
+  }
+  .overview-card p { margin: 0 0 8px; }
+  .overview-card p:last-child { margin-bottom: 0; }
+
+  .highlight-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  }
+  .highlight-head {
+    background: var(--ink);
+    color: #fff;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .highlight-head .tag {
+    background: var(--accent);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+  }
+  .highlight-head .company {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .highlight-body { padding: 24px; }
+  .highlight-body .desc { font-size: 15px; color: #333; margin-bottom: 18px; }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    margin-bottom: 20px;
+  }
+  .stat-cell {
+    background: var(--card);
+    padding: 14px 12px;
+    text-align: center;
+  }
+  .stat-cell .label {
+    font-size: 12px;
+    color: var(--sub);
+    margin-bottom: 6px;
+  }
+  .stat-cell .value {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+
+  .highlight-body h4 {
+    font-size: 14px;
+    margin: 18px 0 8px;
+    color: var(--ink);
+    border-left: 3px solid var(--accent);
+    padding-left: 8px;
+  }
+  .highlight-body ul { margin: 0; padding-left: 20px; font-size: 14px; color: #333; }
+  .highlight-body li { margin-bottom: 6px; }
+  .highlight-body .quote {
+    margin-top: 16px;
+    font-size: 14px;
+    font-style: italic;
+    color: var(--sub);
+    border-left: 3px solid var(--line);
+    padding-left: 12px;
+  }
+
+  .deal-list { display: flex; flex-direction: column; gap: 14px; }
+  .deal {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    padding: 16px 20px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .deal .rank {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--accent);
+    min-width: 32px;
+  }
+  .deal .content { flex: 1; }
+  .deal .row1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .deal .company { font-size: 17px; font-weight: 700; }
+  .deal .amount {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 2px 10px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  .deal .desc { font-size: 14px; color: #444; margin-bottom: 8px; }
+  .deal .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .deal .tag {
+    font-size: 11px;
+    color: var(--sub);
+    background: #f2efe9;
+    border: 1px solid var(--line);
+    padding: 2px 8px;
+    border-radius: 12px;
+  }
+
+  footer {
+    margin-top: 40px;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+    font-size: 12.5px;
+    color: var(--sub);
+  }
+  footer h3 {
+    font-size: 13px;
+    color: var(--ink);
+    margin: 0 0 10px;
+    letter-spacing: 1px;
+  }
+  footer ul { margin: 0 0 16px; padding-left: 18px; }
+  footer li { margin-bottom: 5px; }
+  footer a { color: var(--accent); text-decoration: none; word-break: break-all; }
+  footer a:hover { text-decoration: underline; }
+  footer .disclaimer {
+    background: #f7f4ef;
+    border: 1px solid var(--line);
+    padding: 12px 16px;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 600px) {
+    header.masthead h1 { font-size: 26px; }
+    .stat-grid { grid-template-columns: repeat(2, 1fr); }
+    .deal { flex-direction: column; }
   }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<header class="masthead">
-  <div class="kicker">Global Tech Investment Daily</div>
-  <h1 class="title">每日科技投资动态</h1>
-  <div class="dateline">
-    <span>2026年9月16日 星期三</span>
-    <span>覆盖窗口：9月15日–16日</span>
-    <span>来源：TechStartups · Reuters · 投资界 · 36氪 · SCMP</span>
-  </div>
-</header>
-
-<h2 class="sec">今日概览</h2>
-<div class="card overview">
-  <p>过去 24–48 小时，全球创投资金继续向「AI 的物理层与约束层」倾斜。投资人不再只为模型本身付费，而是为模型跑得起来、用得进去所依赖的东西付费——推理芯片、光互连、内存、制造数据、真实驾驶数据、科研 IP 与企业工作流。</p>
-  <p>今日最大单笔来自中国：字节跳动分拆的 AI 制药公司 <strong>Anew Labs</strong> 完成 2.9 亿美元首轮外部融资，估值 15 亿美元，红杉中国（HSG）、IDG 资本、高瓴领投，创下今年 AI 制药最大融资。美国方面，<strong>Factory</strong> 以 50 亿美元估值募资 2 亿美元，黑石、Khosla、红杉同时在列；<strong>Profound</strong> 由红杉与凯鹏华盈（Kleiner Perkins）联合领投 1.8 亿美元。欧洲则由三星领投的荷兰 AI 芯片公司 <strong>EUCLYD</strong> 拿下逾 2 亿欧元 A 轮。</p>
-  <p>结构性特征有三：一是种子轮金额异常之大（TypeSafe AI 4000 万美元、Noetive 4100 万美元、Apex Intelligence 近 4 亿元人民币天使轮）；二是 CVC 与产业资本深度介入（三星、Salesforce Ventures、丰田系 Woven Capital、汇丰、中信金石）；三是中国项目在硬科技与 AI4S 上密集出手，上海国投、深创投等国资平台频繁领投。</p>
-  <div class="stats">
-    <div class="stat"><b>$2.9亿</b><small>今日最大单笔（Anew Labs）</small></div>
-    <div class="stat"><b>$50亿</b><small>今日最高估值（Factory）</small></div>
-    <div class="stat"><b>10+</b><small>亿元级以上交易</small></div>
-    <div class="stat"><b>6 / 10</b><small>AI 直接相关占比</small></div>
-  </div>
-</div>
-
-<h2 class="sec">今日最值得关注</h2>
-<div class="spotlight">
-  <div class="spot-head">SPOTLIGHT · 重点深挖</div>
-  <div class="spot-body">
-    <h3>Anew Labs（安诺实验室）</h3>
-    <div class="spot-sub">字节跳动 AI 制药业务分拆独立 · 首轮外部融资 2.9 亿美元 · 估值 15 亿美元 · 上海</div>
-
-    <div class="grid">
-      <div class="cell"><b>$2.9亿</b><small>本轮融资额</small></div>
-      <div class="cell"><b>$15亿</b><small>投后估值</small></div>
-      <div class="cell"><b>$2.9亿</b><small>累计对外披露融资</small></div>
-      <div class="cell"><b>56%</b><small>字节跳动融资后持股</small></div>
+  <header class="masthead">
+    <div class="eyebrow">Daily Tech Investment Brief</div>
+    <h1>每日科技投资动态</h1>
+    <div class="meta">
+      <span>📅 <strong>2026年9月20日</strong>（星期日）</span>
+      <span>🕐 覆盖过去24–48小时全球科技创投动态</span>
+      <span>📰 来源：TechCrunch · Crunchbase News · TechStartups · 腾讯新闻 · 凤凰网科技 等</span>
     </div>
+  </header>
 
-    <h4>公司做什么</h4>
-    <p>Anew Labs 脱胎于字节跳动 2021 年组建的内部 AI for Science（AI4S）团队，2026 年 6 月启动分拆与独立融资，约 50 名核心人员连同技术栈与早期管线一并划转至新公司。总部位于上海，并在旧金山、新加坡设点。</p>
-    <p>它不是「卖 AI 工具给药企」的路线，而是用自研 AI 方法自己做药。团队 2025 年发布生物分子结构预测模型 <strong>Protenix</strong> 与 <strong>Seedfold</strong>，2026 年迭代至 v1/v2，并开发了蛋白结合体设计工具 <strong>PXDesign</strong>；今年 3 月又推出与清华大学合作、基于逾 500 万个生物分子复合物训练的生成式框架 <strong>AnewOmni</strong>。围绕动态结构预测、全原子分子生成、自由能计算、合成可行性与虚拟细胞，公司陆续发表了 AnewSampling、AnewFEP、AnewSynth、scNext 等工作。</p>
+  <section id="overview">
+    <h2 class="section-title">今日概览</h2>
+    <div class="overview-card">
+      <p>本轮统计周期内，<strong>AI 基础设施</strong>再度成为全球创投市场的绝对主角：美国AI云服务商 <strong>Crusoe</strong> 完成 <strong>39亿美元</strong> D轮融资，投后估值达 <strong>309亿美元</strong>，Nvidia、Founders Fund、GIC、卡塔尔投资局等悉数在列，是本周期全球最大单笔交易。</p>
+      <p>中国市场同样活跃：港股上市大模型公司<strong>智谱</strong>通过H股配售与可转债合计募资约 <strong>50亿美元</strong>；国产RISC-V AI芯片公司 <strong>EVAS Intelligence（衍芯智能）</strong>完成约 <strong>20亿元人民币</strong>融资，估值达150亿元；推理云平台<strong>硅基流动</strong>年内累计股权融资已近29亿元，"国家队"基金持续加码AI算力与模型底座。</p>
+      <p>此外，太空基础设施、企业级开源大模型、跨境支付等赛道亦有多笔重要交易，红杉中国、Vista Equity Partners、阿里巴巴、腾讯等知名机构均现身其中。</p>
+    </div>
+  </section>
 
-    <h4>融资历程</h4>
+  <section id="highlight">
+    <h2 class="section-title">今日最值得关注</h2>
+    <div class="highlight-card">
+      <div class="highlight-head">
+        <div>
+          <span class="tag">HIGHLIGHT</span>
+          <span class="company" style="margin-left:10px;">Crusoe（美国AI基础设施公司）</span>
+        </div>
+        <div style="font-size:13px;opacity:0.85;">Series F · 2026年9月17日宣布</div>
+      </div>
+      <div class="highlight-body">
+        <div class="desc">
+          Crusoe 是一家总部位于美国丹佛的垂直整合型AI基础设施公司，业务覆盖能源开发、数据中心建设、模块化数据中心制造（Crusoe Spark）以及自有的Crusoe Cloud GPU云服务。公司2018年从利用"搁浅能源"进行加密货币挖矿起家，后全面转型聚焦AI算力基础设施，目标是"从电力到token"全链路自主可控，服务全球最具野心的AI模型开发者。
+        </div>
+        <div class="stat-grid">
+          <div class="stat-cell"><div class="label">本轮融资额</div><div class="value">39亿美元</div></div>
+          <div class="stat-cell"><div class="label">投后估值</div><div class="value">309亿美元</div></div>
+          <div class="stat-cell"><div class="label">累计融资额</div><div class="value">约53亿美元</div></div>
+          <div class="stat-cell"><div class="label">总合同金额</div><div class="value">超1400亿美元</div></div>
+        </div>
+
+        <h4>历史融资情况</h4>
+        <ul>
+          <li><strong>本轮（2026年9月）：</strong>Series F，融资39亿美元，投后估值309亿美元；领投方包括 Atreides Management、Mubadala Capital（阿布扎比穆巴达拉资本）、Valor Equity Partners；参投方包括 Founders Fund、GIC（新加坡政府投资公司）、Nvidia、Qatar Investment Authority（卡塔尔投资局）、Radical Ventures、TPG 等。</li>
+          <li><strong>上一轮（2025年12月）：</strong>融资约13.7亿美元，估值约100亿美元。</li>
+          <li>两轮合计公开披露融资额约53亿美元，短短9个月估值增长约3倍。</li>
+        </ul>
+
+        <h4>业务发展情况</h4>
+        <ul>
+          <li>总合同价值（TCV）已超过 1400 亿美元，毛签约算力容量超过 6 吉瓦（GW），其中约 1 吉瓦已投入运营。</li>
+          <li>Crusoe Cloud 云服务预订量 2026 年同比增长超过 20 倍。</li>
+          <li>全球员工超过 1800 人，业务遍及五个国家。</li>
+          <li>新融资将用于现有项目建设、"AI工厂"超大规模园区扩建，以及模块化数据中心Crusoe Spark的持续部署。</li>
+        </ul>
+
+        <div class="quote">
+          "我们要做到从电子（electrons）到token的全链路可控"——Crusoe 首席执行官 Chase Lochmiller 谈公司战略定位。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="deals">
+    <h2 class="section-title">重点交易一览（按重要性排序）</h2>
+    <div class="deal-list">
+
+      <div class="deal">
+        <div class="rank">01</div>
+        <div class="content">
+          <div class="row1">
+            <span class="company">Crusoe</span>
+            <span class="amount">39亿美元</span>
+          </div>
+          <div class="desc">AI基础设施平台，涵盖数据中心、GPU云算力与托管服务；投后估值309亿美元。</div>
+          <div class="tags">
+            <span class="tag">Series F</span>
+            <span class="tag">Nvidia</span>
+            <span class="tag">Founders Fund</span>
+            <span class="tag">GIC</span>
+            <span class="tag">卡塔尔投资局</span>
+            <span class="tag">美国</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="deal">
+        <div class="rank">02</div>
+        <div class="content">
+          <div class="row1">
+            <span class="company">智谱（Zhipu AI，02513.HK）</span>
+            <span class="amount">约50亿美元</span>
+          </div>
+          <div class="desc">"全球大模型第一股"，通过H股配售（约20亿美元）与可转债发行（约30亿美元）合计募资；2026上半年MaaS业务收入同比增长2736%。</div>
+          <div class="tags">
+            <span class="tag">H股配售+可转债</span>
+            <span class="tag">数百家全球机构</span>
+            <span class="tag">中国</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="deal">
+        <div class="rank">03</div>
+        <div class="content">
+          <div class="row1">
+            <span class="company">EVAS Intelligence（衍芯智能）</span>
+            <span class="amount">约20亿元人民币</span>
+          </div>
+          <div class="desc">基于RISC-V架构的云端AI芯片设计公司，面向数据中心推理场景；投后估值约150亿元人民币。</div>
+          <div class="tags">
+            <span class="tag">华泰创新</span>
+            <span class="tag">东方富海</span>
+            <span class="tag">国产芯片</span>
+            <span class="tag">中国</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="deal">
+        <div class="rank">04</div>
+        <div class="content">
+          <div class="row1">
+            <span class="company">Impulse Space</span>
+            <span class="amount">3.08亿美元</span>
+          </div>
+          <div class="desc">在轨物流与太空运输基础设施公司；本轮为D轮扩展融资，投后估值54亿美元。</div>
+          <div class="tags">
+            <span class="tag">Series D扩展</span>
+            <span class="tag">太空科技</span>
+            <span class="tag">美国</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="deal">
+        <div class="rank">05</div>
+        <div class="content">
+          <div class="row1">
+            <span class="company">Arcee AI</span>
+            <span class="amount">超1.5亿美元</span>
+          </div>
+          <div class="desc">面向企业的开源权重基础大模型公司；本轮由Vista Equity Partners领投，投前估值10亿美元。</div>
+          <div class="tags">
+            <span class="tag">Series B</span>
+            <span class="tag">Vista Equity Partners</span>
+            <span class="tag">Hitachi</span>
+            <span class="tag">美国</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="deal">
+        <div class="rank">06</div>
+        <div class="content">
+          <div class="row1">
+            <span class="company">UniPat</span>
+            <span class="amount">3亿美元</span>
+          </div>
+          <div class="desc">前阿里实习生创立的AI模型训练与基准测试公司；阿里巴巴领投，腾讯跟投，投后估值约25亿美元。</div>
+          <div class="tags">
+            <span class="tag">A轮</span>
+            <span class="tag">阿里巴巴</span>
+            <span class="tag">腾讯</span>
+            <span class="tag">中国</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="deal">
+        <div class="rank">07</div>
+        <div class="content">
+          <div class="row1">
+            <span class="company">硅基流动（SiliconFlow）</span>
+            <span class="amount">2026年累计近29亿元</span>
+          </div>
+          <div class="desc">AI推理云服务平台，提供API、专属实例及企业级MaaS方案；本轮为B+轮二期与C轮，"国家队"基金及产业资本共23家机构参与。</div>
+          <div class="tags">
+            <span class="tag">B+轮/C轮</span>
+            <span class="tag">中国互联网投资基金</span>
+            <span class="tag">中国移动链长基金</span>
+            <span class="tag">中国</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="deal">
+        <div class="rank">08</div>
+        <div class="content">
+          <div class="row1">
+            <span class="company">中科国生</span>
+            <span class="amount">6000万元人民币</span>
+          </div>
+          <div class="desc">研发20-50兆瓦级轻型燃气轮机，面向工业发电场景。</div>
+          <div class="tags">
+            <span class="tag">Series C</span>
+            <span class="tag">红杉中国</span>
+            <span class="tag">JIC投资</span>
+            <span class="tag">中国</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="deal">
+        <div class="rank">09</div>
+        <div class="content">
+          <div class="row1">
+            <span class="company">Mantic</span>
+            <span class="amount">2500万美元</span>
+          </div>
+          <div class="desc">伦敦AI预测初创公司，在2026夏季Metaculus预测锦标赛中战胜全部人类选手，面向对冲基金与政府机构提供预测服务。</div>
+          <div class="tags">
+            <span class="tag">种子轮</span>
+            <span class="tag">Radical Ventures</span>
+            <span class="tag">微软M12</span>
+            <span class="tag">英国</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="deal">
+        <div class="rank">10</div>
+        <div class="content">
+          <div class="row1">
+            <span class="company">Ryft</span>
+            <span class="amount">2000万英镑</span>
+          </div>
+          <div class="desc">多方支付基础设施服务商，覆盖商户接入与跨境结算；为2026年英国最大支付领域B轮融资。</div>
+          <div class="tags">
+            <span class="tag">Series B</span>
+            <span class="tag">Gresham House Ventures</span>
+            <span class="tag">英国</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <h3>信息来源</h3>
     <ul>
-      <li><strong>2021 年－2026 年 6 月</strong>：作为字节跳动内部部门运营，由字节全额投入，无外部融资，负责人刘凯（VC 背景）。</li>
-      <li><strong>2026 年 6 月</strong>：字节跳动启动 AI 制药业务分拆，开始独立融资。</li>
-      <li><strong>2026 年 9 月 16 日</strong>：完成 2.9 亿美元首轮外部融资，投后估值 15 亿美元。HSG（原红杉中国）、IDG 资本、高瓴投资领投，五源资本（5Y Capital）联合领投；高榕创投、云锋基金系 Primavera Venture Partners、博裕资本、上海未来产业基金参与，SBP Group 作为战略投资方进入。</li>
-      <li><strong>累计对外披露融资</strong>：2.9 亿美元（此前均为字节内部投入，金额未披露）。</li>
+      <li><a href="https://techstartups.com/2026/09/17/crusoe-raises-3-9-billion-at-30-9-billion-valuation-as-ai-infrastructure-demand-surges/" target="_blank">TechStartups — Crusoe raises $3.9 billion at $30.9 billion valuation (2026-09-17)</a></li>
+      <li><a href="https://techstartups.com/2026/09/18/startup-funding-news-today-september-18-2026-arcos-crusoe-dtcpay-evas-intelligence-ryft-more/" target="_blank">TechStartups — Startup Funding News Today, September 18, 2026</a></li>
+      <li><a href="https://techstartups.com/2026/09/16/venture-capital-startup-funding-roundup-september-16-2026-andreessen-horowitz-index-ventures-general-catalyst-vista-equity-more/" target="_blank">TechStartups — Venture Capital & Startup Funding Roundup, September 16, 2026</a></li>
+      <li><a href="https://techstartups.com/2026/09/18/british-ai-startup-mantic-raises-25m-to-build-superhuman-ai-forecasting-after-metaculus-win/" target="_blank">TechStartups — British AI startup Mantic raises $25M (2026-09-18)</a></li>
+      <li><a href="https://news.qq.com/rain/a/20260915A051MI00" target="_blank">腾讯新闻 — 大模型第一股，完成约50亿美元融资（智谱，2026-09-15）</a></li>
+      <li><a href="https://news.17173.com/content/09202026/140411829.shtml" target="_blank">17173 / 凤凰网 — 硅基流动完成B+轮二期与C轮融资（2026-09-20）</a></li>
+      <li><a href="https://news.qq.com/rain/a/20260910A075JF00" target="_blank">腾讯新闻 — 阿里巴巴据悉领投AI初创UniPat，估值25亿美元（2026-09-10）</a></li>
+      <li><a href="https://news.crunchbase.com/venture/biggest-funding-rounds-ai-energy-biotech-joulent/" target="_blank">Crunchbase News — The Week's 10 Biggest Funding Rounds</a></li>
     </ul>
-
-    <h4>业务进展与财务状况</h4>
-    <ul>
-      <li><strong>管线阶段</strong>：目前共 <strong>4 条药物管线</strong>，早期管线方向包括 IL-17（AA/AF/FF）与 IL-4R。<strong>尚无候选药物进入临床试验</strong>，公司处于临床前阶段。</li>
-      <li><strong>研发里程碑</strong>：2026 年 4 月，生物学负责人 Chris Li 在波士顿美国免疫学家协会（AAI）年会上首次披露 IL-17 小分子项目，据称实现全球首次用小分子同时阻断 IL-17 家族三种二聚体（AA/AF/FF）——这一靶点长期被制药业视为「不可成药」。</li>
-      <li><strong>营收与盈利</strong>：公开信息中<strong>未披露任何营收或盈利数据</strong>。作为临床前 AI 制药公司，其估值主要反映科研团队、模型能力与 IP，而非现金流。</li>
-      <li><strong>治理结构</strong>：分拆后字节跳动保留 56% 股权，但公司拥有独立股东结构与按药物研发周期设计的治理机制，而非消费互联网公司的节奏。</li>
-    </ul>
-
-    <h4>为什么值得关注</h4>
-    <p>15 亿美元估值为「临床前 AI 制药公司」定出了一个新的市场标尺——在尚无一款药进入临床的情况下，首轮就拿到 2.9 亿美元，是相当激进的一笔押注。它同时也是互联网大厂 AI4S 团队产业化的一次样本：技术、人、资产整体出表，接受外部资本定价。风险同样明确：AI 生成的分子最终仍要通过毒理、临床与监管的检验，计算上的优雅不能消除生物学上的失败。</p>
-    <p style="color:var(--muted);font-size:13px;margin-top:14px;">注：本轮融资由路透社援引两位知情人士报道，字节跳动与投资方未公开宣布，双方未回应置评请求。</p>
-  </div>
-</div>
-
-<h2 class="sec">今日交易榜（按重要性排序）</h2>
-
-<div class="item">
-  <div class="item-top"><span class="rank">1</span><h3>Anew Labs — 字节跳动分拆 AI 制药</h3><span class="amt">$2.9亿</span></div>
-  <div class="meta">首轮外部融资 · 估值 $15 亿 · 上海 · 2026-09-16 · 领投：HSG（红杉中国）、IDG 资本、高瓴；联合领投：五源资本</div>
-  <p>字节跳动将其 AI4S 药物发现业务整体分拆独立，融资后仍持股 56%。公司拥有 Protenix / PXDesign / AnewOmni 等自研模型与 4 条临床前管线，尚无药物进入临床。今年迄今全球 AI 制药最大单笔融资。</p>
-  <div class="tags"><span class="tag hot">AI 制药</span><span class="tag">大厂分拆</span><span class="tag">红杉/高瓴/IDG</span><span class="tag">中国</span></div>
-</div>
-
-<div class="item">
-  <div class="item-top"><span class="rank">2</span><h3>Factory — 企业级 AI 编程智能体</h3><span class="amt">$2亿</span></div>
-  <div class="meta">成长轮 · 估值 $50 亿（4 月为 $15 亿）· 累计融资 &gt;$4 亿 · 旧金山 · 2026-09-15 · 投资方：黑石、Khosla Ventures、红杉资本、Insight Partners、NEA、Clearlake 等，天使包括 Brad Gerstner、Marc Benioff</div>
-  <p>构建让 AI 编程智能体在企业治理框架下完成规划、编写、测试与维护软件的系统，支持云端、本地及气隙（air-gapped）部署。估值五个月内翻逾三倍，是本轮名单中估值最高的一笔。</p>
-  <div class="tags"><span class="tag hot">AI 编程智能体</span><span class="tag">企业软件</span><span class="tag">红杉/Khosla/黑石</span><span class="tag">美国</span></div>
-</div>
-
-<div class="item">
-  <div class="item-top"><span class="rank">3</span><h3>EUCLYD — 挑战英伟达的欧洲 AI 推理芯片</h3><span class="amt">€2亿+</span></div>
-  <div class="meta">A 轮 · 埃因霍温（荷兰）· 2026-09-15 · 联合领投：三星、Somerset Capital Partners、EQT 管理的 Scaleup Europe Fund、Innovation Industries；EIFO、imec.xpand、BOM、Quadri 参与</div>
-  <p>不做更大的模型，而是攻击模型运行的成本——算力、内存带宽、电力与数据中心占地。路线图包括可编程 ASIC 平台 craftwerk 及 craftwerk station 系统。前 ASML 总裁兼 CEO Peter Wennink 出任董事长，为一家 A 轮公司带来罕见的半导体运营分量。</p>
-  <div class="tags"><span class="tag hot">AI 芯片</span><span class="tag">推理经济学</span><span class="tag">三星 CVC</span><span class="tag">欧洲</span></div>
-</div>
-
-<div class="item">
-  <div class="item-top"><span class="rank">4</span><h3>Profound — 品牌在 AI 答案引擎中的可见度</h3><span class="amt">$1.8亿</span></div>
-  <div class="meta">D 轮 · 估值 $18 亿 · 累计融资 &gt;$3.35 亿 · 纽约 · 2026-09-15 · 联合领投：红杉资本、凯鹏华盈（Kleiner Perkins）；Lightspeed、Khosla Ventures、Saga Ventures 等参与</div>
-  <p>帮助品牌了解并优化自己在 ChatGPT、Gemini、Perplexity 等 AI 答案引擎中的呈现方式，并以智能体跨付费与自然 AI 搜索创建、更新和协调营销内容。距上一轮 9600 万美元 C 轮不足七个月。</p>
-  <div class="tags"><span class="tag hot">AI 搜索营销</span><span class="tag">红杉/KP 联合领投</span><span class="tag">美国</span></div>
-</div>
-
-<div class="item">
-  <div class="item-top"><span class="rank">5</span><h3>CADDi — 全球制造业的 AI 数据层</h3><span class="amt">¥177亿日元</span></div>
-  <div class="meta">D 轮 · 估值 ¥1820 亿日元 · 累计股权融资 ¥363.1 亿日元 · 东京 · 2026-09-16 · 新投资方：Moore Strategic Ventures、Coreline Ventures、Recruit HR Tech Fund、丰田系 Woven Capital、Salesforce Ventures；Atomico、Globis 等跟投</div>
-  <p>从零部件采购平台转型为制造业 AI 与数据平台，用 AI 结构化图纸、规格、采购历史与生产记录，让工程、采购、生产人员与 AI 智能体共享同一上下文。公司称软件已部署于 22 个国家，被日经 225 中过半离散制造企业使用。</p>
-  <div class="tags"><span class="tag hot">制造业 AI</span><span class="tag">Salesforce/丰田 CVC</span><span class="tag">日本</span></div>
-</div>
-
-<div class="item">
-  <div class="item-top"><span class="rank">6</span><h3>哈啰 Robotaxi（上海钥匙智能）— L4 自动驾驶</h3><span class="amt">约$1亿</span></div>
-  <div class="meta">轮次未披露 · 投后估值近 $30 亿 · 上海 · 2026-09-16 · 领投：上海国投先导基金；闵金投资、创世伙伴资本参与</div>
-  <p>2025 年 6 月由哈啰、蚂蚁集团、宁德时代相关主体共同组建，阿里巴巴其后战略投资。本轮资金将投向万卡级 GPU 算力平台、端到端自动驾驶模型与数据供应链。首款自研车型 HR1 已于今夏进入量产交付。</p>
-  <div class="tags"><span class="tag hot">Robotaxi</span><span class="tag">蚂蚁/宁德/阿里生态</span><span class="tag">国资领投</span><span class="tag">中国</span></div>
-</div>
-
-<div class="item">
-  <div class="item-top"><span class="rank">7</span><h3>Delos Data — GPU 间数据搬运的专用硅</h3><span class="amt">$1亿+</span></div>
-  <div class="meta">轮次未披露 · 帕洛阿尔托 · 2026-09-15 · 投资方：Matrix、Playground Global、Socratic Partners、Capricorn Technology Impact Fund、Matter Venture Partners、IAG 等</div>
-  <p>由数据中心芯片老兵创立，打造名为「Nonstop AI」的软件、系统与接口硅，解决 GPU、CPU、加速器、内存与存储之间的数据搬运效率问题。是本轮「为 AI 瓶颈而非 AI 本身买单」逻辑最直接的体现之一。</p>
-  <div class="tags"><span class="tag">AI 网络</span><span class="tag">数据中心基础设施</span><span class="tag">美国</span></div>
-</div>
-
-<div class="item">
-  <div class="item-top"><span class="rank">8</span><h3>箭元科技 Space Epoch — 可回收液氧甲烷火箭</h3><span class="amt">B轮累计&gt;23亿元</span></div>
-  <div class="meta">B++ 轮（本轮金额未披露）· 北京 · 2026-09-16 · B 系列投资方：IDG 资本、混沌投资、杭州资本、松源创投、和达投资、凌岚资本、华富资本、毅达资本等</div>
-  <p>研制不锈钢液氧甲烷可重复使用运载火箭「元行者一号」。资金用于首次入轨任务、一子级回收验证、商业交付能力与塔捕获工程。公司称火箭将于 2026 年底具备首飞条件，2027 年提供商业发射服务——均为公司目标而非已完成里程碑。近六个月 B 系列融资合计超 23 亿元人民币。</p>
-  <div class="tags"><span class="tag">商业航天</span><span class="tag">可回收火箭</span><span class="tag">IDG 资本</span><span class="tag">中国</span></div>
-</div>
-
-<div class="item">
-  <div class="item-top"><span class="rank">9</span><h3>Apex Intelligence — 让 AI 去研究 AI</h3><span class="amt">近4亿元</span></div>
-  <div class="meta">天使轮 + 天使+轮 · 中国 · 2026-09-16 · 天使轮联合领投：IDG 资本、星连资本、晶泰科技（XtalPi）；天使+轮联合领投：中关村科学城基金、深创投、上海未来产业基金</div>
-  <p>成立于 2026 年 6 月，创始人陈永超为清华大学人工智能研究院 27 岁助理教授，方向是递归自我改进（RSI）——让 AI 参与改进 AI 本身所需的研究。公司称其研究系统可从选题、方法设计、代码生成、实验一直做到论文写作。成立不到三个月即募得近 4 亿元，是今日最纯粹的一笔信念型押注。</p>
-  <div class="tags"><span class="tag hot">AI for Science</span><span class="tag">递归自我改进</span><span class="tag">超大天使轮</span><span class="tag">中国</span></div>
-</div>
-
-<div class="item">
-  <div class="item-top"><span class="rank">10</span><h3>Noetive — 工厂与物流的工业世界模型</h3><span class="amt">$4100万</span></div>
-  <div class="meta">种子轮 · 美国 · 2026-09-16 · 领投：Eclipse；Craft Ventures、Westly Group，以及 Meta CTO Andrew Bosworth、Airbnb CTO Ahmed Al-Dahle 等个人投资者参与</div>
-  <p>由前 Meta 生成式 AI 高管 Amir Frenkel 与前 Netlify 产品高管 Dan Barak 创立，构建理解工厂、物流场站与建筑工地空间与运营行为的工业世界模型，并研发通用传感吊舱采集实时物理数据。早期客户 Steuben Foods 向《华尔街日报》表示其软件可使现有产线产能提升 10%–15%（客户估算，未经独立验证）。</p>
-  <div class="tags"><span class="tag">工业 AI</span><span class="tag">世界模型</span><span class="tag">巨型种子轮</span><span class="tag">美国</span></div>
-</div>
-
-<div class="card" style="margin-top:18px;">
-  <strong style="font-size:14px;">同期其他值得留意的交易：</strong>
-  <p style="margin:8px 0 0;font-size:14.5px;color:var(--muted);">
-    TypeSafe AI（旧金山，$4000 万种子轮，DCVC 领投，前 OpenAI 研究员创立，首个模型 Jev 面向机器而非对话）；Polaris Electro-Optics（$5000 万 B 轮，Walden Catalyst 领投，电光调制器）；富勒科技 Fuller Technology（上海，3.5 亿元 B 轮，深创投领投，经纬中国参与，供应链软件）；晶精科技 Jinjing / Goldenscope（北京，3 亿元 B 轮，电子束光刻与电镜设备）；AIUC（$4000 万 A 轮，Ribbit Capital 领投，AI 智能体认证与保险）；TeRAM（$3700 万种子轮，3D SRAM）；Evvy（$4000 万 B 轮，女性健康精准诊断）。
-  </p>
-</div>
-
-<footer>
-  <h3>信息来源</h3>
-  <ul>
-    <li><a href="https://techstartups.com/2026/09/16/startup-funding-news-today-september-16-2026-anew-labs-caddi-space-epoch-typesafe-ai-more/">TechStartups — Startup Funding News Today, September 16, 2026: Anew Labs, CADDi, Space Epoch, TypeSafe AI &amp; More</a></li>
-    <li><a href="https://techstartups.com/2026/09/15/startup-funding-news-today-september-15-2026-euclyd-yincheng-intelligence-nutshell-therapeutics-yoom-more/">TechStartups — Startup Funding News Today, September 15, 2026: EUCLYD, Yincheng Intelligence, Nutshell Therapeutics, Yoom &amp; More</a></li>
-    <li><a href="https://techstartups.com/2026/09/15/venture-capital-startup-funding-roundup-september-15-2026-alumni-ventures-lightscape-partners-kleiner-perkins-khosla-ventures-sequoia-capital-more/">TechStartups — Venture Capital &amp; Startup Funding Roundup, September 15, 2026: Alumni Ventures, Kleiner Perkins, Khosla Ventures, Sequoia Capital &amp; More</a></li>
-    <li><a href="https://1027wbow.com/2026/09/16/bytedance-completes-290-million-fundraising-for-ai-drug-unit-after-its-spin-off-sources-say/">Reuters — ByteDance completes $290 million fundraising for AI drug unit after its spin-off, sources say</a></li>
-    <li><a href="https://news.pedaily.cn/202609/569128.shtml">投资界 — 首发｜Anew Labs 首轮融资 2.9 亿美元，今年 AI 制药最大融资诞生</a></li>
-    <li><a href="https://36kr.com/p/3846956646124036">36氪 — 独家｜字节 AI 制药开启拆分融资，AI4S 进入产业化阶段</a></li>
-    <li><a href="https://www.scmp.com/tech/article/3352032/bytedances-drug-unit-presents-ai-designed-therapies-global-conferences">South China Morning Post — ByteDance's drug unit presents AI-designed therapies at global conferences</a></li>
-    <li><a href="https://thenextweb.com/news/bytedance-anew-labs-290m-ai-drug-discovery">The Next Web — ByteDance's AI drug unit Anew Labs raises $290M at $1.5B valuation</a></li>
-    <li><a href="https://techstartups.com/2026/09/15/samsung-backs-dutch-ai-chip-startup-euclyd-in-231m-funding-round-to-challenge-nvidia/">TechStartups — Samsung backs Dutch AI chip startup EUCLYD in $231M funding round to challenge Nvidia</a></li>
-  </ul>
-
-  <div class="disclaimer">
-    <strong>免责声明：</strong>本页面内容由 AI 依据公开报道自动整理生成，覆盖 2026 年 9 月 15 日至 16 日的公开融资信息，仅供信息参考，不构成任何投资建议、要约或推荐。文中融资金额、估值、营收、产能、性能等数据多为公司自述或媒体援引知情人士消息，部分交易（如 Anew Labs）未获当事方正式公告，未经独立审计或核实，可能存在偏差、延迟或后续更正。汇率换算与中文公司名称为便于阅读的近似处理。读者在据此作出任何决策前，应自行核实原始来源。
-    <br><br>
-    生成时间：2026 年 9 月 16 日
-  </div>
-</footer>
+    <div class="disclaimer">
+      <strong>免责声明：</strong>本页面内容基于公开新闻报道自动汇总生成，仅供参考，不构成任何投资建议。文中金额、估值等数据以原始报道为准，如有出入请以官方披露信息为准。
+    </div>
+  </footer>
 
 </div>
 </body>
