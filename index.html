@@ -1,488 +1,485 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日科技投资动态 | 2026年9月23日</title>
+<title>每日科技投资动态</title>
 <style>
   :root{
-    --accent:#c8401a;
-    --accent-dark:#9c3013;
-    --ink:#1a1a1a;
-    --sub:#5c5c5c;
-    --line:#e4e0da;
-    --paper:#f6f3ee;
+    --paper:#f6f2e9;
     --card:#ffffff;
+    --ink:#201c17;
+    --ink-soft:#6c6255;
+    --line:#e2dac8;
+    --line-strong:#c9bea3;
+    --accent:#c8401a;
+    --accent-ink:#ffffff;
+    --tag-bg:#f1e9d8;
+    --tag-ink:#7a5a2e;
+    --rule:#201c17;
+    --shadow:0 1px 2px rgba(32,28,23,.06);
+    color-scheme:light;
   }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#15130f;
+      --card:#211d17;
+      --ink:#ece5d6;
+      --ink-soft:#aa9f89;
+      --line:#3a3324;
+      --line-strong:#4d4530;
+      --accent:#e2703c;
+      --accent-ink:#1c1006;
+      --tag-bg:#2c2618;
+      --tag-ink:#e0b985;
+      --rule:#ece5d6;
+      --shadow:0 1px 2px rgba(0,0,0,.4);
+      color-scheme:dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#15130f;
+    --card:#211d17;
+    --ink:#ece5d6;
+    --ink-soft:#aa9f89;
+    --line:#3a3324;
+    --line-strong:#4d4530;
+    --accent:#e2703c;
+    --accent-ink:#1c1006;
+    --tag-bg:#2c2618;
+    --tag-ink:#e0b985;
+    --rule:#ece5d6;
+    --shadow:0 1px 2px rgba(0,0,0,.4);
+    color-scheme:dark;
+  }
+
   *{box-sizing:border-box;}
   body{
     margin:0;
     background:var(--paper);
     color:var(--ink);
-    font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",-apple-system,BlinkMacSystemFont,sans-serif;
+    font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",-apple-system,BlinkMacSystemFont,Arial,sans-serif;
     line-height:1.6;
+    padding-inline:16px;
+    padding-block:28px 40px;
   }
-  .wrap{max-width:900px;margin:0 auto;padding:0 20px 60px;}
+  .wrap{max-width:760px;margin:0 auto;}
 
-  header.masthead{
-    border-bottom:4px solid var(--ink);
-    padding:28px 0 14px;
-    margin-bottom:28px;
-  }
-  header.masthead .kicker{
+  /* ---------- 头版 masthead ---------- */
+  .masthead{text-align:center;padding-bottom:14px;}
+  .kicker{
     font-size:12px;
-    letter-spacing:3px;
+    letter-spacing:.28em;
     color:var(--accent);
     font-weight:700;
-    text-transform:uppercase;
-    margin-bottom:6px;
-  }
-  header.masthead h1{
-    font-size:34px;
     margin:0 0 10px;
-    font-weight:800;
-    letter-spacing:1px;
   }
-  header.masthead .meta{
+  .masthead h1{
+    margin:0;
+    font-size:34px;
+    font-weight:900;
+    letter-spacing:.04em;
+    line-height:1.2;
+  }
+  .masthead-meta{
+    margin-top:12px;
     display:flex;
-    flex-wrap:wrap;
-    justify-content:space-between;
-    align-items:baseline;
-    font-size:13px;
-    color:var(--sub);
-    border-top:1px solid var(--line);
-    padding-top:10px;
-  }
-  header.masthead .meta span strong{color:var(--ink);}
-
-  section{margin-bottom:34px;}
-  h2.section-title{
-    font-size:15px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    color:var(--accent);
-    font-weight:800;
-    margin:0 0 14px;
-    padding-bottom:8px;
-    border-bottom:2px solid var(--ink);
-  }
-
-  .overview-card{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:4px;
-    padding:20px 24px;
-    box-shadow:0 1px 3px rgba(0,0,0,.04);
-  }
-  .overview-card p{margin:0 0 10px;font-size:14.5px;color:#333;}
-  .overview-card p:last-child{margin-bottom:0;}
-  .overview-stats{
-    display:flex;
-    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
     gap:10px;
-    margin-top:14px;
+    flex-wrap:wrap;
+    font-size:13px;
+    color:var(--ink-soft);
   }
-  .stat-pill{
-    background:var(--paper);
-    border:1px solid var(--line);
-    border-radius:20px;
-    padding:6px 14px;
-    font-size:12.5px;
-    color:var(--sub);
+  .masthead-meta .dot{opacity:.5;}
+  .rule-double{
+    border:none;
+    border-top:3px solid var(--rule);
+    border-bottom:1px solid var(--rule);
+    height:4px;
+    margin:16px 0 22px;
   }
-  .stat-pill b{color:var(--accent-dark);font-weight:800;}
 
-  /* Highlight card */
-  .highlight{
+  /* ---------- 概览 ---------- */
+  .overview{
+    font-size:15.5px;
+    color:var(--ink);
     background:var(--card);
     border:1px solid var(--line);
-    border-left:6px solid var(--accent);
-    border-radius:4px;
-    padding:26px 28px;
-    box-shadow:0 2px 8px rgba(0,0,0,.06);
+    border-radius:2px;
+    padding:16px 18px;
+    box-shadow:var(--shadow);
+    margin-bottom:26px;
   }
-  .highlight .tag-top{
+  .overview b{color:var(--accent);}
+  .section-label{
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.18em;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    margin:0 0 12px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .section-label::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--line-strong);
+  }
+
+  /* ---------- 头条 highlight ---------- */
+  .spotlight{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-top:4px solid var(--accent);
+    border-radius:2px;
+    box-shadow:var(--shadow);
+    padding:20px 20px 22px;
+    margin-bottom:30px;
+  }
+  .spotlight-tag{
     display:inline-block;
     background:var(--accent);
-    color:#fff;
-    font-size:11px;
-    letter-spacing:1.5px;
+    color:var(--accent-ink);
+    font-size:12px;
     font-weight:700;
-    padding:4px 10px;
-    border-radius:3px;
-    margin-bottom:12px;
+    letter-spacing:.12em;
+    padding:3px 10px;
+    border-radius:2px;
+    margin-bottom:10px;
   }
-  .highlight h3{
-    font-size:26px;
+  .spotlight h2{
     margin:0 0 4px;
-    font-weight:800;
+    font-size:24px;
+    font-weight:900;
+    line-height:1.3;
   }
-  .highlight .company-sub{
+  .spotlight .sub{
     font-size:13.5px;
-    color:var(--sub);
+    color:var(--ink-soft);
     margin-bottom:16px;
   }
-  .highlight .lede{
-    font-size:14.5px;
-    color:#2a2a2a;
-    margin-bottom:18px;
-  }
-  .data-grid{
+  .stat-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:1px;
     background:var(--line);
     border:1px solid var(--line);
-    border-radius:4px;
+    margin-bottom:18px;
+    border-radius:2px;
     overflow:hidden;
-    margin-bottom:20px;
   }
-  .data-cell{
+  .stat{
     background:var(--card);
-    padding:14px 12px;
+    padding:12px 10px;
     text-align:center;
   }
-  .data-cell .label{
-    font-size:11px;
-    color:var(--sub);
-    margin-bottom:6px;
-    letter-spacing:.5px;
-  }
-  .data-cell .value{
-    font-size:18px;
+  .stat .v{
+    font-size:19px;
     font-weight:800;
-    color:var(--accent-dark);
+    color:var(--accent);
+    font-variant-numeric:tabular-nums;
+    line-height:1.25;
   }
-  .highlight-block{margin-bottom:16px;}
-  .highlight-block h4{
-    font-size:13px;
-    letter-spacing:1px;
-    color:var(--ink);
-    margin:0 0 8px;
-    text-transform:uppercase;
-    font-weight:800;
-    border-bottom:1px solid var(--line);
-    padding-bottom:6px;
+  .stat .k{
+    font-size:11.5px;
+    color:var(--ink-soft);
+    margin-top:4px;
   }
-  .highlight-block p, .highlight-block ul{
+  @media (max-width:480px){
+    .stat-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  .spotlight h3{
     font-size:14px;
-    color:#333;
-    margin:0;
+    font-weight:700;
+    margin:18px 0 6px;
+    color:var(--ink);
   }
-  .highlight-block ul{padding-left:18px;}
-  .highlight-block li{margin-bottom:6px;}
-  .fund-history{width:100%;border-collapse:collapse;font-size:13px;margin-top:4px;}
-  .fund-history th,.fund-history td{
+  .spotlight p{
+    margin:0 0 4px;
+    font-size:14.5px;
+    color:var(--ink);
+  }
+  .table-scroll{overflow-x:auto;margin-top:8px;}
+  table.history{
+    border-collapse:collapse;
+    width:100%;
+    min-width:480px;
+    font-size:13px;
+  }
+  table.history th, table.history td{
+    border-bottom:1px solid var(--line);
+    padding:8px 10px;
     text-align:left;
-    padding:7px 8px;
+    white-space:nowrap;
+  }
+  table.history th{
+    color:var(--ink-soft);
+    font-weight:700;
+    font-size:12px;
+  }
+  table.history td:first-child, table.history th:first-child{padding-left:0;}
+
+  /* ---------- 新闻列表 ---------- */
+  .news-item{
+    display:flex;
+    gap:14px;
+    padding:16px 0;
     border-bottom:1px solid var(--line);
   }
-  .fund-history th{color:var(--sub);font-weight:700;font-size:12px;}
-  .fund-history td.amt{color:var(--accent-dark);font-weight:700;}
-
-  /* News list */
-  .news-list{display:flex;flex-direction:column;gap:14px;}
-  .news-item{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:4px;
-    padding:18px 20px;
-    display:flex;
-    gap:16px;
-    align-items:flex-start;
-  }
-  .news-rank{
-    flex:0 0 auto;
-    width:30px;
-    height:30px;
+  .news-item:first-child{padding-top:0;}
+  .rank{
+    flex:none;
+    width:28px;
+    height:28px;
     border-radius:50%;
-    background:var(--ink);
-    color:#fff;
+    border:1.5px solid var(--accent);
+    color:var(--accent);
     font-weight:800;
     font-size:13px;
     display:flex;
     align-items:center;
     justify-content:center;
+    font-variant-numeric:tabular-nums;
   }
   .news-body{flex:1;min-width:0;}
-  .news-head{
+  .news-top{
     display:flex;
-    flex-wrap:wrap;
+    justify-content:space-between;
     align-items:baseline;
-    gap:8px;
-    margin-bottom:6px;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:4px;
   }
-  .news-head .company{font-size:16.5px;font-weight:800;}
-  .news-head .amount{
+  .news-title{
+    font-size:16px;
+    font-weight:800;
+    color:var(--ink);
+  }
+  .news-amount{
     font-size:14px;
     font-weight:800;
-    color:#fff;
-    background:var(--accent);
-    padding:2px 9px;
-    border-radius:3px;
+    color:var(--accent);
+    white-space:nowrap;
+    font-variant-numeric:tabular-nums;
   }
-  .news-desc{font-size:13.5px;color:#3a3a3a;margin-bottom:8px;}
-  .news-meta{font-size:12.5px;color:var(--sub);margin-bottom:8px;}
-  .news-tags{display:flex;flex-wrap:wrap;gap:6px;}
+  .news-desc{
+    font-size:14px;
+    color:var(--ink);
+    margin:0 0 8px;
+  }
+  .tags{display:flex;flex-wrap:wrap;gap:6px;}
   .tag{
-    font-size:11px;
-    color:var(--accent-dark);
-    background:#fbe9e2;
-    border:1px solid #f0c9b8;
-    padding:2px 9px;
-    border-radius:12px;
+    font-size:11.5px;
+    background:var(--tag-bg);
+    color:var(--tag-ink);
+    padding:2px 8px;
+    border-radius:2px;
+    font-weight:600;
   }
 
-  footer{
-    border-top:2px solid var(--ink);
-    padding-top:18px;
-    margin-top:10px;
-    font-size:12px;
-    color:var(--sub);
+  /* ---------- 页脚 ---------- */
+  footer{margin-top:34px;}
+  .sources{
+    font-size:12.5px;
+    color:var(--ink-soft);
+    line-height:1.9;
   }
-  footer h4{font-size:12px;letter-spacing:1px;color:var(--ink);margin:0 0 8px;text-transform:uppercase;}
-  footer ul{margin:0 0 16px;padding-left:18px;}
-  footer li{margin-bottom:5px;}
-  footer a{color:var(--accent-dark);text-decoration:none;}
-  footer a:hover{text-decoration:underline;}
-  footer .disclaimer{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:4px;
-    padding:12px 14px;
-    color:var(--sub);
-  }
-
-  @media (max-width:640px){
-    header.masthead h1{font-size:26px;}
-    .data-grid{grid-template-columns:repeat(2,1fr);}
-    .highlight{padding:18px;}
-    .news-item{flex-direction:column;}
+  .sources a{color:var(--ink-soft);text-decoration:underline;text-decoration-color:var(--line-strong);}
+  .disclaimer{
+    margin-top:16px;
+    padding-top:14px;
+    border-top:1px solid var(--line);
+    font-size:11.5px;
+    color:var(--ink-soft);
   }
 </style>
-</head>
-<body>
+
 <div class="wrap">
 
-  <header class="masthead">
-    <div class="kicker">Tech Investment Daily · 全球科技投资情报</div>
+  <div class="masthead">
+    <p class="kicker">GLOBAL TECH CAPITAL · 每日速览</p>
     <h1>每日科技投资动态</h1>
-    <div class="meta">
-      <span>日期：<strong>2026年9月23日</strong></span>
-      <span>覆盖周期：<strong>过去24–48小时</strong></span>
-      <span>信息源：<strong>TechStartups、CNBC、Tech.eu、TechFundingNews 等</strong></span>
+    <div class="masthead-meta">
+      <span>2026年9月28日 星期一</span>
+      <span class="dot">·</span>
+      <span>信息源：TechCrunch / TechStartups 等</span>
     </div>
-  </header>
+  </div>
+  <hr class="rule-double">
 
-  <section>
-    <h2 class="section-title">今日概览</h2>
-    <div class="overview-card">
-      <p>过去24–48小时，全球科技一级市场共披露约10笔重点交易，覆盖国防科技、数据安全、AI基础设施、医疗AI与企业AI应用等多个赛道，披露融资总额合计超过<strong>21亿美元</strong>。最大单笔交易来自葡萄牙／英国自主防务公司 <strong>TEKEVER</strong>，其D轮融资5.8亿美元，估值跃升至64亿美元；紧随其后的是数据安全独角兽 <strong>Cyera</strong>（4亿美元，高盛另类投资领投）与AI训练数据基础设施公司 <strong>Snorkel AI</strong>（3.5亿美元）。整体来看，"AI+行业纵深应用"（国防、法律、医疗、金融欺诈检测）仍是资金最集中的方向。</p>
-      <div class="overview-stats">
-        <div class="stat-pill">重点交易 <b>10</b> 笔</div>
-        <div class="stat-pill">披露总额 <b>约21亿美元</b></div>
-        <div class="stat-pill">最大单笔 <b>TEKEVER 5.8亿美元</b></div>
-        <div class="stat-pill">最高估值 <b>Cyera 120亿美元+</b></div>
+  <p class="section-label">今日概览</p>
+  <div class="overview">
+    过去24–48小时全球科技一级市场的焦点集中在 <b>消费级 AI Agent</b> 赛道：主打"个人 AI 助理"的初创公司 Instinct 在上线仅一个月内估值从25亿美元跃升至100亿美元，由红杉资本（Sequoia）、Benchmark、Coatue联合投资完成 <b>10亿美元</b> C轮融资，是本期最值得关注的交易。与此同时，阿布扎比主权基金 MGX 与贝莱德（BlackRock）牵头的"AI基础设施合作伙伴"（AIP）传出正就收购数据中心运营商 Stack Infrastructure 股权展开独家谈判，交易规模最高可达 <b>250亿美元</b>；英伟达同期宣布规模达 <b>1500亿美元</b> 的股票回购计划，凸显头部科技公司在 AI 基础设施上的持续资本投入。中小额轮次方面，中东、欧洲、印度与东南亚的金融科技、合规科技、农业科技与消费品牌初创公司也纷纷完成千万美元级别的早期融资。
+  </div>
+
+  <p class="section-label">今日最值得关注</p>
+  <div class="spotlight">
+    <span class="spotlight-tag">今日头条 · TOP PICK</span>
+    <h2>消费级AI代理 Instinct 一个月内估值翻4倍，完成10亿美元C轮融资</h2>
+    <p class="sub">美国 ｜ 消费级 AI Agent ｜ 创始人：Noah Shinn ｜ 领投：Sequoia Capital、Benchmark Capital、Coatue</p>
+
+    <div class="stat-grid">
+      <div class="stat"><div class="v">$10亿</div><div class="k">本轮融资额(C轮)</div></div>
+      <div class="stat"><div class="v">$100亿</div><div class="k">投后估值</div></div>
+      <div class="stat"><div class="v">$13.5亿</div><div class="k">累计融资总额</div></div>
+      <div class="stat"><div class="v">约1个月</div><div class="k">距上轮(B轮)融资</div></div>
+    </div>
+
+    <h3>业务内容</h3>
+    <p>Instinct 是一款通过短信/文本交互、代用户实际执行任务的消费级"个人 AI 代理"：预订机票酒店与餐厅、下单购物、缴纳账单、取消订阅、开展调研、订购生鲜杂货，并可直接拨打电话完成事务。近期新增"礼宾"式电话预约服务，以及让不同用户的AI代理之间协同办事的"可信联系人网络"功能。公司由 Noah Shinn 创立，2026年8月以邀请制方式上线，目前尚无独立手机App，服务主要通过短信触达。</p>
+
+    <h3>历史融资情况</h3>
+    <div class="table-scroll">
+      <table class="history">
+        <thead>
+          <tr><th>轮次</th><th>时间</th><th>金额</th><th>投后估值</th><th>投资方</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Series B</td><td>2026年8月</td><td>$3.5亿</td><td>$25亿</td><td>未披露</td></tr>
+          <tr><td>Series C</td><td>2026年9月28日</td><td>$10亿</td><td>$100亿</td><td>Sequoia、Benchmark、Coatue</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:8px;">累计融资约 <b>13.5亿美元</b>，两轮融资间隔仅约一个月，估值增长约4倍。</p>
+
+    <h3>业务发展情况</h3>
+    <p>公开报道未披露 Instinct 具体的收入或用户规模数据；公司2026年8月才以邀请制形式上线，短短一个月内估值即增长4倍，反映市场对"任务执行型"AI Agent赛道的旺盛需求与资本追捧。行业内，Meta 旗下同类产品"Muse"已具备更深的社交平台整合，并录得数百万次App下载，形成直接竞争。</p>
+  </div>
+
+  <p class="section-label">按重要性排序 · 今日交易榜</p>
+
+  <div class="news-list">
+
+    <div class="news-item">
+      <div class="rank">01</div>
+      <div class="news-body">
+        <div class="news-top">
+          <span class="news-title">Instinct C轮融资</span>
+          <span class="news-amount">$10亿 · 估值$100亿</span>
+        </div>
+        <p class="news-desc">消费级AI个人助理初创公司完成C轮融资，红杉资本、Benchmark、Coatue联合领投，上线仅一个月估值增长4倍（详见上方头条深度解读）。</p>
+        <div class="tags"><span class="tag">AI Agent</span><span class="tag">美国</span><span class="tag">头部VC</span></div>
       </div>
     </div>
-  </section>
 
-  <section>
-    <h2 class="section-title">今日最值得关注</h2>
-    <div class="highlight">
-      <span class="tag-top">头条 · TOP DEAL</span>
-      <h3>TEKEVER：欧洲自主防务独角兽完成5.8亿美元D轮，估值近乎五连跳至64亿美元</h3>
-      <div class="company-sub">葡萄牙里斯本创立 · 现总部位于英国 · AI自主无人机与监视系统提供商</div>
-      <p class="lede">在乌克兰战场超5万飞行小时的实战数据支撑下，Tekever 本轮由加州大学投资部门 UC Investments（首次直接投资欧洲公司）与老牌成长基金 Baillie Gifford 领投，前英国国防大臣 Ben Wallace 参与管理的 Merlyn Advisors 亦加入新一轮，成为欧洲防务科技融资史上最受瞩目的交易之一。</p>
-
-      <div class="data-grid">
-        <div class="data-cell"><div class="label">本轮融资</div><div class="value">$5.8亿</div></div>
-        <div class="data-cell"><div class="label">最新估值</div><div class="value">$64亿</div></div>
-        <div class="data-cell"><div class="label">累计融资</div><div class="value">≥$6.7亿</div></div>
-        <div class="data-cell"><div class="label">ARR（估）</div><div class="value">$1.17亿</div></div>
-      </div>
-
-      <div class="highlight-block">
-        <h4>业务内容</h4>
-        <p>Tekever 定位为"端到端自主监视系统"供应商：自主研发 AR3、AR4、AR5 系列无人机，结合AI数据处理与订阅制情报服务，将空中采集的数据转化为可直接使用的情报产品。客户包括英国国防部（CORVUS监视项目，10年期合同价值最高达4亿英镑，用AR5平台替代老旧的Watchkeeper无人机）与英国内政部（用于英吉利海峡巡逻）。公司创立于2001年，最初从事银行软件开发，后转型进入无人机与分布式系统领域。</p>
-      </div>
-
-      <div class="highlight-block">
-        <h4>历史融资情况</h4>
-        <table class="fund-history">
-          <tr><th>时间</th><th>轮次</th><th>金额</th><th>估值</th><th>主要投资方</th></tr>
-          <tr><td>2022年</td><td>Series A</td><td class="amt">$2,000万</td><td>未披露</td><td>—</td></tr>
-          <tr><td>2024年</td><td>Series B</td><td class="amt">$7,400万</td><td>$13亿（跻身独角兽）</td><td>—</td></tr>
-          <tr><td>2025年5月</td><td>追加轮</td><td class="amt">未披露</td><td>$12.5亿+</td><td>Ventura Capital领投，北约创新基金（NIF）等参与</td></tr>
-          <tr><td>2026年9月</td><td>Series D（首轮收盘）</td><td class="amt">$5.8亿</td><td>$64亿</td><td>UC Investments、Baillie Gifford领投</td></tr>
-        </table>
-      </div>
-
-      <div class="highlight-block">
-        <h4>业务发展情况</h4>
-        <ul>
-          <li><strong>战场验证</strong>：自2022年俄罗斯全面入侵乌克兰以来，Tekever无人机在乌克兰战场累计飞行超过5万小时，截至2025年5月披露已协助摧毁价值超30亿英镑的俄方军事资产，是公司在各国防务采购中的核心竞争力来源。</li>
-          <li><strong>营收</strong>：第三方数据估算其2025年年化经常性收入（ARR）约为1.167亿美元（较创立初期从零起步）。</li>
-          <li><strong>团队与产能</strong>：员工规模约900人，过去一年增长近40%；2025年启动代号"Overmatch"的五年期产能扩张计划，投资约5亿美元在英国扩大AR3/AR5生产。</li>
-          <li><strong>资金用途与展望</strong>：本轮资金将用于国际市场扩张、制造与技术能力建设、潜在并购及AI自主系统研发；公司与Helsing、Quantum Systems并列为欧洲三大防务无人机独角兽。</li>
-        </ul>
+    <div class="news-item">
+      <div class="rank">02</div>
+      <div class="news-body">
+        <div class="news-top">
+          <span class="news-title">MGX × BlackRock 洽购 Stack Infrastructure</span>
+          <span class="news-amount">最高$250亿</span>
+        </div>
+        <p class="news-desc">阿布扎比主权基金MGX与贝莱德旗下"AI基础设施合作伙伴"（AIP）传出正就收购数据中心运营商 Stack Infrastructure 的股权展开独家谈判，标的估值最高可达250亿美元；MGX此前已是"星际之门"（Stargate）AI基础设施计划的资金支持方之一。</p>
+        <div class="tags"><span class="tag">AI基础设施</span><span class="tag">主权基金</span><span class="tag">洽谈中</span></div>
       </div>
     </div>
-  </section>
 
-  <section>
-    <h2 class="section-title">按重要性排序 · 今日交易榜</h2>
-    <div class="news-list">
-
-      <div class="news-item">
-        <div class="news-rank">1</div>
-        <div class="news-body">
-          <div class="news-head">
-            <span class="company">TEKEVER</span>
-            <span class="amount">$5.8亿 · D轮</span>
-          </div>
-          <div class="news-desc">欧洲自主防务无人机与AI监视系统公司，估值跃升至64亿美元，乌克兰战场实战数据成核心壁垒。详见上方重点卡片。</div>
-          <div class="news-meta">估值 $64亿 ｜ 领投：UC Investments、Baillie Gifford</div>
-          <div class="news-tags"><span class="tag">国防科技</span><span class="tag">自主无人机</span><span class="tag">欧洲</span></div>
+    <div class="news-item">
+      <div class="rank">03</div>
+      <div class="news-body">
+        <div class="news-top">
+          <span class="news-title">erad 融资</span>
+          <span class="news-amount">$2200万</span>
         </div>
+        <p class="news-desc">总部位于利雅得的金融科技公司erad为沙特与阿联酋中小企业提供符合伊斯兰教法（Shariah）的营运资金融资，采用自动化风控审批以加快放款；MEVP领投，500 Global、沙特风投公司（SVC）、S60 Ventures等跟投。</p>
+        <div class="tags"><span class="tag">金融科技</span><span class="tag">中东</span><span class="tag">中小企业融资</span></div>
       </div>
-
-      <div class="news-item">
-        <div class="news-rank">2</div>
-        <div class="news-body">
-          <div class="news-head">
-            <span class="company">Cyera</span>
-            <span class="amount">$4亿 · G轮扩展</span>
-          </div>
-          <div class="news-desc">企业级数据安全与AI代理安全平台，整合非人类身份管理，本轮由高盛另类投资成长股权部门领投。</div>
-          <div class="news-meta">估值 $120亿+ ｜ 投资方：Growth Equity at Goldman Sachs Alternatives</div>
-          <div class="news-tags"><span class="tag">数据安全</span><span class="tag">AI Agent安全</span><span class="tag">独角兽</span></div>
-        </div>
-      </div>
-
-      <div class="news-item">
-        <div class="news-rank">3</div>
-        <div class="news-body">
-          <div class="news-head">
-            <span class="company">Snorkel AI</span>
-            <span class="amount">$3.5亿 · 增长轮</span>
-          </div>
-          <div class="news-desc">AI训练数据、强化学习与模型评估基础设施供应商，为大模型训练提供高质量数据管线。</div>
-          <div class="news-meta">估值 $35亿 ｜ 投资方：Insight Partners、Greylock、S32、Addition、Wells Fargo</div>
-          <div class="news-tags"><span class="tag">AI基础设施</span><span class="tag">训练数据</span></div>
-        </div>
-      </div>
-
-      <div class="news-item">
-        <div class="news-rank">4</div>
-        <div class="news-body">
-          <div class="news-head">
-            <span class="company">Heidi Health</span>
-            <span class="amount">$3.4亿 · C+轮</span>
-          </div>
-          <div class="news-desc">临床AI医疗文档与工作流自动化平台，本轮由1亿美元股权融资与2.4亿美元非稀释性融资工具组成。</div>
-          <div class="news-meta">估值 约$9亿 ｜ General Catalyst领投非稀释部分；Blackbird、Point72等参与股权部分</div>
-          <div class="news-tags"><span class="tag">医疗AI</span><span class="tag">临床文档</span></div>
-        </div>
-      </div>
-
-      <div class="news-item">
-        <div class="news-rank">5</div>
-        <div class="news-body">
-          <div class="news-head">
-            <span class="company">Brahma AI</span>
-            <span class="amount">$1.5亿 · 增长轮</span>
-          </div>
-          <div class="news-desc">企业视听内容生成平台，客户包括华纳兄弟、NBA与梅奥诊所，聚焦企业级AI视频内容生产。</div>
-          <div class="news-meta">估值 $20亿 ｜ 投资方：Multiples Alternate Asset Management等</div>
-          <div class="news-tags"><span class="tag">生成式AI</span><span class="tag">企业内容</span></div>
-        </div>
-      </div>
-
-      <div class="news-item">
-        <div class="news-rank">6</div>
-        <div class="news-body">
-          <div class="news-head">
-            <span class="company">Noxtua</span>
-            <span class="amount">€1亿+ · C轮</span>
-          </div>
-          <div class="news-desc">德国柏林法律AI公司，为法律研究、分析、文书起草与专业工作流提供AI支持。</div>
-          <div class="news-meta">投资方：C.H.BECK（多数股东）、MANZ</div>
-          <div class="news-tags"><span class="tag">法律AI</span><span class="tag">欧洲</span></div>
-        </div>
-      </div>
-
-      <div class="news-item">
-        <div class="news-rank">7</div>
-        <div class="news-body">
-          <div class="news-head">
-            <span class="company">Go.AI</span>
-            <span class="amount">$8500万 · A轮</span>
-          </div>
-          <div class="news-desc">为受监管机构提供私有AI基础设施与硬件设备，聚焦金融、政府等合规敏感场景。</div>
-          <div class="news-meta">投资方：Updata Partners、GFT Ventures、LAUNCH</div>
-          <div class="news-tags"><span class="tag">AI基础设施</span><span class="tag">企业私有化部署</span></div>
-        </div>
-      </div>
-
-      <div class="news-item">
-        <div class="news-rank">8</div>
-        <div class="news-body">
-          <div class="news-head">
-            <span class="company">Ultraviolette Automotive</span>
-            <span class="amount">$8500万 · E轮</span>
-          </div>
-          <div class="news-desc">印度班加罗尔电动摩托车制造商，自研电池、电力电子系统与整车软件。</div>
-          <div class="news-meta">投资方：Yali Capital、TDK Ventures 等</div>
-          <div class="news-tags"><span class="tag">电动出行</span><span class="tag">印度</span></div>
-        </div>
-      </div>
-
-      <div class="news-item">
-        <div class="news-rank">9</div>
-        <div class="news-body">
-          <div class="news-head">
-            <span class="company">Firecrawl</span>
-            <span class="amount">$7500万 · B轮</span>
-          </div>
-          <div class="news-desc">为AI代理提供网页数据抓取与结构化提取基础设施，服务大模型应用开发者。</div>
-          <div class="news-meta">投资方：Smash Capital、Altos Ventures、Y Combinator、Nexus Venture Partners</div>
-          <div class="news-tags"><span class="tag">AI Agent</span><span class="tag">数据基础设施</span></div>
-        </div>
-      </div>
-
-      <div class="news-item">
-        <div class="news-rank">10</div>
-        <div class="news-body">
-          <div class="news-head">
-            <span class="company">Anaconda Biomed</span>
-            <span class="amount">$5600万 · 后期轮</span>
-          </div>
-          <div class="news-desc">西班牙巴塞罗那血栓切除导管开发商，产品面向缺血性卒中患者的介入治疗。</div>
-          <div class="news-meta">投资方：Omega Funds、Ysios Capital、Asabys 等</div>
-          <div class="news-tags"><span class="tag">医疗器械</span><span class="tag">欧洲</span></div>
-        </div>
-      </div>
-
     </div>
-  </section>
+
+    <div class="news-item">
+      <div class="rank">04</div>
+      <div class="news-body">
+        <div class="news-top">
+          <span class="news-title">Complaion 融资</span>
+          <span class="news-amount">€1350万</span>
+        </div>
+        <p class="news-desc">总部位于米兰的合规自动化平台Complaion，将软件与持证审计员相结合，帮助欧洲中小企业管理ISO认证与监管合规事务；由Eurazeo与Italian Founders Fund联合领投。</p>
+        <div class="tags"><span class="tag">合规科技</span><span class="tag">欧洲</span><span class="tag">SaaS</span></div>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="rank">05</div>
+      <div class="news-body">
+        <div class="news-top">
+          <span class="news-title">Balwaan Krishi 融资</span>
+          <span class="news-amount">约$1040万</span>
+        </div>
+        <p class="news-desc">总部位于印度斋浦尔的平价农机制造商Balwaan Krishi，面向印度小农户提供经济型农业设备，现有40万+用户与800余家经销商网络；由First Bridge India Growth Fund领投。</p>
+        <div class="tags"><span class="tag">农业科技</span><span class="tag">印度</span><span class="tag">制造业</span></div>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="rank">06</div>
+      <div class="news-body">
+        <div class="news-top">
+          <span class="news-title">Amaani Series A</span>
+          <span class="news-amount">$500万</span>
+        </div>
+        <p class="news-desc">总部位于迪拜、旗下拥有AÏZA美妆品牌的Amaani以阿拉伯地区原料与仪式感护肤理念为核心，正扩大在海湾国家的零售分销网络；BECO Capital领投，Homegrown Ventures、Peak XV旗下Surge跟投。</p>
+        <div class="tags"><span class="tag">消费品牌</span><span class="tag">中东</span><span class="tag">Series A</span></div>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="rank">07</div>
+      <div class="news-body">
+        <div class="news-top">
+          <span class="news-title">Mavi 种子轮</span>
+          <span class="news-amount">$400万</span>
+        </div>
+        <p class="news-desc">AI人才市场平台Mavi专注于为美企对接全球财会专业人才，涵盖跨境合同、法律合规与薪酬发放全流程，平台现有3000余名会计专业人才；种子轮由Harlem Capital领投。</p>
+        <div class="tags"><span class="tag">AI+招聘</span><span class="tag">企业服务</span><span class="tag">种子轮</span></div>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="rank">08</div>
+      <div class="news-body">
+        <div class="news-top">
+          <span class="news-title">Humanos 融资</span>
+          <span class="news-amount">$320万</span>
+        </div>
+        <p class="news-desc">总部位于里斯本的保险科技公司Humanos，正为自主AI代理构建风险评估基础设施，通过行为评分与"风险护照"文档体系进行量化管理；Anthemis领投，Springbank、Critical Ventures等跟投。</p>
+        <div class="tags"><span class="tag">保险科技</span><span class="tag">AI Agent</span><span class="tag">欧洲</span></div>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="rank">09</div>
+      <div class="news-body">
+        <div class="news-top">
+          <span class="news-title">Alive App 融资</span>
+          <span class="news-amount">$100万</span>
+        </div>
+        <p class="news-desc">总部位于班加罗尔的本地体验市场平台Alive App，为印度多个城市提供精选本地活动预订服务，近期已实现盈利；Powerhouse Ventures与Flipkart Ventures联合领投。</p>
+        <div class="tags"><span class="tag">消费互联网</span><span class="tag">印度</span><span class="tag">已盈利</span></div>
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="rank">10</div>
+      <div class="news-body">
+        <div class="news-top">
+          <span class="news-title">bilt.me 融资</span>
+          <span class="news-amount">约€61.5万</span>
+        </div>
+        <p class="news-desc">总部位于塔林的AI开发者工具bilt.me，可将自然语言提示直接转化为原生iOS/Android应用并集成部署基础设施；由Superhero Capital领投，Bolt联合创始人Markus Villig等天使跟投。</p>
+        <div class="tags"><span class="tag">AI开发工具</span><span class="tag">欧洲</span><span class="tag">早期轮</span></div>
+      </div>
+    </div>
+
+  </div>
 
   <footer>
-    <h4>信息来源</h4>
-    <ul>
-      <li><a href="https://techstartups.com/2026/09/23/startup-funding-news-today-september-23-2026-tekever-f13-brahma-ai-noxtua-standardx-more/" target="_blank" rel="noopener">Tech Startups — Startup Funding News Today, September 23, 2026</a></li>
-      <li><a href="https://techstartups.com/2026/09/22/venture-capital-startup-funding-roundup-september-22-2026-general-catalyst-goldman-sachs-greylock-m13-y-combinator-more/" target="_blank" rel="noopener">Tech Startups — Venture Capital & Startup Funding Roundup, September 22, 2026</a></li>
-      <li><a href="https://techstartups.com/2026/09/23/ai-drone-startup-tekever-raises-580m-at-6-4b-valuation-as-europe-ramps-up-defense-tech-spending/" target="_blank" rel="noopener">Tech Startups — AI drone startup Tekever raises $580M at $6.4B valuation</a></li>
-      <li><a href="https://www.cnbc.com/2026/09/23/ai-drone-maker-ukraine-war-defense-tech.html" target="_blank" rel="noopener">CNBC — AI drone maker hits $6.4 billion valuation as Ukraine war spurs defense tech</a></li>
-      <li><a href="https://techfundingnews.com/tekever-580m-series-d-6-4b-valuation-uc-investments/" target="_blank" rel="noopener">Tech Funding News — Tekever nearly quintuples valuation to $6.4B</a></li>
-      <li><a href="https://scroll.media/en/2025/05/07/tekever-with-office-in-ukraine-secures-new-investment-at-1-25b-valuation/" target="_blank" rel="noopener">Scroll.media — Tekever secures new investment at $1.25B+ valuation (2025年5月)</a></li>
-      <li><a href="https://getlatka.com/companies/tekever.com" target="_blank" rel="noopener">Latka — TEKEVER Revenue &amp; Funding Estimate</a></li>
-    </ul>
-    <div class="disclaimer">
-      免责声明：本页面内容基于公开新闻报道自动整理生成，融资金额、估值及营收数据均引用自上述信息源，部分第三方估算数据（如ARR）可能与公司官方口径存在差异，仅供参考，不构成任何投资建议。如需引用请核实原始信息源。
+    <p class="section-label">信息来源</p>
+    <div class="sources">
+      · <a href="https://techcrunch.com/2026/09/28/viral-ai-agent-instinct-raises-1b-series-c-at-a-10b-valuation/" target="_blank" rel="noopener">TechCrunch – Viral AI agent Instinct raises $1B Series C at a $10B valuation</a><br>
+      · <a href="https://techstartups.com/2026/09/28/startup-funding-news-today-september-28-2026-erad-complaion-humanos-more/" target="_blank" rel="noopener">TechStartups – Startup Funding News Today, September 28, 2026: erad, Complaion, Humanos & More</a><br>
+      · <a href="https://techstartups.com/2026/09/28/top-tech-news-today-september-28-2026-citrix-microsoft-nvidia-openai-samsung-spacex-more/" target="_blank" rel="noopener">TechStartups – Top Tech News Today, September 28, 2026（MGX/BlackRock、英伟达回购计划等）</a><br>
+      · <a href="https://techcrunch.com/2026/09/28/mavi-bets-on-the-ai-boom-creating-demand-for-a-new-kind-of-accountant/" target="_blank" rel="noopener">TechCrunch – Mavi bets on the AI boom creating demand for a new kind of accountant</a>
     </div>
+    <p class="disclaimer">本页内容基于以上公开报道整理，融资金额、估值等数据以相关公司及媒体最终披露为准，部分交易（如标注"洽谈中"）尚未正式完成，条款可能随后续进展调整。本页不构成任何投资建议。页面每日更新一次，覆盖过去24–48小时内的全球科技行业投资动态。</p>
   </footer>
 
 </div>
-</body>
-</html>
